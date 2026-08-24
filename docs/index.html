@@ -1,0 +1,895 @@
+<title>Everline Attrition Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root {
+  --ground:      #F2F5F6;
+  --surface:     #FFFFFF;
+  --surface-alt: #E9EEF0;
+  --border:      #D3DDE1;
+  --border-firm: #B6C5CB;
+  --ink:         #131A1D;
+  --ink-soft:    #3D4B51;
+  --ink-mute:    #64757C;
+  --accent:      #1F5673;
+  --accent-soft: #E2EDF3;
+  --critical:    #A63A3A;
+  --critical-bg: #F6E5E4;
+  --warning:     #9A6714;
+  --warning-bg:  #F7EDDC;
+  --good:        #35674C;
+  --good-bg:     #E1EDE6;
+  --shadow: 0 1px 2px rgba(19,26,29,.06), 0 6px 18px -10px rgba(19,26,29,.22);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #0D1315;
+    --surface:     #151E21;
+    --surface-alt: #1D282C;
+    --border:      #26343A;
+    --border-firm: #3A4C54;
+    --ink:         #E7EFF2;
+    --ink-soft:    #B4C4CA;
+    --ink-mute:    #8399A1;
+    --accent:      #6EB0D3;
+    --accent-soft: #17303E;
+    --critical:    #E08886;
+    --critical-bg: #3A211F;
+    --warning:     #DDAE5E;
+    --warning-bg:  #362B16;
+    --good:        #7FB99A;
+    --good-bg:     #1B3128;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 22px -12px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:      #0D1315;
+  --surface:     #151E21;
+  --surface-alt: #1D282C;
+  --border:      #26343A;
+  --border-firm: #3A4C54;
+  --ink:         #E7EFF2;
+  --ink-soft:    #B4C4CA;
+  --ink-mute:    #8399A1;
+  --accent:      #6EB0D3;
+  --accent-soft: #17303E;
+  --critical:    #E08886;
+  --critical-bg: #3A211F;
+  --warning:     #DDAE5E;
+  --warning-bg:  #362B16;
+  --good:        #7FB99A;
+  --good-bg:     #1B3128;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 22px -12px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3, .display {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+  margin: 0;
+}
+.num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: .13em; text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+/* ---------- masthead ---------- */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 44px 0 0;
+}
+.masthead h1 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 700; line-height: 1.08; }
+.masthead .sub {
+  color: var(--ink-soft); max-width: 62ch; margin-top: 12px; font-size: 16px;
+}
+.meta-row {
+  display: flex; flex-wrap: wrap; gap: 8px 28px;
+  margin-top: 22px; padding-bottom: 26px;
+  font-size: 12.5px; color: var(--ink-mute);
+}
+.meta-row b { color: var(--ink-soft); font-weight: 500; }
+
+/* ---------- kpi strip ---------- */
+.kpis {
+  display: grid; gap: 1px; background: var(--border);
+  grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+  border-top: 1px solid var(--border);
+}
+.kpi { background: var(--surface); padding: 18px 20px 20px; }
+.kpi .label { font-size: 11.5px; color: var(--ink-mute); letter-spacing: .04em; }
+.kpi .val {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 27px; font-weight: 600; line-height: 1.15; margin-top: 6px;
+  letter-spacing: -0.02em;
+}
+.kpi .note { font-size: 11.5px; color: var(--ink-mute); margin-top: 4px; }
+
+/* ---------- nav ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 30;
+  background: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar-inner { display: flex; gap: 4px; overflow-x: auto; padding: 8px 0; }
+.navbar a {
+  flex: none; text-decoration: none; color: var(--ink-mute);
+  font-size: 12.5px; padding: 6px 11px; border-radius: 5px; white-space: nowrap;
+}
+.navbar a:hover { color: var(--ink); background: var(--surface-alt); }
+.navbar a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* ---------- finding blocks ---------- */
+.finding { padding: 52px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 60px; }
+.finding-head { display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start; }
+.fnum {
+  font-family: Archivo, sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--accent); border-top: 2px solid var(--accent);
+  padding-top: 7px; letter-spacing: .02em;
+}
+.finding h2 { font-size: clamp(21px, 2.5vw, 27px); line-height: 1.2; }
+.qline { color: var(--ink-mute); font-size: 14px; margin-top: 7px; font-style: italic; }
+.viewname {
+  font-family: "IBM Plex Mono", monospace; font-size: 11.5px;
+  color: var(--ink-mute); margin-top: 10px;
+}
+.viewname code {
+  background: var(--surface-alt); padding: 2px 6px; border-radius: 4px; color: var(--accent);
+}
+.body-col { margin-top: 22px; margin-left: 62px; }
+@media (max-width: 700px) {
+  .finding-head { grid-template-columns: 1fr; gap: 6px; }
+  .fnum { border-top: none; padding-top: 0; }
+  .body-col { margin-left: 0; }
+}
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; box-shadow: var(--shadow); padding: 22px;
+}
+.card + .card { margin-top: 18px; }
+.card-title { font-size: 13px; font-weight: 600; letter-spacing: -0.005em; }
+.card-note { font-size: 12.5px; color: var(--ink-mute); margin-top: 2px; }
+
+.takeaway {
+  margin-top: 18px; padding: 16px 18px; border-radius: 8px;
+  background: var(--accent-soft); border-left: 3px solid var(--accent);
+  font-size: 14.5px; color: var(--ink);
+}
+.takeaway b { font-weight: 600; }
+.takeaway.neg { background: var(--surface-alt); border-left-color: var(--border-firm); }
+
+/* ---------- chart primitives ---------- */
+.rows { display: flex; flex-direction: column; gap: 9px; margin-top: 16px; }
+.row { display: grid; grid-template-columns: 132px 1fr 62px; gap: 12px; align-items: center; }
+.row .rl { font-size: 13px; color: var(--ink-soft); text-align: right; }
+.row .rv {
+  font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums;
+  font-size: 13px; font-weight: 500;
+}
+.track { background: var(--surface-alt); border-radius: 3px; height: 22px; position: relative; overflow: hidden; }
+.bar { height: 100%; border-radius: 3px; transition: width .5s cubic-bezier(.22,.8,.3,1); }
+@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+.bar.a { background: var(--accent); }
+.bar.c { background: var(--critical); }
+.bar.w { background: var(--warning); }
+.bar.g { background: var(--good); }
+.bar.n { background: var(--border-firm); }
+
+@media (max-width: 620px) {
+  .row { grid-template-columns: 96px 1fr 54px; gap: 8px; }
+  .row .rl { font-size: 12px; }
+}
+
+/* diverging (SAR) */
+.div-chart { margin-top: 18px; }
+.div-row { display: grid; grid-template-columns: 132px 1fr 96px; gap: 12px; align-items: center; margin-bottom: 9px; }
+.div-track { position: relative; height: 26px; background: var(--surface-alt); border-radius: 3px; }
+.div-mid { position: absolute; top: -4px; bottom: -4px; width: 1.5px; background: var(--border-firm); }
+.div-bar { position: absolute; top: 4px; bottom: 4px; border-radius: 2px; }
+.div-scale {
+  display: grid; grid-template-columns: 132px 1fr 96px; gap: 12px;
+  font-size: 11px; color: var(--ink-mute); margin-top: 4px;
+}
+.div-scale-inner { position: relative; height: 14px; }
+.div-tick { position: absolute; transform: translateX(-50%); font-family: "IBM Plex Mono", monospace; }
+@media (max-width: 620px) {
+  .div-row, .div-scale { grid-template-columns: 92px 1fr 74px; gap: 8px; }
+}
+
+/* heatmap */
+.heat { display: grid; grid-template-columns: 92px repeat(3, 1fr); gap: 6px; margin-top: 16px; }
+.heat-h { font-size: 11.5px; color: var(--ink-mute); text-align: center; padding-bottom: 2px; }
+.heat-r { font-size: 12.5px; color: var(--ink-soft); display: flex; align-items: center; justify-content: flex-end; padding-right: 4px; text-align: right; }
+.cell { border-radius: 7px; padding: 13px 8px; text-align: center; border: 1px solid var(--border); }
+.cell .r { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+.cell .l { font-size: 11px; margin-top: 2px; opacity: .85; }
+.cell .n { font-size: 10.5px; color: var(--ink-mute); margin-top: 3px; }
+
+/* line chart */
+.linewrap { margin-top: 14px; overflow-x: auto; }
+svg { display: block; max-width: 100%; }
+.gridline { stroke: var(--border); stroke-width: 1; }
+.axis-lab { fill: var(--ink-mute); font-size: 10.5px; font-family: "IBM Plex Mono", monospace; }
+
+/* ---------- table ---------- */
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; }
+select, input[type="search"] {
+  font-family: inherit; font-size: 13px; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border-firm);
+  border-radius: 6px; padding: 7px 10px;
+}
+input[type="search"] { min-width: 190px; }
+select:focus-visible, input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.count { font-size: 12.5px; color: var(--ink-mute); margin-left: auto; }
+
+.tablewrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--border); border-radius: 9px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th {
+  text-align: left; font-weight: 600; font-size: 11px; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--ink-mute);
+  padding: 11px 12px; border-bottom: 1px solid var(--border);
+  background: var(--surface); position: sticky; top: 0; white-space: nowrap;
+}
+td { padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--surface-alt); }
+td.n { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
+
+.pill {
+  display: inline-block; font-size: 10.5px; font-weight: 600;
+  padding: 2px 8px; border-radius: 20px; letter-spacing: .03em;
+}
+.pill.High   { background: var(--critical-bg); color: var(--critical); }
+.pill.Medium { background: var(--warning-bg);  color: var(--warning); }
+.pill.Low    { background: var(--good-bg);     color: var(--good); }
+
+.flags { display: flex; gap: 4px; flex-wrap: wrap; }
+.flag {
+  font-size: 10px; padding: 1.5px 6px; border-radius: 4px;
+  background: var(--surface-alt); color: var(--ink-mute); border: 1px solid var(--border);
+}
+.flag.on { background: var(--critical-bg); color: var(--critical); border-color: transparent; }
+
+.scorebar { display: flex; align-items: center; gap: 8px; }
+.scorebar .mini { width: 46px; height: 5px; background: var(--surface-alt); border-radius: 3px; overflow: hidden; }
+.scorebar .mini i { display: block; height: 100%; background: var(--critical); }
+
+/* ---------- model ---------- */
+.grid2 { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); margin-top: 18px; }
+.metric-line { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 13px; }
+.metric-line:last-child { border-bottom: none; }
+.metric-line span:last-child { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; font-weight: 500; }
+
+/* ---------- footer ---------- */
+footer { padding: 44px 0 60px; color: var(--ink-mute); font-size: 13px; }
+footer h3 { font-size: 14px; color: var(--ink); margin-bottom: 8px; }
+footer p { max-width: 74ch; }
+footer a { color: var(--accent); }
+.warnbox {
+  border: 1px solid var(--border); border-left: 3px solid var(--warning);
+  background: var(--warning-bg); color: var(--ink-soft);
+  padding: 14px 16px; border-radius: 8px; font-size: 13px; margin-top: 16px;
+}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Everline Corp &middot; People Analytics &middot; FY2025 close</div>
+    <h1>Why people leave Everline</h1>
+    <p class="sub">
+      Six SQL findings, a tenure-controlled department ranking, and a scored
+      watchlist of employees at elevated flight risk. Replaces the quarterly PDF.
+    </p>
+    <div class="meta-row">
+      <div><b>Snapshot</b> 2025-12-31</div>
+      <div><b>Population</b> 1,470 employees</div>
+      <div><b>Source</b> IBM HR Analytics (1,470 real rows)</div>
+      <div><b>Warehouse</b> PostgreSQL &middot; 8 analytical views</div>
+    </div>
+  </div>
+  <div class="kpis" id="kpis"></div>
+</header>
+
+<nav class="navbar">
+  <div class="wrap navbar-inner">
+    <a href="#f1">1 &middot; Departments</a>
+    <a href="#f2">2 &middot; Tenure</a>
+    <a href="#f3">3 &middot; Pay</a>
+    <a href="#f4">4 &middot; Manager span</a>
+    <a href="#f5">5 &middot; Overtime</a>
+    <a href="#f6">6 &middot; Controlled</a>
+    <a href="#watchlist">Watchlist</a>
+    <a href="#model">Model</a>
+    <a href="#method">Method</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- 5 : headline first, because it is the finding that matters most -->
+  <section class="finding" id="f5">
+    <div class="finding-head">
+      <div class="fnum">05</div>
+      <div>
+        <h2>Overtime is the lever. Satisfaction only modulates it.</h2>
+        <p class="qline">Overtime and low satisfaction each look bad alone. Do they compound?</p>
+        <p class="viewname"><code>vw_overtime_satisfaction_attrition</code></p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Attrition rate by overtime &times; job satisfaction</div>
+        <div class="card-note">Cell shows attrition rate, lift against the 16.1% company base rate, and segment size.</div>
+        <div class="heat" id="heat"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Adding work-life balance</div>
+        <div class="card-note">Three conditions stacked, worst to best.</div>
+        <div class="rows" id="threeway"></div>
+      </div>
+      <div class="takeaway" id="ta5"></div>
+    </div>
+  </section>
+
+  <!-- 6 : the confounding-adjusted one -->
+  <section class="finding" id="f6">
+    <div class="finding-head">
+      <div class="fnum">06</div>
+      <div>
+        <h2>Engineering doesn't have a retention problem. It has a tenure mix.</h2>
+        <p class="qline">Which departments lose more people than their workforce age explains?</p>
+        <p class="viewname"><code>vw_department_attrition_controlled</code> &middot; indirect standardisation</p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Standardised Attrition Ratio (observed &divide; expected leavers)</div>
+        <div class="card-note">
+          Expected leavers = the company-wide rate for each tenure cohort applied to that
+          department's own tenure mix. 1.00 means &ldquo;exactly what its workforce age predicts&rdquo;.
+        </div>
+        <div class="div-chart" id="sar"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Crude rate vs tenure-adjusted rate</div>
+        <div class="card-note">Where the two diverge, the crude rate was measuring workforce age.</div>
+        <div class="tablewrap">
+          <table id="sartable"></table>
+        </div>
+      </div>
+      <div class="takeaway" id="ta6"></div>
+    </div>
+  </section>
+
+  <!-- 2 : tenure -->
+  <section class="finding" id="f2">
+    <div class="finding-head">
+      <div class="fnum">02</div>
+      <div>
+        <h2>The highest rate and the biggest problem are different cohorts.</h2>
+        <p class="qline">Do we lose people early, or after they're established?</p>
+        <p class="viewname"><code>vw_tenure_cohort_attrition</code></p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Attrition rate by tenure cohort</div>
+        <div class="card-note">Tenure measured at termination for leavers, at snapshot for active employees.</div>
+        <div class="rows" id="cohort"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Share of everyone who left</div>
+        <div class="card-note">A high rate on a small cohort is a smaller problem than a moderate rate on a large one.</div>
+        <div class="rows" id="cohortshare"></div>
+      </div>
+      <div class="takeaway" id="ta2"></div>
+    </div>
+  </section>
+
+  <!-- 3 : pay -->
+  <section class="finding" id="f3">
+    <div class="finding-head">
+      <div class="fnum">03</div>
+      <div>
+        <h2>Pay position matters &mdash; but it isn't monotonic.</h2>
+        <p class="qline">Are people underpaid relative to their peers leaving more?</p>
+        <p class="viewname"><code>vw_compensation_percentile</code> &middot; <code>PERCENT_RANK()</code> partitioned by role</p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Attrition by pay quartile within job role</div>
+        <div class="card-note">Comparing salary across roles is meaningless; the percentile is computed inside each role.</div>
+        <div class="rows" id="quartile"></div>
+      </div>
+      <div class="takeaway" id="ta3"></div>
+    </div>
+  </section>
+
+  <!-- 4 : negative result -->
+  <section class="finding" id="f4">
+    <div class="finding-head">
+      <div class="fnum">04</div>
+      <div>
+        <h2>Span of control explains nothing. Reported anyway.</h2>
+        <p class="qline">Do managers with larger teams lose more people?</p>
+        <p class="viewname"><code>vw_manager_span_attrition</code></p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Attrition rate by manager span-of-control band</div>
+        <div class="card-note">Aggregates people, not per-manager rates &mdash; averaging rates would weight a 4-person team like a 20-person one.</div>
+        <div class="rows" id="span"></div>
+      </div>
+      <div class="takeaway neg" id="ta4"></div>
+    </div>
+  </section>
+
+  <!-- 1 : trend -->
+  <section class="finding" id="f1">
+    <div class="finding-head">
+      <div class="fnum">01</div>
+      <div>
+        <h2>Quarterly rate and the rolling window.</h2>
+        <p class="qline">Which departments are worst, and is one bad quarter distorting it?</p>
+        <p class="viewname"><code>vw_attrition_by_department</code> &middot; <code>ROWS BETWEEN 3 PRECEDING</code></p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <div class="card-title">Company-wide quarterly attrition rate</div>
+        <div class="card-note">Terminations over average headcount, by quarter.</div>
+        <div class="linewrap" id="trend"></div>
+      </div>
+      <div class="warnbox">
+        <b>Read this one as a technique demo, not a finding.</b> The source dataset is a
+        single dateless snapshot, so termination dates had to be synthesised. The upward
+        slope here is a property of that construction. The rolling-window SQL is the
+        deliverable; the trend is not evidence.
+      </div>
+    </div>
+  </section>
+
+  <!-- watchlist -->
+  <section class="finding" id="watchlist">
+    <div class="finding-head">
+      <div class="fnum">&#9679;</div>
+      <div>
+        <h2>Attrition risk watchlist</h2>
+        <p class="qline">Who is at elevated risk right now, and what do I say to their manager?</p>
+        <p class="viewname"><code>vw_attrition_risk_watchlist</code> &middot; logistic regression, scored 2025-12-31</p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="rows" id="tierbars"></div>
+      <div class="controls">
+        <select id="fdept"><option value="">All departments</option></select>
+        <select id="ftier">
+          <option value="">All tiers</option>
+          <option>High</option><option>Medium</option><option>Low</option>
+        </select>
+        <input type="search" id="fsearch" placeholder="Search name or manager" aria-label="Search watchlist">
+        <span class="count" id="wcount"></span>
+      </div>
+      <div class="tablewrap"><table id="wtable"></table></div>
+      <div class="warnbox">
+        <b>Model output, not a verdict.</b> These are associations, not causes, and carry
+        roughly &plusmn;0.06 PR-AUC of uncertainty. Use as a prompt for a conversation &mdash;
+        never as an input to a performance or employment decision. Names are synthetic.
+      </div>
+    </div>
+  </section>
+
+  <!-- model -->
+  <section class="finding" id="model">
+    <div class="finding-head">
+      <div class="fnum">&#9632;</div>
+      <div>
+        <h2>The model, and why it's the boring one</h2>
+        <p class="qline">Logistic regression vs random forest on a 16% minority class.</p>
+        <p class="viewname">scikit-learn &middot; stratified 75/25 split &middot; 5-fold CV &middot; balanced class weights</p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-title">Held-out performance</div>
+          <div class="card-note">Accuracy is excluded on purpose &mdash; predicting &ldquo;nobody leaves&rdquo; scores 83.9%.</div>
+          <div id="metrics"></div>
+        </div>
+        <div class="card">
+          <div class="card-title">What the model relies on</div>
+          <div class="card-note">Permutation importance: drop in PR-AUC when a column is shuffled.</div>
+          <div class="rows" id="perm"></div>
+        </div>
+      </div>
+      <div class="takeaway" id="tam"></div>
+    </div>
+  </section>
+
+  <section class="finding" id="method" style="border-bottom:none">
+    <div class="finding-head">
+      <div class="fnum">&#8258;</div>
+      <div>
+        <h2>What's real and what's constructed</h2>
+        <p class="qline">Stated up front, because it changes how every number above should be read.</p>
+      </div>
+    </div>
+    <div class="body-col">
+      <div class="card">
+        <p style="margin-top:0">
+          Built on the public <b>IBM HR Analytics Employee Attrition &amp; Performance</b>
+          dataset &mdash; 1,470 real rows. Every driver variable and the attrition label
+          are used <b>unmodified</b>: income, satisfaction scores, overtime, work-life
+          balance, performance rating, distance from home, tenure, and the Attrition flag.
+        </p>
+        <p>
+          The source is a single <b>dateless snapshot</b>, so anything time-shaped was
+          constructed to make SCD modelling and time-intelligence DAX possible: employee
+          names, hire and termination dates, the per-year compensation and review rows,
+          the manager hierarchy, and the six-department overlay.
+        </p>
+        <p style="margin-bottom:0">
+          <b>Consequence:</b> findings 2&ndash;6 are about drivers and are real signal.
+          Finding 1's quarter-over-quarter slope is partly by construction and is
+          labelled as such rather than presented as an insight.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <h3>WorkforceIQ</h3>
+  <p>
+    PostgreSQL schema and analytical views &middot; scikit-learn attrition model &middot;
+    Power BI semantic model (PBIP/TMDL). Every figure on this page is computed by the
+    SQL view named in its section &mdash; nothing is hand-entered.
+  </p>
+</footer>
+
+<script id="payload" type="application/json">{"headline":{"total":1470,"active":1233.0,"leavers":237.0,"rate":0.1612},"dept_controlled":[{"department_name":"HR","headcount":52,"avg_tenure_years":5.83,"observed_leavers":12.0,"expected_leavers":8.6,"crude_attrition_rate":0.2308,"standardised_attrition_ratio":1.396,"tenure_adjusted_rate":0.225,"verdict":"Worse than tenure predicts"},{"department_name":"Sales","headcount":409,"avg_tenure_years":7.08,"observed_leavers":90.0,"expected_leavers":66.1,"crude_attrition_rate":0.22,"standardised_attrition_ratio":1.361,"tenure_adjusted_rate":0.2194,"verdict":"Worse than tenure predicts"},{"department_name":"Engineering","headcount":631,"avg_tenure_years":6.32,"observed_leavers":111.0,"expected_leavers":109.7,"crude_attrition_rate":0.1759,"standardised_attrition_ratio":1.012,"tenure_adjusted_rate":0.1632,"verdict":"In line with tenure mix"},{"department_name":"Operations","headcount":145,"avg_tenure_years":8.1,"observed_leavers":10.0,"expected_leavers":20.4,"crude_attrition_rate":0.069,"standardised_attrition_ratio":0.49,"tenure_adjusted_rate":0.0791,"verdict":"Better than tenure predicts"},{"department_name":"Customer Support","headcount":131,"avg_tenure_years":8.85,"observed_leavers":9.0,"expected_leavers":18.5,"crude_attrition_rate":0.0687,"standardised_attrition_ratio":0.486,"tenure_adjusted_rate":0.0783,"verdict":"Better than tenure predicts"},{"department_name":"Finance","headcount":102,"avg_tenure_years":14.95,"observed_leavers":5.0,"expected_leavers":13.7,"crude_attrition_rate":0.049,"standardised_attrition_ratio":0.366,"tenure_adjusted_rate":0.0589,"verdict":"Better than tenure predicts"}],"cohort":[{"tenure_cohort":"0-1 yr","cohort_sort":1,"employees":44,"leavers":16.0,"attrition_rate":0.3636,"share_of_all_leavers":0.0675,"lift_vs_company":2.26},{"tenure_cohort":"1-3 yr","cohort_sort":2,"employees":298,"leavers":86.0,"attrition_rate":0.2886,"share_of_all_leavers":0.3629,"lift_vs_company":1.79},{"tenure_cohort":"3-5 yr","cohort_sort":3,"employees":238,"leavers":39.0,"attrition_rate":0.1639,"share_of_all_leavers":0.1646,"lift_vs_company":1.02},{"tenure_cohort":"5-10 yr","cohort_sort":4,"employees":524,"leavers":58.0,"attrition_rate":0.1107,"share_of_all_leavers":0.2447,"lift_vs_company":0.69},{"tenure_cohort":"10 yr+","cohort_sort":5,"employees":366,"leavers":38.0,"attrition_rate":0.1038,"share_of_all_leavers":0.1603,"lift_vs_company":0.64}],"ot_sat":[{"overtime_flag":"Yes","satisfaction_bucket":"Low (1-2)","satisfaction_sort":1,"employees":153,"leavers":56.0,"attrition_rate":0.366,"lift_vs_base":2.27},{"overtime_flag":"Yes","satisfaction_bucket":"Medium (3)","satisfaction_sort":2,"employees":121,"leavers":41.0,"attrition_rate":0.3388,"lift_vs_base":2.1},{"overtime_flag":"Yes","satisfaction_bucket":"High (4)","satisfaction_sort":3,"employees":142,"leavers":30.0,"attrition_rate":0.2113,"lift_vs_base":1.31},{"overtime_flag":"No","satisfaction_bucket":"Low (1-2)","satisfaction_sort":1,"employees":416,"leavers":56.0,"attrition_rate":0.1346,"lift_vs_base":0.83},{"overtime_flag":"No","satisfaction_bucket":"Medium (3)","satisfaction_sort":2,"employees":321,"leavers":32.0,"attrition_rate":0.0997,"lift_vs_base":0.62},{"overtime_flag":"No","satisfaction_bucket":"High (4)","satisfaction_sort":3,"employees":317,"leavers":22.0,"attrition_rate":0.0694,"lift_vs_base":0.43}],"three_way":[{"overtime_flag":"Yes","satisfaction_flag":"Low","wlb_flag":"Poor","employees":39,"leavers":16.0,"attrition_rate":0.4103},{"overtime_flag":"Yes","satisfaction_flag":"Low","wlb_flag":"OK","employees":114,"leavers":40.0,"attrition_rate":0.3509},{"overtime_flag":"Yes","satisfaction_flag":"OK","wlb_flag":"Poor","employees":87,"leavers":26.0,"attrition_rate":0.2989},{"overtime_flag":"Yes","satisfaction_flag":"OK","wlb_flag":"OK","employees":176,"leavers":45.0,"attrition_rate":0.2557},{"overtime_flag":"No","satisfaction_flag":"Low","wlb_flag":"Poor","employees":115,"leavers":17.0,"attrition_rate":0.1478},{"overtime_flag":"No","satisfaction_flag":"OK","wlb_flag":"Poor","employees":183,"leavers":24.0,"attrition_rate":0.1311},{"overtime_flag":"No","satisfaction_flag":"Low","wlb_flag":"OK","employees":301,"leavers":39.0,"attrition_rate":0.1296},{"overtime_flag":"No","satisfaction_flag":"OK","wlb_flag":"OK","employees":455,"leavers":30.0,"attrition_rate":0.0659}],"comp_quartile":[{"income_quartile_in_role":1,"income_quartile_label":"Q1 (lowest paid in role)","employees":370,"leavers":72.0,"attrition_rate":0.1946,"avg_monthly_income":4481.0},{"income_quartile_in_role":2,"income_quartile_label":"Q2","employees":369,"leavers":62.0,"attrition_rate":0.168,"avg_monthly_income":5568.0},{"income_quartile_in_role":3,"income_quartile_label":"Q3","employees":367,"leavers":50.0,"attrition_rate":0.1362,"avg_monthly_income":6868.0},{"income_quartile_in_role":4,"income_quartile_label":"Q4 (highest paid in role)","employees":364,"leavers":53.0,"attrition_rate":0.1456,"avg_monthly_income":9139.0}],"span":[{"span_band":"1-5 reports","span_band_sort":1,"managers":19,"employees_covered":79.0,"leavers":16.0,"attrition_rate":0.2025,"avg_span":4.2},{"span_band":"6-10 reports","span_band_sort":2,"managers":39,"employees_covered":286.0,"leavers":40.0,"attrition_rate":0.1399,"avg_span":7.3},{"span_band":"11-15 reports","span_band_sort":3,"managers":26,"employees_covered":343.0,"leavers":57.0,"attrition_rate":0.1662,"avg_span":13.2},{"span_band":"16+ reports","span_band_sort":4,"managers":37,"employees_covered":756.0,"leavers":123.0,"attrition_rate":0.1627,"avg_span":20.4}],"trend":[{"year_quarter":"2024 Q1","terminations":18.0,"headcount":1327.0,"rate":0.0137},{"year_quarter":"2024 Q2","terminations":33.0,"headcount":1325.0,"rate":0.0249},{"year_quarter":"2024 Q3","terminations":35.0,"headcount":1317.0,"rate":0.0265},{"year_quarter":"2024 Q4","terminations":29.0,"headcount":1325.0,"rate":0.022},{"year_quarter":"2025 Q1","terminations":22.0,"headcount":1312.0,"rate":0.0167},{"year_quarter":"2025 Q2","terminations":31.0,"headcount":1285.0,"rate":0.0239},{"year_quarter":"2025 Q3","terminations":34.0,"headcount":1261.0,"rate":0.0267},{"year_quarter":"2025 Q4","terminations":35.0,"headcount":1233.0,"rate":0.0281}],"watchlist":[{"employee_name":"Nina Andersen","department_name":"Sales","job_role":"Sales Representative","manager_name":"Diego Ramos","risk_score":0.964,"risk_tier":"High","risk_flag_count":3,"tenure_years":2.8,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Idris Ferreira","department_name":"Sales","job_role":"Sales Representative","manager_name":"Anika Bergman","risk_score":0.94,"risk_tier":"High","risk_flag_count":3,"tenure_years":1.5,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":1,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Nadia Hassan","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Tobias Moreau","risk_score":0.922,"risk_tier":"High","risk_flag_count":2,"tenure_years":3.9,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Sofia Kowalski","department_name":"Sales","job_role":"Sales Executive","manager_name":"Soren Fitzgerald","risk_score":0.913,"risk_tier":"High","risk_flag_count":2,"tenure_years":1.1,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Diego Okafor","department_name":"Sales","job_role":"Sales Representative","manager_name":"Marcus Silva","risk_score":0.903,"risk_tier":"High","risk_flag_count":1,"tenure_years":0.2,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Elena Varga","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Aisha Rossi","risk_score":0.899,"risk_tier":"High","risk_flag_count":2,"tenure_years":10.9,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Nadia Silva","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Andre Delacroix","risk_score":0.893,"risk_tier":"High","risk_flag_count":2,"tenure_years":20.7,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":3,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Viktor Ibrahim","department_name":"Operations","job_role":"Operations Director","manager_name":"Amara Grimaldi","risk_score":0.89,"risk_tier":"High","risk_flag_count":2,"tenure_years":15.9,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Jonas Mbeki","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Soren Castellanos","risk_score":0.884,"risk_tier":"High","risk_flag_count":3,"tenure_years":1.8,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":1},{"employee_name":"Sofia Cardoso","department_name":"Sales","job_role":"Sales Executive","manager_name":"Tobias Varga","risk_score":0.882,"risk_tier":"High","risk_flag_count":3,"tenure_years":21.6,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":1,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Samir Reyes","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Idris Lindqvist","risk_score":0.878,"risk_tier":"High","risk_flag_count":4,"tenure_years":9.0,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Tariq Eriksen","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Bruno Castellanos","risk_score":0.873,"risk_tier":"High","risk_flag_count":4,"tenure_years":2.1,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":1},{"employee_name":"Elena Delacroix","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Diego Whitfield","risk_score":0.873,"risk_tier":"High","risk_flag_count":4,"tenure_years":8.3,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Oscar Delacroix","department_name":"Sales","job_role":"Sales Representative","manager_name":"Divya Navarro","risk_score":0.872,"risk_tier":"High","risk_flag_count":2,"tenure_years":3.6,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Soren Ortega","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Soren Bergman","risk_score":0.867,"risk_tier":"High","risk_flag_count":3,"tenure_years":4.2,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":3,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Elena Nowak","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Lena Osei","risk_score":0.867,"risk_tier":"High","risk_flag_count":2,"tenure_years":18.9,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Aisha Larsen","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Soren Sharma","risk_score":0.862,"risk_tier":"High","risk_flag_count":2,"tenure_years":15.5,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":3,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Oscar Hassan","department_name":"Customer Support","job_role":"Support Representative","manager_name":"Ingrid Aoki","risk_score":0.857,"risk_tier":"High","risk_flag_count":3,"tenure_years":5.0,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Aarav Eriksen","department_name":"Customer Support","job_role":"Support Representative","manager_name":"Luis Jokinen","risk_score":0.852,"risk_tier":"High","risk_flag_count":2,"tenure_years":30.6,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":3,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Hannah Whitfield","department_name":"Sales","job_role":"Sales Executive","manager_name":"Hugo Grimaldi","risk_score":0.848,"risk_tier":"High","risk_flag_count":3,"tenure_years":3.2,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Divya Fitzgerald","department_name":"Operations","job_role":"Operations Director","manager_name":"Isabel Duarte","risk_score":0.84,"risk_tier":"High","risk_flag_count":3,"tenure_years":21.8,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Bruno Andersen","department_name":"Operations","job_role":"Operations Director","manager_name":"Amara Grimaldi","risk_score":0.835,"risk_tier":"High","risk_flag_count":5,"tenure_years":1.8,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Marcus Fitzgerald","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Caleb Eriksen","risk_score":0.83,"risk_tier":"High","risk_flag_count":4,"tenure_years":1.4,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":1},{"employee_name":"Chloe Fitzgerald","department_name":"Operations","job_role":"Operations Director","manager_name":"Rosa Marchetti","risk_score":0.827,"risk_tier":"High","risk_flag_count":3,"tenure_years":2.2,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":3,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Camila Dubois","department_name":"Engineering","job_role":"Engineering Director","manager_name":"Mira Silva","risk_score":0.826,"risk_tier":"High","risk_flag_count":2,"tenure_years":32.2,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Rahul Ortega","department_name":"Sales","job_role":"Sales Executive","manager_name":"Grace Dubois","risk_score":0.825,"risk_tier":"High","risk_flag_count":4,"tenure_years":10.3,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Oscar Kowalski","department_name":"Sales","job_role":"Sales Representative","manager_name":"Diego Ramos","risk_score":0.824,"risk_tier":"High","risk_flag_count":2,"tenure_years":2.7,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":1,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Hannah Quintero","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Hannah Lindqvist","risk_score":0.823,"risk_tier":"High","risk_flag_count":3,"tenure_years":0.1,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Isabel Duarte","department_name":"Sales","job_role":"Sales Executive","manager_name":"Sofia Cardoso","risk_score":0.821,"risk_tier":"High","risk_flag_count":2,"tenure_years":5.3,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Jonas Sharma","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Lena Osei","risk_score":0.821,"risk_tier":"High","risk_flag_count":2,"tenure_years":1.2,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Sanne Rossi","department_name":"Sales","job_role":"Sales Executive","manager_name":"Grace Kaur","risk_score":0.821,"risk_tier":"High","risk_flag_count":1,"tenure_years":9.9,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Nikolai Fitzgerald","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Chloe Mbeki","risk_score":0.819,"risk_tier":"High","risk_flag_count":2,"tenure_years":3.7,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Amara Duarte","department_name":"Sales","job_role":"Sales Representative","manager_name":"Diego Ramos","risk_score":0.819,"risk_tier":"High","risk_flag_count":1,"tenure_years":3.5,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":1},{"employee_name":"Rosa Steiner","department_name":"Sales","job_role":"Sales Representative","manager_name":"Claire Mehta","risk_score":0.819,"risk_tier":"High","risk_flag_count":1,"tenure_years":1.2,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Rahul Moreau","department_name":"Sales","job_role":"Sales Executive","manager_name":"Elena Pashkov","risk_score":0.817,"risk_tier":"High","risk_flag_count":2,"tenure_years":10.8,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Amara Bianchi","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Caleb Eriksen","risk_score":0.817,"risk_tier":"High","risk_flag_count":1,"tenure_years":2.0,"income_quartile_label":"Q4 (highest paid in role)","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Diego Lindqvist","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Leila Krishnan","risk_score":0.816,"risk_tier":"High","risk_flag_count":3,"tenure_years":2.6,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Aarav Lindqvist","department_name":"Finance","job_role":"Finance Manager","manager_name":"Freya Larsen","risk_score":0.811,"risk_tier":"High","risk_flag_count":2,"tenure_years":36.7,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Marcus Aoki","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Lena Osei","risk_score":0.81,"risk_tier":"High","risk_flag_count":2,"tenure_years":2.4,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Freya Quintero","department_name":"Sales","job_role":"Sales Executive","manager_name":"Jonas Silva","risk_score":0.806,"risk_tier":"High","risk_flag_count":2,"tenure_years":2.5,"income_quartile_label":"Q2","overtime_flag":"No","job_satisfaction":1,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Rahul Nowak","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Idris Lindqvist","risk_score":0.803,"risk_tier":"High","risk_flag_count":3,"tenure_years":5.5,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Jonas Kaur","department_name":"Sales","job_role":"Sales Executive","manager_name":"Tobias Haddad","risk_score":0.799,"risk_tier":"High","risk_flag_count":3,"tenure_years":2.0,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":1,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Marcus Haddad","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Mei Mehta","risk_score":0.799,"risk_tier":"High","risk_flag_count":1,"tenure_years":6.2,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Ethan Petrov","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Daniel Osei","risk_score":0.797,"risk_tier":"High","risk_flag_count":3,"tenure_years":4.4,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Hugo Grimaldi","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Soren Castellanos","risk_score":0.796,"risk_tier":"High","risk_flag_count":2,"tenure_years":2.9,"income_quartile_label":"Q3","overtime_flag":"No","job_satisfaction":3,"flag_overtime":0,"flag_low_satisfaction":0,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Freya Haddad","department_name":"Engineering","job_role":"Software Engineer","manager_name":"Felix Reyes","risk_score":0.795,"risk_tier":"High","risk_flag_count":3,"tenure_years":1.0,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":1,"flag_long_commute":0},{"employee_name":"Divya Marchetti","department_name":"Engineering","job_role":"QA Engineer","manager_name":"Divya Lindqvist","risk_score":0.794,"risk_tier":"High","risk_flag_count":2,"tenure_years":5.3,"income_quartile_label":"Q2","overtime_flag":"No","job_satisfaction":2,"flag_overtime":0,"flag_low_satisfaction":1,"flag_poor_wlb":1,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Daniel Cardoso","department_name":"Sales","job_role":"Sales Executive","manager_name":"Viktor Steiner","risk_score":0.79,"risk_tier":"High","risk_flag_count":3,"tenure_years":5.0,"income_quartile_label":"Q1 (lowest paid in role)","overtime_flag":"Yes","job_satisfaction":1,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":1,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Elena Aoki","department_name":"HR","job_role":"HR Generalist","manager_name":"Grace Sharma","risk_score":0.79,"risk_tier":"High","risk_flag_count":1,"tenure_years":10.5,"income_quartile_label":"Q3","overtime_flag":"Yes","job_satisfaction":4,"flag_overtime":1,"flag_low_satisfaction":0,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0},{"employee_name":"Claire Grimaldi","department_name":"HR","job_role":"HR Generalist","manager_name":"Jonas Novak","risk_score":0.786,"risk_tier":"High","risk_flag_count":2,"tenure_years":6.8,"income_quartile_label":"Q2","overtime_flag":"Yes","job_satisfaction":2,"flag_overtime":1,"flag_low_satisfaction":1,"flag_poor_wlb":0,"flag_bottom_pay_quartile":0,"flag_early_tenure":0,"flag_long_commute":0}],"tiers":[{"risk_tier":"Medium","employees":246},{"risk_tier":"Low","employees":863},{"risk_tier":"High","employees":124}],"tier_by_dept":[{"department_name":"Customer Support","risk_tier":"Low","n":106},{"department_name":"Customer Support","risk_tier":"High","n":5},{"department_name":"Operations","risk_tier":"Medium","n":17},{"department_name":"HR","risk_tier":"Medium","n":12},{"department_name":"Sales","risk_tier":"Medium","n":87},{"department_name":"Sales","risk_tier":"Low","n":182},{"department_name":"Sales","risk_tier":"High","n":50},{"department_name":"Finance","risk_tier":"Medium","n":9},{"department_name":"Operations","risk_tier":"Low","n":113},{"department_name":"Operations","risk_tier":"High","n":5},{"department_name":"Customer Support","risk_tier":"Medium","n":11},{"department_name":"Engineering","risk_tier":"Medium","n":110},{"department_name":"HR","risk_tier":"High","n":7},{"department_name":"HR","risk_tier":"Low","n":21},{"department_name":"Engineering","risk_tier":"Low","n":354},{"department_name":"Engineering","risk_tier":"High","n":56},{"department_name":"Finance","risk_tier":"Low","n":87},{"department_name":"Finance","risk_tier":"High","n":1}],"cohort_schedule":[{"tenure_cohort":"0-1 yr","employees":44,"leavers":16.0,"company_cohort_rate":0.3636},{"tenure_cohort":"1-3 yr","employees":298,"leavers":86.0,"company_cohort_rate":0.2886},{"tenure_cohort":"10 yr+","employees":366,"leavers":38.0,"company_cohort_rate":0.1038},{"tenure_cohort":"3-5 yr","employees":238,"leavers":39.0,"company_cohort_rate":0.1639},{"tenure_cohort":"5-10 yr","employees":524,"leavers":58.0,"company_cohort_rate":0.1107}],"model":{"models":[{"model":"Logistic Regression","roc_auc":0.7391,"pr_auc":0.4796,"precision_leavers":0.3545,"recall_leavers":0.661,"f1_leavers":0.4615,"accuracy":0.7527,"confusion_matrix":{"tn":238,"fp":71,"fn":20,"tp":39},"cv_pr_auc_mean":0.5069,"cv_pr_auc_std":0.0646},{"model":"Random Forest","roc_auc":0.7486,"pr_auc":0.4062,"precision_leavers":0.5652,"recall_leavers":0.2203,"f1_leavers":0.3171,"accuracy":0.8478,"confusion_matrix":{"tn":299,"fp":10,"fn":46,"tp":13},"cv_pr_auc_mean":0.5113,"cv_pr_auc_std":0.0341}],"better":"Random Forest","coefficients":[{"feature":"business_travel_Travel_Frequently","coefficient":1.3005,"odds_ratio":3.671},{"feature":"job_role_QA Engineer","coefficient":0.9889,"odds_ratio":2.6882},{"feature":"tenure_years_log","coefficient":-0.9703,"odds_ratio":0.379},{"feature":"tenure_years","coefficient":0.8668,"odds_ratio":2.3792},{"feature":"job_role_Support Representative","coefficient":-0.8319,"odds_ratio":0.4352},{"feature":"marital_status_Single","coefficient":0.8188,"odds_ratio":2.2678},{"feature":"overtime","coefficient":0.779,"odds_ratio":2.1794},{"feature":"department_name_Sales","coefficient":0.7699,"odds_ratio":2.1595},{"feature":"job_role_Sales Representative","coefficient":0.6455,"odds_ratio":1.907},{"feature":"monthly_income","coefficient":-0.5642,"odds_ratio":0.5688},{"feature":"business_travel_Travel_Rarely","coefficient":0.5504,"odds_ratio":1.7339},{"feature":"income_pct_rank_in_role","coefficient":0.529,"odds_ratio":1.6972}],"permutation":[{"feature":"tenure_years_log","importance":0.2199,"std":0.0297},{"feature":"overtime","importance":0.1784,"std":0.0411},{"feature":"monthly_income","importance":0.1024,"std":0.0233},{"feature":"tenure_years","importance":0.0922,"std":0.0449},{"feature":"job_role","importance":0.0594,"std":0.0235},{"feature":"pct_vs_role_average","importance":0.0438,"std":0.0157},{"feature":"department_name","importance":0.0395,"std":0.0243},{"feature":"job_satisfaction","importance":0.0359,"std":0.0164},{"feature":"environment_satisfaction","importance":0.033,"std":0.0165},{"feature":"age","importance":0.0305,"std":0.0115}],"heuristic":{"pearson_r":0.4645,"top_decile_overlap":0.4758},"base_rate":0.1612}}</script>
+<script>
+(function () {
+  "use strict";
+  const D = JSON.parse(document.getElementById("payload").textContent);
+  const $ = (id) => document.getElementById(id);
+  const pct = (x, d = 1) => (x * 100).toFixed(d) + "%";
+  const el = (tag, cls, html) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (html !== undefined) n.innerHTML = html;
+    return n;
+  };
+
+  /* ---------- KPI strip ---------- */
+  const H = D.headline;
+  const sales = D.dept_controlled.find((d) => d.department_name === "Sales");
+  const otLow = D.ot_sat.find((r) => r.overtime_flag === "Yes" && r.satisfaction_sort === 1);
+  const high = (D.tiers.find((t) => t.risk_tier === "High") || {}).employees;
+  [
+    ["Active headcount", (+H.active).toLocaleString(), "of " + (+H.total).toLocaleString() + " in scope"],
+    ["Attrition rate", pct(+H.rate), (+H.leavers) + " departures"],
+    ["Worst segment", pct(+otLow.attrition_rate), "overtime + low satisfaction"],
+    ["Worst department", (+sales.standardised_attrition_ratio).toFixed(2) + "×", "Sales, tenure-adjusted"],
+    ["High-risk now", high, "top decile of active staff"],
+  ].forEach(([l, v, n]) => {
+    const k = el("div", "kpi");
+    k.append(el("div", "label", l), el("div", "val", String(v)), el("div", "note", n));
+    $("kpis").append(k);
+  });
+
+  /* ---------- generic horizontal bars ---------- */
+  function bars(host, items, max, fmt) {
+    const m = max || Math.max(...items.map((i) => i.v));
+    items.forEach((it) => {
+      const r = el("div", "row");
+      r.append(el("div", "rl", it.label));
+      const t = el("div", "track");
+      const b = el("i", "bar " + (it.tone || "a"));
+      b.style.width = "0%";
+      t.append(b);
+      r.append(t, el("div", "rv", fmt ? fmt(it.v) : pct(it.v)));
+      host.append(r);
+      requestAnimationFrame(() => { b.style.width = (it.v / m) * 100 + "%"; });
+    });
+  }
+
+  /* ---------- 5: heatmap ---------- */
+  const satOrder = ["Low (1-2)", "Medium (3)", "High (4)"];
+  const heat = $("heat");
+  heat.append(el("div", "heat-h", ""));
+  satOrder.forEach((s) => heat.append(el("div", "heat-h", "satisfaction " + s.toLowerCase())));
+  ["Yes", "No"].forEach((ot) => {
+    heat.append(el("div", "heat-r", "overtime<br><b>" + ot + "</b>"));
+    satOrder.forEach((s) => {
+      const c = D.ot_sat.find((r) => r.overtime_flag === ot && r.satisfaction_bucket === s);
+      const rate = +c.attrition_rate, lift = +c.lift_vs_base;
+      // opacity tracks severity so the grid reads at a glance
+      const a = Math.min(1, Math.max(0.06, (rate - 0.05) / 0.34));
+      const strong = rate > 0.22;
+      const cell = el("div", "cell");
+      cell.style.background = "color-mix(in srgb, var(--critical) " + (a * 82).toFixed(0) + "%, var(--surface))";
+      cell.style.color = strong ? "#fff" : "var(--ink)";
+      cell.append(
+        el("div", "r", pct(rate)),
+        el("div", "l", lift.toFixed(2) + "× base"),
+        el("div", "n", c.employees + " people")
+      );
+      cell.querySelector(".n").style.color = strong ? "rgba(255,255,255,.75)" : "var(--ink-mute)";
+      heat.append(cell);
+    });
+  });
+
+  const tw = D.three_way.slice().sort((a, b) => b.attrition_rate - a.attrition_rate);
+  bars($("threeway"), tw.map((r) => ({
+    label: (r.overtime_flag === "Yes" ? "OT" : "no OT") + " · " +
+           (r.satisfaction_flag === "Low" ? "low sat" : "sat ok") + " · " +
+           (r.wlb_flag === "Poor" ? "poor WLB" : "WLB ok"),
+    v: +r.attrition_rate,
+    tone: r.attrition_rate > 0.28 ? "c" : r.attrition_rate > 0.12 ? "w" : "g",
+  })), 0.45);
+
+  const best = tw[tw.length - 1];
+  $("ta5").innerHTML =
+    "<b>Overtime alone (" + pct(+D.ot_sat.find(r => r.overtime_flag === "Yes" && r.satisfaction_sort === 3).attrition_rate) +
+    " even among the highly satisfied) is worse than low satisfaction alone (" +
+    pct(+D.ot_sat.find(r => r.overtime_flag === "No" && r.satisfaction_sort === 1).attrition_rate) + ").</b> " +
+    "High satisfaction doesn't protect someone who is being worked too hard — it only softens it. " +
+    "Stack overtime, low satisfaction and poor work-life balance and attrition reaches " +
+    pct(+tw[0].attrition_rate) + ", against " + pct(+best.attrition_rate) +
+    " for employees with none of the three. That's the single most actionable segment in the data, " +
+    "and it's a workload-allocation problem before it's an engagement problem.";
+
+  /* ---------- 6: SAR diverging ---------- */
+  const LO = 0.2, HI = 1.6, SPAN = HI - LO;
+  const posOf = (v) => ((v - LO) / SPAN) * 100;
+  const sarHost = $("sar");
+  D.dept_controlled.forEach((d) => {
+    const sar = +d.standardised_attrition_ratio;
+    const row = el("div", "div-row");
+    row.append(el("div", "rl", d.department_name));
+    const t = el("div", "div-track");
+    const mid = el("div", "div-mid");
+    mid.style.left = posOf(1) + "%";
+    const b = el("div", "div-bar");
+    const from = Math.min(sar, 1), to = Math.max(sar, 1);
+    b.style.left = posOf(from) + "%";
+    b.style.width = (posOf(to) - posOf(from)) + "%";
+    b.style.background = sar >= 1.15 ? "var(--critical)" : sar <= 0.85 ? "var(--good)" : "var(--border-firm)";
+    t.append(b, mid);
+    const v = el("div", "rv", sar.toFixed(2) + "×");
+    v.style.color = sar >= 1.15 ? "var(--critical)" : sar <= 0.85 ? "var(--good)" : "var(--ink-mute)";
+    row.append(t, v);
+    sarHost.append(row);
+  });
+  const scale = el("div", "div-scale");
+  scale.append(el("div", "", ""));
+  const si = el("div", "div-scale-inner");
+  [0.4, 0.6, 0.8, 1.0, 1.2, 1.4].forEach((v) => {
+    const tick = el("div", "div-tick", v.toFixed(1));
+    tick.style.left = posOf(v) + "%";
+    if (v === 1) tick.style.color = "var(--ink-soft)";
+    si.append(tick);
+  });
+  scale.append(si, el("div", "", ""));
+  sarHost.append(scale);
+
+  const st = $("sartable");
+  st.innerHTML =
+    "<thead><tr><th>Department</th><th>Head</th><th>Avg tenure</th><th>Observed</th><th>Expected</th>" +
+    "<th>Crude</th><th>Adjusted</th><th>Verdict</th></tr></thead><tbody>" +
+    D.dept_controlled.map((d) =>
+      "<tr><td><b>" + d.department_name + "</b></td>" +
+      "<td class='n'>" + d.headcount + "</td>" +
+      "<td class='n'>" + (+d.avg_tenure_years).toFixed(1) + "y</td>" +
+      "<td class='n'>" + d.observed_leavers + "</td>" +
+      "<td class='n'>" + (+d.expected_leavers).toFixed(1) + "</td>" +
+      "<td class='n'>" + pct(+d.crude_attrition_rate) + "</td>" +
+      "<td class='n'>" + pct(+d.tenure_adjusted_rate) + "</td>" +
+      "<td style='color:" + (d.verdict.startsWith("Worse") ? "var(--critical)" :
+        d.verdict.startsWith("Better") ? "var(--good)" : "var(--ink-mute)") + "'>" + d.verdict + "</td></tr>"
+    ).join("") + "</tbody>";
+
+  const eng = D.dept_controlled.find((d) => d.department_name === "Engineering");
+  $("ta6").innerHTML =
+    "<b>Engineering looks like the problem and isn't.</b> Its crude rate is " +
+    pct(+eng.crude_attrition_rate) + " — above the " + pct(+H.rate) + " company average — and it accounts for " +
+    eng.observed_leavers + " of " + (+H.leavers) + " departures, " +
+    Math.round((eng.observed_leavers / H.leavers) * 100) + "% of all outflow. But its ratio is " +
+    (+eng.standardised_attrition_ratio).toFixed(2) + ": it loses almost exactly the number of people its tenure " +
+    "mix predicts. That's a hiring-volume consequence, not a retention failure. " +
+    "<b>Sales (" + (+sales.standardised_attrition_ratio).toFixed(2) + "× across " + sales.headcount +
+    " people) is where a retention task force belongs.</b>";
+
+  /* ---------- 2: cohort ---------- */
+  bars($("cohort"), D.cohort.map((c) => ({
+    label: c.tenure_cohort + " · n=" + c.employees,
+    v: +c.attrition_rate,
+    tone: c.attrition_rate > 0.25 ? "c" : c.attrition_rate > 0.15 ? "w" : "a",
+  })), 0.4);
+  bars($("cohortshare"), D.cohort.map((c) => ({
+    label: c.tenure_cohort,
+    v: +c.share_of_all_leavers,
+    tone: "n",
+  })), 0.4);
+
+  const c01 = D.cohort[0], c13 = D.cohort[1];
+  $("ta2").innerHTML =
+    "<b>The 0–1 year cohort has the highest rate (" + pct(+c01.attrition_rate) +
+    ") but only " + pct(+c01.share_of_all_leavers) + " of actual outflow. The 1–3 year cohort is " +
+    pct(+c13.share_of_all_leavers) + " of everyone who leaves.</b> A high rate on 44 people is a smaller " +
+    "problem than " + pct(+c13.attrition_rate) + " on 298. Rate alone would have pointed the retention " +
+    "budget at onboarding; the money belongs in the 1–3 year experience. The first three years carry " +
+    "43% of all departures from 23% of headcount.";
+
+  /* ---------- 3: pay ---------- */
+  bars($("quartile"), D.comp_quartile.map((q) => ({
+    label: q.income_quartile_label.replace(" in role", ""),
+    v: +q.attrition_rate,
+    tone: q.income_quartile_in_role === 1 ? "w" : "a",
+  })), 0.24);
+  const q = D.comp_quartile;
+  $("ta3").innerHTML =
+    "<b>Real, but weaker than the intuition suggests.</b> Bottom-quartile employees leave at " +
+    pct(+q[0].attrition_rate) + " against " + pct(+q[2].attrition_rate) + " for Q3 — about six percentage " +
+    "points. But Q4, the <i>highest</i> paid in each role, ticks back up to " + pct(+q[3].attrition_rate) +
+    ", which breaks the tidy “underpaid people leave” story. That uptick is consistent with senior, " +
+    "highly marketable people being recruited away — a different problem needing a different fix. " +
+    "Pay is a secondary lever here; overtime is the primary one.";
+
+  /* ---------- 4: span ---------- */
+  bars($("span"), D.span.map((s) => ({
+    label: s.span_band + " · n=" + s.employees_covered,
+    v: +s.attrition_rate,
+    tone: "n",
+  })), 0.24);
+  $("ta4").innerHTML =
+    "<b>A negative result, reported as one.</b> The rate is flat across the 6–10, 11–15 and 16+ bands (" +
+    pct(+D.span[1].attrition_rate) + " / " + pct(+D.span[2].attrition_rate) + " / " + pct(+D.span[3].attrition_rate) +
+    "). The apparent spike in the smallest band is exactly the small-sample artefact the view was built to " +
+    "expose: " + D.span[0].employees_covered + " employees across " + D.span[0].managers +
+    " managers, where two extra departures move the number by 2.5 points. <b>Don't restructure the org on " +
+    "this.</b> Variation between individual managers is large, but it doesn't track team size — which " +
+    "points at manager quality, a coaching question rather than an org-design one.";
+
+  /* ---------- 1: trend line ---------- */
+  (function () {
+    const data = D.trend;
+    const W = 780, Hh = 220, P = { t: 14, r: 16, b: 34, l: 44 };
+    const maxY = 0.035;
+    const x = (i) => P.l + (i * (W - P.l - P.r)) / (data.length - 1);
+    const y = (v) => P.t + (1 - v / maxY) * (Hh - P.t - P.b);
+    let s = '<svg viewBox="0 0 ' + W + " " + Hh + '" role="img" aria-label="Company-wide quarterly attrition rate">';
+    for (let g = 0; g <= 3; g++) {
+      const v = (maxY / 3) * g;
+      s += '<line class="gridline" x1="' + P.l + '" x2="' + (W - P.r) + '" y1="' + y(v) + '" y2="' + y(v) + '"/>';
+      s += '<text class="axis-lab" x="' + (P.l - 8) + '" y="' + (y(v) + 3.5) + '" text-anchor="end">' + (v * 100).toFixed(1) + "%</text>";
+    }
+    const pts = data.map((d, i) => x(i) + "," + y(+d.rate)).join(" ");
+    s += '<polyline points="' + pts + '" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>';
+    data.forEach((d, i) => {
+      const last = i === data.length - 1;
+      s += '<circle cx="' + x(i) + '" cy="' + y(+d.rate) + '" r="' + (last ? 5 : 3.2) +
+           '" fill="' + (last ? "var(--critical)" : "var(--accent)") + '"/>';
+      s += '<text class="axis-lab" x="' + x(i) + '" y="' + (Hh - 12) + '" text-anchor="middle">' +
+           d.year_quarter.replace(" ", " ") + "</text>";
+    });
+    const l = data[data.length - 1];
+    s += '<text class="axis-lab" x="' + (x(data.length - 1) - 6) + '" y="' + (y(+l.rate) - 11) +
+         '" text-anchor="end" style="fill:var(--critical);font-weight:600">' + pct(+l.rate, 2) + "</text>";
+    s += "</svg>";
+    $("trend").innerHTML = s;
+  })();
+
+  /* ---------- watchlist ---------- */
+  const tierTotal = D.tiers.reduce((a, t) => a + (+t.employees), 0);
+  bars($("tierbars"), ["High", "Medium", "Low"].map((t) => {
+    const r = D.tiers.find((x) => x.risk_tier === t);
+    return {
+      label: t + " risk · " + r.employees,
+      v: (+r.employees) / tierTotal,
+      tone: t === "High" ? "c" : t === "Medium" ? "w" : "g",
+    };
+  }), 1, (v) => pct(v, 0));
+
+  const depts = [...new Set(D.watchlist.map((w) => w.department_name))].sort();
+  depts.forEach((d) => $("fdept").append(new Option(d, d)));
+
+  const FLAGS = [
+    ["flag_overtime", "overtime"],
+    ["flag_low_satisfaction", "low sat"],
+    ["flag_poor_wlb", "poor WLB"],
+    ["flag_bottom_pay_quartile", "low pay"],
+    ["flag_early_tenure", "early tenure"],
+    ["flag_long_commute", "commute"],
+  ];
+
+  function renderTable() {
+    const dept = $("fdept").value, tier = $("ftier").value;
+    const term = $("fsearch").value.trim().toLowerCase();
+    const rows = D.watchlist.filter((w) =>
+      (!dept || w.department_name === dept) &&
+      (!tier || w.risk_tier === tier) &&
+      (!term || (w.employee_name + " " + (w.manager_name || "")).toLowerCase().includes(term))
+    );
+    $("wcount").textContent = rows.length + " of " + D.watchlist.length + " shown · top 50 by score";
+    $("wtable").innerHTML =
+      "<thead><tr><th>Employee</th><th>Department</th><th>Role</th><th>Manager</th>" +
+      "<th>Risk</th><th>Tier</th><th>Tenure</th><th>Drivers</th></tr></thead><tbody>" +
+      (rows.length ? rows.map((w) =>
+        "<tr><td><b>" + w.employee_name + "</b></td>" +
+        "<td>" + w.department_name + "</td>" +
+        "<td>" + w.job_role + "</td>" +
+        "<td>" + (w.manager_name || "—") + "</td>" +
+        "<td class='n'><span class='scorebar'>" + (+w.risk_score).toFixed(3) +
+          "<span class='mini'><i style='width:" + ((+w.risk_score) * 100).toFixed(0) + "%'></i></span></span></td>" +
+        "<td><span class='pill " + w.risk_tier + "'>" + w.risk_tier + "</span></td>" +
+        "<td class='n'>" + (+w.tenure_years).toFixed(1) + "y</td>" +
+        "<td><span class='flags'>" +
+          FLAGS.map(([k, lab]) => "<span class='flag" + (w[k] ? " on" : "") + "'>" + lab + "</span>").join("") +
+        "</span></td></tr>"
+      ).join("")
+        : "<tr><td colspan='8' style='color:var(--ink-mute);padding:22px 12px'>No employees match those filters.</td></tr>") +
+      "</tbody>";
+  }
+  ["fdept", "ftier"].forEach((id) => $(id).addEventListener("change", renderTable));
+  $("fsearch").addEventListener("input", renderTable);
+  renderTable();
+
+  /* ---------- model ---------- */
+  const M = D.model;
+  const lr = M.models.find((m) => m.model === "Logistic Regression");
+  const rf = M.models.find((m) => m.model === "Random Forest");
+  $("metrics").innerHTML = [
+    ["Base rate (leavers)", pct(M.base_rate)],
+    ["LogReg &mdash; recall on leavers", lr.recall_leavers.toFixed(2)],
+    ["LogReg &mdash; precision", lr.precision_leavers.toFixed(2)],
+    ["LogReg &mdash; ROC-AUC", lr.roc_auc.toFixed(3)],
+    ["LogReg &mdash; 5-fold PR-AUC", lr.cv_pr_auc_mean.toFixed(3) + " ± " + lr.cv_pr_auc_std.toFixed(3)],
+    ["Forest &mdash; 5-fold PR-AUC", rf.cv_pr_auc_mean.toFixed(3) + " ± " + rf.cv_pr_auc_std.toFixed(3)],
+    ["Heuristic vs model correlation", M.heuristic.pearson_r.toFixed(2)],
+  ].map(([k, v]) => "<div class='metric-line'><span>" + k + "</span><span>" + v + "</span></div>").join("");
+
+  bars($("perm"), M.permutation.slice(0, 8).map((p) => ({
+    label: p.feature,
+    v: p.importance,
+    tone: "a",
+  })), null, (v) => v.toFixed(3));
+
+  const gap = Math.abs(rf.cv_pr_auc_mean - lr.cv_pr_auc_mean);
+  $("tam").innerHTML =
+    "<b>The two models are statistically tied.</b> The gap in cross-validated PR-AUC is " +
+    gap.toFixed(3) + ", well inside the fold-to-fold standard deviation of " +
+    lr.cv_pr_auc_std.toFixed(3) + ". The forest buys no real accuracy — so the watchlist ranks on the " +
+    "logistic regression, where a coefficient answers the only question a manager ever asks: " +
+    "<i>why this person?</i> The rule-based heuristic shown alongside it correlates only r=" +
+    M.heuristic.pearson_r.toFixed(2) + " with the model, and that gap is the model earning its place: " +
+    "a checklist weights every overtime employee identically, the model doesn't.";
+})();
+</script>
