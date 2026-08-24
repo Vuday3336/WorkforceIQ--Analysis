@@ -1,0 +1,126 @@
+/// Pre-aggregated quarterly + rolling 4-quarter departmental rates.
+table AttritionByDepartment
+	lineageTag: 0465daf1-5407-4e2c-52ce-496661999218
+
+	column department_id
+		dataType: int64
+		lineageTag: 547dce2b-f747-971f-8cb1-9a346a390d48
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: d891fd55-30aa-efa2-7ecc-83516e325efc
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: e297cebb-9293-d0bb-75d9-c890a1ae02f9
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		lineageTag: dcd45f8a-c5ed-4db0-e11e-afc3fc58e5d7
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		lineageTag: cd8c9e24-aa58-7066-5245-319a1e4f4df1
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_quarter
+		dataType: string
+		lineageTag: a688bf11-f5b1-5118-d1c1-1340e48c6728
+		summarizeBy: none
+		sourceColumn: year_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column headcount_start
+		dataType: int64
+		lineageTag: a4a30c88-78e0-d6ec-86e3-8cdbfd3afcf9
+		summarizeBy: none
+		sourceColumn: headcount_start
+
+		annotation SummarizationSetBy = Automatic
+
+	column headcount_end
+		dataType: int64
+		lineageTag: 2d3fe814-0200-8a09-47e3-e23279603e8c
+		summarizeBy: none
+		sourceColumn: headcount_end
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_headcount
+		dataType: double
+		lineageTag: eb131f6d-6539-8690-bae3-aa0070d6795a
+		summarizeBy: none
+		sourceColumn: avg_headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column terminations
+		dataType: int64
+		lineageTag: c35a0f63-2c21-e645-9b66-482b99d802ae
+		summarizeBy: none
+		sourceColumn: terminations
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_rate_qtr
+		dataType: double
+		lineageTag: e3167309-ebcc-4202-14da-cb39600e14b9
+		summarizeBy: none
+		sourceColumn: attrition_rate_qtr
+
+		annotation SummarizationSetBy = Automatic
+
+	column rolling_4q_terminations
+		dataType: int64
+		lineageTag: 3bfa142e-68ca-354a-89f9-ee6a55211c59
+		summarizeBy: none
+		sourceColumn: rolling_4q_terminations
+
+		annotation SummarizationSetBy = Automatic
+
+	column rolling_4q_attrition_rate
+		dataType: double
+		lineageTag: f510cf00-fb91-4faf-502b-946e414f2b74
+		summarizeBy: none
+		sourceColumn: rolling_4q_attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column rolling_window_quarters
+		dataType: int64
+		lineageTag: ed020500-69aa-5661-bc0b-190cfb2b6665
+		summarizeBy: none
+		sourceColumn: rolling_window_quarters
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AttritionByDepartment = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_attrition_by_department"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

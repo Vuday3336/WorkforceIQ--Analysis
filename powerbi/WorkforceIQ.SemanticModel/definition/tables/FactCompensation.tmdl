@@ -1,0 +1,63 @@
+/// Effective-dated salary history (SCD Type 2 pattern).
+table FactCompensation
+	lineageTag: 05d03239-da4c-da25-cafd-2637529e03dd
+
+	column comp_id
+		dataType: int64
+		lineageTag: 2b8f52fd-ea8c-7745-9cb6-c6938edfc403
+		summarizeBy: none
+		sourceColumn: comp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_id
+		dataType: int64
+		lineageTag: 00526a66-08d2-bdcf-5dc3-788a34820e06
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: e0b28707-0fd0-4a76-28c4-f3e3a1d51aac
+		summarizeBy: none
+		sourceColumn: effective_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column monthly_income
+		dataType: int64
+		lineageTag: b2a71598-57ad-f4ad-b550-369ecadabb49
+		summarizeBy: none
+		sourceColumn: monthly_income
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary_hike_pct
+		dataType: double
+		lineageTag: ffa94380-8960-9a79-e312-ee76b3ab1cda
+		summarizeBy: none
+		sourceColumn: salary_hike_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock_option_level
+		dataType: int64
+		lineageTag: 02ba36db-798c-f363-f7a3-a172c9cc5b1e
+		summarizeBy: none
+		sourceColumn: stock_option_level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactCompensation = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="compensation_history"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

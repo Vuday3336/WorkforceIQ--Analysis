@@ -1,0 +1,70 @@
+/// Attrition by manager span-of-control band.
+table SpanBand
+	lineageTag: 531b4fe0-5271-9f0f-bb3d-418090812653
+
+	column span_band
+		dataType: string
+		lineageTag: ed8aa274-84d7-171c-66b9-331ebe98f042
+		summarizeBy: none
+		sourceColumn: span_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column span_band_sort
+		dataType: int64
+		lineageTag: 01638550-7a3b-a3b6-74fb-df46faf99d6a
+		summarizeBy: none
+		sourceColumn: span_band_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column managers
+		dataType: int64
+		lineageTag: 9f05bb5a-eb32-aef2-d9fc-219888126481
+		summarizeBy: none
+		sourceColumn: managers
+
+		annotation SummarizationSetBy = Automatic
+
+	column employees_covered
+		dataType: int64
+		lineageTag: cf83b8e0-cf4b-503b-3b25-202a1a1df5e4
+		summarizeBy: none
+		sourceColumn: employees_covered
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		lineageTag: d02676c8-60ec-5e17-3e38-995ba6cd4ff0
+		summarizeBy: none
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_rate
+		dataType: double
+		lineageTag: bc10cdd2-4ead-2f90-9bad-6895e45060f8
+		summarizeBy: none
+		sourceColumn: attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_span
+		dataType: double
+		lineageTag: f26ae409-db82-5e30-4349-67082d7b5ea8
+		summarizeBy: none
+		sourceColumn: avg_span
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SpanBand = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_attrition_by_span_band"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

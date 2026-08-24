@@ -1,0 +1,86 @@
+/// The headline cross-segment: overtime x satisfaction, with lift.
+table OvertimeSatisfaction
+	lineageTag: 53932163-f979-3d19-9d1c-d433f4d1ee01
+
+	column overtime_flag
+		dataType: string
+		lineageTag: ed91a7b2-c63e-09eb-71c7-53fa3378b86c
+		summarizeBy: none
+		sourceColumn: overtime_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column satisfaction_bucket
+		dataType: string
+		lineageTag: 3c2c9bf9-c54d-e40a-e7b1-6c0dab78797d
+		summarizeBy: none
+		sourceColumn: satisfaction_bucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column satisfaction_sort
+		dataType: int64
+		lineageTag: 0a763052-28b0-ed47-7c09-7b4b8437d627
+		summarizeBy: none
+		sourceColumn: satisfaction_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column employees
+		dataType: int64
+		lineageTag: 56285c7d-bdc8-9ac1-f510-f898e3453484
+		summarizeBy: none
+		sourceColumn: employees
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		lineageTag: 7321ea8a-fb08-7bcd-4cee-3602e15f7f14
+		summarizeBy: none
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_rate
+		dataType: double
+		lineageTag: 5903e4d0-0838-1d98-85e3-6112cf2dec8a
+		summarizeBy: none
+		sourceColumn: attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_base_rate
+		dataType: double
+		lineageTag: f415429c-3336-cd7a-34ea-4c1609974b05
+		summarizeBy: none
+		sourceColumn: company_base_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column lift_vs_base
+		dataType: double
+		lineageTag: 3ff16e9d-c2b8-3ca9-6346-edb1049a5539
+		summarizeBy: none
+		sourceColumn: lift_vs_base
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_reliable_sample
+		dataType: int64
+		lineageTag: bd456606-09de-af5d-f22f-45b6244be559
+		summarizeBy: none
+		sourceColumn: has_reliable_sample
+
+		annotation SummarizationSetBy = Automatic
+
+	partition OvertimeSatisfaction = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_overtime_satisfaction_attrition"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

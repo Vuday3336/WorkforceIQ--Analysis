@@ -1,0 +1,62 @@
+/// Attrition by in-role pay quartile.
+table CompQuartile
+	lineageTag: e672bc6a-011e-87a0-9926-acecec171a9b
+
+	column income_quartile_in_role
+		dataType: int64
+		lineageTag: 171a6ca4-4d72-f76c-760c-f4e825289418
+		summarizeBy: none
+		sourceColumn: income_quartile_in_role
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_quartile_label
+		dataType: string
+		lineageTag: 878c3be6-3aa2-b1a6-bebe-373d307b59c2
+		summarizeBy: none
+		sourceColumn: income_quartile_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column employees
+		dataType: int64
+		lineageTag: 53765c0f-d848-e25c-e837-b196f84e6a7d
+		summarizeBy: none
+		sourceColumn: employees
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		lineageTag: 7c0c1284-5c57-bfa7-95d3-1b16b40acf78
+		summarizeBy: none
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_rate
+		dataType: double
+		lineageTag: 1566b944-a360-9c44-1772-6ab7f6118b89
+		summarizeBy: none
+		sourceColumn: attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_monthly_income
+		dataType: double
+		lineageTag: b46474c6-8c7a-50a3-f81d-444192911a76
+		summarizeBy: none
+		sourceColumn: avg_monthly_income
+
+		annotation SummarizationSetBy = Automatic
+
+	partition CompQuartile = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_attrition_by_comp_quartile"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

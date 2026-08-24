@@ -1,0 +1,222 @@
+/// Measure-only table. Holds every DAX measure so they sit at the top
+/// of the field list instead of being buried inside a data table.
+table Measures
+	lineageTag: da03d3a9-4d2f-e9ad-3454-a972c9c11934
+
+	column _placeholder
+		isHidden
+		dataType: int64
+		lineageTag: 1e50f3e2-16b7-4e6b-dc0f-6c6f3c874591
+		summarizeBy: none
+		sourceColumn: _placeholder
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Every employee in scope, active or departed. The denominator of the crude rate.
+	measure 'Total Headcount' = COUNTROWS ( DimEmployee )
+		formatString: 0
+		displayFolder: Headline
+		lineageTag: 42a3fbce-f335-7d48-c1d0-a356d8879630
+
+	/// Employees still with Everline at the snapshot date.
+	measure 'Active Headcount' = CALCULATE ( COUNTROWS ( DimEmployee ), DimEmployee[current_status] = "Active" )
+		formatString: 0
+		displayFolder: Headline
+		lineageTag: f2595b74-2868-ed6c-def0-bbd38d636533
+
+	/// Departures. Filtered by DimDate through termination_date, so this responds to any date slicer.
+	measure 'Terminated Count' = COUNTROWS ( FactAttrition )
+		formatString: 0
+		displayFolder: Headline
+		lineageTag: 80114b17-6d28-f797-c5db-cd494a6dadce
+
+	/// The crude rate. Correct for an all-time view; use Attrition Rate (Period) inside a date filter, because Total Headcount is not point-in-time.
+	measure 'Attrition Rate' = DIVIDE ( [Terminated Count], [Total Headcount] )
+		formatString: 0.0%
+		displayFolder: Rates
+		lineageTag: 1dee5e77-3357-cefa-1573-85aa474c34b4
+
+	/// Point-in-time headcount at the end of the filtered period: hired on or before, and either still here or terminated after. ALL() is required - without it the employee filter context from the date relationship would restrict this to people who already left.
+	measure 'Headcount (EOP)' =
+			VAR AsOf = MAX ( DimDate[date_key] )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( DimEmployee ),
+			        FILTER (
+			            ALL ( DimEmployee ),
+			            DimEmployee[hire_date] <= AsOf
+			                && ( ISBLANK ( DimEmployee[termination_date] )
+			                     || DimEmployee[termination_date] > AsOf )
+			        )
+			    )
+		formatString: 0
+		displayFolder: Rates
+		lineageTag: 2f64909a-1001-1496-51e0-a757ed255e48
+
+	/// Mean of month-end headcounts across the period. Averaging the endpoints of a shrinking team understates the denominator and overstates its rate.
+	measure 'Avg Headcount (Period)' =
+			AVERAGEX (
+			    FILTER ( VALUES ( DimDate[date_key] ), DimDate[is_month_end] ),
+			    [Headcount (EOP)]
+			)
+		formatString: 0
+		displayFolder: Rates
+		lineageTag: ec1e27e1-be3e-37aa-9069-6f05b8367c56
+
+	/// The rate to use in any date-sliced visual.
+	measure 'Attrition Rate (Period)' = DIVIDE ( [Terminated Count], [Avg Headcount (Period)] )
+		formatString: 0.0%
+		displayFolder: Rates
+		lineageTag: 14e13dc1-88d3-e277-52c2-f525fe7ea6d0
+
+	/// Same period, previous year. Requires DimDate to be marked as the date table.
+	measure 'Attrition Rate LY' = CALCULATE ( [Attrition Rate (Period)], SAMEPERIODLASTYEAR ( DimDate[date_key] ) )
+		formatString: 0.0%
+		displayFolder: Time Intelligence
+		lineageTag: acb419b4-86ad-dbfb-ae5e-69f27cedbab9
+
+	/// Percentage-POINT change year over year, not a percentage change. 16% -> 18% reads as +2.0pp.
+	measure 'YoY Attrition Change' = [Attrition Rate (Period)] - [Attrition Rate LY]
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Time Intelligence
+		lineageTag: e128f051-d64a-005a-4a7c-434cf8fd5b5c
+
+	/// Relative change, for the KPI card subtitle.
+	measure 'YoY Attrition Change %' =
+			DIVIDE (
+			    [Attrition Rate (Period)] - [Attrition Rate LY],
+			    [Attrition Rate LY]
+			)
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Time Intelligence
+		lineageTag: 428416ef-9ec1-b9ac-b8c8-b5c3d3996f61
+
+	/// Year-to-date departures.
+	measure 'YTD Terminations' = TOTALYTD ( [Terminated Count], DimDate[date_key] )
+		formatString: 0
+		displayFolder: Time Intelligence
+		lineageTag: 40f52db6-6793-24eb-39a7-42780bdfffc5
+
+	/// Year-to-date rate against the year-to-date average headcount.
+	measure 'YTD Attrition Rate' =
+			VAR AsOf = MAX ( DimDate[date_key] )
+			VAR YtdDates = DATESYTD ( DimDate[date_key] )
+			VAR Terms = CALCULATE ( [Terminated Count], YtdDates )
+			VAR AvgHead =
+			    AVERAGEX ( FILTER ( YtdDates, DimDate[is_month_end] ), [Headcount (EOP)] )
+			RETURN
+			    DIVIDE ( Terms, AvgHead )
+		formatString: 0.0%
+		displayFolder: Time Intelligence
+		lineageTag: 28dd73f7-194d-1c81-2285-a6bdcd54e8ac
+
+	/// The trend number leadership should actually read. A single month in a 50-person department swings on one resignation; the 12-month window smooths that without hiding a genuine shift.
+	measure 'Rolling 12-Month Attrition Rate' =
+			VAR AsOf = MAX ( DimDate[date_key] )
+			VAR Window = DATESINPERIOD ( DimDate[date_key], AsOf, -12, MONTH )
+			VAR Terms = CALCULATE ( [Terminated Count], Window )
+			VAR AvgHead =
+			    AVERAGEX ( FILTER ( Window, DimDate[is_month_end] ), [Headcount (EOP)] )
+			RETURN
+			    DIVIDE ( Terms, AvgHead )
+		formatString: 0.0%
+		displayFolder: Time Intelligence
+		lineageTag: e49e964f-479f-e336-e030-401e81b16f79
+
+	/// Size of the current High tier watchlist.
+	measure 'High Risk Employees' =
+			CALCULATE (
+			    DISTINCTCOUNT ( RiskScores[employee_id] ),
+			    RiskScores[risk_tier] = "High",
+			    RiskScores[model_name] = "logistic_regression"
+			)
+		formatString: 0
+		displayFolder: Risk
+		lineageTag: 5f36c14c-6a0a-a64d-0462-c773baf3f4c9
+
+	/// Mean modelled probability across the filtered population.
+	measure 'Avg Risk Score' =
+			CALCULATE (
+			    AVERAGE ( RiskScores[risk_score] ),
+			    RiskScores[model_name] = "logistic_regression"
+			)
+		formatString: 0.000
+		displayFolder: Risk
+		lineageTag: 70c182b6-90d2-d712-6613-c6583e52f1f6
+
+	/// The explainable counterpart to the model score: a transparent weighted checklist, shown beside the trained model so the two can be compared. Weights come from the SQL findings - overtime is heaviest because it is the strongest driver. Correlation with the model is only r=0.47, and that gap is the argument for the model.
+	measure 'Flight Risk Score (Rule-Based)' =
+			VAR Overtime  = IF ( SELECTEDVALUE ( DimEmployee[overtime_flag] ) = "Yes", 2.0, 0 )
+			VAR LowSat    = IF ( SELECTEDVALUE ( DimEmployee[job_satisfaction] ) <= 2, 1.5, 0 )
+			VAR PoorWLB   = IF ( SELECTEDVALUE ( DimEmployee[work_life_balance] ) <= 2, 1.0, 0 )
+			VAR LowPay    = IF ( SELECTEDVALUE ( DimEmployee[income_pct_rank_in_role] ) <= 0.25, 1.5, 0 )
+			VAR RiskyTenure =
+			    VAR Tenure = SELECTEDVALUE ( DimEmployee[tenure_years] )
+			    RETURN IF ( Tenure >= 1 && Tenure <= 3, 1.0, 0 )
+			VAR LongCommute = IF ( SELECTEDVALUE ( DimEmployee[distance_from_home] ) >= 20, 0.5, 0 )
+			RETURN
+			    DIVIDE (
+			        Overtime + LowSat + PoorWLB + LowPay + RiskyTenure + LongCommute,
+			        7.5
+			    )
+		formatString: 0.00
+		displayFolder: Risk
+		lineageTag: 3ed2baa5-b8f1-4493-0eb3-a738811b7aa9
+
+	/// Where the model and the human heuristic disagree - the most interesting rows on the Watchlist page.
+	measure 'Risk Score Delta (Model - Rule)' = [Avg Risk Score] - [Flight Risk Score (Rule-Based)]
+		formatString: +0.00;-0.00;0.00
+		displayFolder: Risk
+		lineageTag: c736de46-58fc-c7ec-3295-76a9ca093d1c
+
+	/// Share of the filtered population flagged for overtime.
+	measure 'Overtime %' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( DimEmployee ), DimEmployee[overtime_flag] = "Yes" ),
+			    COUNTROWS ( DimEmployee )
+			)
+		formatString: 0.0%
+		displayFolder: Segments
+		lineageTag: 58e95ae8-f4d9-93f4-5ea2-5f9c7951787a
+
+	/// Share scoring 1-2 out of 4 on job satisfaction.
+	measure 'Low Satisfaction %' =
+			DIVIDE (
+			    CALCULATE ( COUNTROWS ( DimEmployee ), DimEmployee[job_satisfaction] <= 2 ),
+			    COUNTROWS ( DimEmployee )
+			)
+		formatString: 0.0%
+		displayFolder: Segments
+		lineageTag: 4d9d5e84-fd0f-d259-bc68-55368b6d6c32
+
+	/// At termination for leavers, at snapshot for active employees.
+	measure 'Avg Tenure (Years)' = AVERAGE ( DimEmployee[tenure_years] )
+		formatString: 0.0
+		displayFolder: Segments
+		lineageTag: e4c1f40c-3f99-f7dd-75dd-c83fbdf6e979
+
+	/// Point-in-time salary from compensation_history.
+	measure 'Avg Monthly Income' = AVERAGE ( DimEmployee[monthly_income] )
+		formatString: #,0
+		displayFolder: Segments
+		lineageTag: 24e7d628-f064-7a9c-b0f6-34cff49e2bde
+
+	/// How many times the company base rate the current selection runs at. This is the column that turns a table into a decision.
+	measure 'Attrition Lift vs Company' =
+			VAR Segment = [Attrition Rate]
+			VAR Company = CALCULATE ( [Attrition Rate], ALL ( DimEmployee ) )
+			RETURN
+			    DIVIDE ( Segment, Company )
+		formatString: 0.00x
+		displayFolder: Segments
+		lineageTag: 50bbd679-7f4b-b36b-d8eb-b497338e5be7
+
+	partition Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows({{1}}, {"_placeholder"})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table

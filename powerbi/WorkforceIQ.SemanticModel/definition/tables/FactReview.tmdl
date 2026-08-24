@@ -1,0 +1,87 @@
+/// One row per employee per review cycle.
+table FactReview
+	lineageTag: 8c8a4222-bfc6-2f52-69a9-1c6ba5eacd30
+
+	column review_id
+		dataType: int64
+		lineageTag: 31a90aa3-e629-c1ff-091e-be633327e25c
+		summarizeBy: none
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_id
+		dataType: int64
+		lineageTag: f12d63cb-d497-dcb9-eb9e-bb3e66f6eba5
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 77be27aa-5cab-c9c0-e009-2b0871d00b25
+		summarizeBy: none
+		sourceColumn: review_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column performance_rating
+		dataType: int64
+		lineageTag: 2ae631e0-7491-c613-7c05-cdf5c18b35d8
+		summarizeBy: none
+		sourceColumn: performance_rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_satisfaction
+		dataType: int64
+		lineageTag: 1e1161eb-1375-54da-9c94-987d91ef9d8f
+		summarizeBy: none
+		sourceColumn: job_satisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column environment_satisfaction
+		dataType: int64
+		lineageTag: 09b509b4-f56b-f854-3b27-4d5eb1711e1f
+		summarizeBy: none
+		sourceColumn: environment_satisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_life_balance
+		dataType: int64
+		lineageTag: 1ee7d25f-af8f-7432-0c95-c6147e895810
+		summarizeBy: none
+		sourceColumn: work_life_balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column overtime_flag
+		dataType: string
+		lineageTag: 59f167d2-10db-6db5-4aad-0342253815fb
+		summarizeBy: none
+		sourceColumn: overtime_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_id
+		dataType: double
+		lineageTag: 74590f3e-0c2a-3b1d-703d-c0fc54a9b4da
+		summarizeBy: none
+		sourceColumn: manager_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactReview = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="performance_reviews"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

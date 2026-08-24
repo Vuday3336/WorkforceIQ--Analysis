@@ -1,0 +1,78 @@
+/// Attrition by tenure cohort with lift against the company base rate.
+table TenureCohort
+	lineageTag: d370309d-d72d-77b3-a7f5-d9a4d58937ed
+
+	column tenure_cohort
+		dataType: string
+		lineageTag: 02c2589e-3a50-88ef-aeb4-935242983e84
+		summarizeBy: none
+		sourceColumn: tenure_cohort
+
+		annotation SummarizationSetBy = Automatic
+
+	column cohort_sort
+		dataType: int64
+		lineageTag: 2ad1a79d-5703-5ff3-7afb-a0753ba69f61
+		summarizeBy: none
+		sourceColumn: cohort_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column employees
+		dataType: int64
+		lineageTag: 9b3a2422-5873-2589-91fc-051c1b70d1c3
+		summarizeBy: none
+		sourceColumn: employees
+
+		annotation SummarizationSetBy = Automatic
+
+	column leavers
+		dataType: int64
+		lineageTag: 0caaa810-0f28-b1a9-0e78-da86553e71f8
+		summarizeBy: none
+		sourceColumn: leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_rate
+		dataType: double
+		lineageTag: e967eea0-2e44-fad7-3622-6f13768f0a91
+		summarizeBy: none
+		sourceColumn: attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_tenure_years
+		dataType: double
+		lineageTag: 3b0fb582-744e-ecf4-85fb-dcc366b8455d
+		summarizeBy: none
+		sourceColumn: avg_tenure_years
+
+		annotation SummarizationSetBy = Automatic
+
+	column share_of_all_leavers
+		dataType: double
+		lineageTag: 9a7ca911-2508-36be-63cd-268ff48ac611
+		summarizeBy: none
+		sourceColumn: share_of_all_leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column lift_vs_company
+		dataType: double
+		lineageTag: 13173a35-c983-d73e-1576-6116051cd012
+		summarizeBy: none
+		sourceColumn: lift_vs_company
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TenureCohort = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_tenure_cohort_attrition"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

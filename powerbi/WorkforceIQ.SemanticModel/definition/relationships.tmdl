@@ -1,0 +1,23 @@
+relationship 311d28dd-104b-7b71-b109-8e9581601903
+	fromColumn: DimEmployee.department_id
+	toColumn: DimDepartment.department_id
+
+relationship 0b5186e9-e88d-e7e8-13ca-ce63bf0e52bb
+	fromColumn: FactAttrition.employee_id
+	toColumn: DimEmployee.employee_id
+
+relationship f5b11a37-a434-a9c2-143d-f22e30667519
+	fromColumn: FactCompensation.employee_id
+	toColumn: DimEmployee.employee_id
+
+relationship 2f9f88a7-5f45-15c8-3d6e-36dd84e83065
+	fromColumn: FactReview.employee_id
+	toColumn: DimEmployee.employee_id
+
+relationship 6c835b9a-8419-4f71-c0dc-a89f4f24fadf
+	fromColumn: RiskScores.employee_id
+	toColumn: DimEmployee.employee_id
+
+relationship b2075e4b-861a-b838-2ef9-31ca09b6cc00
+	fromColumn: FactAttrition.termination_date
+	toColumn: DimDate.date_key

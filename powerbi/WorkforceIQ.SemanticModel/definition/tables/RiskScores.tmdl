@@ -1,0 +1,55 @@
+/// Model output. Every scoring run is retained so drift stays observable, so filter to the latest scored_date when building visuals.
+table RiskScores
+	lineageTag: baa97fbd-3034-dd5d-ab97-eabd41261d62
+
+	column employee_id
+		dataType: int64
+		lineageTag: b30ec197-8556-f1ae-76ec-fda86cf54a0f
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column scored_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 598cf8b9-0cd1-c4a3-b4d7-1c57b29f6ebc
+		summarizeBy: none
+		sourceColumn: scored_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_score
+		dataType: double
+		lineageTag: 0256d8f7-7f56-6c30-b49a-bb50c9f7cce3
+		summarizeBy: none
+		sourceColumn: risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column risk_tier
+		dataType: string
+		lineageTag: 0f20a097-e60c-5dc2-fa6a-2318c24203af
+		summarizeBy: none
+		sourceColumn: risk_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column model_name
+		dataType: string
+		lineageTag: 1a2e7f0e-0eec-a4c8-3e81-f630f3b246cb
+		summarizeBy: none
+		sourceColumn: model_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RiskScores = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="attrition_risk_scores"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

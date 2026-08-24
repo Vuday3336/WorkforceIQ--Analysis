@@ -1,0 +1,10 @@
+/// Postgres host. Supabase: db.<project-ref>.supabase.co
+/// Change this in Power BI via Transform data > Manage parameters.
+expression ServerName = "db.YOUR_PROJECT_REF.supabase.co" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a6139704-93ec-ab8b-359b-31f54cb13335
+	annotation PBI_ResultType = Text
+
+/// Database name. On Supabase this is always "postgres".
+expression DatabaseName = "postgres" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 2b655a44-bdc5-6ea6-97dd-cdbbcb8f1e78
+	annotation PBI_ResultType = Text

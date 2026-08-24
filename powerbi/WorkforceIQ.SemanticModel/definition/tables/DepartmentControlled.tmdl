@@ -1,0 +1,126 @@
+/// Crude vs tenure-adjusted departmental attrition (indirect standardisation).
+table DepartmentControlled
+	lineageTag: 756c74d8-ea20-4227-d6e2-488f11301b01
+
+	column department_id
+		dataType: int64
+		lineageTag: 8ed856d3-0d77-9e8f-bc4e-5f72979c5012
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: 1705dd22-453d-41bc-7cdf-59a2ebae25b4
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 828ef0d0-745b-c2c7-9c61-967f9011fc2c
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column headcount
+		dataType: int64
+		lineageTag: f0d61d6c-cc8b-ef50-1f69-3ad329b58760
+		summarizeBy: none
+		sourceColumn: headcount
+
+		annotation SummarizationSetBy = Automatic
+
+	column observed_leavers
+		dataType: int64
+		lineageTag: e21ac01a-6de6-ac60-22aa-5fa20dba7fb0
+		summarizeBy: none
+		sourceColumn: observed_leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_leavers
+		dataType: double
+		lineageTag: 181b969c-739b-f0fd-8ebe-557ab1efa347
+		summarizeBy: none
+		sourceColumn: expected_leavers
+
+		annotation SummarizationSetBy = Automatic
+
+	column avg_tenure_years
+		dataType: double
+		lineageTag: bc5f265e-c076-65c0-1de3-f57b1043629e
+		summarizeBy: none
+		sourceColumn: avg_tenure_years
+
+		annotation SummarizationSetBy = Automatic
+
+	column crude_attrition_rate
+		dataType: double
+		lineageTag: 24d3ff1a-e07c-c860-68df-1bc95fb84b70
+		summarizeBy: none
+		sourceColumn: crude_attrition_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column standardised_attrition_ratio
+		dataType: double
+		lineageTag: ca2b335c-b143-3b3d-06e2-d4f740f71ea7
+		summarizeBy: none
+		sourceColumn: standardised_attrition_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_adjusted_rate
+		dataType: double
+		lineageTag: e938c64a-a709-2a15-20f2-e88f5886133b
+		summarizeBy: none
+		sourceColumn: tenure_adjusted_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column mix_effect
+		dataType: double
+		lineageTag: 6142c6cd-14bf-b7ce-ba85-66ab5229101d
+		summarizeBy: none
+		sourceColumn: mix_effect
+
+		annotation SummarizationSetBy = Automatic
+
+	column company_crude_rate
+		dataType: double
+		lineageTag: fca17b82-0c2e-99cc-f5c5-52d3b9d58ba7
+		summarizeBy: none
+		sourceColumn: company_crude_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column verdict
+		dataType: string
+		lineageTag: 0166f0ca-3e1e-9c12-f64d-5a6222f887ed
+		summarizeBy: none
+		sourceColumn: verdict
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_reliable_sample
+		dataType: int64
+		lineageTag: 43760b88-b607-b803-693d-29856e9aecd2
+		summarizeBy: none
+		sourceColumn: has_reliable_sample
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DepartmentControlled = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_department_attrition_controlled"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

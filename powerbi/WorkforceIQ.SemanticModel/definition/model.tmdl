@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+
+	annotation PBI_QueryOrder = ["Measures","DimDate","DimDepartment","DimEmployee","FactAttrition","FactCompensation","FactReview","RiskScores","AttritionByDepartment","TenureCohort","CompQuartile","OvertimeSatisfaction","SpanBand","DepartmentControlled"]
+
+	annotation PBI_ProTooling = ["DaxQueryView","TMDL"]
+
+ref table Measures
+ref table DimDate
+ref table DimDepartment
+ref table DimEmployee
+ref table FactAttrition
+ref table FactCompensation
+ref table FactReview
+ref table RiskScores
+ref table AttritionByDepartment
+ref table TenureCohort
+ref table CompQuartile
+ref table OvertimeSatisfaction
+ref table SpanBand
+ref table DepartmentControlled
+
+ref cultureInfo en-US

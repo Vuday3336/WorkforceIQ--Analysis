@@ -1,0 +1,79 @@
+/// Contiguous 2015-2026 calendar. MARK THIS AS THE DATE TABLE in Power BI (Table tools > Mark as date table > date_key) or every time-intelligence measure below silently returns wrong numbers.
+table DimDate
+	lineageTag: c501efbc-ef9a-ec8d-89d0-e5d891ced24d
+
+	column date_key
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: a479af02-1871-0e2f-fb19-c7eae15284ac
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		lineageTag: c42b7c13-8675-e9a4-9392-caeb012a72c1
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		lineageTag: 6ca05134-d863-9879-371a-e99bf4e617bb
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		lineageTag: 70e00ed9-2bf0-7587-1674-8b46e2d87091
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: 8fb23d63-4323-4b55-761b-f0aa0a70e92c
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_quarter
+		dataType: string
+		lineageTag: fc15523b-7d19-1e31-e10d-f41664970aee
+		summarizeBy: none
+		sourceColumn: year_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: string
+		lineageTag: 9d99eb3d-2905-754a-10e9-fcaf4e41b038
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_month_end
+		dataType: boolean
+		lineageTag: cd11df73-9521-de90-ff90-85528fd5c1ba
+		summarizeBy: none
+		sourceColumn: is_month_end
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="dim_date"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,55 @@
+/// One row per departure. Joined to DimDate on termination_date - this is the relationship every time-intelligence measure travels along.
+table FactAttrition
+	lineageTag: d9bc9879-6a85-6ff3-df61-f454dfc229fa
+
+	column event_id
+		dataType: int64
+		lineageTag: 0a7e1782-51ec-445c-6d2e-cd3254c27621
+		summarizeBy: none
+		sourceColumn: event_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_id
+		dataType: int64
+		lineageTag: 9eab6f1f-f55c-2f7e-6456-e149f4dc7c06
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column termination_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 5bc30eb6-383f-9bbb-ceef-b9aee278f747
+		summarizeBy: none
+		sourceColumn: termination_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_flag
+		dataType: int64
+		lineageTag: 876440f2-728b-65cd-531f-c3e8ef0a4ec1
+		summarizeBy: none
+		sourceColumn: attrition_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column voluntary_flag
+		dataType: int64
+		lineageTag: 081ec233-4835-4897-8af8-9aa60edb8c76
+		summarizeBy: none
+		sourceColumn: voluntary_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAttrition = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="attrition_events"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

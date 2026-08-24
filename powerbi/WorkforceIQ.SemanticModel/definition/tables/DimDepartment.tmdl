@@ -1,0 +1,38 @@
+/// Six Everline Corp departments rolled up to division.
+table DimDepartment
+	lineageTag: 50bd9c18-c4de-d573-2de6-8a534471695f
+
+	column department_id
+		dataType: int64
+		lineageTag: e9e76d9f-9c4c-279f-5904-2955afcd8a04
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: ca1bf96e-907b-6688-dd05-e1c9c8b08899
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 9ddea545-2e57-0edb-d64b-30add999e972
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDepartment = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="departments"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table

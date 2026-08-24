@@ -1,0 +1,321 @@
+/// Conformed wide employee dimension. Pay position and satisfaction are point-in-time correct: as at exit for leavers, as at snapshot for actives.
+table DimEmployee
+	lineageTag: a01bca26-22a0-5376-1ce1-2abb8474150a
+
+	column employee_id
+		dataType: int64
+		lineageTag: ddd314f5-4f8c-5004-985e-5b6df5004881
+		summarizeBy: none
+		sourceColumn: employee_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: cc37407d-1c00-67a3-82f2-f92efdc50519
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: bb31bf1f-e7c2-e347-982d-746edca8c4a0
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column employee_name
+		dataType: string
+		lineageTag: b0f36835-dc28-f755-fb88-16ac9e08c4cf
+		summarizeBy: none
+		sourceColumn: employee_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_id
+		dataType: int64
+		lineageTag: 8e679132-27b0-9579-aaff-b641a658f0e8
+		summarizeBy: none
+		sourceColumn: department_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: a359b094-34d7-9c8d-b8b3-126f66afeffc
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column division
+		dataType: string
+		lineageTag: 6944d63a-2137-b566-ec0e-9573107dcd75
+		summarizeBy: none
+		sourceColumn: division
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_role
+		dataType: string
+		lineageTag: 9e903c1d-074f-c87e-d2d1-8a8711dcea9b
+		summarizeBy: none
+		sourceColumn: job_role
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_level
+		dataType: int64
+		lineageTag: 586870a0-c00c-5fa5-b59e-fd80033aaebe
+		summarizeBy: none
+		sourceColumn: job_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_travel
+		dataType: string
+		lineageTag: 17390c1e-d52b-c9af-2e6a-4604514fd839
+		summarizeBy: none
+		sourceColumn: business_travel
+
+		annotation SummarizationSetBy = Automatic
+
+	column hire_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c7376acd-5246-c10a-2fcd-e643acadfdf2
+		summarizeBy: none
+		sourceColumn: hire_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column termination_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: eddbc4a8-fb5b-b288-c274-d903b8778a7a
+		summarizeBy: none
+		sourceColumn: termination_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column current_status
+		dataType: string
+		lineageTag: 092c18e4-8c1f-391f-9119-f61e9f1439b0
+		summarizeBy: none
+		sourceColumn: current_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column attrition_flag
+		dataType: int64
+		lineageTag: 5d9f02f6-f671-4999-d27d-dd647b344e07
+		summarizeBy: none
+		sourceColumn: attrition_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_years
+		dataType: string
+		lineageTag: 9b15089b-b247-f832-aea9-cdcdb08cec4b
+		summarizeBy: none
+		sourceColumn: tenure_years
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_cohort
+		dataType: string
+		lineageTag: 99d8dfa3-aa52-8dad-fbf5-ad2ce205a383
+		summarizeBy: none
+		sourceColumn: tenure_cohort
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_cohort_sort
+		dataType: int64
+		lineageTag: a80c7173-a364-a1e4-6d85-05ae41bb416d
+		summarizeBy: none
+		sourceColumn: tenure_cohort_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: fb8ac330-511a-4ecc-2177-ca0364bf5e77
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		lineageTag: e98339e2-5c2f-5b64-79b3-f0df63c0238e
+		summarizeBy: none
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column marital_status
+		dataType: string
+		lineageTag: ad8c0726-ef67-11e2-3f39-f8fbbcd2c56a
+		summarizeBy: none
+		sourceColumn: marital_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column education_level
+		dataType: string
+		lineageTag: 81772c00-d53f-ae60-45d1-3514eb3caad0
+		summarizeBy: none
+		sourceColumn: education_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column distance_from_home
+		dataType: int64
+		lineageTag: 9355ae87-296e-efec-53a6-8625bf5f4a36
+		summarizeBy: none
+		sourceColumn: distance_from_home
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_id
+		dataType: double
+		lineageTag: b051e2d9-acc1-9d76-4f0a-956433297c39
+		summarizeBy: none
+		sourceColumn: manager_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column manager_name
+		dataType: string
+		lineageTag: 2a7d95d3-47bb-de3b-e9b8-7751fea77934
+		summarizeBy: none
+		sourceColumn: manager_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column monthly_income
+		dataType: int64
+		lineageTag: 0a0fca5a-01df-a3fb-34c1-eed33dfd13e0
+		summarizeBy: none
+		sourceColumn: monthly_income
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_pct_rank_in_role
+		dataType: string
+		lineageTag: 457f922a-f293-6a65-2172-c4605ccf2c5e
+		summarizeBy: none
+		sourceColumn: income_pct_rank_in_role
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_quartile_in_role
+		dataType: int64
+		lineageTag: f54bb4ce-fec9-7570-e41e-b975ff0a9094
+		summarizeBy: none
+		sourceColumn: income_quartile_in_role
+
+		annotation SummarizationSetBy = Automatic
+
+	column income_quartile_label
+		dataType: string
+		lineageTag: c092c114-d7c7-3096-3809-18070b4ccb00
+		summarizeBy: none
+		sourceColumn: income_quartile_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_vs_role_average
+		dataType: double
+		lineageTag: 167a4423-cc15-6e66-efdc-7b8b2a4194be
+		summarizeBy: none
+		sourceColumn: pct_vs_role_average
+
+		annotation SummarizationSetBy = Automatic
+
+	column stock_option_level
+		dataType: int64
+		lineageTag: 44495bed-0565-90f3-1f50-56a8f75ab650
+		summarizeBy: none
+		sourceColumn: stock_option_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column salary_hike_pct
+		dataType: double
+		lineageTag: a9832e18-666e-f49e-1f54-d7cc14b0d6f8
+		summarizeBy: none
+		sourceColumn: salary_hike_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column latest_review_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 9a21b506-e980-aae7-2058-169de93c1cfd
+		summarizeBy: none
+		sourceColumn: latest_review_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column performance_rating
+		dataType: int64
+		lineageTag: c78f79ff-d085-46ef-0dcc-e51455075e54
+		summarizeBy: none
+		sourceColumn: performance_rating
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_satisfaction
+		dataType: int64
+		lineageTag: cb12fc93-67e6-d4bd-7678-0b8dd4f68936
+		summarizeBy: none
+		sourceColumn: job_satisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column environment_satisfaction
+		dataType: int64
+		lineageTag: 16f35b40-f21b-705f-e559-054ebdfc5596
+		summarizeBy: none
+		sourceColumn: environment_satisfaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_life_balance
+		dataType: int64
+		lineageTag: 6cfbe21d-a528-0d16-39e1-5c4743063c16
+		summarizeBy: none
+		sourceColumn: work_life_balance
+
+		annotation SummarizationSetBy = Automatic
+
+	column overtime_flag
+		dataType: string
+		lineageTag: cccc6e10-8948-fecf-7eb0-f8de4cf0e462
+		summarizeBy: none
+		sourceColumn: overtime_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column voluntary_flag
+		dataType: int64
+		lineageTag: 7abe725b-25bb-af11-058d-e783b912d3ab
+		summarizeBy: none
+		sourceColumn: voluntary_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimEmployee = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database(ServerName, DatabaseName),
+				    Data = Source{[Schema="public",Item="vw_dim_employee"]}[Data]
+				in
+				    Data
+
+	annotation PBI_ResultType = Table
