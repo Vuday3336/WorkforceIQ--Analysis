@@ -1,0 +1,18 @@
+# data pipeline
+pandas>=2.2
+numpy>=1.26
+
+# local SQL validation -- runs the shipped Postgres views without a server
+duckdb>=1.0
+
+# modelling
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# loading into PostgreSQL
+psycopg2-binary>=2.9
+
+# notebook execution
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29

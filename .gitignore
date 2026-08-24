@@ -1,0 +1,19 @@
+# secrets
+.env
+*.pem
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# os
+Thumbs.db
+.DS_Store
+
+# power bi local artefacts
+*.pbix.bak
+powerbi/**/.pbi/localSettings.json
+powerbi/**/.pbi/cache.abf
