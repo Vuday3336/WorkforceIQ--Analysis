@@ -1,0 +1,253 @@
+{
+  "generated_for_snapshot": "2025-12-31",
+  "rows": 1470,
+  "leavers": 237,
+  "base_rate": 0.1612,
+  "test_set_size": 368,
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "roc_auc": 0.7391,
+      "pr_auc": 0.4796,
+      "precision_leavers": 0.3545,
+      "recall_leavers": 0.661,
+      "f1_leavers": 0.4615,
+      "accuracy": 0.7527,
+      "confusion_matrix": {
+        "tn": 238,
+        "fp": 71,
+        "fn": 20,
+        "tp": 39
+      },
+      "cv_pr_auc_mean": 0.5069,
+      "cv_pr_auc_std": 0.0646
+    },
+    {
+      "model": "Random Forest",
+      "roc_auc": 0.7486,
+      "pr_auc": 0.4062,
+      "precision_leavers": 0.5652,
+      "recall_leavers": 0.2203,
+      "f1_leavers": 0.3171,
+      "accuracy": 0.8478,
+      "confusion_matrix": {
+        "tn": 299,
+        "fp": 10,
+        "fn": 46,
+        "tp": 13
+      },
+      "cv_pr_auc_mean": 0.5113,
+      "cv_pr_auc_std": 0.0341
+    }
+  ],
+  "better_cv_pr_auc": "Random Forest",
+  "top_coefficients": [
+    {
+      "feature": "business_travel_Travel_Frequently",
+      "coefficient": 1.3005,
+      "odds_ratio": 3.671
+    },
+    {
+      "feature": "job_role_QA Engineer",
+      "coefficient": 0.9889,
+      "odds_ratio": 2.6882
+    },
+    {
+      "feature": "tenure_years_log",
+      "coefficient": -0.9703,
+      "odds_ratio": 0.379
+    },
+    {
+      "feature": "tenure_years",
+      "coefficient": 0.8668,
+      "odds_ratio": 2.3792
+    },
+    {
+      "feature": "job_role_Support Representative",
+      "coefficient": -0.8319,
+      "odds_ratio": 0.4352
+    },
+    {
+      "feature": "marital_status_Single",
+      "coefficient": 0.8188,
+      "odds_ratio": 2.2678
+    },
+    {
+      "feature": "overtime",
+      "coefficient": 0.779,
+      "odds_ratio": 2.1794
+    },
+    {
+      "feature": "department_name_Sales",
+      "coefficient": 0.7699,
+      "odds_ratio": 2.1595
+    },
+    {
+      "feature": "job_role_Sales Representative",
+      "coefficient": 0.6455,
+      "odds_ratio": 1.907
+    },
+    {
+      "feature": "monthly_income",
+      "coefficient": -0.5642,
+      "odds_ratio": 0.5688
+    },
+    {
+      "feature": "business_travel_Travel_Rarely",
+      "coefficient": 0.5504,
+      "odds_ratio": 1.7339
+    },
+    {
+      "feature": "income_pct_rank_in_role",
+      "coefficient": 0.529,
+      "odds_ratio": 1.6972
+    },
+    {
+      "feature": "pct_vs_role_average",
+      "coefficient": -0.4299,
+      "odds_ratio": 0.6506
+    },
+    {
+      "feature": "environment_satisfaction",
+      "coefficient": -0.4127,
+      "odds_ratio": 0.6618
+    },
+    {
+      "feature": "marital_status_Married",
+      "coefficient": 0.3992,
+      "odds_ratio": 1.4906
+    }
+  ],
+  "random_forest_top_importances": [
+    {
+      "feature": "monthly_income",
+      "importance": 0.0904
+    },
+    {
+      "feature": "tenure_years_log",
+      "importance": 0.0863
+    },
+    {
+      "feature": "tenure_years",
+      "importance": 0.0825
+    },
+    {
+      "feature": "age",
+      "importance": 0.0783
+    },
+    {
+      "feature": "overtime",
+      "importance": 0.0745
+    },
+    {
+      "feature": "pct_vs_role_average",
+      "importance": 0.061
+    },
+    {
+      "feature": "income_pct_rank_in_role",
+      "importance": 0.0578
+    },
+    {
+      "feature": "distance_from_home",
+      "importance": 0.0534
+    },
+    {
+      "feature": "stock_option_level",
+      "importance": 0.0472
+    },
+    {
+      "feature": "manager_span",
+      "importance": 0.0403
+    },
+    {
+      "feature": "job_level",
+      "importance": 0.0356
+    },
+    {
+      "feature": "salary_hike_pct",
+      "importance": 0.0348
+    },
+    {
+      "feature": "environment_satisfaction",
+      "importance": 0.0341
+    },
+    {
+      "feature": "job_satisfaction",
+      "importance": 0.0298
+    },
+    {
+      "feature": "department_name_Sales",
+      "importance": 0.0218
+    }
+  ],
+  "permutation_importance": [
+    {
+      "feature": "tenure_years_log",
+      "importance": 0.2199,
+      "std": 0.0297
+    },
+    {
+      "feature": "overtime",
+      "importance": 0.1784,
+      "std": 0.0411
+    },
+    {
+      "feature": "monthly_income",
+      "importance": 0.1024,
+      "std": 0.0233
+    },
+    {
+      "feature": "tenure_years",
+      "importance": 0.0922,
+      "std": 0.0449
+    },
+    {
+      "feature": "job_role",
+      "importance": 0.0594,
+      "std": 0.0235
+    },
+    {
+      "feature": "pct_vs_role_average",
+      "importance": 0.0438,
+      "std": 0.0157
+    },
+    {
+      "feature": "department_name",
+      "importance": 0.0395,
+      "std": 0.0243
+    },
+    {
+      "feature": "job_satisfaction",
+      "importance": 0.0359,
+      "std": 0.0164
+    },
+    {
+      "feature": "environment_satisfaction",
+      "importance": 0.033,
+      "std": 0.0165
+    },
+    {
+      "feature": "age",
+      "importance": 0.0305,
+      "std": 0.0115
+    },
+    {
+      "feature": "marital_status",
+      "importance": 0.0153,
+      "std": 0.0176
+    },
+    {
+      "feature": "income_pct_rank_in_role",
+      "importance": 0.0132,
+      "std": 0.0202
+    }
+  ],
+  "heuristic_vs_model": {
+    "pearson_r": 0.4645,
+    "top_decile_overlap": 0.4758
+  },
+  "tier_thresholds": {
+    "high_quantile": 0.9,
+    "medium_quantile": 0.7
+  }
+}
