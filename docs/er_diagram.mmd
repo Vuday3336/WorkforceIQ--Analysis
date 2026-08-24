@@ -1,0 +1,74 @@
+erDiagram
+    departments ||--o{ employees : "employs"
+    employees   ||--o{ employees : "manages (self-FK)"
+    employees   ||--o{ compensation_history : "earns over time"
+    employees   ||--o{ performance_reviews : "is reviewed"
+    employees   ||--o| attrition_events : "may depart"
+    employees   ||--o{ attrition_risk_scores : "is scored"
+    dim_date    ||--o{ attrition_events : "dates"
+
+    departments {
+        int department_id PK
+        varchar department_name UK
+        varchar division
+    }
+    employees {
+        int employee_id PK
+        varchar first_name
+        varchar last_name
+        int department_id FK
+        varchar job_role
+        smallint job_level
+        date hire_date
+        varchar gender
+        smallint age
+        varchar marital_status
+        varchar education_level
+        smallint distance_from_home
+        varchar business_travel
+        int manager_id FK "self-referencing"
+        varchar current_status "Active | Terminated"
+    }
+    compensation_history {
+        int comp_id PK
+        int employee_id FK
+        date effective_date "SCD Type 2"
+        int monthly_income
+        numeric salary_hike_pct
+        smallint stock_option_level
+    }
+    performance_reviews {
+        int review_id PK
+        int employee_id FK
+        date review_date
+        smallint performance_rating
+        smallint job_satisfaction
+        smallint environment_satisfaction
+        smallint work_life_balance
+        varchar overtime_flag
+        int manager_id FK "manager at review time"
+    }
+    attrition_events {
+        int event_id PK
+        int employee_id FK UK
+        date termination_date
+        smallint attrition_flag
+        smallint voluntary_flag
+    }
+    attrition_risk_scores {
+        int employee_id PK_FK
+        date scored_date PK
+        varchar model_name PK
+        numeric risk_score
+        varchar risk_tier "Low | Medium | High"
+    }
+    dim_date {
+        date date_key PK
+        smallint year
+        smallint quarter
+        smallint month
+        varchar month_name
+        varchar year_quarter
+        varchar year_month
+        boolean is_month_end
+    }

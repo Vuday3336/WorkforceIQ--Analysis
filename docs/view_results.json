@@ -1,0 +1,796 @@
+{
+  "company_headline": [
+    {
+      "total_employees": 1470,
+      "active_headcount": 1233.0,
+      "leavers": 237.0,
+      "crude_attrition_rate": 0.1612
+    }
+  ],
+  "v1_department_rolling": [
+    {
+      "department_name": "HR",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 40,
+      "terminations": 1,
+      "attrition_rate_qtr": 0.0247,
+      "rolling_4q_terminations": 8.0,
+      "rolling_4q_attrition_rate": 0.1818
+    },
+    {
+      "department_name": "Sales",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 319,
+      "terminations": 13,
+      "attrition_rate_qtr": 0.04,
+      "rolling_4q_terminations": 46.0,
+      "rolling_4q_attrition_rate": 0.1349
+    },
+    {
+      "department_name": "Engineering",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 520,
+      "terminations": 21,
+      "attrition_rate_qtr": 0.0397,
+      "rolling_4q_terminations": 59.0,
+      "rolling_4q_attrition_rate": 0.1082
+    },
+    {
+      "department_name": "Customer Support",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 122,
+      "terminations": 0,
+      "attrition_rate_qtr": 0.0,
+      "rolling_4q_terminations": 4.0,
+      "rolling_4q_attrition_rate": 0.0329
+    },
+    {
+      "department_name": "Operations",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 135,
+      "terminations": 0,
+      "attrition_rate_qtr": 0.0,
+      "rolling_4q_terminations": 4.0,
+      "rolling_4q_attrition_rate": 0.0295
+    },
+    {
+      "department_name": "Finance",
+      "year_quarter": "2025 Q4",
+      "headcount_end": 97,
+      "terminations": 0,
+      "attrition_rate_qtr": 0.0,
+      "rolling_4q_terminations": 1.0,
+      "rolling_4q_attrition_rate": 0.0103
+    }
+  ],
+  "v1_company_trend": [
+    {
+      "year_quarter": "2024 Q1",
+      "terminations": 18.0,
+      "headcount_end": 1327.0,
+      "attrition_rate_qtr": 0.0137
+    },
+    {
+      "year_quarter": "2024 Q2",
+      "terminations": 33.0,
+      "headcount_end": 1325.0,
+      "attrition_rate_qtr": 0.0249
+    },
+    {
+      "year_quarter": "2024 Q3",
+      "terminations": 35.0,
+      "headcount_end": 1317.0,
+      "attrition_rate_qtr": 0.0265
+    },
+    {
+      "year_quarter": "2024 Q4",
+      "terminations": 29.0,
+      "headcount_end": 1325.0,
+      "attrition_rate_qtr": 0.022
+    },
+    {
+      "year_quarter": "2025 Q1",
+      "terminations": 22.0,
+      "headcount_end": 1312.0,
+      "attrition_rate_qtr": 0.0167
+    },
+    {
+      "year_quarter": "2025 Q2",
+      "terminations": 31.0,
+      "headcount_end": 1285.0,
+      "attrition_rate_qtr": 0.0239
+    },
+    {
+      "year_quarter": "2025 Q3",
+      "terminations": 34.0,
+      "headcount_end": 1261.0,
+      "attrition_rate_qtr": 0.0267
+    },
+    {
+      "year_quarter": "2025 Q4",
+      "terminations": 35.0,
+      "headcount_end": 1233.0,
+      "attrition_rate_qtr": 0.0281
+    }
+  ],
+  "v2_tenure_cohort": [
+    {
+      "tenure_cohort": "0-1 yr",
+      "employees": 44,
+      "leavers": 16.0,
+      "attrition_rate": 0.3636,
+      "share_of_all_leavers": 0.0675,
+      "lift_vs_company": 2.26,
+      "avg_tenure_years": 0.5
+    },
+    {
+      "tenure_cohort": "1-3 yr",
+      "employees": 298,
+      "leavers": 86.0,
+      "attrition_rate": 0.2886,
+      "share_of_all_leavers": 0.3629,
+      "lift_vs_company": 1.79,
+      "avg_tenure_years": 1.94
+    },
+    {
+      "tenure_cohort": "3-5 yr",
+      "employees": 238,
+      "leavers": 39.0,
+      "attrition_rate": 0.1639,
+      "share_of_all_leavers": 0.1646,
+      "lift_vs_company": 1.02,
+      "avg_tenure_years": 3.97
+    },
+    {
+      "tenure_cohort": "5-10 yr",
+      "employees": 524,
+      "leavers": 58.0,
+      "attrition_rate": 0.1107,
+      "share_of_all_leavers": 0.2447,
+      "lift_vs_company": 0.69,
+      "avg_tenure_years": 7.07
+    },
+    {
+      "tenure_cohort": "10 yr+",
+      "employees": 366,
+      "leavers": 38.0,
+      "attrition_rate": 0.1038,
+      "share_of_all_leavers": 0.1603,
+      "lift_vs_company": 0.64,
+      "avg_tenure_years": 15.83
+    }
+  ],
+  "v3_comp_quartile": [
+    {
+      "income_quartile_in_role": 1,
+      "income_quartile_label": "Q1 (lowest paid in role)",
+      "employees": 370,
+      "leavers": 72.0,
+      "attrition_rate": 0.1946,
+      "avg_monthly_income": 4481.0
+    },
+    {
+      "income_quartile_in_role": 2,
+      "income_quartile_label": "Q2",
+      "employees": 369,
+      "leavers": 62.0,
+      "attrition_rate": 0.168,
+      "avg_monthly_income": 5568.0
+    },
+    {
+      "income_quartile_in_role": 3,
+      "income_quartile_label": "Q3",
+      "employees": 367,
+      "leavers": 50.0,
+      "attrition_rate": 0.1362,
+      "avg_monthly_income": 6868.0
+    },
+    {
+      "income_quartile_in_role": 4,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "employees": 364,
+      "leavers": 53.0,
+      "attrition_rate": 0.1456,
+      "avg_monthly_income": 9139.0
+    }
+  ],
+  "v3_bottom_decile": [
+    {
+      "band": "Bottom 10% in role",
+      "employees": 152,
+      "leavers": 31.0,
+      "attrition_rate": 0.2039
+    },
+    {
+      "band": "Middle 80%",
+      "employees": 1166,
+      "leavers": 185.0,
+      "attrition_rate": 0.1587
+    },
+    {
+      "band": "Top 10% in role",
+      "employees": 152,
+      "leavers": 21.0,
+      "attrition_rate": 0.1382
+    }
+  ],
+  "v4_span_band": [
+    {
+      "span_band": "1-5 reports",
+      "span_band_sort": 1,
+      "managers": 19,
+      "employees_covered": 79.0,
+      "leavers": 16.0,
+      "attrition_rate": 0.2025,
+      "avg_span": 4.2
+    },
+    {
+      "span_band": "6-10 reports",
+      "span_band_sort": 2,
+      "managers": 39,
+      "employees_covered": 286.0,
+      "leavers": 40.0,
+      "attrition_rate": 0.1399,
+      "avg_span": 7.3
+    },
+    {
+      "span_band": "11-15 reports",
+      "span_band_sort": 3,
+      "managers": 26,
+      "employees_covered": 343.0,
+      "leavers": 57.0,
+      "attrition_rate": 0.1662,
+      "avg_span": 13.2
+    },
+    {
+      "span_band": "16+ reports",
+      "span_band_sort": 4,
+      "managers": 37,
+      "employees_covered": 756.0,
+      "leavers": 123.0,
+      "attrition_rate": 0.1627,
+      "avg_span": 20.4
+    }
+  ],
+  "v4_worst_managers": [
+    {
+      "manager_name": "Soren Castellanos",
+      "department_name": "Engineering",
+      "direct_reports": 20,
+      "reports_lost": 11.0,
+      "team_attrition_rate": 0.55,
+      "span_band": "16+ reports"
+    },
+    {
+      "manager_name": "Rosa Fitzgerald",
+      "department_name": "HR",
+      "direct_reports": 13,
+      "reports_lost": 7.0,
+      "team_attrition_rate": 0.5385,
+      "span_band": "11-15 reports"
+    },
+    {
+      "manager_name": "Diego Ramos",
+      "department_name": "Sales",
+      "direct_reports": 15,
+      "reports_lost": 8.0,
+      "team_attrition_rate": 0.5333,
+      "span_band": "11-15 reports"
+    },
+    {
+      "manager_name": "Claire Mehta",
+      "department_name": "Sales",
+      "direct_reports": 19,
+      "reports_lost": 10.0,
+      "team_attrition_rate": 0.5263,
+      "span_band": "16+ reports"
+    },
+    {
+      "manager_name": "Claire Reyes",
+      "department_name": "Engineering",
+      "direct_reports": 9,
+      "reports_lost": 4.0,
+      "team_attrition_rate": 0.4444,
+      "span_band": "6-10 reports"
+    },
+    {
+      "manager_name": "Andre Nowak",
+      "department_name": "Engineering",
+      "direct_reports": 14,
+      "reports_lost": 6.0,
+      "team_attrition_rate": 0.4286,
+      "span_band": "11-15 reports"
+    },
+    {
+      "manager_name": "Soren Bergman",
+      "department_name": "Engineering",
+      "direct_reports": 22,
+      "reports_lost": 9.0,
+      "team_attrition_rate": 0.4091,
+      "span_band": "16+ reports"
+    },
+    {
+      "manager_name": "Leila Krishnan",
+      "department_name": "Engineering",
+      "direct_reports": 15,
+      "reports_lost": 6.0,
+      "team_attrition_rate": 0.4,
+      "span_band": "11-15 reports"
+    }
+  ],
+  "v5_overtime_satisfaction": [
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_bucket": "Low (1-2)",
+      "employees": 153,
+      "leavers": 56.0,
+      "attrition_rate": 0.366,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 2.27,
+      "has_reliable_sample": 1
+    },
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_bucket": "Medium (3)",
+      "employees": 121,
+      "leavers": 41.0,
+      "attrition_rate": 0.3388,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 2.1,
+      "has_reliable_sample": 1
+    },
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_bucket": "High (4)",
+      "employees": 142,
+      "leavers": 30.0,
+      "attrition_rate": 0.2113,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 1.31,
+      "has_reliable_sample": 1
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_bucket": "Low (1-2)",
+      "employees": 416,
+      "leavers": 56.0,
+      "attrition_rate": 0.1346,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 0.83,
+      "has_reliable_sample": 1
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_bucket": "Medium (3)",
+      "employees": 321,
+      "leavers": 32.0,
+      "attrition_rate": 0.0997,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 0.62,
+      "has_reliable_sample": 1
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_bucket": "High (4)",
+      "employees": 317,
+      "leavers": 22.0,
+      "attrition_rate": 0.0694,
+      "company_base_rate": 0.1612,
+      "lift_vs_base": 0.43,
+      "has_reliable_sample": 1
+    }
+  ],
+  "v5_three_way": [
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_flag": "Low",
+      "wlb_flag": "Poor",
+      "employees": 39,
+      "leavers": 16.0,
+      "attrition_rate": 0.4103
+    },
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_flag": "Low",
+      "wlb_flag": "OK",
+      "employees": 114,
+      "leavers": 40.0,
+      "attrition_rate": 0.3509
+    },
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_flag": "OK",
+      "wlb_flag": "Poor",
+      "employees": 87,
+      "leavers": 26.0,
+      "attrition_rate": 0.2989
+    },
+    {
+      "overtime_flag": "Yes",
+      "satisfaction_flag": "OK",
+      "wlb_flag": "OK",
+      "employees": 176,
+      "leavers": 45.0,
+      "attrition_rate": 0.2557
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_flag": "Low",
+      "wlb_flag": "Poor",
+      "employees": 115,
+      "leavers": 17.0,
+      "attrition_rate": 0.1478
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_flag": "OK",
+      "wlb_flag": "Poor",
+      "employees": 183,
+      "leavers": 24.0,
+      "attrition_rate": 0.1311
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_flag": "Low",
+      "wlb_flag": "OK",
+      "employees": 301,
+      "leavers": 39.0,
+      "attrition_rate": 0.1296
+    },
+    {
+      "overtime_flag": "No",
+      "satisfaction_flag": "OK",
+      "wlb_flag": "OK",
+      "employees": 455,
+      "leavers": 30.0,
+      "attrition_rate": 0.0659
+    }
+  ],
+  "v6_cohort_schedule": [
+    {
+      "tenure_cohort": "0-1 yr",
+      "employees": 44,
+      "leavers": 16.0,
+      "company_cohort_rate": 0.3636
+    },
+    {
+      "tenure_cohort": "1-3 yr",
+      "employees": 298,
+      "leavers": 86.0,
+      "company_cohort_rate": 0.2886
+    },
+    {
+      "tenure_cohort": "10 yr+",
+      "employees": 366,
+      "leavers": 38.0,
+      "company_cohort_rate": 0.1038
+    },
+    {
+      "tenure_cohort": "3-5 yr",
+      "employees": 238,
+      "leavers": 39.0,
+      "company_cohort_rate": 0.1639
+    },
+    {
+      "tenure_cohort": "5-10 yr",
+      "employees": 524,
+      "leavers": 58.0,
+      "company_cohort_rate": 0.1107
+    }
+  ],
+  "v6_controlled": [
+    {
+      "department_name": "HR",
+      "headcount": 52,
+      "avg_tenure_years": 5.83,
+      "observed_leavers": 12.0,
+      "expected_leavers": 8.6,
+      "crude_attrition_rate": 0.2308,
+      "standardised_attrition_ratio": 1.396,
+      "tenure_adjusted_rate": 0.225,
+      "mix_effect": 0.0058,
+      "verdict": "Worse than tenure predicts",
+      "has_reliable_sample": 0
+    },
+    {
+      "department_name": "Sales",
+      "headcount": 409,
+      "avg_tenure_years": 7.08,
+      "observed_leavers": 90.0,
+      "expected_leavers": 66.1,
+      "crude_attrition_rate": 0.22,
+      "standardised_attrition_ratio": 1.361,
+      "tenure_adjusted_rate": 0.2194,
+      "mix_effect": 0.0006,
+      "verdict": "Worse than tenure predicts",
+      "has_reliable_sample": 1
+    },
+    {
+      "department_name": "Engineering",
+      "headcount": 631,
+      "avg_tenure_years": 6.32,
+      "observed_leavers": 111.0,
+      "expected_leavers": 109.7,
+      "crude_attrition_rate": 0.1759,
+      "standardised_attrition_ratio": 1.012,
+      "tenure_adjusted_rate": 0.1632,
+      "mix_effect": 0.0127,
+      "verdict": "In line with tenure mix",
+      "has_reliable_sample": 1
+    },
+    {
+      "department_name": "Operations",
+      "headcount": 145,
+      "avg_tenure_years": 8.1,
+      "observed_leavers": 10.0,
+      "expected_leavers": 20.4,
+      "crude_attrition_rate": 0.069,
+      "standardised_attrition_ratio": 0.49,
+      "tenure_adjusted_rate": 0.0791,
+      "mix_effect": -0.0101,
+      "verdict": "Better than tenure predicts",
+      "has_reliable_sample": 1
+    },
+    {
+      "department_name": "Customer Support",
+      "headcount": 131,
+      "avg_tenure_years": 8.85,
+      "observed_leavers": 9.0,
+      "expected_leavers": 18.5,
+      "crude_attrition_rate": 0.0687,
+      "standardised_attrition_ratio": 0.486,
+      "tenure_adjusted_rate": 0.0783,
+      "mix_effect": -0.0096,
+      "verdict": "Better than tenure predicts",
+      "has_reliable_sample": 1
+    },
+    {
+      "department_name": "Finance",
+      "headcount": 102,
+      "avg_tenure_years": 14.95,
+      "observed_leavers": 5.0,
+      "expected_leavers": 13.7,
+      "crude_attrition_rate": 0.049,
+      "standardised_attrition_ratio": 0.366,
+      "tenure_adjusted_rate": 0.0589,
+      "mix_effect": -0.0099,
+      "verdict": "Better than tenure predicts",
+      "has_reliable_sample": 1
+    }
+  ],
+  "v7_watchlist": [
+    {
+      "employee_name": "Nina Andersen",
+      "department_name": "Sales",
+      "job_role": "Sales Representative",
+      "manager_name": "Diego Ramos",
+      "risk_score": 0.964,
+      "risk_tier": "High",
+      "risk_flag_count": 3,
+      "tenure_years": 2.82,
+      "income_quartile_label": "Q2",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Idris Ferreira",
+      "department_name": "Sales",
+      "job_role": "Sales Representative",
+      "manager_name": "Anika Bergman",
+      "risk_score": 0.94,
+      "risk_tier": "High",
+      "risk_flag_count": 3,
+      "tenure_years": 1.52,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "No",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Nadia Hassan",
+      "department_name": "Engineering",
+      "job_role": "QA Engineer",
+      "manager_name": "Tobias Moreau",
+      "risk_score": 0.922,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 3.91,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Sofia Kowalski",
+      "department_name": "Sales",
+      "job_role": "Sales Executive",
+      "manager_name": "Soren Fitzgerald",
+      "risk_score": 0.913,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 1.1,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 4
+    },
+    {
+      "employee_name": "Diego Okafor",
+      "department_name": "Sales",
+      "job_role": "Sales Representative",
+      "manager_name": "Marcus Silva",
+      "risk_score": 0.903,
+      "risk_tier": "High",
+      "risk_flag_count": 1,
+      "tenure_years": 0.18,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "No",
+      "job_satisfaction": 3
+    },
+    {
+      "employee_name": "Elena Varga",
+      "department_name": "Engineering",
+      "job_role": "QA Engineer",
+      "manager_name": "Aisha Rossi",
+      "risk_score": 0.899,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 10.87,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Nadia Silva",
+      "department_name": "Engineering",
+      "job_role": "Software Engineer",
+      "manager_name": "Andre Delacroix",
+      "risk_score": 0.893,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 20.72,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 3
+    },
+    {
+      "employee_name": "Viktor Ibrahim",
+      "department_name": "Operations",
+      "job_role": "Operations Director",
+      "manager_name": "Amara Grimaldi",
+      "risk_score": 0.89,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 15.93,
+      "income_quartile_label": "Q2",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Jonas Mbeki",
+      "department_name": "Engineering",
+      "job_role": "Software Engineer",
+      "manager_name": "Soren Castellanos",
+      "risk_score": 0.884,
+      "risk_tier": "High",
+      "risk_flag_count": 3,
+      "tenure_years": 1.8,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 4
+    },
+    {
+      "employee_name": "Sofia Cardoso",
+      "department_name": "Sales",
+      "job_role": "Sales Executive",
+      "manager_name": "Tobias Varga",
+      "risk_score": 0.882,
+      "risk_tier": "High",
+      "risk_flag_count": 3,
+      "tenure_years": 21.62,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "No",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Samir Reyes",
+      "department_name": "Engineering",
+      "job_role": "Software Engineer",
+      "manager_name": "Idris Lindqvist",
+      "risk_score": 0.878,
+      "risk_tier": "High",
+      "risk_flag_count": 4,
+      "tenure_years": 9.04,
+      "income_quartile_label": "Q1 (lowest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Tariq Eriksen",
+      "department_name": "Engineering",
+      "job_role": "QA Engineer",
+      "manager_name": "Bruno Castellanos",
+      "risk_score": 0.873,
+      "risk_tier": "High",
+      "risk_flag_count": 4,
+      "tenure_years": 2.12,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Elena Delacroix",
+      "department_name": "Engineering",
+      "job_role": "Software Engineer",
+      "manager_name": "Diego Whitfield",
+      "risk_score": 0.873,
+      "risk_tier": "High",
+      "risk_flag_count": 4,
+      "tenure_years": 8.31,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    },
+    {
+      "employee_name": "Oscar Delacroix",
+      "department_name": "Sales",
+      "job_role": "Sales Representative",
+      "manager_name": "Divya Navarro",
+      "risk_score": 0.872,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 3.63,
+      "income_quartile_label": "Q3",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 4
+    },
+    {
+      "employee_name": "Elena Nowak",
+      "department_name": "Engineering",
+      "job_role": "QA Engineer",
+      "manager_name": "Lena Osei",
+      "risk_score": 0.867,
+      "risk_tier": "High",
+      "risk_flag_count": 2,
+      "tenure_years": 18.85,
+      "income_quartile_label": "Q4 (highest paid in role)",
+      "overtime_flag": "Yes",
+      "job_satisfaction": 1
+    }
+  ],
+  "v7_tiers": [
+    {
+      "model_name": "logistic_regression",
+      "risk_tier": "High",
+      "employees": 124,
+      "avg_score": 0.7713
+    },
+    {
+      "model_name": "logistic_regression",
+      "risk_tier": "Medium",
+      "employees": 246,
+      "avg_score": 0.544
+    },
+    {
+      "model_name": "logistic_regression",
+      "risk_tier": "Low",
+      "employees": 863,
+      "avg_score": 0.2137
+    },
+    {
+      "model_name": "random_forest",
+      "risk_tier": "High",
+      "employees": 124,
+      "avg_score": 0.3753
+    },
+    {
+      "model_name": "random_forest",
+      "risk_tier": "Medium",
+      "employees": 246,
+      "avg_score": 0.2197
+    },
+    {
+      "model_name": "random_forest",
+      "risk_tier": "Low",
+      "employees": 863,
+      "avg_score": 0.0945
+    }
+  ]
+}
