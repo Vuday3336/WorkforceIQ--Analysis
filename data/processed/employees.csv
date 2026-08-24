@@ -1,0 +1,1471 @@
+employee_id,first_name,last_name,department_id,job_role,job_level,hire_date,gender,age,marital_status,education_level,distance_from_home,business_travel,manager_id,current_status
+1,Leila,Halvorsen,1,Sales Executive,2,2018-01-12,Female,41,Single,College,1,Travel_Rarely,2056,Terminated
+2,Rahul,Larsen,2,Software Engineer,2,2015-03-21,Male,49,Married,Below College,8,Travel_Frequently,638,Active
+4,Aarav,Fitzgerald,2,QA Engineer,1,2024-03-12,Male,37,Single,College,2,Travel_Rarely,1837,Terminated
+5,Mei,Castellanos,2,Software Engineer,1,2017-02-16,Female,33,Married,Master,3,Travel_Frequently,730,Active
+7,Grace,Simonsen,2,QA Engineer,1,2023-06-15,Male,27,Married,Below College,2,Travel_Rarely,1523,Active
+8,Isabel,Silva,2,QA Engineer,1,2018-08-12,Male,32,Single,College,2,Travel_Frequently,901,Active
+10,Ethan,Marchetti,2,QA Engineer,1,2024-12-02,Female,59,Married,Bachelor,3,Travel_Rarely,1608,Active
+11,Viktor,Andersen,2,QA Engineer,1,2024-10-13,Male,30,Divorced,Below College,24,Travel_Rarely,1317,Active
+12,Sanne,Dubois,5,Operations Director,3,2016-06-23,Male,38,Single,Bachelor,23,Travel_Frequently,1367,Active
+13,Zara,Haddad,6,Support Representative,2,2018-04-17,Male,36,Married,Bachelor,27,Travel_Rarely,119,Active
+14,Leila,Halvorsen,2,QA Engineer,1,2020-07-10,Male,35,Married,Bachelor,16,Travel_Rarely,1250,Active
+15,Mira,Eriksen,2,QA Engineer,2,2016-10-14,Female,29,Single,College,15,Travel_Rarely,1608,Active
+16,Felix,Nakamura,2,Software Engineer,1,2020-02-27,Male,31,Divorced,Below College,26,Travel_Rarely,815,Active
+18,Zara,Petrov,2,QA Engineer,1,2023-08-23,Male,34,Divorced,College,19,Travel_Rarely,1422,Active
+19,Mira,Vandenberg,2,QA Engineer,1,2020-02-24,Male,28,Single,Bachelor,24,Travel_Rarely,575,Terminated
+20,Andre,Andersen,5,Operations Director,3,2015-12-20,Female,29,Divorced,Master,21,Travel_Rarely,1005,Active
+21,Divya,Lombardi,2,Software Engineer,1,2019-06-28,Male,32,Divorced,College,5,Travel_Rarely,901,Active
+22,Elena,Whitfield,2,QA Engineer,1,2024-11-22,Male,22,Divorced,College,16,Non-Travel,468,Active
+23,Marcus,Ferreira,4,Finance Manager,4,2000-07-24,Female,53,Married,Master,2,Travel_Rarely,374,Active
+24,Yuki,Castellanos,2,Software Engineer,1,2022-11-22,Male,38,Single,Bachelor,2,Travel_Rarely,1128,Active
+26,Andre,Navarro,5,Operations Director,2,2021-09-06,Female,24,Divorced,College,11,Non-Travel,1360,Active
+27,Chloe,Sharma,1,Sales Representative,1,2020-04-25,Male,36,Single,Master,9,Travel_Rarely,244,Terminated
+28,Divya,Krishnan,2,Engineering Director,3,2013-07-10,Female,34,Single,Master,7,Travel_Rarely,396,Active
+30,Lena,Aoki,2,Software Engineer,1,2025-08-26,Male,21,Single,College,15,Travel_Rarely,1485,Active
+31,Divya,Rossi,2,Software Engineer,1,2019-12-04,Male,34,Single,Below College,6,Travel_Rarely,1422,Terminated
+32,Freya,Okafor,4,Finance Manager,5,2011-02-05,Female,53,Divorced,Bachelor,5,Travel_Rarely,140,Active
+33,Freya,Quintero,2,Software Engineer,1,2013-07-27,Female,32,Single,Below College,16,Travel_Frequently,901,Terminated
+35,Zara,Bakker,1,Sales Executive,2,2016-11-13,Male,42,Married,Master,8,Travel_Rarely,1975,Active
+36,Felix,Lindqvist,6,Support Representative,3,2003-05-18,Female,44,Married,Master,7,Travel_Rarely,1606,Active
+38,Samir,Lombardi,4,Finance Manager,5,2023-03-12,Female,46,Single,Master,2,Travel_Rarely,140,Active
+39,Sanne,Reyes,2,QA Engineer,1,2024-10-08,Male,33,Single,Bachelor,2,Travel_Rarely,730,Active
+40,Peter,Moreau,6,Support Representative,2,2021-11-20,Male,44,Married,Master,10,Travel_Rarely,1661,Active
+41,Leila,Bianchi,2,QA Engineer,1,2015-04-14,Male,30,Single,College,9,Travel_Rarely,1317,Active
+42,Bruno,Halvorsen,1,Sales Representative,2,2023-10-25,Male,39,Married,Bachelor,5,Travel_Rarely,2056,Terminated
+45,Bruno,Ibrahim,2,Software Engineer,1,2021-11-17,Male,24,Married,Bachelor,1,Travel_Rarely,1666,Terminated
+46,Camila,Andersen,2,Software Engineer,1,2020-08-13,Female,43,Divorced,College,2,Travel_Rarely,999,Active
+47,Mira,Bergman,1,Sales Representative,1,2022-01-14,Male,50,Married,College,3,Travel_Rarely,118,Terminated
+49,Chloe,Vandenberg,1,Sales Representative,1,2023-08-18,Female,35,Married,Bachelor,2,Travel_Rarely,244,Active
+51,Yuki,Fitzgerald,2,Software Engineer,1,2024-01-24,Female,36,Married,Master,5,Travel_Rarely,1424,Active
+52,Chloe,Reyes,1,Sales Executive,2,2020-05-13,Female,33,Married,Bachelor,1,Travel_Frequently,862,Active
+53,Viktor,Lombardi,2,QA Engineer,1,2024-05-17,Male,35,Divorced,College,4,Travel_Rarely,1250,Active
+54,Nadia,Pashkov,2,QA Engineer,1,2024-08-12,Female,27,Divorced,Master,2,Travel_Rarely,1523,Active
+55,Marcus,Rossi,2,QA Engineer,1,2023-08-08,Male,26,Single,Bachelor,25,Travel_Rarely,661,Terminated
+56,Ethan,Steiner,1,Sales Executive,3,2016-06-18,Male,27,Single,Bachelor,8,Travel_Frequently,1167,Active
+57,Peter,Navarro,2,QA Engineer,2,2013-04-15,Female,30,Single,College,1,Travel_Frequently,1608,Active
+58,Isabel,Hassan,2,Engineering Director,5,2003-05-05,Female,41,Married,Bachelor,12,Travel_Rarely,1770,Terminated
+60,Isabel,Halvorsen,1,Sales Executive,2,2016-04-19,Male,34,Single,Master,23,Non-Travel,862,Active
+61,Tariq,Quintero,2,Software Engineer,1,2024-02-10,Male,37,Married,College,19,Travel_Rarely,1837,Active
+62,Sanne,Rossi,1,Sales Executive,2,2016-01-23,Male,46,Single,Master,5,Travel_Frequently,1975,Active
+63,Diego,Bergman,2,QA Engineer,1,2024-10-13,Male,35,Married,Below College,8,Travel_Rarely,1250,Active
+64,Nikolai,Novak,2,QA Engineer,3,2023-02-16,Male,48,Single,College,1,Travel_Rarely,1061,Terminated
+65,Viktor,Kaur,2,QA Engineer,1,2022-10-12,Male,28,Single,Master,5,Travel_Rarely,575,Terminated
+68,Tariq,Marchetti,1,Sales Executive,2,2021-10-04,Female,44,Divorced,Doctor,1,Travel_Rarely,1975,Active
+70,Yuki,Whitfield,6,Support Representative,3,2021-08-30,Male,35,Married,College,11,Non-Travel,431,Active
+72,Samir,Castellanos,1,Sales Executive,2,2023-12-09,Female,26,Married,Bachelor,23,Travel_Rarely,2055,Active
+73,Yuki,Mbeki,2,Engineering Director,3,2010-04-13,Female,33,Single,College,1,Travel_Frequently,638,Active
+74,Tobias,Simonsen,1,Sales Executive,3,2016-09-04,Male,35,Married,Doctor,18,Travel_Frequently,1863,Active
+75,Tariq,Eriksen,2,QA Engineer,1,2023-11-18,Female,35,Married,Master,23,Travel_Rarely,1250,Active
+76,Ethan,Lindqvist,2,QA Engineer,2,2018-11-08,Male,31,Divorced,Master,7,Travel_Rarely,1789,Active
+77,Anika,Vandenberg,5,Operations Director,2,2018-09-08,Male,37,Divorced,Master,1,Travel_Rarely,601,Active
+78,Claire,Kaur,5,Operations Director,2,2016-06-21,Male,32,Married,Bachelor,1,Travel_Rarely,1283,Active
+79,Fatima,Hassan,2,QA Engineer,2,2015-09-01,Female,38,Single,Doctor,29,Travel_Frequently,1867,Active
+80,Mira,Silva,2,Engineering Director,5,1998-02-21,Female,50,Divorced,College,7,Travel_Rarely,825,Active
+81,Sofia,Cardoso,1,Sales Executive,3,2004-05-19,Female,59,Single,Bachelor,25,Travel_Rarely,1372,Active
+83,Mei,Vandenberg,6,Support Representative,3,2008-10-27,Female,36,Divorced,Bachelor,8,Travel_Rarely,431,Active
+84,Aisha,Navarro,4,Finance Manager,4,2020-11-13,Female,55,Divorced,Bachelor,8,Travel_Rarely,1338,Active
+85,Idris,Mbeki,5,Operations Director,2,2019-01-25,Male,36,Single,Bachelor,11,Travel_Frequently,1026,Active
+86,Oscar,Quintero,2,Software Engineer,3,2024-06-25,Male,45,Divorced,Bachelor,7,Travel_Rarely,1061,Active
+88,Grace,Mbeki,2,Software Engineer,1,2022-07-11,Male,35,Married,Bachelor,1,Travel_Frequently,1250,Active
+90,Lena,Ortega,2,Software Engineer,1,2024-01-02,Male,36,Married,Bachelor,9,Travel_Rarely,1424,Terminated
+91,Nadia,Mbeki,1,Sales Executive,2,2021-04-24,Female,59,Single,Below College,1,Travel_Frequently,1167,Active
+94,Nina,Osei,2,Software Engineer,1,2020-09-30,Male,29,Married,Bachelor,2,Travel_Rarely,1539,Active
+95,Leila,Tanaka,2,Software Engineer,1,2024-08-02,Male,31,Single,Master,1,Travel_Rarely,997,Active
+96,Isabel,Bergman,2,Software Engineer,2,2015-09-12,Male,32,Married,Bachelor,1,Travel_Rarely,1217,Active
+97,Chloe,Novak,2,QA Engineer,1,2024-08-11,Female,36,Married,Bachelor,6,Travel_Rarely,1424,Active
+98,Tobias,Eriksen,5,Operations Director,2,2014-05-23,Female,31,Single,Master,8,Travel_Rarely,1283,Active
+100,Diego,Grimaldi,1,Sales Executive,2,2010-05-18,Male,35,Single,Master,1,Travel_Rarely,1070,Active
+101,Samir,Bakker,2,Engineering Director,3,2025-08-20,Male,45,Married,Master,6,Travel_Rarely,1061,Active
+102,Ingrid,Moreau,2,Engineering Director,3,2020-01-28,Male,37,Single,Master,7,Travel_Rarely,396,Active
+103,Idris,Nakamura,3,HR Generalist,2,2021-01-06,Male,46,Divorced,College,5,Travel_Rarely,1744,Active
+104,Priya,Bakker,2,QA Engineer,2,2015-10-22,Male,30,Married,Below College,1,Travel_Rarely,1608,Active
+105,Chloe,Petrov,2,Software Engineer,1,2019-07-26,Male,35,Single,Bachelor,1,Travel_Rarely,1250,Active
+106,Aisha,Ibrahim,1,Sales Executive,3,2024-04-06,Male,55,Married,College,1,Travel_Rarely,1372,Active
+107,Jonas,Okafor,2,Software Engineer,2,2012-12-21,Female,38,Divorced,Bachelor,6,Non-Travel,1867,Active
+110,Daniel,Vandenberg,5,Operations Director,2,2020-02-25,Male,34,Married,College,1,Travel_Rarely,1026,Active
+112,Ethan,Bergman,5,Operations Director,3,2019-07-13,Male,56,Single,Bachelor,7,Travel_Rarely,1775,Active
+113,Samir,Ramos,1,Sales Representative,1,2025-02-12,Male,23,Divorced,Below College,2,Travel_Rarely,1869,Active
+116,Sanne,Silva,2,QA Engineer,1,2021-04-28,Male,51,Married,Master,9,Travel_Rarely,58,Active
+117,Diego,Ibrahim,6,Support Representative,2,2014-05-03,Male,30,Married,Bachelor,2,Travel_Rarely,165,Active
+118,Anika,Bergman,1,Sales Executive,3,2015-06-15,Male,46,Single,College,9,Travel_Rarely,1138,Terminated
+119,Fatima,Novak,6,Support Representative,4,2003-10-27,Male,40,Married,Master,1,Travel_Frequently,1278,Active
+120,Bruno,Navarro,1,Sales Executive,2,2015-02-07,Male,51,Single,Master,21,Travel_Rarely,986,Active
+121,Tariq,Tanaka,1,Sales Executive,2,2014-07-23,Female,30,Divorced,College,4,Travel_Rarely,1319,Active
+124,Sanne,Navarro,6,Support Representative,3,2015-01-30,Male,46,Married,Bachelor,1,Travel_Frequently,1606,Active
+125,Divya,Okafor,1,Sales Executive,2,2014-10-30,Male,32,Single,Master,6,Travel_Rarely,1050,Active
+126,Chloe,Delacroix,2,Engineering Director,3,2021-12-06,Female,54,Married,Master,2,Travel_Rarely,385,Active
+128,Viktor,Mbeki,1,Sales Executive,2,2022-10-03,Female,24,Married,College,3,Travel_Rarely,118,Active
+129,Rosa,Nowak,1,Sales Executive,2,2020-05-10,Male,28,Married,Bachelor,4,Non-Travel,174,Active
+131,Zara,Mehta,1,Sales Executive,4,1988-05-12,Male,58,Single,Master,10,Travel_Rarely,,Active
+132,Bruno,Lombardi,2,QA Engineer,2,2022-11-26,Male,44,Married,Bachelor,23,Non-Travel,1941,Active
+133,Samir,Castellanos,3,HR Generalist,1,2022-01-01,Male,37,Divorced,Master,6,Travel_Rarely,1098,Terminated
+134,Anika,Haddad,2,Software Engineer,1,2024-05-26,Male,32,Single,Below College,1,Travel_Rarely,1472,Active
+137,Chloe,Grimaldi,2,QA Engineer,1,2023-08-09,Female,20,Single,Bachelor,6,Travel_Frequently,612,Terminated
+138,Freya,Osei,2,Software Engineer,2,2009-02-28,Female,34,Single,Master,6,Travel_Rarely,1069,Active
+139,Oscar,Lombardi,6,Support Representative,2,2024-12-27,Male,37,Divorced,College,2,Non-Travel,119,Active
+140,Camila,Osei,4,Finance Manager,5,2022-05-01,Female,59,Married,Master,2,Non-Travel,549,Active
+141,Aarav,Jokinen,2,Engineering Director,5,2017-02-04,Female,50,Married,Bachelor,1,Travel_Frequently,825,Active
+142,Yuki,Petrov,1,Sales Executive,2,2019-01-27,Male,25,Single,Bachelor,5,Travel_Rarely,2055,Terminated
+143,Mei,Fitzgerald,2,Software Engineer,1,2023-08-12,Male,25,Married,Below College,7,Travel_Rarely,1666,Active
+144,Divya,Grimaldi,2,QA Engineer,1,2025-06-05,Female,22,Single,Bachelor,15,Travel_Rarely,468,Active
+145,Marcus,Bakker,6,Support Representative,3,2012-05-09,Female,51,Single,Master,1,Travel_Frequently,1606,Active
+147,Zara,Kowalski,2,QA Engineer,2,2015-03-25,Male,34,Single,Bachelor,7,Travel_Frequently,1069,Terminated
+148,Tobias,Kaur,4,Finance Manager,4,2020-01-31,Female,54,Single,Bachelor,26,Non-Travel,374,Active
+150,Aisha,Vandenberg,2,QA Engineer,1,2020-04-01,Male,24,Married,Below College,18,Travel_Rarely,1666,Active
+151,Priya,Nakamura,2,Software Engineer,2,2024-05-12,Female,34,Divorced,Master,6,Travel_Rarely,1069,Active
+152,Viktor,Dubois,1,Sales Executive,3,2020-02-23,Male,37,Single,Bachelor,3,Travel_Rarely,1716,Active
+153,Caleb,Ramos,4,Finance Manager,3,2014-09-24,Female,34,Single,Bachelor,5,Travel_Rarely,1973,Active
+154,Idris,Castellanos,1,Sales Executive,3,2016-12-15,Female,36,Married,College,11,Travel_Frequently,1716,Active
+155,Leila,Lombardi,2,QA Engineer,1,2024-09-01,Female,36,Divorced,College,3,Travel_Rarely,1424,Active
+158,Grace,Krishnan,4,Finance Manager,4,2000-02-29,Male,43,Married,College,26,Travel_Frequently,787,Active
+159,Nadia,Bergman,2,Software Engineer,1,2015-05-14,Male,30,Divorced,Bachelor,23,Travel_Frequently,1317,Active
+160,Fatima,Delacroix,1,Sales Executive,2,2018-03-29,Male,33,Married,College,22,Non-Travel,1050,Active
+161,Aisha,Bakker,2,Software Engineer,1,2018-07-22,Female,56,Married,Master,14,Travel_Rarely,1255,Terminated
+162,Soren,Pashkov,2,Engineering Director,5,2005-01-10,Male,51,Single,Bachelor,6,Travel_Rarely,825,Active
+163,Viktor,Hassan,1,Sales Executive,2,2016-04-08,Male,31,Married,Master,6,Travel_Rarely,1968,Terminated
+164,Leila,Ramos,2,Software Engineer,1,2020-08-27,Female,26,Married,Bachelor,6,Travel_Rarely,661,Active
+165,Ingrid,Aoki,6,Support Representative,3,1984-05-02,Female,58,Married,Master,23,Travel_Rarely,258,Terminated
+167,Nadia,Kaur,1,Sales Representative,1,2024-01-16,Male,19,Single,Below College,22,Travel_Rarely,302,Terminated
+169,Tariq,Rossi,2,QA Engineer,1,2023-02-01,Male,22,Married,Below College,2,Travel_Rarely,468,Active
+170,Tariq,Andersen,5,Operations Director,2,2010-01-19,Female,49,Married,Master,20,Travel_Rarely,1005,Active
+171,Leila,Bakker,2,Software Engineer,1,2022-06-15,Female,43,Single,Bachelor,28,Travel_Frequently,999,Active
+174,Grace,Dubois,1,Sales Executive,3,2023-07-08,Female,50,Single,Bachelor,12,Travel_Frequently,1138,Active
+175,Caleb,Fitzgerald,1,Sales Executive,2,2022-03-27,Female,31,Married,Bachelor,20,Travel_Rarely,1319,Terminated
+176,Sanne,Kowalski,1,Sales Executive,3,2016-11-18,Male,41,Divorced,Below College,9,Travel_Rarely,1716,Active
+177,Viktor,Marchetti,3,HR Generalist,1,2017-08-30,Female,26,Married,Below College,25,Travel_Rarely,590,Active
+178,Diego,Ibrahim,5,Operations Director,2,2022-03-27,Male,36,Divorced,College,6,Travel_Rarely,1026,Active
+179,Aarav,Duarte,5,Operations Director,3,2020-09-17,Male,51,Single,Master,8,Travel_Frequently,867,Terminated
+182,Samir,Kowalski,1,Sales Executive,2,2010-07-27,Female,39,Married,Master,4,Travel_Rarely,2056,Active
+183,Hugo,Marchetti,1,Sales Executive,2,2023-11-13,Male,25,Married,Bachelor,28,Travel_Rarely,840,Active
+184,Aarav,Varga,3,HR Generalist,2,2014-07-02,Male,30,Married,Bachelor,9,Travel_Rarely,1098,Active
+190,Hugo,Ramos,2,QA Engineer,1,2018-06-17,Female,32,Single,Bachelor,9,Travel_Rarely,1472,Terminated
+192,Hannah,Hassan,2,Software Engineer,1,2019-01-24,Male,45,Single,Bachelor,29,Travel_Rarely,58,Active
+193,Grace,Steiner,2,Software Engineer,2,2022-02-16,Female,38,Single,Doctor,3,Travel_Rarely,1867,Active
+194,Zara,Larsen,2,Software Engineer,1,2020-10-26,Female,30,Single,Bachelor,18,Travel_Rarely,1317,Active
+195,Claire,Silva,1,Sales Executive,2,2017-08-12,Male,32,Divorced,College,9,Travel_Frequently,1050,Active
+197,Diego,Bakker,2,Software Engineer,1,2022-07-25,Female,30,Divorced,Bachelor,5,Travel_Rarely,1539,Active
+198,Fatima,Jokinen,2,QA Engineer,1,2020-11-14,Male,30,Single,Below College,2,Travel_Rarely,1539,Active
+199,Anika,Steiner,4,Finance Manager,4,2018-05-23,Male,41,Divorced,Bachelor,10,Travel_Frequently,1336,Active
+200,Nadia,Grimaldi,2,QA Engineer,1,2020-03-07,Male,41,Married,Master,9,Travel_Rarely,1035,Active
+201,Yuki,Rossi,2,QA Engineer,1,2024-01-29,Female,19,Single,Below College,3,Travel_Rarely,612,Active
+202,Chloe,Marchetti,2,Software Engineer,2,2005-02-04,Female,40,Divorced,Bachelor,26,Travel_Frequently,1263,Active
+204,Amara,Osei,1,Sales Executive,3,2015-08-15,Male,35,Married,Doctor,1,Travel_Rarely,1863,Active
+205,Leila,Fitzgerald,1,Sales Representative,2,2018-11-10,Male,53,Married,College,6,Travel_Rarely,986,Active
+206,Amara,Bergman,2,QA Engineer,2,2008-06-30,Male,45,Divorced,Bachelor,9,Travel_Rarely,1941,Active
+207,Tariq,Vandenberg,1,Sales Executive,3,2016-05-05,Female,32,Single,Bachelor,8,Travel_Frequently,1039,Active
+208,Rosa,Fitzgerald,5,Operations Director,2,2015-05-25,Male,29,Married,Below College,1,Non-Travel,1360,Active
+211,Rosa,Petrov,5,Operations Director,2,2024-02-02,Male,51,Married,Master,7,Travel_Rarely,1005,Active
+214,Oscar,Osei,2,Software Engineer,1,2024-10-25,Female,58,Married,Bachelor,9,Travel_Rarely,1608,Active
+215,Mei,Andersen,1,Sales Executive,3,2013-05-14,Male,40,Married,Master,4,Travel_Rarely,1716,Active
+216,Sanne,Ortega,1,Sales Representative,1,2021-10-16,Female,34,Married,Master,2,Travel_Frequently,244,Active
+217,Nadia,Kowalski,2,Software Engineer,1,2023-04-14,Male,22,Married,Below College,19,Travel_Rarely,468,Active
+218,Elena,Larsen,2,Software Engineer,1,2023-09-16,Male,27,Divorced,Bachelor,9,Non-Travel,1523,Active
+221,Fatima,Mehta,2,Software Engineer,1,2020-09-27,Male,28,Married,Bachelor,21,Travel_Rarely,575,Active
+223,Zara,Lombardi,6,Support Representative,3,2020-02-05,Male,57,Divorced,College,24,Travel_Rarely,1606,Active
+224,Camila,Haddad,2,Software Engineer,1,2024-05-02,Male,27,Divorced,Bachelor,3,Non-Travel,1523,Active
+226,Anika,Whitfield,4,Finance Manager,5,2020-06-19,Female,50,Single,Bachelor,11,Travel_Rarely,140,Active
+227,Sanne,Varga,2,Software Engineer,1,2016-02-08,Male,41,Divorced,Bachelor,14,Travel_Rarely,1035,Active
+228,Bruno,Ibrahim,1,Sales Executive,3,2015-05-03,Female,30,Married,Bachelor,5,Travel_Rarely,1039,Active
+230,Rosa,Grimaldi,1,Sales Executive,2,2017-07-30,Female,38,Single,Master,1,Travel_Rarely,2056,Active
+231,Nadia,Whitfield,2,Software Engineer,1,2020-01-13,Male,32,Single,Doctor,6,Travel_Rarely,1472,Active
+233,Ingrid,Nakamura,2,Software Engineer,1,2020-09-02,Male,27,Married,Bachelor,17,Travel_Rarely,1523,Active
+235,Daniel,Cardoso,1,Sales Representative,1,2024-06-06,Female,19,Single,Below College,1,Travel_Frequently,302,Terminated
+238,Viktor,Rossi,2,QA Engineer,1,2017-10-27,Male,36,Single,College,3,Travel_Frequently,1424,Active
+239,Mira,Castellanos,2,QA Engineer,2,2013-12-24,Male,30,Divorced,Bachelor,9,Non-Travel,1608,Active
+240,Chloe,Jokinen,1,Sales Executive,2,2020-04-01,Female,45,Divorced,College,4,Travel_Rarely,1975,Active
+241,Divya,Osei,2,Software Engineer,1,2023-09-05,Female,56,Divorced,Bachelor,8,Travel_Rarely,1255,Active
+242,Elena,Aoki,2,Software Engineer,1,2022-03-11,Male,33,Single,Bachelor,2,Travel_Rarely,901,Active
+243,Hannah,Haddad,2,QA Engineer,1,2023-03-21,Male,19,Single,Bachelor,2,Travel_Rarely,612,Terminated
+244,Divya,Navarro,1,Sales Executive,3,2001-07-19,Female,46,Divorced,College,1,Travel_Rarely,1138,Active
+245,Viktor,Castellanos,2,QA Engineer,1,2023-06-13,Female,38,Single,College,9,Travel_Rarely,1128,Active
+246,Amara,Ibrahim,2,Software Engineer,1,2021-06-09,Female,31,Married,Below College,12,Travel_Rarely,997,Active
+247,Isabel,Reyes,2,Software Engineer,1,2022-10-08,Female,34,Single,College,27,Travel_Rarely,1422,Active
+248,Nikolai,Simonsen,1,Sales Representative,1,2020-03-13,Female,41,Single,College,20,Travel_Rarely,118,Terminated
+249,Elena,Mehta,2,QA Engineer,1,2022-08-21,Male,50,Married,Bachelor,1,Travel_Rarely,58,Active
+250,Yuki,Lombardi,5,Operations Director,2,2021-03-04,Female,53,Divorced,College,13,Travel_Rarely,1005,Active
+252,Aarav,Larsen,2,Software Engineer,1,2017-01-07,Female,33,Married,Bachelor,14,Travel_Rarely,901,Active
+253,Amara,Jokinen,4,Finance Manager,5,2005-04-14,Female,40,Married,Below College,4,Travel_Rarely,1191,Active
+254,Zara,Sharma,2,Engineering Director,5,2001-02-25,Male,55,Single,Master,14,Travel_Rarely,825,Active
+256,Idris,Silva,5,Operations Director,2,2015-12-20,Male,34,Married,Below College,2,Travel_Frequently,1026,Active
+258,Tobias,Simonsen,6,Support Representative,4,2018-02-01,Female,51,Single,Bachelor,3,Travel_Rarely,762,Active
+259,Hugo,Bergman,4,Finance Manager,5,1992-10-28,Male,52,Married,Master,1,Travel_Rarely,140,Active
+260,Diego,Bianchi,2,Software Engineer,1,2018-03-02,Female,27,Single,Bachelor,9,Travel_Rarely,1523,Active
+261,Elena,Osei,5,Operations Director,2,2023-08-10,Male,35,Married,College,23,Travel_Rarely,1026,Terminated
+262,Rosa,Lindqvist,2,Software Engineer,1,2020-06-26,Male,43,Divorced,Bachelor,7,Non-Travel,999,Active
+264,Aarav,Hassan,4,Finance Manager,4,2005-08-31,Male,45,Married,College,2,Non-Travel,787,Active
+267,Elena,Delacroix,2,Software Engineer,1,2017-09-07,Male,37,Married,Bachelor,21,Travel_Rarely,1837,Active
+269,Andre,Andersen,2,QA Engineer,2,2019-09-11,Female,35,Single,Bachelor,2,Travel_Frequently,1069,Active
+270,Sofia,Halvorsen,5,Operations Director,2,2020-11-16,Female,42,Divorced,College,21,Non-Travel,2034,Active
+271,Diego,Marchetti,5,Operations Director,2,2024-10-21,Male,38,Married,Master,2,Travel_Rarely,601,Active
+273,Lena,Novak,5,Operations Director,2,2018-12-28,Male,38,Married,Bachelor,29,Travel_Rarely,601,Active
+274,Mira,Ibrahim,5,Operations Director,2,2023-12-24,Male,27,Married,Below College,1,Travel_Frequently,1360,Active
+275,Tobias,Pashkov,5,Operations Director,2,2018-09-23,Male,49,Divorced,Master,18,Non-Travel,1005,Active
+277,Isabel,Tanaka,2,Software Engineer,1,2020-12-10,Male,34,Divorced,Master,10,Travel_Frequently,1422,Active
+281,Aisha,Simonsen,2,QA Engineer,2,2018-05-01,Male,40,Married,College,19,Travel_Rarely,1263,Active
+282,Nikolai,Moreau,6,Support Representative,2,2023-12-02,Male,38,Married,Below College,29,Travel_Rarely,119,Terminated
+283,Isabel,Quintero,1,Sales Executive,3,2013-06-06,Female,29,Married,Bachelor,27,Travel_Rarely,404,Terminated
+284,Lena,Haddad,2,Software Engineer,1,2021-12-12,Male,22,Divorced,Bachelor,5,Travel_Rarely,468,Active
+286,Luis,Nakamura,2,QA Engineer,1,2017-12-19,Female,36,Single,Below College,18,Travel_Frequently,1424,Active
+287,Samir,Hassan,6,Support Representative,2,2022-02-12,Male,40,Married,Doctor,9,Non-Travel,119,Active
+288,Marcus,Marchetti,6,Support Representative,3,2021-07-02,Male,46,Divorced,Master,1,Travel_Rarely,1606,Active
+291,Grace,Vandenberg,1,Sales Executive,3,2011-01-07,Male,32,Married,Master,4,Travel_Rarely,1039,Terminated
+292,Caleb,Ferreira,5,Operations Director,3,2014-08-09,Male,30,Single,Below College,1,Non-Travel,1367,Active
+293,Caleb,Okafor,1,Sales Executive,2,2018-01-18,Female,27,Single,Bachelor,20,Travel_Frequently,174,Active
+296,Aarav,Okafor,2,Engineering Director,3,2015-11-24,Male,51,Married,Master,8,Travel_Rarely,385,Active
+297,Ingrid,Moreau,2,Software Engineer,1,2019-01-28,Female,30,Single,Bachelor,3,Travel_Rarely,1539,Terminated
+298,Nina,Jokinen,4,Finance Manager,3,2024-07-18,Female,41,Single,Bachelor,6,Travel_Rarely,1973,Active
+299,Felix,Bakker,1,Sales Executive,2,2018-12-15,Female,30,Single,Master,26,Travel_Frequently,1319,Terminated
+300,Rahul,Duarte,2,Software Engineer,1,2019-09-12,Male,29,Single,Bachelor,1,Travel_Rarely,1539,Terminated
+302,Diego,Ramos,1,Sales Executive,3,2006-10-11,Female,45,Single,Bachelor,6,Non-Travel,746,Active
+303,Mira,Reyes,1,Sales Executive,2,2019-06-01,Female,54,Married,Bachelor,3,Travel_Rarely,986,Active
+304,Rosa,Kowalski,2,QA Engineer,2,2012-10-31,Male,36,Single,College,5,Travel_Rarely,447,Active
+305,Jonas,Larsen,2,Software Engineer,1,2022-04-23,Female,33,Married,Master,4,Travel_Rarely,901,Active
+306,Ethan,Simonsen,2,Engineering Director,3,2015-03-01,Male,37,Divorced,Bachelor,11,Travel_Frequently,396,Active
+307,Amara,Jokinen,1,Sales Executive,3,2009-03-03,Male,38,Divorced,Bachelor,3,Travel_Rarely,1716,Active
+308,Idris,Dubois,5,Operations Director,2,2020-08-28,Male,31,Married,Master,1,Non-Travel,1283,Active
+309,Sanne,Varga,2,Software Engineer,1,2024-03-17,Male,59,Married,Bachelor,3,Travel_Rarely,1608,Active
+311,Zara,Moreau,1,Sales Representative,1,2016-06-27,Male,37,Divorced,Master,4,Travel_Frequently,244,Active
+312,Aisha,Mbeki,1,Sales Executive,3,2014-09-03,Female,29,Married,Below College,1,Travel_Frequently,1167,Active
+314,Samir,Bianchi,1,Sales Executive,3,2015-08-14,Female,35,Single,Bachelor,1,Travel_Frequently,1863,Active
+315,Nina,Kowalski,2,Software Engineer,1,2021-05-21,Male,29,Single,Below College,18,Travel_Rarely,1539,Terminated
+316,Freya,Grimaldi,2,QA Engineer,1,2023-08-08,Female,52,Single,Bachelor,2,Travel_Rarely,58,Active
+319,Sanne,Duarte,4,Finance Manager,5,2003-05-21,Male,42,Married,College,4,Travel_Rarely,1191,Active
+321,Priya,Rossi,3,HR Generalist,1,2023-11-22,Male,59,Married,College,6,Travel_Rarely,1098,Active
+323,Diego,Eriksen,4,Finance Manager,5,2018-02-09,Female,50,Divorced,Master,1,Travel_Rarely,140,Active
+325,Marcus,Osei,2,QA Engineer,1,2019-11-12,Male,33,Married,Bachelor,14,Travel_Rarely,901,Terminated
+327,Priya,Kaur,4,Finance Manager,4,2008-02-03,Female,43,Married,Bachelor,16,Travel_Rarely,787,Active
+328,Rahul,Grimaldi,2,QA Engineer,1,2014-09-17,Female,33,Married,College,2,Travel_Rarely,901,Terminated
+329,Soren,Reyes,4,Finance Manager,5,1992-04-04,Male,52,Single,Master,2,Non-Travel,140,Active
+330,Claire,Kaur,1,Sales Representative,1,2021-03-17,Female,32,Married,College,4,Travel_Rarely,580,Active
+331,Omar,Krishnan,2,QA Engineer,1,2021-03-13,Male,32,Single,Bachelor,1,Travel_Rarely,1472,Terminated
+332,Sofia,Bakker,2,QA Engineer,1,2022-11-14,Female,39,Divorced,Master,1,Travel_Rarely,1128,Active
+333,Samir,Fitzgerald,1,Sales Executive,2,2022-06-11,Male,32,Married,Master,26,Non-Travel,1050,Active
+334,Jonas,Mehta,2,Software Engineer,2,2024-08-14,Male,41,Divorced,College,19,Travel_Rarely,1263,Active
+335,Ingrid,Larsen,2,Software Engineer,2,2016-03-07,Male,40,Divorced,College,24,Travel_Rarely,1263,Active
+336,Tobias,Okafor,4,Finance Manager,5,2001-09-30,Male,45,Married,Bachelor,1,Travel_Rarely,140,Active
+337,Claire,Moreau,2,Engineering Director,3,2023-06-20,Male,31,Divorced,Master,3,Travel_Frequently,638,Active
+338,Samir,Rossi,2,Software Engineer,1,2023-08-05,Female,33,Married,Master,5,Travel_Rarely,901,Active
+339,Grace,Kaur,5,Operations Director,2,2014-06-24,Male,34,Married,Master,2,Travel_Rarely,1026,Active
+340,Nadia,Dubois,2,Software Engineer,1,2022-11-16,Female,37,Married,College,1,Travel_Rarely,1837,Active
+341,Nadia,Petrov,5,Operations Director,2,2022-03-19,Male,45,Married,Master,7,Travel_Frequently,2034,Active
+342,Andre,Navarro,5,Operations Director,3,2023-05-26,Male,37,Divorced,Bachelor,10,Travel_Frequently,1367,Terminated
+343,Andre,Moreau,6,Support Representative,3,2006-12-10,Female,39,Single,Master,2,Travel_Frequently,431,Active
+346,Fatima,Mbeki,2,Software Engineer,1,2019-04-25,Male,29,Single,Bachelor,15,Travel_Rarely,1539,Active
+347,Ingrid,Halvorsen,2,Software Engineer,2,2022-06-09,Female,42,Single,College,17,Travel_Rarely,1941,Active
+349,Rahul,Aoki,1,Sales Executive,2,2022-12-25,Male,29,Divorced,College,20,Travel_Rarely,1391,Active
+350,Bruno,Fitzgerald,5,Operations Director,2,2021-08-10,Female,25,Married,Bachelor,1,Travel_Rarely,1360,Active
+351,Peter,Tanaka,2,QA Engineer,1,2016-06-27,Female,42,Divorced,Bachelor,2,Travel_Rarely,1035,Active
+352,Felix,Reyes,2,Engineering Director,5,2004-02-13,Male,40,Divorced,College,2,Travel_Rarely,522,Active
+353,Fatima,Tanaka,2,Software Engineer,1,2024-11-02,Male,51,Married,Bachelor,1,Travel_Rarely,58,Active
+355,Claire,Petrov,2,QA Engineer,1,2019-05-11,Male,31,Single,College,29,Travel_Frequently,997,Terminated
+359,Divya,Marchetti,2,QA Engineer,1,2020-08-27,Male,32,Married,Bachelor,7,Travel_Frequently,1472,Active
+361,Caleb,Andersen,1,Sales Executive,2,2017-10-15,Male,38,Married,College,2,Non-Travel,2056,Active
+362,Anika,Kowalski,2,QA Engineer,2,2019-03-30,Male,32,Single,Below College,2,Travel_Rarely,1217,Active
+363,Camila,Halvorsen,4,Finance Manager,4,2018-11-29,Female,46,Married,Bachelor,2,Travel_Rarely,787,Active
+364,Aisha,Kaur,2,QA Engineer,1,2023-10-24,Male,28,Single,Master,2,Travel_Rarely,575,Terminated
+366,Oscar,Tanaka,1,Sales Executive,2,2025-01-23,Male,29,Married,Bachelor,2,Travel_Rarely,1391,Active
+367,Omar,Duarte,6,Support Representative,2,2016-03-05,Male,31,Married,Bachelor,23,Travel_Rarely,1697,Active
+369,Ingrid,Simonsen,6,Support Representative,2,2019-12-27,Male,25,Divorced,College,5,Non-Travel,165,Active
+372,Soren,Duarte,6,Support Representative,4,2005-08-20,Male,45,Married,College,20,Travel_Rarely,1278,Active
+373,Chloe,Grimaldi,2,QA Engineer,1,2010-03-30,Male,36,Married,Bachelor,6,Travel_Rarely,1424,Active
+374,Aarav,Lindqvist,4,Finance Manager,5,1989-04-23,Male,55,Single,Bachelor,1,Travel_Rarely,549,Active
+376,Divya,Nakamura,4,Finance Manager,3,2013-11-08,Male,47,Married,Master,29,Non-Travel,1578,Terminated
+377,Fatima,Bergman,2,Software Engineer,1,2020-11-07,Male,28,Married,Bachelor,9,Travel_Rarely,575,Active
+378,Omar,Hassan,1,Sales Executive,2,2020-12-23,Male,37,Married,Master,6,Travel_Rarely,81,Active
+379,Peter,Dubois,2,Software Engineer,1,2022-12-15,Male,21,Single,College,3,Travel_Rarely,1485,Active
+380,Chloe,Bianchi,2,Engineering Director,3,2020-07-03,Female,37,Divorced,Master,1,Non-Travel,396,Active
+381,Felix,Kaur,4,Finance Manager,3,2018-02-04,Female,35,Divorced,Bachelor,22,Travel_Rarely,1973,Active
+382,Sanne,Grimaldi,1,Sales Executive,2,2017-06-02,Female,38,Divorced,College,7,Travel_Rarely,573,Active
+384,Grace,Nowak,5,Operations Director,2,2019-10-24,Female,26,Divorced,Bachelor,1,Travel_Frequently,1360,Active
+385,Hannah,Lindqvist,2,Engineering Director,5,2015-12-08,Male,50,Divorced,Below College,4,Travel_Rarely,1423,Active
+386,Jonas,Whitfield,2,Engineering Director,4,2020-07-22,Male,53,Married,Master,3,Travel_Rarely,162,Active
+387,Zara,Jokinen,1,Sales Executive,2,2005-01-22,Male,42,Married,Below College,1,Travel_Rarely,1975,Active
+388,Diego,Reyes,1,Sales Executive,2,2015-10-29,Male,29,Single,College,2,Travel_Frequently,1391,Active
+389,Amara,Dubois,2,QA Engineer,2,2015-08-02,Male,55,Married,College,20,Travel_Rarely,638,Active
+390,Oscar,Hassan,6,Support Representative,2,2020-12-19,Male,26,Married,College,11,Travel_Frequently,165,Active
+391,Nikolai,Osei,2,Software Engineer,1,2008-07-24,Female,37,Single,Bachelor,1,Travel_Rarely,1837,Active
+392,Isabel,Petrov,2,QA Engineer,1,2023-05-24,Male,44,Divorced,Bachelor,24,Travel_Frequently,999,Terminated
+393,Bruno,Moreau,6,Support Representative,2,2023-12-28,Male,38,Divorced,Master,23,Travel_Rarely,119,Active
+394,Ethan,Mbeki,2,QA Engineer,1,2020-07-26,Male,26,Divorced,Master,16,Travel_Rarely,661,Terminated
+395,Rosa,Simonsen,2,Software Engineer,1,2020-01-25,Female,28,Single,College,8,Travel_Rarely,575,Active
+396,Chloe,Tanaka,2,Engineering Director,5,2022-03-21,Female,49,Single,Master,10,Travel_Frequently,1423,Active
+397,Nina,Moreau,2,Software Engineer,2,2017-03-16,Male,36,Single,Bachelor,3,Travel_Rarely,447,Active
+399,Zara,Haddad,1,Sales Representative,1,2023-03-26,Female,31,Divorced,Bachelor,5,Travel_Frequently,580,Active
+401,Daniel,Grimaldi,1,Sales Executive,2,2017-04-18,Male,26,Single,Master,4,Travel_Rarely,2055,Terminated
+403,Oscar,Silva,2,Software Engineer,1,2021-06-16,Male,37,Married,Bachelor,9,Travel_Frequently,1837,Active
+404,Nadia,Kowalski,1,Sales Executive,4,2005-03-06,Female,42,Married,Bachelor,26,Travel_Frequently,532,Active
+405,Rahul,Larsen,2,QA Engineer,1,2024-11-25,Male,18,Single,Bachelor,3,Travel_Rarely,612,Terminated
+406,Soren,Sharma,1,Sales Executive,3,2014-11-17,Male,35,Married,Bachelor,16,Travel_Rarely,1863,Active
+407,Nadia,Eriksen,2,QA Engineer,1,2024-01-11,Male,36,Married,Master,18,Travel_Frequently,1424,Active
+408,Anika,Castellanos,5,Operations Director,2,2021-08-05,Male,51,Divorced,Bachelor,2,Travel_Rarely,1005,Active
+410,Elena,Sharma,4,Finance Manager,4,2003-08-14,Male,41,Single,Master,2,Travel_Rarely,1336,Active
+411,Samir,Jokinen,1,Sales Representative,1,2025-01-05,Female,18,Single,Bachelor,10,Travel_Rarely,302,Active
+412,Ethan,Grimaldi,6,Support Representative,2,2017-07-28,Male,28,Single,College,16,Travel_Rarely,165,Active
+416,Diego,Kowalski,1,Sales Executive,2,2017-08-09,Male,31,Married,Bachelor,7,Travel_Rarely,1319,Active
+417,Elena,Varga,6,Support Representative,3,2007-09-08,Male,39,Divorced,Bachelor,1,Travel_Rarely,431,Active
+419,Viktor,Dubois,2,QA Engineer,2,2016-07-04,Female,36,Married,Master,24,Non-Travel,447,Active
+420,Rosa,Vandenberg,1,Sales Executive,2,2012-06-08,Male,32,Married,Bachelor,7,Travel_Rarely,1050,Active
+421,Tariq,Jokinen,2,Engineering Director,3,2015-02-03,Female,38,Married,College,25,Travel_Rarely,396,Active
+422,Lena,Okafor,6,Support Representative,2,2020-01-05,Male,58,Divorced,Master,1,Non-Travel,431,Active
+423,Zara,Krishnan,2,Software Engineer,1,2020-08-05,Male,31,Married,Master,5,Travel_Rarely,997,Active
+424,Chloe,Marchetti,3,HR Generalist,2,2023-03-26,Male,31,Married,Bachelor,2,Travel_Rarely,1744,Active
+425,Claire,Jokinen,2,QA Engineer,3,2001-06-21,Male,45,Divorced,Bachelor,7,Travel_Frequently,1061,Active
+426,Luis,Bianchi,2,Software Engineer,1,2023-06-14,Male,31,Divorced,Master,2,Travel_Rarely,997,Active
+428,Divya,Petrov,4,Finance Manager,3,2015-07-05,Female,33,Married,Master,5,Travel_Frequently,1973,Active
+429,Marcus,Bakker,4,Finance Manager,4,2004-06-13,Male,39,Married,Below College,10,Travel_Rarely,1578,Active
+430,Jonas,Ortega,2,QA Engineer,1,2017-03-02,Female,43,Single,Master,10,Travel_Frequently,999,Active
+431,Leila,Halvorsen,6,Support Representative,4,2018-01-02,Female,49,Single,College,1,Travel_Rarely,1278,Active
+433,Ethan,Cardoso,2,Software Engineer,2,2015-02-15,Male,52,Married,Master,8,Travel_Rarely,638,Terminated
+434,Ethan,Petrov,2,Software Engineer,1,2021-08-13,Female,27,Single,Bachelor,5,Travel_Rarely,1523,Active
+436,Bruno,Tanaka,1,Sales Executive,2,2012-05-22,Female,32,Married,College,8,Travel_Rarely,1050,Active
+437,Daniel,Haddad,1,Sales Executive,2,2020-06-17,Male,27,Single,Bachelor,2,Travel_Rarely,174,Active
+438,Chloe,Marchetti,1,Sales Executive,2,2018-05-04,Male,31,Divorced,Bachelor,7,Travel_Rarely,1319,Active
+439,Kwame,Ferreira,2,Software Engineer,2,2018-07-03,Female,32,Single,Master,2,Travel_Rarely,1217,Active
+440,Marcus,Delacroix,2,Software Engineer,1,2020-09-24,Male,28,Married,Master,2,Travel_Rarely,575,Terminated
+441,Elena,Lindqvist,2,Software Engineer,2,2015-05-29,Female,30,Married,College,28,Travel_Rarely,1608,Active
+442,Fatima,Lindqvist,5,Operations Director,3,2015-01-05,Female,31,Married,College,7,Travel_Frequently,1367,Active
+444,Luis,Bakker,4,Finance Manager,5,2004-08-30,Male,39,Married,College,7,Travel_Frequently,1338,Active
+445,Jonas,Mehta,1,Sales Executive,2,2024-02-25,Female,39,Married,College,3,Travel_Rarely,2056,Terminated
+446,Oscar,Rossi,1,Sales Executive,2,2018-09-20,Male,33,Single,Bachelor,10,Travel_Frequently,1050,Active
+447,Tobias,Moreau,2,Engineering Director,5,2022-03-29,Male,47,Married,Doctor,5,Travel_Rarely,254,Active
+448,Lena,Quintero,2,QA Engineer,2,2016-04-28,Female,43,Divorced,Master,10,Travel_Frequently,1941,Active
+449,Chloe,Petrov,1,Sales Executive,2,2020-02-26,Male,27,Married,Below College,1,Non-Travel,174,Active
+450,Omar,Nakamura,2,Software Engineer,2,2021-10-22,Female,54,Single,Master,20,Travel_Frequently,638,Active
+451,Divya,Okafor,6,Support Representative,3,2024-05-19,Female,43,Married,Bachelor,7,Travel_Rarely,1606,Active
+452,Idris,Aoki,2,Software Engineer,2,2015-05-12,Male,45,Married,Master,8,Travel_Rarely,1941,Active
+453,Andre,Pashkov,1,Sales Executive,2,2021-12-09,Male,40,Married,College,1,Travel_Rarely,2056,Active
+454,Ingrid,Bergman,2,QA Engineer,1,2017-12-07,Male,29,Married,Master,8,Travel_Rarely,1539,Terminated
+455,Soren,Jokinen,2,QA Engineer,1,2022-07-27,Male,29,Single,Doctor,9,Travel_Rarely,1655,Active
+456,Sofia,Aoki,1,Sales Executive,2,2015-04-13,Female,30,Divorced,Bachelor,5,Travel_Rarely,1319,Active
+458,Amara,Bianchi,1,Sales Executive,2,2017-03-23,Female,27,Married,Master,8,Travel_Rarely,2055,Active
+460,Nadia,Okafor,5,Operations Director,2,2019-04-06,Male,37,Divorced,College,5,Travel_Rarely,601,Active
+461,Andre,Kaur,2,Engineering Director,3,2014-11-26,Male,38,Divorced,College,15,Travel_Rarely,396,Active
+462,Rahul,Bianchi,5,Operations Director,3,2014-06-19,Female,31,Single,Master,7,Travel_Rarely,1367,Active
+463,Freya,Grimaldi,1,Sales Executive,2,2018-09-16,Female,29,Divorced,Below College,10,Travel_Rarely,1391,Active
+464,Isabel,Steiner,5,Operations Director,3,2009-05-12,Male,35,Single,Master,5,Travel_Rarely,1367,Active
+465,Mei,Okafor,2,Software Engineer,1,2021-11-28,Male,23,Divorced,Below College,26,Travel_Rarely,468,Active
+466,Ethan,Marchetti,5,Operations Director,2,2020-10-05,Male,41,Single,Bachelor,6,Travel_Rarely,601,Active
+467,Diego,Okafor,1,Sales Representative,2,2025-10-28,Male,47,Single,Below College,4,Travel_Frequently,986,Active
+468,Mei,Mehta,2,Engineering Director,4,2024-04-20,Female,42,Single,Doctor,23,Travel_Rarely,141,Active
+469,Ingrid,Ortega,1,Sales Executive,2,2021-01-16,Male,29,Married,Bachelor,2,Non-Travel,1391,Active
+470,Ethan,Duarte,3,HR Generalist,1,2022-01-28,Male,42,Divorced,Below College,2,Travel_Rarely,1098,Active
+471,Diego,Eriksen,2,QA Engineer,1,2017-08-02,Female,32,Married,Bachelor,2,Travel_Rarely,1472,Active
+473,Daniel,Pashkov,4,Finance Manager,3,2025-03-10,Female,48,Married,Below College,29,Travel_Rarely,1578,Active
+474,Felix,Cardoso,2,Software Engineer,2,2018-05-01,Male,37,Divorced,Bachelor,6,Travel_Rarely,447,Active
+475,Nikolai,Marchetti,1,Sales Executive,2,2023-12-30,Female,30,Married,College,25,Non-Travel,1319,Active
+476,Omar,Krishnan,1,Sales Executive,2,2017-02-24,Male,26,Married,Bachelor,1,Travel_Rarely,2055,Active
+477,Diego,Delacroix,6,Support Representative,2,2024-06-15,Male,42,Single,Master,2,Travel_Rarely,372,Active
+478,Nadia,Hassan,1,Sales Representative,1,2021-08-05,Female,21,Single,Below College,1,Travel_Frequently,1869,Terminated
+479,Andre,Rossi,1,Sales Executive,2,2024-05-17,Female,36,Single,Doctor,1,Non-Travel,81,Active
+481,Diego,Castellanos,1,Sales Executive,3,2012-06-28,Male,36,Married,Master,3,Travel_Frequently,1716,Active
+482,Bruno,Krishnan,6,Support Representative,2,2022-12-30,Male,57,Married,Master,1,Travel_Rarely,431,Active
+483,Luis,Pashkov,2,QA Engineer,1,2018-09-23,Female,40,Married,Master,10,Travel_Rarely,352,Active
+484,Fatima,Bakker,1,Sales Representative,1,2022-08-06,Male,21,Single,College,9,Non-Travel,302,Active
+485,Aisha,Kaur,1,Sales Representative,1,2022-05-31,Female,33,Single,Bachelor,5,Travel_Rarely,580,Terminated
+486,Hugo,Krishnan,2,QA Engineer,1,2020-10-08,Female,37,Married,Bachelor,10,Travel_Rarely,1837,Active
+487,Zara,Lindqvist,5,Operations Director,2,2024-09-16,Female,46,Married,Master,7,Non-Travel,2034,Active
+488,Daniel,Sharma,1,Sales Executive,2,2015-05-11,Male,41,Single,Bachelor,4,Travel_Frequently,2056,Terminated
+491,Sanne,Mbeki,6,Support Representative,3,2021-01-04,Male,50,Single,Bachelor,10,Travel_Rarely,1606,Active
+492,Priya,Moreau,1,Sales Executive,2,2018-12-23,Male,40,Married,College,22,Travel_Rarely,2056,Terminated
+493,Diego,Lindqvist,2,Software Engineer,1,2023-05-17,Male,31,Single,Master,9,Travel_Rarely,997,Active
+494,Sanne,Petrov,1,Sales Representative,1,2023-10-29,Female,21,Single,Bachelor,12,Travel_Rarely,302,Terminated
+495,Diego,Vandenberg,2,Software Engineer,1,2022-11-15,Male,29,Single,Bachelor,23,Travel_Rarely,1655,Active
+496,Claire,Navarro,6,Support Representative,2,2024-02-02,Male,35,Single,Master,9,Travel_Rarely,119,Active
+497,Amara,Dubois,2,QA Engineer,1,2020-02-07,Male,27,Divorced,College,1,Travel_Rarely,1523,Active
+498,Kwame,Varga,1,Sales Executive,2,2018-11-03,Male,28,Single,Master,9,Travel_Rarely,174,Active
+499,Samir,Ibrahim,6,Support Representative,3,2020-03-03,Male,49,Single,Bachelor,7,Travel_Rarely,1606,Active
+500,Camila,Mbeki,1,Sales Executive,2,2018-09-27,Female,51,Married,College,14,Travel_Rarely,986,Active
+501,Camila,Moreau,2,Software Engineer,1,2023-12-15,Female,36,Married,Bachelor,2,Travel_Rarely,1424,Active
+502,Kwame,Duarte,1,Sales Executive,2,2019-06-16,Male,34,Single,Bachelor,19,Non-Travel,862,Terminated
+505,Divya,Eriksen,4,Finance Manager,4,2020-08-11,Female,55,Single,Bachelor,2,Travel_Rarely,374,Active
+507,Amara,Duarte,1,Sales Executive,2,2020-12-27,Female,24,Divorced,Master,10,Travel_Rarely,118,Active
+508,Aarav,Ortega,1,Sales Representative,1,2024-06-21,Male,30,Married,Below College,2,Travel_Rarely,1457,Active
+510,Samir,Vandenberg,2,Software Engineer,1,2019-04-11,Male,26,Single,Below College,3,Travel_Frequently,661,Terminated
+511,Bruno,Eriksen,2,Software Engineer,1,2023-02-16,Female,22,Married,Bachelor,11,Travel_Rarely,468,Active
+513,Diego,Larsen,1,Sales Executive,3,2015-04-05,Male,36,Married,College,2,Travel_Rarely,1716,Active
+514,Ingrid,Sharma,2,Software Engineer,1,2023-09-11,Male,30,Single,Bachelor,4,Travel_Frequently,1539,Terminated
+515,Camila,Silva,2,QA Engineer,1,2007-04-20,Female,37,Divorced,Bachelor,14,Travel_Rarely,1837,Active
+516,Aisha,Lombardi,1,Sales Executive,2,2020-10-05,Female,40,Divorced,College,2,Travel_Rarely,2056,Active
+517,Peter,Halvorsen,2,QA Engineer,1,2020-05-19,Female,42,Divorced,Master,1,Travel_Rarely,1035,Active
+518,Bruno,Andersen,5,Operations Director,2,2024-04-02,Male,37,Single,Master,10,Travel_Rarely,601,Active
+520,Idris,Lindqvist,2,Engineering Director,4,2000-03-10,Male,43,Divorced,Bachelor,12,Travel_Rarely,80,Active
+521,Bruno,Ramos,2,QA Engineer,2,2024-05-14,Female,40,Married,Bachelor,2,Travel_Rarely,1263,Active
+522,Anika,Bianchi,2,Engineering Director,5,2021-03-06,Male,54,Married,College,5,Travel_Rarely,825,Active
+523,Bruno,Ibrahim,1,Sales Executive,2,2022-06-04,Female,34,Married,Master,4,Non-Travel,862,Active
+524,Zara,Kaur,5,Operations Director,2,2012-05-25,Female,31,Married,College,7,Travel_Rarely,1283,Active
+525,Grace,Cardoso,2,QA Engineer,1,2022-06-11,Male,43,Married,Bachelor,21,Travel_Frequently,999,Active
+526,Nina,Ramos,6,Support Representative,2,2020-02-12,Female,43,Divorced,Master,8,Travel_Rarely,372,Active
+527,Kwame,Kaur,1,Sales Executive,2,2020-02-29,Female,25,Single,College,4,Travel_Rarely,840,Active
+529,Yuki,Krishnan,2,Software Engineer,2,2012-03-07,Female,37,Married,Doctor,25,Non-Travel,447,Active
+530,Jonas,Quintero,2,QA Engineer,1,2021-03-01,Male,31,Married,College,1,Travel_Rarely,997,Active
+531,Leila,Reyes,4,Finance Manager,5,2004-10-11,Male,39,Divorced,Below College,1,Travel_Frequently,1338,Active
+532,Tobias,Aoki,1,Sales Executive,4,2018-01-29,Female,56,Married,Bachelor,6,Travel_Frequently,131,Active
+533,Hugo,Marchetti,1,Sales Executive,2,2020-05-19,Female,30,Single,Bachelor,12,Travel_Rarely,1319,Active
+534,Mei,Castellanos,1,Sales Executive,3,2015-06-24,Male,41,Married,Bachelor,1,Travel_Rarely,1716,Active
+536,Sanne,Okafor,2,QA Engineer,2,2015-07-01,Male,28,Divorced,College,17,Travel_Rarely,1608,Active
+538,Zara,Ramos,2,QA Engineer,1,2023-02-15,Male,25,Married,Bachelor,3,Travel_Rarely,1666,Terminated
+543,Zara,Petrov,5,Operations Director,3,2020-01-27,Male,52,Married,Bachelor,3,Travel_Rarely,867,Active
+544,Grace,Osei,2,Software Engineer,1,2023-12-14,Male,45,Married,College,10,Travel_Rarely,999,Active
+546,Kwame,Whitfield,4,Finance Manager,4,2020-03-15,Female,52,Married,College,4,Travel_Rarely,374,Active
+547,Caleb,Aoki,2,Software Engineer,2,2020-10-05,Female,42,Divorced,College,29,Travel_Frequently,1941,Active
+548,Idris,Cardoso,5,Operations Director,2,2020-08-11,Female,30,Single,Bachelor,2,Travel_Rarely,1360,Active
+549,Freya,Larsen,4,Finance Manager,5,1996-07-03,Female,60,Married,Bachelor,7,Travel_Rarely,,Active
+550,Priya,Simonsen,5,Operations Director,2,2015-06-27,Female,46,Divorced,Bachelor,18,Travel_Rarely,2034,Active
+551,Tariq,Novak,6,Support Representative,2,2019-05-29,Female,42,Married,Master,28,Travel_Frequently,372,Active
+554,Omar,Delacroix,1,Sales Representative,1,2019-06-18,Female,24,Single,Below College,1,Travel_Rarely,1869,Terminated
+555,Ethan,Silva,1,Sales Representative,1,2022-01-25,Female,34,Divorced,College,6,Travel_Frequently,580,Terminated
+556,Bruno,Petrov,2,QA Engineer,1,2024-07-24,Male,38,Married,College,2,Travel_Frequently,1128,Active
+558,Bruno,Marchetti,4,Finance Manager,5,2005-11-09,Female,40,Married,Master,2,Travel_Rarely,1191,Active
+560,Caleb,Eriksen,2,Software Engineer,1,2022-11-22,Female,26,Divorced,Bachelor,23,Travel_Rarely,661,Active
+562,Andre,Petrov,2,QA Engineer,1,2020-12-31,Male,30,Married,Bachelor,3,Non-Travel,1539,Active
+564,Soren,Simonsen,2,Engineering Director,3,2015-05-11,Male,29,Married,Master,3,Travel_Rarely,638,Active
+565,Chloe,Kowalski,2,Software Engineer,1,2021-12-24,Female,29,Married,Doctor,25,Travel_Rarely,1655,Terminated
+566,Yuki,Novak,3,HR Generalist,1,2023-07-25,Male,19,Single,College,2,Travel_Rarely,590,Terminated
+567,Sofia,Hassan,1,Sales Executive,3,2016-01-25,Female,30,Married,Master,22,Non-Travel,404,Active
+568,Jonas,Navarro,4,Finance Manager,4,2024-12-18,Male,57,Divorced,Bachelor,29,Travel_Rarely,1338,Active
+569,Jonas,Rossi,4,Finance Manager,4,1998-07-02,Male,50,Married,Master,29,Travel_Rarely,787,Active
+571,Ethan,Pashkov,2,QA Engineer,1,2014-07-27,Female,30,Single,Bachelor,2,Non-Travel,1539,Active
+573,Soren,Fitzgerald,1,Sales Executive,3,2007-04-30,Female,60,Married,Bachelor,28,Travel_Frequently,1372,Active
+574,Peter,Whitfield,5,Operations Director,2,2020-10-02,Female,47,Divorced,College,2,Travel_Rarely,1005,Active
+575,Soren,Bergman,2,Engineering Director,4,2022-12-25,Male,46,Married,Bachelor,2,Travel_Rarely,80,Active
+577,Zara,Sharma,2,QA Engineer,1,2020-02-12,Male,35,Single,Bachelor,22,Travel_Rarely,1250,Active
+578,Nikolai,Halvorsen,2,QA Engineer,2,2024-11-29,Female,54,Single,Master,8,Travel_Rarely,638,Active
+579,Zara,Pashkov,2,Software Engineer,1,2018-06-04,Male,34,Divorced,Master,2,Travel_Rarely,1422,Active
+580,Yuki,Nowak,1,Sales Executive,3,2022-10-12,Female,46,Married,Bachelor,10,Travel_Rarely,1138,Active
+581,Soren,Mbeki,5,Operations Director,3,2012-09-25,Male,31,Divorced,Below College,9,Travel_Rarely,1367,Active
+582,Amara,Rossi,4,Finance Manager,3,2016-12-09,Male,33,Married,Below College,15,Travel_Rarely,1973,Terminated
+584,Aisha,Dubois,2,QA Engineer,1,2019-12-05,Male,33,Divorced,Below College,10,Travel_Rarely,901,Terminated
+585,Leila,Osei,1,Sales Representative,1,2022-10-18,Male,30,Single,Below College,7,Travel_Rarely,1732,Active
+586,Luis,Kaur,6,Support Representative,3,2017-11-13,Male,35,Married,Bachelor,16,Travel_Rarely,431,Active
+587,Kwame,Hassan,6,Support Representative,3,2022-09-19,Male,31,Married,Bachelor,20,Travel_Frequently,431,Terminated
+590,Rosa,Fitzgerald,3,HR Generalist,3,2021-06-08,Female,34,Divorced,Bachelor,23,Travel_Frequently,698,Terminated
+591,Idris,Ferreira,2,QA Engineer,1,2023-02-17,Male,42,Married,College,5,Travel_Frequently,1035,Active
+592,Nikolai,Ibrahim,1,Sales Executive,3,2015-11-17,Male,36,Single,Master,10,Non-Travel,1716,Active
+593,Zara,Bianchi,2,QA Engineer,1,2021-07-18,Male,22,Single,Below College,4,Travel_Frequently,468,Terminated
+595,Luis,Ibrahim,1,Sales Executive,2,2016-01-25,Female,48,Married,Doctor,2,Travel_Rarely,986,Active
+597,Mira,Sharma,4,Finance Manager,4,2015-05-17,Female,55,Single,Doctor,18,Travel_Rarely,374,Active
+599,Andre,Sharma,1,Sales Executive,2,2011-10-24,Male,41,Single,College,10,Non-Travel,2056,Active
+600,Mei,Eriksen,1,Sales Executive,2,2014-04-07,Male,35,Married,Bachelor,1,Travel_Rarely,1070,Active
+601,Amara,Grimaldi,5,Operations Director,4,2005-04-11,Female,40,Single,Bachelor,6,Travel_Rarely,1775,Active
+602,Camila,Tanaka,2,QA Engineer,1,2017-06-20,Female,39,Married,Below College,8,Travel_Frequently,1128,Active
+604,Peter,Rossi,1,Sales Executive,2,2019-01-15,Male,31,Single,Below College,2,Travel_Rarely,1319,Active
+605,Fatima,Bergman,5,Operations Director,3,2015-03-16,Male,42,Married,Bachelor,24,Travel_Rarely,1401,Active
+606,Nina,Novak,1,Sales Executive,2,2017-10-28,Male,45,Married,Bachelor,2,Travel_Rarely,1975,Active
+608,Rahul,Rossi,3,HR Generalist,1,2017-06-14,Female,26,Divorced,Master,17,Travel_Frequently,590,Terminated
+611,Isabel,Varga,5,Operations Director,2,2022-06-18,Male,29,Divorced,Bachelor,19,Travel_Rarely,1360,Active
+612,Soren,Castellanos,2,Engineering Director,4,2019-09-06,Female,33,Divorced,Doctor,1,Travel_Rarely,141,Active
+613,Rahul,Petrov,4,Finance Manager,3,2020-10-22,Male,31,Divorced,Bachelor,7,Travel_Rarely,1973,Active
+614,Aisha,Delacroix,1,Sales Representative,1,2025-09-06,Male,18,Single,Bachelor,5,Travel_Frequently,302,Terminated
+615,Oscar,Varga,1,Sales Executive,3,2024-06-24,Male,40,Divorced,Bachelor,28,Non-Travel,1716,Active
+616,Ingrid,Bakker,6,Support Representative,2,2017-11-08,Female,41,Single,Master,2,Non-Travel,372,Active
+618,Tariq,Petrov,1,Sales Executive,2,2025-03-01,Male,26,Divorced,College,29,Travel_Rarely,2055,Active
+620,Hugo,Fitzgerald,1,Sales Executive,2,2020-05-26,Female,35,Single,Bachelor,1,Travel_Rarely,1070,Active
+621,Idris,Sharma,1,Sales Executive,2,2015-09-08,Male,34,Single,Master,21,Travel_Rarely,862,Active
+622,Aarav,Krishnan,2,QA Engineer,1,2023-05-05,Male,26,Single,Bachelor,24,Travel_Rarely,661,Terminated
+623,Freya,Duarte,5,Operations Director,3,2019-08-29,Female,37,Single,Bachelor,1,Travel_Rarely,1367,Active
+624,Caleb,Okafor,6,Support Representative,3,2023-07-31,Female,46,Married,Below College,18,Travel_Frequently,1606,Active
+625,Daniel,Bianchi,4,Finance Manager,4,2007-06-24,Female,41,Married,Doctor,2,Travel_Rarely,1336,Active
+626,Nadia,Lombardi,1,Sales Executive,3,2016-04-09,Male,37,Divorced,Master,9,Non-Travel,1716,Active
+630,Sofia,Osei,2,Software Engineer,2,2015-01-09,Male,52,Divorced,College,6,Travel_Rarely,638,Active
+631,Hugo,Kowalski,1,Sales Executive,2,2020-08-19,Male,32,Married,Master,11,Non-Travel,1050,Terminated
+632,Ingrid,Vandenberg,1,Sales Representative,1,2023-02-24,Male,24,Married,Bachelor,24,Travel_Frequently,1869,Active
+634,Hannah,Duarte,6,Support Representative,2,2024-10-30,Female,38,Married,Bachelor,10,Travel_Rarely,119,Active
+635,Marcus,Tanaka,5,Operations Director,2,2019-03-04,Female,37,Married,Master,1,Travel_Rarely,601,Active
+638,Kwame,Cardoso,2,Engineering Director,5,1994-10-15,Male,49,Divorced,Master,18,Travel_Rarely,1423,Active
+639,Rahul,Kowalski,2,Software Engineer,1,2019-12-24,Male,24,Married,Bachelor,23,Travel_Rarely,1666,Active
+641,Elena,Grimaldi,1,Sales Executive,2,2020-06-11,Male,26,Married,College,28,Travel_Rarely,2055,Active
+643,Marcus,Steiner,2,QA Engineer,1,2024-11-16,Male,24,Married,College,17,Travel_Rarely,1666,Active
+644,Chloe,Larsen,4,Finance Manager,5,1993-03-12,Male,50,Married,Bachelor,3,Travel_Frequently,140,Active
+645,Sofia,Kaur,1,Sales Representative,1,2018-03-26,Male,25,Married,Below College,13,Travel_Rarely,1732,Active
+647,Camila,Duarte,2,QA Engineer,1,2018-06-28,Female,24,Married,Bachelor,7,Travel_Frequently,1666,Terminated
+648,Yuki,Fitzgerald,1,Sales Representative,1,2022-06-13,Male,30,Married,Master,12,Travel_Frequently,1732,Terminated
+649,Bruno,Cardoso,2,Software Engineer,1,2019-04-28,Male,34,Married,College,1,Travel_Rarely,386,Active
+650,Samir,Mehta,1,Sales Executive,2,2021-03-30,Male,31,Divorced,Master,13,Travel_Rarely,1319,Terminated
+652,Omar,Bakker,2,QA Engineer,2,2022-02-20,Male,35,Single,College,25,Travel_Rarely,1069,Active
+653,Caleb,Ibrahim,1,Sales Executive,2,2018-04-24,Male,31,Divorced,Master,6,Travel_Rarely,1319,Active
+655,Rosa,Nowak,2,Software Engineer,1,2020-05-29,Female,27,Divorced,Master,6,Travel_Rarely,1523,Active
+656,Elena,Hassan,1,Sales Executive,2,2022-09-25,Male,37,Married,Bachelor,2,Travel_Rarely,81,Active
+657,Andre,Kaur,2,Software Engineer,1,2024-11-04,Female,20,Single,Bachelor,1,Travel_Rarely,612,Active
+659,Lena,Larsen,6,Support Representative,2,2015-03-25,Female,42,Married,Master,2,Travel_Rarely,372,Active
+661,Andre,Nowak,2,Engineering Director,4,2024-06-28,Male,43,Divorced,Master,6,Travel_Rarely,141,Active
+662,Divya,Osei,2,Software Engineer,1,2025-10-21,Female,38,Single,Below College,1,Travel_Rarely,1128,Active
+663,Viktor,Sharma,2,QA Engineer,2,2017-03-11,Male,43,Divorced,Doctor,9,Travel_Frequently,1941,Active
+664,Hugo,Kaur,4,Finance Manager,4,2022-05-31,Female,48,Married,Master,1,Travel_Rarely,787,Active
+665,Daniel,Novak,3,HR Generalist,2,2023-10-07,Female,44,Single,Master,1,Travel_Rarely,1744,Active
+666,Caleb,Lindqvist,1,Sales Representative,1,2017-06-08,Female,34,Divorced,Bachelor,14,Travel_Rarely,580,Active
+667,Tariq,Varga,1,Sales Representative,1,2020-06-20,Male,27,Divorced,Below College,2,Travel_Rarely,1732,Terminated
+669,Amara,Duarte,1,Sales Representative,1,2022-07-08,Male,21,Single,Below College,22,Travel_Rarely,302,Active
+671,Jonas,Grimaldi,4,Finance Manager,5,2023-05-25,Male,44,Married,Master,3,Travel_Rarely,140,Active
+675,Andre,Reyes,2,Software Engineer,1,2023-07-17,Male,22,Married,Below College,6,Travel_Rarely,468,Active
+677,Daniel,Eriksen,1,Sales Executive,2,2020-02-13,Male,33,Divorced,Master,8,Travel_Rarely,1050,Active
+679,Claire,Dubois,2,Software Engineer,2,2019-11-25,Female,32,Married,Master,9,Travel_Rarely,1217,Active
+680,Nadia,Dubois,2,Software Engineer,1,2024-09-10,Female,30,Divorced,Bachelor,3,Travel_Frequently,1539,Active
+682,Amara,Aoki,1,Sales Executive,2,2011-02-23,Female,53,Single,Below College,1,Travel_Rarely,986,Active
+683,Claire,Ibrahim,2,Software Engineer,1,2015-01-14,Male,34,Married,Doctor,1,Travel_Rarely,386,Active
+684,Nadia,Jokinen,1,Sales Executive,2,2023-12-07,Female,45,Married,Master,26,Travel_Frequently,1975,Terminated
+686,Luis,Vandenberg,2,QA Engineer,1,2022-10-15,Female,26,Married,Bachelor,6,Travel_Rarely,661,Active
+689,Tariq,Ramos,5,Operations Director,3,2015-12-21,Male,37,Married,Bachelor,3,Travel_Rarely,1367,Active
+690,Amara,Steiner,1,Sales Executive,2,2019-09-13,Female,29,Married,College,3,Travel_Rarely,1391,Active
+691,Leila,Ferreira,2,Software Engineer,2,2008-04-27,Male,35,Single,Master,6,Travel_Rarely,1069,Active
+692,Grace,Tanaka,6,Support Representative,2,2012-05-27,Male,33,Divorced,Bachelor,6,Travel_Frequently,1697,Active
+698,Anika,Vandenberg,3,HR Generalist,3,2016-07-27,Male,54,Married,Master,19,Travel_Rarely,,Active
+699,Viktor,Silva,5,Operations Director,2,2022-07-24,Male,36,Divorced,College,9,Travel_Rarely,1026,Active
+700,Priya,Okafor,2,Software Engineer,1,2021-07-27,Male,27,Single,Master,3,Travel_Rarely,1523,Active
+701,Tobias,Lombardi,2,Software Engineer,1,2023-03-14,Male,20,Single,Below College,10,Travel_Rarely,612,Terminated
+702,Priya,Osei,2,Software Engineer,1,2015-10-07,Male,33,Single,Bachelor,3,Travel_Frequently,901,Terminated
+704,Luis,Delacroix,2,QA Engineer,1,2024-05-26,Male,35,Married,Bachelor,3,Non-Travel,1250,Active
+705,Jonas,Sharma,2,Software Engineer,1,2022-03-06,Male,23,Married,Bachelor,4,Travel_Rarely,468,Active
+707,Ingrid,Petrov,1,Sales Executive,2,2022-11-21,Male,25,Married,Bachelor,8,Travel_Rarely,840,Active
+709,Hugo,Ferreira,1,Sales Executive,2,2018-11-17,Female,38,Single,Master,7,Travel_Rarely,573,Active
+710,Samir,Kowalski,2,Software Engineer,1,2015-05-01,Male,29,Divorced,Master,1,Travel_Frequently,1655,Active
+712,Luis,Ramos,1,Sales Executive,2,2023-02-12,Male,48,Married,Below College,2,Travel_Rarely,986,Active
+714,Lena,Lindqvist,1,Sales Executive,2,2019-08-04,Female,27,Divorced,Below College,3,Travel_Frequently,2055,Active
+715,Divya,Cardoso,2,Software Engineer,1,2024-02-25,Male,37,Single,College,10,Travel_Rarely,1837,Active
+716,Fatima,Bergman,2,QA Engineer,1,2005-07-18,Male,50,Married,Below College,28,Travel_Rarely,58,Active
+717,Tariq,Ramos,6,Support Representative,3,2017-07-30,Female,34,Single,Bachelor,9,Travel_Rarely,431,Active
+720,Marcus,Silva,1,Sales Executive,2,2022-05-28,Female,24,Single,College,3,Travel_Rarely,118,Terminated
+721,Anika,Jokinen,6,Support Representative,2,2005-05-26,Female,39,Single,Master,2,Travel_Rarely,119,Active
+722,Ingrid,Ferreira,1,Sales Executive,2,2015-09-04,Male,32,Single,Bachelor,10,Travel_Rarely,1050,Active
+723,Mira,Pashkov,1,Sales Executive,2,2021-01-18,Male,50,Married,College,8,Travel_Frequently,986,Terminated
+724,Nadia,Cardoso,6,Support Representative,2,2016-12-15,Female,38,Single,Master,1,Travel_Rarely,119,Active
+725,Nina,Nakamura,5,Operations Director,3,2016-04-06,Female,27,Married,College,1,Travel_Rarely,1005,Active
+727,Caleb,Andersen,2,Engineering Director,3,2018-12-31,Female,32,Single,College,3,Travel_Rarely,638,Active
+728,Camila,Ibrahim,1,Sales Executive,2,2018-09-27,Male,47,Single,Master,14,Travel_Rarely,986,Active
+729,Soren,Grimaldi,1,Sales Executive,3,2007-12-24,Male,40,Married,Master,5,Travel_Frequently,1716,Active
+730,Jonas,Silva,2,Engineering Director,4,2020-06-30,Male,53,Married,Bachelor,7,Travel_Rarely,162,Active
+731,Priya,Jokinen,4,Finance Manager,5,2004-07-27,Male,41,Divorced,Master,10,Travel_Rarely,1191,Active
+732,Freya,Quintero,1,Sales Executive,2,2023-07-05,Male,60,Single,Master,16,Travel_Rarely,1167,Active
+733,Mira,Bakker,5,Operations Director,3,2016-08-09,Male,27,Divorced,College,10,Travel_Frequently,1005,Active
+734,Luis,Okafor,4,Finance Manager,5,2003-02-08,Male,41,Married,Bachelor,1,Travel_Rarely,1191,Active
+738,Rosa,Bakker,1,Sales Representative,1,2023-10-02,Male,50,Married,Master,8,Travel_Rarely,118,Active
+741,Mei,Reyes,2,Software Engineer,1,2018-02-02,Female,28,Single,College,1,Travel_Rarely,575,Terminated
+742,Hugo,Steiner,2,Engineering Director,3,2017-08-04,Female,36,Married,Bachelor,8,Non-Travel,396,Active
+743,Priya,Moreau,5,Operations Director,3,2024-08-14,Female,38,Single,Bachelor,1,Travel_Rarely,1367,Active
+744,Sofia,Reyes,2,QA Engineer,1,2020-03-09,Male,44,Single,Bachelor,24,Non-Travel,999,Active
+746,Zara,Marchetti,1,Sales Executive,4,2003-09-18,Female,47,Divorced,Bachelor,3,Travel_Frequently,131,Active
+747,Aisha,Ramos,1,Sales Executive,2,2017-12-13,Male,30,Divorced,Doctor,27,Travel_Rarely,1319,Active
+749,Rosa,Steiner,1,Sales Representative,1,2024-10-12,Male,29,Single,Bachelor,10,Travel_Rarely,1732,Active
+752,Samir,Whitfield,2,Software Engineer,1,2023-03-31,Male,42,Divorced,Bachelor,19,Travel_Frequently,1035,Terminated
+754,Chloe,Kowalski,1,Sales Executive,2,2023-03-26,Male,43,Married,Bachelor,15,Travel_Frequently,1975,Active
+757,Bruno,Rossi,6,Support Representative,2,2020-07-20,Female,34,Single,College,8,Travel_Rarely,1127,Active
+758,Yuki,Nakamura,2,QA Engineer,1,2021-08-24,Male,23,Married,Below College,9,Travel_Rarely,468,Active
+760,Omar,Okafor,3,HR Generalist,2,2017-10-17,Female,39,Married,Bachelor,3,Travel_Rarely,1744,Active
+762,Felix,Okafor,6,Support Representative,4,2015-02-02,Male,56,Married,Bachelor,9,Travel_Rarely,,Active
+763,Marcus,Grimaldi,2,Software Engineer,1,2021-08-08,Female,40,Single,Below College,2,Travel_Rarely,352,Active
+764,Peter,Haddad,6,Support Representative,2,2018-07-27,Female,27,Single,Bachelor,7,Travel_Rarely,165,Active
+766,Kwame,Bergman,1,Sales Representative,1,2023-03-17,Male,29,Divorced,Bachelor,10,Travel_Rarely,1732,Active
+769,Amara,Mehta,2,QA Engineer,2,2023-04-24,Male,53,Single,Bachelor,6,Travel_Rarely,638,Active
+771,Isabel,Okafor,6,Support Representative,2,2024-12-01,Female,35,Divorced,Master,2,Non-Travel,1127,Active
+772,Soren,Moreau,2,QA Engineer,2,2015-02-22,Male,32,Married,Master,24,Travel_Frequently,1217,Active
+773,Fatima,Delacroix,2,Software Engineer,1,2024-03-08,Male,38,Married,Doctor,2,Travel_Rarely,1128,Active
+775,Divya,Silva,5,Operations Director,2,2025-09-30,Female,34,Divorced,Doctor,8,Travel_Rarely,1283,Active
+776,Mira,Kaur,4,Finance Manager,4,1991-10-30,Male,52,Married,Master,3,Travel_Rarely,374,Active
+780,Mei,Ortega,2,Software Engineer,1,2014-04-23,Male,33,Single,Master,1,Travel_Rarely,901,Terminated
+781,Rahul,Bakker,1,Sales Executive,2,2019-04-18,Female,25,Single,Below College,26,Travel_Rarely,840,Active
+783,Sanne,Kowalski,1,Sales Representative,2,2017-08-14,Male,45,Single,College,2,Travel_Rarely,1975,Active
+784,Caleb,Ferreira,2,Software Engineer,1,2023-11-08,Male,23,Single,Below College,10,Travel_Rarely,468,Active
+785,Aisha,Kaur,1,Sales Executive,2,2020-01-09,Female,47,Single,College,27,Travel_Frequently,1975,Terminated
+786,Aarav,Haddad,1,Sales Executive,2,2019-10-09,Male,34,Single,Bachelor,2,Travel_Rarely,862,Active
+787,Divya,Novak,4,Finance Manager,5,2019-12-22,Male,55,Married,Bachelor,2,Travel_Rarely,549,Terminated
+789,Zara,Osei,1,Sales Executive,3,2015-12-08,Male,36,Single,Master,8,Non-Travel,1716,Active
+791,Kwame,Fitzgerald,2,Software Engineer,1,2021-07-16,Male,52,Married,Master,19,Non-Travel,58,Active
+792,Ethan,Halvorsen,2,QA Engineer,1,2023-09-15,Female,26,Divorced,College,1,Travel_Frequently,661,Active
+793,Leila,Nowak,6,Support Representative,2,2017-11-08,Female,29,Married,Bachelor,27,Travel_Rarely,165,Active
+796,Elena,Jokinen,1,Sales Executive,2,2020-07-13,Male,26,Single,Bachelor,8,Travel_Rarely,2055,Terminated
+797,Bruno,Tanaka,2,Software Engineer,1,2021-01-03,Female,34,Single,Master,1,Travel_Rarely,386,Active
+799,Nina,Rossi,5,Operations Director,2,2020-07-28,Female,54,Divorced,Master,19,Travel_Rarely,1005,Active
+800,Grace,Fitzgerald,1,Sales Executive,2,2021-01-31,Male,27,Married,Below College,8,Travel_Frequently,2055,Active
+802,Rosa,Lombardi,2,Software Engineer,1,2020-10-01,Female,37,Divorced,Below College,10,Travel_Rarely,1837,Active
+803,Viktor,Ibrahim,5,Operations Director,2,2010-01-27,Female,38,Single,Master,2,Travel_Frequently,601,Active
+804,Rahul,Rossi,2,Software Engineer,1,2019-06-12,Female,34,Single,Master,2,Travel_Rarely,386,Active
+805,Hannah,Hassan,1,Sales Representative,1,2022-09-05,Female,35,Married,Master,8,Travel_Rarely,244,Active
+806,Sofia,Marchetti,2,QA Engineer,1,2023-06-23,Male,30,Married,Bachelor,1,Travel_Rarely,1539,Active
+807,Nadia,Mehta,6,Support Representative,2,2017-02-15,Female,40,Married,College,2,Travel_Frequently,119,Active
+808,Diego,Nowak,1,Sales Executive,2,2022-02-01,Female,34,Married,College,8,Travel_Rarely,862,Active
+809,Nikolai,Eriksen,4,Finance Manager,5,2001-07-24,Male,42,Divorced,Bachelor,8,Travel_Frequently,1191,Active
+811,Idris,Halvorsen,2,QA Engineer,1,2024-12-26,Male,23,Married,Bachelor,6,Travel_Rarely,468,Terminated
+812,Diego,Vandenberg,2,QA Engineer,1,2024-04-10,Male,24,Divorced,Bachelor,9,Non-Travel,1666,Active
+813,Hannah,Sharma,2,QA Engineer,2,2020-10-30,Female,52,Married,Master,11,Travel_Rarely,638,Active
+815,Chloe,Aoki,2,Engineering Director,4,2021-06-18,Male,50,Married,Bachelor,2,Travel_Rarely,162,Active
+816,Mei,Osei,2,QA Engineer,1,2023-08-11,Female,29,Married,College,1,Travel_Rarely,1655,Terminated
+817,Chloe,Nowak,2,Engineering Director,3,2012-07-02,Male,33,Married,Bachelor,7,Travel_Rarely,638,Active
+819,Luis,Ferreira,1,Sales Executive,2,2020-10-31,Female,33,Single,Bachelor,16,Travel_Rarely,1050,Terminated
+820,Marcus,Quintero,4,Finance Manager,4,1999-06-27,Female,47,Married,College,2,Travel_Rarely,787,Active
+823,Caleb,Novak,5,Operations Director,2,2016-11-28,Female,36,Married,Bachelor,1,Travel_Rarely,1026,Active
+824,Anika,Krishnan,2,Software Engineer,1,2015-09-18,Male,29,Married,College,23,Travel_Rarely,1655,Active
+825,Sofia,Sharma,2,Engineering Director,5,1992-09-28,Male,58,Single,Master,2,Travel_Rarely,,Terminated
+826,Peter,Bakker,2,Software Engineer,1,2023-11-11,Female,35,Single,Master,1,Travel_Rarely,1422,Active
+827,Tariq,Larsen,5,Operations Director,2,2021-10-19,Female,42,Married,College,1,Travel_Rarely,2034,Active
+828,Peter,Bergman,2,Software Engineer,1,2023-04-01,Male,28,Single,Master,2,Travel_Rarely,575,Terminated
+829,Felix,Grimaldi,3,HR Generalist,1,2020-03-02,Male,36,Married,Bachelor,13,Travel_Rarely,1098,Active
+830,Omar,Kowalski,5,Operations Director,2,2011-06-18,Female,32,Married,Bachelor,4,Travel_Rarely,1283,Active
+832,Amara,Bianchi,2,QA Engineer,2,2024-01-10,Male,40,Single,Master,16,Travel_Frequently,1263,Active
+833,Hugo,Aoki,5,Operations Director,2,2025-10-03,Female,30,Single,Bachelor,2,Travel_Rarely,1360,Active
+834,Yuki,Mehta,2,Software Engineer,1,2024-06-10,Female,45,Single,Bachelor,2,Travel_Rarely,999,Active
+836,Viktor,Quintero,5,Operations Director,2,2016-01-29,Male,42,Married,Bachelor,29,Travel_Rarely,601,Active
+837,Rahul,Eriksen,6,Support Representative,2,2021-01-06,Male,38,Divorced,Bachelor,12,Travel_Frequently,119,Active
+838,Tobias,Nakamura,2,Software Engineer,1,2020-12-04,Female,34,Single,Master,16,Travel_Frequently,386,Active
+840,Viktor,Steiner,1,Sales Executive,3,2015-09-06,Female,49,Married,Bachelor,11,Travel_Rarely,1138,Terminated
+842,Hugo,Dubois,1,Sales Executive,2,2015-12-06,Male,55,Single,Below College,2,Travel_Rarely,986,Terminated
+843,Andre,Mehta,2,Engineering Director,4,2021-12-29,Male,43,Married,College,14,Travel_Rarely,141,Active
+844,Viktor,Osei,2,Engineering Director,3,2016-12-25,Male,27,Divorced,Below College,5,Travel_Rarely,638,Active
+845,Aisha,Bergman,5,Operations Director,3,2017-03-24,Male,35,Single,Bachelor,7,Travel_Rarely,1367,Active
+846,Peter,Halvorsen,1,Sales Executive,2,2017-09-06,Female,28,Married,Master,2,Travel_Rarely,174,Active
+847,Sofia,Cardoso,3,HR Generalist,1,2022-04-14,Male,34,Married,College,3,Travel_Rarely,1098,Active
+848,Aisha,Vandenberg,2,Software Engineer,1,2015-12-02,Female,26,Married,College,5,Travel_Frequently,661,Terminated
+850,Caleb,Jokinen,2,Software Engineer,1,2025-08-05,Male,27,Married,Bachelor,3,Non-Travel,1523,Active
+851,Grace,Tanaka,4,Finance Manager,4,2005-05-09,Female,51,Married,Master,26,Travel_Rarely,374,Active
+852,Claire,Andersen,6,Support Representative,2,2020-07-30,Male,44,Single,Bachelor,4,Travel_Rarely,1661,Active
+854,Daniel,Andersen,2,Software Engineer,1,2021-02-24,Male,25,Single,Below College,2,Travel_Rarely,1666,Active
+855,Nadia,Mehta,1,Sales Executive,2,2016-05-18,Male,33,Divorced,Bachelor,1,Travel_Rarely,1050,Active
+856,Fatima,Reyes,2,Software Engineer,1,2019-10-20,Female,35,Single,Below College,27,Travel_Rarely,1422,Active
+857,Viktor,Petrov,1,Sales Executive,2,2007-03-02,Male,36,Married,College,1,Travel_Rarely,81,Active
+859,Kwame,Okafor,1,Sales Executive,2,2020-05-13,Male,32,Divorced,Master,13,Travel_Rarely,1050,Active
+861,Amara,Haddad,2,Software Engineer,1,2020-08-20,Male,30,Divorced,Master,5,Travel_Frequently,1539,Active
+862,Hugo,Grimaldi,1,Sales Executive,3,2020-07-01,Female,53,Married,College,7,Travel_Rarely,1372,Active
+864,Andre,Eriksen,1,Sales Executive,3,2020-10-04,Male,45,Divorced,Bachelor,9,Travel_Rarely,1716,Active
+865,Hugo,Halvorsen,2,Software Engineer,2,2020-11-12,Female,32,Married,College,8,Travel_Rarely,1217,Active
+867,Aarav,Navarro,5,Operations Director,4,2016-12-28,Female,52,Married,Master,25,Travel_Frequently,1373,Active
+868,Rosa,Varga,1,Sales Executive,2,2024-01-10,Male,37,Divorced,Master,16,Travel_Rarely,81,Active
+869,Marcus,Halvorsen,3,HR Generalist,1,2020-09-17,Male,28,Divorced,College,8,Travel_Rarely,590,Active
+872,Felix,Pashkov,5,Operations Director,2,2023-09-04,Male,22,Married,College,1,Travel_Rarely,112,Active
+874,Soren,Quintero,2,QA Engineer,1,2022-07-06,Male,44,Married,Master,8,Travel_Rarely,999,Active
+875,Marcus,Aoki,2,Software Engineer,1,2023-07-26,Male,42,Single,Below College,2,Travel_Frequently,1035,Active
+878,Luis,Kowalski,3,HR Generalist,1,2020-06-21,Male,36,Married,Bachelor,8,Travel_Rarely,1098,Active
+879,Daniel,Cardoso,1,Sales Executive,2,2020-12-22,Male,25,Married,Below College,3,Travel_Rarely,840,Active
+880,Mira,Hassan,5,Operations Director,3,2008-03-14,Female,35,Married,Bachelor,9,Travel_Rarely,1367,Active
+881,Caleb,Aoki,2,Software Engineer,1,2013-06-20,Female,35,Divorced,Master,25,Travel_Frequently,1422,Terminated
+882,Andre,Duarte,2,QA Engineer,1,2022-09-16,Male,32,Divorced,Bachelor,1,Non-Travel,1472,Active
+885,Tariq,Bianchi,1,Sales Executive,2,2020-01-06,Male,25,Married,Below College,4,Travel_Rarely,840,Active
+887,Freya,Ibrahim,2,Software Engineer,1,2021-11-06,Female,49,Married,Bachelor,1,Travel_Rarely,58,Active
+888,Yuki,Ferreira,2,QA Engineer,1,2020-01-11,Male,24,Married,Below College,4,Non-Travel,1666,Active
+889,Claire,Kaur,1,Sales Executive,2,2015-11-10,Male,32,Married,College,5,Travel_Frequently,1968,Active
+893,Ethan,Tanaka,1,Sales Representative,1,2023-02-22,Male,38,Married,Bachelor,9,Travel_Rarely,118,Active
+894,Daniel,Novak,2,QA Engineer,2,2020-10-29,Female,42,Married,Bachelor,3,Travel_Rarely,1263,Active
+895,Fatima,Varga,2,Software Engineer,1,2019-01-23,Male,31,Married,Master,11,Travel_Rarely,997,Active
+896,Zara,Fitzgerald,1,Sales Representative,1,2021-01-17,Female,29,Divorced,Bachelor,1,Travel_Rarely,1732,Terminated
+897,Diego,Rossi,1,Sales Executive,4,2023-09-27,Male,53,Married,Bachelor,8,Travel_Rarely,131,Active
+899,Tariq,Petrov,5,Operations Director,3,2012-05-12,Male,35,Married,Bachelor,25,Travel_Rarely,1367,Active
+900,Jonas,Ortega,1,Sales Representative,1,2020-04-07,Female,37,Married,College,21,Travel_Frequently,244,Active
+901,Chloe,Mbeki,2,Engineering Director,4,2013-01-08,Female,53,Single,Master,23,Travel_Rarely,162,Active
+902,Nadia,Duarte,6,Support Representative,2,2020-10-14,Female,43,Married,Bachelor,1,Travel_Frequently,372,Active
+903,Samir,Novak,1,Sales Executive,2,2018-08-02,Female,47,Married,College,2,Travel_Rarely,1975,Active
+904,Rahul,Moreau,1,Sales Executive,3,2015-04-03,Male,37,Single,College,19,Non-Travel,1716,Active
+905,Aisha,Nakamura,4,Finance Manager,4,1994-03-23,Male,50,Divorced,Master,2,Non-Travel,787,Active
+909,Diego,Marchetti,3,HR Generalist,2,2020-12-30,Female,39,Married,Bachelor,2,Travel_Rarely,1744,Active
+910,Anika,Hassan,3,HR Generalist,1,2021-02-25,Male,33,Divorced,College,3,Travel_Rarely,2040,Active
+911,Elena,Bergman,2,QA Engineer,1,2023-12-14,Male,32,Single,Master,25,Travel_Rarely,815,Terminated
+912,Yuki,Hassan,2,QA Engineer,1,2021-11-10,Female,29,Divorced,Below College,7,Travel_Rarely,1655,Active
+913,Marcus,Bakker,2,Software Engineer,1,2017-05-03,Male,44,Married,College,9,Travel_Rarely,999,Active
+916,Andre,Haddad,1,Sales Executive,2,2021-06-16,Male,28,Single,Master,5,Travel_Rarely,174,Active
+918,Zara,Tanaka,2,QA Engineer,1,2023-02-22,Male,58,Divorced,Below College,2,Travel_Frequently,1608,Terminated
+920,Hugo,Ibrahim,5,Operations Director,2,2024-10-18,Female,43,Divorced,Bachelor,8,Travel_Rarely,2034,Active
+922,Lena,Petrov,1,Sales Representative,1,2022-01-04,Female,20,Single,Bachelor,2,Travel_Rarely,302,Terminated
+923,Amara,Osei,2,Software Engineer,1,2024-07-20,Female,21,Single,Below College,18,Travel_Rarely,612,Terminated
+924,Hugo,Mbeki,6,Support Representative,2,2009-09-04,Male,36,Married,Below College,14,Travel_Rarely,119,Active
+925,Priya,Lombardi,1,Sales Representative,1,2022-06-29,Female,47,Single,Master,2,Travel_Rarely,118,Active
+926,Camila,Hassan,5,Operations Director,2,2020-12-14,Female,22,Married,Below College,3,Travel_Rarely,112,Terminated
+927,Luis,Lindqvist,2,QA Engineer,1,2017-06-17,Female,41,Divorced,Master,2,Travel_Rarely,1035,Terminated
+930,Hugo,Mbeki,2,Software Engineer,1,2023-07-23,Female,28,Divorced,Bachelor,9,Travel_Rarely,575,Active
+932,Oscar,Petrov,2,QA Engineer,1,2021-05-30,Male,39,Married,Bachelor,6,Travel_Rarely,1128,Terminated
+933,Jonas,Kowalski,2,Software Engineer,1,2024-09-02,Female,27,Single,Bachelor,4,Travel_Rarely,1523,Active
+934,Mira,Duarte,2,QA Engineer,1,2024-08-07,Male,34,Divorced,Bachelor,10,Travel_Rarely,386,Active
+936,Divya,Krishnan,1,Sales Executive,2,2020-02-21,Female,42,Single,College,14,Travel_Rarely,1975,Active
+939,Nikolai,Fitzgerald,2,Software Engineer,1,2022-04-19,Male,33,Single,Master,1,Travel_Rarely,901,Active
+940,Amara,Krishnan,6,Support Representative,3,2019-05-30,Female,58,Divorced,Bachelor,5,Travel_Rarely,1606,Active
+941,Omar,Duarte,1,Sales Representative,1,2018-06-26,Male,31,Married,Master,7,Travel_Rarely,580,Active
+942,Freya,Quintero,6,Support Representative,2,2015-06-03,Female,35,Married,Below College,21,Travel_Rarely,1127,Active
+944,Omar,Simonsen,2,QA Engineer,3,1999-10-08,Female,49,Married,College,8,Travel_Rarely,1061,Active
+945,Fatima,Haddad,2,Software Engineer,1,2025-10-30,Male,48,Married,Master,20,Travel_Rarely,58,Active
+947,Rosa,Castellanos,1,Sales Executive,2,2016-05-11,Female,31,Married,College,20,Non-Travel,1319,Active
+949,Anika,Okafor,2,Software Engineer,1,2019-02-08,Male,36,Single,Master,7,Travel_Rarely,1424,Active
+950,Isabel,Grimaldi,2,Engineering Director,3,2010-11-08,Female,38,Married,Bachelor,1,Travel_Rarely,396,Active
+951,Daniel,Hassan,2,QA Engineer,1,2022-11-01,Female,32,Married,Bachelor,1,Non-Travel,815,Active
+952,Aarav,Novak,1,Sales Representative,1,2024-03-08,Male,25,Married,College,19,Travel_Rarely,1732,Terminated
+954,Nikolai,Jokinen,1,Sales Executive,3,2024-11-30,Male,40,Divorced,Master,10,Travel_Rarely,1716,Active
+956,Rosa,Okafor,1,Sales Executive,2,2018-06-05,Male,26,Single,Bachelor,1,Travel_Frequently,2055,Active
+957,Elena,Nowak,2,QA Engineer,1,2007-02-24,Male,41,Single,Bachelor,6,Travel_Rarely,1035,Active
+958,Freya,Okafor,2,QA Engineer,1,2014-06-01,Male,36,Single,Master,2,Travel_Rarely,1250,Active
+959,Kwame,Hassan,1,Sales Representative,1,2023-05-18,Male,19,Single,Bachelor,21,Travel_Rarely,302,Terminated
+960,Grace,Rossi,2,QA Engineer,1,2022-12-08,Male,20,Single,Bachelor,4,Travel_Rarely,612,Terminated
+961,Luis,Jokinen,6,Support Representative,2,2016-05-06,Female,31,Married,Bachelor,12,Travel_Rarely,1697,Active
+964,Freya,Haddad,2,Software Engineer,1,2024-12-15,Male,40,Divorced,Master,9,Travel_Frequently,352,Active
+966,Fatima,Whitfield,5,Operations Director,2,2017-05-08,Female,32,Married,Master,3,Travel_Rarely,1283,Active
+967,Ingrid,Mehta,1,Sales Executive,3,2009-10-27,Male,36,Married,Below College,3,Travel_Rarely,1863,Terminated
+969,Hugo,Delacroix,6,Support Representative,2,2020-01-09,Female,33,Single,Bachelor,1,Travel_Rarely,1697,Active
+970,Elena,Quintero,1,Sales Executive,3,2011-03-16,Male,37,Married,Master,1,Travel_Rarely,1716,Terminated
+972,Camila,Tanaka,2,QA Engineer,2,2016-09-07,Male,45,Married,College,4,Non-Travel,1941,Active
+974,Aisha,Dubois,1,Sales Representative,1,2022-08-24,Female,29,Married,Bachelor,20,Travel_Frequently,1732,Active
+975,Omar,Mehta,1,Sales Executive,2,2020-01-31,Female,35,Married,Bachelor,18,Travel_Rarely,1070,Active
+976,Soren,Varga,4,Finance Manager,4,2016-07-27,Male,52,Married,College,1,Travel_Rarely,374,Active
+977,Samir,Duarte,2,Software Engineer,1,2022-11-30,Male,58,Single,Bachelor,2,Travel_Rarely,1255,Terminated
+981,Zara,Novak,4,Finance Manager,4,2008-01-29,Male,53,Divorced,College,2,Travel_Rarely,374,Active
+982,Mira,Tanaka,1,Sales Executive,3,2017-01-17,Male,30,Divorced,College,8,Travel_Rarely,404,Active
+983,Claire,Hassan,1,Sales Executive,2,2020-11-25,Female,38,Single,Bachelor,10,Non-Travel,573,Active
+984,Jonas,Castellanos,1,Sales Executive,3,2015-03-03,Male,35,Divorced,Master,3,Travel_Rarely,1863,Active
+985,Samir,Larsen,1,Sales Executive,3,2017-04-09,Male,39,Single,Doctor,2,Travel_Rarely,1716,Active
+986,Marcus,Silva,1,Sales Executive,4,2023-10-25,Female,40,Single,Bachelor,24,Non-Travel,532,Terminated
+987,Lena,Lindqvist,5,Operations Director,2,2006-05-09,Male,47,Divorced,Master,16,Travel_Frequently,1005,Active
+990,Kwame,Nowak,1,Sales Executive,2,2018-12-04,Male,36,Divorced,Master,8,Non-Travel,81,Active
+991,Omar,Delacroix,2,Software Engineer,1,2021-08-09,Male,31,Single,College,9,Non-Travel,997,Terminated
+992,Tariq,Reyes,4,Finance Manager,4,2015-11-13,Male,33,Single,Bachelor,17,Non-Travel,1578,Active
+994,Ethan,Dubois,2,Software Engineer,1,2024-07-24,Female,29,Single,Bachelor,10,Travel_Rarely,1655,Terminated
+995,Lena,Pashkov,2,Software Engineer,1,2022-10-14,Female,33,Single,Below College,13,Travel_Rarely,901,Active
+996,Priya,Bakker,2,QA Engineer,1,2020-12-30,Female,45,Divorced,Master,1,Travel_Rarely,999,Active
+997,Leila,Krishnan,2,Engineering Director,4,2020-10-26,Male,50,Divorced,College,1,Travel_Rarely,162,Active
+998,Nina,Steiner,6,Support Representative,2,2019-01-20,Female,33,Married,Master,1,Travel_Frequently,1697,Active
+999,Jonas,Mbeki,2,Engineering Director,5,2007-10-20,Male,41,Divorced,Bachelor,9,Travel_Frequently,522,Active
+1001,Claire,Bakker,2,QA Engineer,1,2023-07-21,Female,27,Married,Master,16,Travel_Rarely,1523,Active
+1002,Ethan,Andersen,2,QA Engineer,2,2016-12-18,Male,45,Married,College,23,Non-Travel,1941,Active
+1003,Divya,Bianchi,1,Sales Executive,2,2016-03-16,Female,47,Single,College,4,Travel_Rarely,1975,Active
+1004,Lena,Rossi,2,Software Engineer,1,2020-06-06,Female,30,Married,Bachelor,22,Travel_Rarely,1539,Terminated
+1005,Zara,Lindqvist,5,Operations Director,4,2013-10-01,Male,50,Married,Bachelor,24,Travel_Rarely,1373,Active
+1006,Caleb,Delacroix,2,Software Engineer,1,2023-04-15,Male,38,Married,Below College,10,Travel_Frequently,1128,Active
+1007,Hugo,Duarte,5,Operations Director,3,2017-04-20,Male,46,Divorced,College,7,Travel_Rarely,867,Active
+1009,Anika,Tanaka,5,Operations Director,2,2021-09-27,Female,24,Divorced,Below College,17,Travel_Rarely,112,Active
+1010,Andre,Bergman,2,QA Engineer,1,2019-06-16,Male,35,Divorced,Master,14,Travel_Rarely,1422,Terminated
+1011,Rahul,Quintero,5,Operations Director,2,2021-03-19,Female,31,Married,Below College,1,Travel_Frequently,1283,Active
+1012,Samir,Bianchi,2,Software Engineer,1,2025-09-05,Male,18,Single,College,5,Non-Travel,612,Active
+1013,Omar,Lombardi,5,Operations Director,3,2015-05-25,Female,54,Married,Bachelor,17,Travel_Rarely,867,Active
+1014,Caleb,Duarte,6,Support Representative,3,2009-03-10,Female,35,Divorced,Master,25,Travel_Rarely,431,Active
+1015,Anika,Steiner,2,Engineering Director,3,2017-08-31,Female,30,Married,College,8,Travel_Rarely,638,Active
+1016,Nikolai,Kowalski,2,Software Engineer,1,2024-01-17,Female,20,Single,Bachelor,11,Travel_Rarely,612,Terminated
+1017,Isabel,Quintero,2,QA Engineer,1,2021-03-21,Female,30,Single,Bachelor,5,Travel_Frequently,1539,Terminated
+1018,Samir,Duarte,5,Operations Director,2,2017-02-07,Male,26,Married,College,2,Travel_Rarely,1360,Active
+1019,Idris,Bergman,2,QA Engineer,1,2021-02-01,Male,22,Married,Below College,8,Travel_Rarely,1485,Active
+1022,Caleb,Eriksen,6,Support Representative,2,2023-11-05,Male,48,Single,Bachelor,6,Travel_Rarely,1661,Active
+1024,Nadia,Larsen,6,Support Representative,3,2010-01-22,Male,48,Single,Master,4,Travel_Rarely,1606,Active
+1025,Soren,Moreau,5,Operations Director,2,2023-05-25,Female,41,Single,College,7,Travel_Rarely,601,Active
+1026,Nadia,Mbeki,5,Operations Director,4,2004-01-19,Female,39,Married,Below College,1,Travel_Rarely,1775,Active
+1027,Sofia,Bakker,5,Operations Director,2,2022-12-09,Female,27,Married,Master,2,Travel_Rarely,1360,Active
+1028,Marcus,Hassan,2,QA Engineer,1,2022-07-02,Male,35,Divorced,Bachelor,10,Travel_Rarely,1422,Active
+1029,Leila,Steiner,4,Finance Manager,5,2024-06-28,Male,42,Married,College,5,Travel_Rarely,1191,Active
+1030,Luis,Fitzgerald,2,QA Engineer,1,2024-04-06,Male,50,Married,Bachelor,9,Travel_Rarely,58,Active
+1032,Idris,Mehta,5,Operations Director,4,2020-09-18,Female,59,Single,Bachelor,2,Travel_Rarely,,Active
+1033,Hugo,Varga,6,Support Representative,2,2022-11-18,Female,37,Married,College,11,Travel_Rarely,119,Terminated
+1034,Hannah,Osei,6,Support Representative,2,2017-08-08,Male,55,Married,Master,18,Travel_Frequently,431,Active
+1035,Lena,Osei,2,Engineering Director,5,2004-02-27,Female,41,Divorced,Below College,7,Non-Travel,522,Active
+1036,Sofia,Kowalski,1,Sales Executive,2,2024-11-24,Male,38,Single,Master,3,Travel_Rarely,573,Active
+1037,Luis,Bakker,1,Sales Executive,2,2021-07-14,Male,26,Single,College,29,Non-Travel,2055,Terminated
+1038,Peter,Silva,4,Finance Manager,5,1992-07-04,Female,52,Married,Below College,2,Travel_Rarely,140,Terminated
+1039,Soren,Novak,1,Sales Executive,4,2013-11-05,Female,44,Married,Bachelor,28,Travel_Rarely,532,Active
+1040,Ethan,Varga,1,Sales Executive,2,2007-02-09,Female,50,Married,Bachelor,1,Non-Travel,986,Active
+1042,Sofia,Simonsen,2,QA Engineer,1,2008-08-28,Female,36,Single,Master,16,Travel_Rarely,1250,Terminated
+1043,Divya,Fitzgerald,5,Operations Director,3,2004-03-02,Female,39,Single,Bachelor,22,Travel_Frequently,1367,Active
+1044,Rahul,Lindqvist,1,Sales Representative,1,2023-10-28,Female,33,Single,Below College,8,Non-Travel,580,Active
+1045,Hannah,Larsen,4,Finance Manager,4,2016-04-04,Female,45,Married,College,11,Travel_Rarely,787,Active
+1046,Anika,Ferreira,2,QA Engineer,1,2017-09-16,Female,32,Single,Master,29,Non-Travel,815,Active
+1047,Chloe,Lindqvist,1,Sales Executive,2,2010-11-26,Male,34,Divorced,Master,1,Travel_Rarely,862,Active
+1048,Yuki,Kaur,4,Finance Manager,3,2019-12-06,Male,59,Married,College,1,Travel_Rarely,1578,Active
+1049,Kwame,Nakamura,3,HR Generalist,1,2019-07-10,Male,45,Single,Master,24,Travel_Rarely,1098,Active
+1050,Tobias,Haddad,1,Sales Executive,3,2010-09-08,Female,53,Married,Bachelor,2,Travel_Frequently,1372,Active
+1052,Hannah,Bianchi,2,QA Engineer,2,2023-03-01,Male,36,Divorced,Bachelor,15,Travel_Rarely,447,Terminated
+1053,Aisha,Kaur,2,Software Engineer,1,2021-09-21,Male,26,Married,Bachelor,2,Travel_Frequently,661,Terminated
+1055,Ethan,Eriksen,1,Sales Representative,1,2024-01-19,Female,34,Married,Master,10,Travel_Rarely,580,Active
+1056,Marcus,Bergman,1,Sales Representative,1,2024-10-14,Male,28,Married,Below College,10,Travel_Rarely,1732,Active
+1060,Camila,Tanaka,2,Software Engineer,1,2023-08-26,Male,38,Married,Master,3,Travel_Frequently,1128,Active
+1061,Claire,Sharma,2,Engineering Director,5,2017-07-30,Male,50,Married,Master,2,Travel_Rarely,1423,Active
+1062,Omar,Tanaka,6,Support Representative,2,2021-10-10,Female,37,Single,Bachelor,3,Travel_Rarely,119,Active
+1066,Soren,Moreau,1,Sales Executive,2,2018-11-03,Male,40,Married,Bachelor,26,Travel_Rarely,2056,Active
+1068,Elena,Jokinen,2,Software Engineer,1,2020-02-19,Female,26,Divorced,Below College,1,Travel_Frequently,661,Active
+1069,Divya,Krishnan,2,Engineering Director,5,2023-12-21,Male,46,Divorced,Master,1,Travel_Rarely,254,Active
+1070,Samir,Eriksen,1,Sales Executive,3,2016-11-04,Female,54,Married,Master,2,Travel_Rarely,1372,Active
+1071,Sanne,Pashkov,2,Software Engineer,1,2020-12-09,Female,56,Married,Bachelor,9,Travel_Frequently,1255,Active
+1073,Divya,Ortega,5,Operations Director,3,2011-05-14,Female,36,Single,Doctor,12,Travel_Rarely,1367,Active
+1074,Rahul,Mbeki,4,Finance Manager,4,2016-07-20,Male,55,Single,Below College,2,Non-Travel,374,Active
+1076,Samir,Halvorsen,1,Sales Executive,3,2024-01-29,Male,43,Divorced,Bachelor,25,Travel_Rarely,1716,Active
+1077,Andre,Nowak,1,Sales Representative,1,2022-09-04,Female,20,Single,Bachelor,9,Travel_Frequently,302,Terminated
+1079,Caleb,Mbeki,2,QA Engineer,1,2022-12-26,Female,21,Single,Bachelor,10,Travel_Rarely,612,Terminated
+1080,Rosa,Whitfield,2,Software Engineer,2,2009-02-15,Female,46,Divorced,Master,8,Travel_Rarely,1941,Active
+1081,Sofia,Ferreira,2,Software Engineer,1,2015-02-13,Male,51,Married,Master,4,Travel_Rarely,58,Terminated
+1082,Daniel,Halvorsen,6,Support Representative,3,2014-10-27,Male,28,Single,College,24,Non-Travel,431,Terminated
+1083,Daniel,Moreau,2,QA Engineer,1,2020-04-06,Male,26,Married,College,1,Travel_Rarely,661,Active
+1084,Daniel,Simonsen,5,Operations Director,2,2019-03-20,Male,30,Married,Bachelor,20,Travel_Rarely,1360,Active
+1085,Freya,Lindqvist,2,Software Engineer,1,2016-01-01,Female,41,Married,College,7,Travel_Rarely,1035,Active
+1088,Fatima,Aoki,6,Support Representative,3,2006-06-19,Female,38,Married,Below College,17,Travel_Rarely,431,Active
+1092,Luis,Castellanos,6,Support Representative,3,2014-05-17,Male,40,Married,Master,20,Travel_Rarely,431,Active
+1094,Luis,Andersen,2,QA Engineer,1,2022-01-16,Male,27,Married,Doctor,8,Non-Travel,1523,Active
+1096,Aisha,Steiner,5,Operations Director,3,2022-01-30,Male,55,Married,Below College,2,Travel_Frequently,867,Active
+1097,Priya,Eriksen,2,Software Engineer,2,2017-08-29,Female,28,Single,Bachelor,10,Travel_Rarely,1608,Active
+1098,Jonas,Novak,3,HR Generalist,3,2003-06-07,Male,44,Married,College,1,Travel_Rarely,698,Terminated
+1099,Divya,Aoki,6,Support Representative,3,2022-08-08,Male,33,Divorced,Bachelor,5,Travel_Rarely,431,Active
+1100,Bruno,Eriksen,1,Sales Executive,3,2016-02-03,Male,35,Single,Bachelor,4,Travel_Rarely,1863,Terminated
+1101,Chloe,Haddad,2,Software Engineer,2,2012-09-24,Female,33,Single,Master,29,Travel_Frequently,1069,Terminated
+1102,Nina,Kowalski,2,QA Engineer,1,2021-01-15,Male,28,Divorced,College,15,Travel_Rarely,575,Active
+1103,Jonas,Lindqvist,6,Support Representative,2,2019-12-30,Male,34,Single,Below College,3,Travel_Frequently,1697,Active
+1105,Zara,Nakamura,1,Sales Executive,2,2024-04-14,Female,37,Divorced,Master,10,Travel_Rarely,81,Active
+1106,Claire,Lindqvist,2,QA Engineer,1,2018-06-22,Male,25,Married,Below College,4,Travel_Rarely,1666,Terminated
+1107,Camila,Ferreira,2,QA Engineer,1,2023-06-13,Male,26,Divorced,Bachelor,21,Travel_Rarely,843,Terminated
+1108,Grace,Castellanos,2,Software Engineer,1,2021-12-03,Male,33,Single,Bachelor,25,Travel_Rarely,901,Terminated
+1109,Rahul,Fitzgerald,4,Finance Manager,4,2003-11-02,Male,42,Married,College,2,Travel_Rarely,1336,Active
+1111,Leila,Varga,2,QA Engineer,1,2024-02-05,Male,28,Divorced,Bachelor,1,Travel_Frequently,575,Terminated
+1113,Lena,Ortega,1,Sales Executive,2,2024-03-21,Male,50,Single,Master,1,Travel_Frequently,986,Terminated
+1114,Divya,Bergman,1,Sales Executive,2,2022-03-21,Female,33,Married,Bachelor,7,Travel_Frequently,1050,Active
+1115,Priya,Dubois,2,Software Engineer,1,2025-07-22,Male,34,Married,Master,3,Non-Travel,386,Active
+1116,Rahul,Osei,4,Finance Manager,4,2020-08-08,Male,48,Single,Master,1,Non-Travel,787,Active
+1117,Nikolai,Silva,1,Sales Executive,2,2010-04-23,Female,45,Married,Master,9,Non-Travel,1975,Active
+1118,Zara,Simonsen,6,Support Representative,3,2017-11-26,Male,52,Single,Master,7,Travel_Rarely,1606,Active
+1119,Diego,Mbeki,1,Sales Executive,3,2017-02-20,Male,38,Divorced,Master,10,Travel_Rarely,1716,Active
+1120,Aarav,Ibrahim,2,Software Engineer,1,2018-04-23,Female,29,Divorced,Master,28,Travel_Rarely,1655,Active
+1121,Leila,Navarro,5,Operations Director,3,2016-02-10,Female,28,Divorced,Bachelor,3,Travel_Rarely,1005,Active
+1124,Hannah,Simonsen,4,Finance Manager,4,2013-12-27,Male,46,Married,Below College,3,Travel_Rarely,787,Active
+1125,Yuki,Grimaldi,1,Sales Executive,3,2024-03-26,Male,38,Single,College,2,Travel_Rarely,1716,Active
+1126,Hannah,Castellanos,5,Operations Director,3,2017-03-08,Female,43,Married,Bachelor,27,Travel_Frequently,1401,Active
+1127,Ethan,Simonsen,6,Support Representative,4,2005-10-17,Male,39,Divorced,Bachelor,2,Travel_Frequently,258,Terminated
+1128,Kwame,Mehta,2,Engineering Director,5,2005-12-06,Male,40,Single,Bachelor,14,Travel_Rarely,522,Active
+1131,Sofia,Lindqvist,2,Software Engineer,1,2023-02-07,Female,21,Single,Below College,1,Travel_Rarely,612,Active
+1132,Caleb,Krishnan,2,QA Engineer,2,2020-09-14,Male,39,Single,Bachelor,9,Non-Travel,1263,Active
+1133,Kwame,Delacroix,5,Operations Director,2,2014-06-21,Male,36,Single,Master,18,Non-Travel,1026,Active
+1135,Caleb,Ibrahim,1,Sales Representative,1,2023-02-16,Male,31,Married,Bachelor,20,Travel_Frequently,580,Active
+1136,Nina,Varga,2,Software Engineer,1,2020-12-18,Male,28,Married,Below College,2,Travel_Rarely,575,Active
+1137,Tobias,Rossi,1,Sales Executive,2,2020-03-05,Male,35,Divorced,College,11,Travel_Frequently,1070,Active
+1138,Caleb,Quintero,1,Sales Executive,4,2016-03-24,Male,49,Married,Master,8,Travel_Rarely,131,Active
+1140,Felix,Marchetti,5,Operations Director,2,2022-06-04,Male,34,Single,College,2,Travel_Frequently,1283,Active
+1143,Fatima,Jokinen,2,Software Engineer,1,2018-12-01,Female,29,Divorced,Bachelor,10,Travel_Frequently,1655,Active
+1148,Lena,Vandenberg,2,QA Engineer,2,2024-02-09,Male,42,Single,Bachelor,29,Travel_Rarely,1263,Active
+1150,Yuki,Halvorsen,5,Operations Director,2,2015-10-06,Male,29,Married,Below College,8,Travel_Rarely,1360,Active
+1152,Aisha,Andersen,3,HR Generalist,1,2018-08-17,Male,38,Married,Bachelor,1,Travel_Rarely,1098,Active
+1154,Lena,Moreau,2,Software Engineer,1,2022-01-27,Male,28,Divorced,Bachelor,6,Travel_Frequently,575,Active
+1156,Sofia,Steiner,2,QA Engineer,1,2024-05-31,Male,18,Single,Below College,8,Non-Travel,612,Terminated
+1157,Oscar,Silva,1,Sales Executive,2,2019-05-26,Female,33,Single,Master,9,Travel_Rarely,1050,Terminated
+1158,Jonas,Sharma,2,QA Engineer,1,2024-10-29,Male,41,Married,Master,12,Travel_Rarely,1035,Active
+1160,Sofia,Quintero,2,QA Engineer,1,2021-08-03,Male,31,Married,Bachelor,15,Travel_Frequently,997,Terminated
+1161,Bruno,Dubois,6,Support Representative,2,2019-04-30,Female,37,Divorced,College,25,Travel_Rarely,119,Active
+1162,Diego,Cardoso,2,Software Engineer,1,2021-03-22,Male,27,Married,Bachelor,6,Travel_Rarely,1523,Active
+1163,Idris,Sharma,1,Sales Executive,2,2019-06-01,Female,34,Married,Below College,9,Travel_Rarely,862,Active
+1164,Kwame,Whitfield,3,HR Generalist,1,2020-11-02,Male,35,Single,Master,8,Travel_Rarely,1098,Active
+1165,Yuki,Steiner,1,Sales Executive,3,2012-12-03,Female,29,Married,Below College,23,Travel_Rarely,1167,Terminated
+1166,Fatima,Krishnan,2,Engineering Director,3,2007-04-15,Female,40,Single,Master,9,Travel_Frequently,396,Active
+1167,Jonas,Silva,1,Sales Executive,4,2003-11-15,Male,42,Single,Bachelor,12,Travel_Frequently,532,Terminated
+1171,Anika,Reyes,1,Sales Executive,2,2019-04-08,Male,42,Single,Master,4,Travel_Rarely,1975,Active
+1172,Priya,Dubois,2,QA Engineer,1,2017-11-01,Male,35,Married,Master,1,Travel_Rarely,1422,Active
+1173,Kwame,Andersen,2,QA Engineer,1,2021-09-17,Male,24,Single,Bachelor,24,Travel_Rarely,1666,Active
+1175,Divya,Novak,2,QA Engineer,1,2023-10-12,Female,28,Married,Below College,12,Travel_Rarely,575,Terminated
+1177,Tariq,Rossi,2,QA Engineer,1,2017-02-21,Male,26,Married,Master,3,Travel_Rarely,843,Active
+1179,Mei,Ortega,1,Sales Executive,2,2015-04-25,Male,30,Married,Bachelor,10,Travel_Rarely,1391,Active
+1180,Marcus,Fitzgerald,2,Software Engineer,2,2024-08-13,Female,40,Married,College,26,Travel_Frequently,1263,Active
+1182,Marcus,Cardoso,5,Operations Director,3,2018-06-03,Male,35,Divorced,Bachelor,2,Travel_Rarely,1367,Active
+1184,Sofia,Reyes,6,Support Representative,2,2012-10-11,Male,34,Single,Bachelor,1,Travel_Frequently,1697,Active
+1185,Andre,Ortega,2,QA Engineer,1,2023-09-30,Male,35,Married,Master,4,Travel_Frequently,1422,Active
+1188,Marcus,Novak,1,Sales Executive,2,2020-04-29,Female,43,Single,Bachelor,9,Travel_Rarely,1975,Terminated
+1190,Samir,Eriksen,1,Sales Representative,1,2024-09-16,Female,32,Divorced,Below College,2,Non-Travel,580,Active
+1191,Aisha,Varga,4,Finance Manager,5,2020-06-26,Female,56,Divorced,Master,4,Travel_Rarely,549,Active
+1192,Ingrid,Varga,2,QA Engineer,1,2015-09-13,Female,29,Married,Below College,6,Travel_Rarely,1655,Active
+1193,Nina,Krishnan,2,Software Engineer,1,2024-09-29,Male,19,Single,College,9,Travel_Rarely,612,Active
+1195,Anika,Bakker,2,Software Engineer,1,2022-06-19,Female,45,Married,Bachelor,7,Travel_Rarely,999,Active
+1196,Tariq,Lombardi,5,Operations Director,2,2011-06-01,Female,37,Married,Bachelor,1,Travel_Rarely,601,Active
+1198,Hugo,Grimaldi,2,QA Engineer,1,2023-02-16,Male,20,Single,Bachelor,3,Travel_Rarely,612,Active
+1200,Sofia,Haddad,2,Software Engineer,1,2019-06-24,Male,44,Single,Master,10,Travel_Rarely,999,Terminated
+1201,Idris,Vandenberg,4,Finance Manager,5,2018-02-18,Female,53,Divorced,College,7,Travel_Rarely,140,Active
+1202,Mira,Tanaka,2,Software Engineer,1,2020-03-25,Female,29,Married,Below College,15,Travel_Rarely,1443,Active
+1203,Omar,Simonsen,2,Software Engineer,1,2024-11-22,Male,22,Married,Master,3,Travel_Frequently,1485,Terminated
+1204,Samir,Tanaka,4,Finance Manager,4,1999-02-03,Female,46,Married,Bachelor,2,Travel_Rarely,787,Active
+1206,Andre,Steiner,2,Software Engineer,1,2025-09-14,Male,44,Single,Bachelor,17,Non-Travel,999,Active
+1207,Hannah,Mehta,3,HR Generalist,1,2020-02-14,Male,33,Married,Bachelor,2,Travel_Rarely,2040,Active
+1210,Chloe,Ferreira,2,Software Engineer,1,2024-03-12,Male,41,Divorced,College,5,Non-Travel,1035,Terminated
+1211,Claire,Okafor,1,Sales Executive,2,2021-07-23,Male,30,Divorced,Master,29,Travel_Rarely,1391,Active
+1212,Fatima,Lindqvist,1,Sales Executive,2,2025-06-17,Male,40,Married,Master,2,Travel_Frequently,2056,Active
+1215,Rosa,Nakamura,4,Finance Manager,4,2023-03-12,Female,50,Married,Bachelor,2,Travel_Frequently,787,Active
+1216,Anika,Grimaldi,2,QA Engineer,1,2019-06-15,Male,28,Married,Master,19,Travel_Rarely,575,Active
+1217,Soren,Sharma,2,Engineering Director,5,2021-09-16,Male,46,Married,College,15,Travel_Rarely,1770,Active
+1218,Luis,Bakker,1,Sales Executive,2,2018-09-15,Male,35,Married,Master,17,Travel_Rarely,1070,Active
+1219,Jonas,Haddad,2,QA Engineer,1,2024-01-09,Female,24,Married,College,17,Travel_Rarely,1666,Terminated
+1220,Claire,Tanaka,1,Sales Executive,2,2015-07-24,Female,33,Married,Bachelor,25,Travel_Frequently,1050,Active
+1221,Diego,Aoki,2,QA Engineer,1,2018-09-05,Male,36,Divorced,Master,6,Travel_Rarely,1250,Active
+1224,Daniel,Moreau,2,QA Engineer,2,2015-03-05,Male,30,Divorced,Master,7,Travel_Rarely,1608,Active
+1225,Grace,Jokinen,2,Software Engineer,2,2005-01-19,Male,44,Single,Master,29,Travel_Rarely,1941,Active
+1226,Kwame,Nakamura,1,Sales Representative,1,2023-12-19,Male,20,Single,Bachelor,21,Travel_Rarely,302,Active
+1228,Ethan,Larsen,5,Operations Director,2,2019-06-03,Male,46,Divorced,Master,2,Travel_Rarely,2034,Active
+1231,Andre,Halvorsen,3,HR Generalist,2,2021-09-02,Male,42,Married,Doctor,2,Non-Travel,1744,Active
+1233,Elena,Pashkov,1,Sales Executive,2,2014-08-01,Male,60,Divorced,Master,7,Travel_Rarely,1167,Active
+1234,Kwame,Vandenberg,2,QA Engineer,1,2023-10-05,Female,32,Married,Bachelor,13,Travel_Frequently,815,Active
+1235,Tariq,Simonsen,2,Software Engineer,2,2017-10-10,Female,32,Single,College,2,Travel_Frequently,1789,Active
+1237,Zara,Varga,5,Operations Director,3,2018-11-20,Female,36,Divorced,Bachelor,1,Travel_Rarely,1367,Active
+1238,Viktor,Kowalski,2,Software Engineer,1,2011-06-25,Male,33,Married,Bachelor,9,Travel_Rarely,901,Active
+1239,Hannah,Vandenberg,1,Sales Executive,2,2020-12-02,Female,40,Divorced,Bachelor,10,Travel_Rarely,2056,Active
+1240,Nina,Jokinen,1,Sales Executive,2,2021-05-04,Male,25,Single,Master,10,Travel_Rarely,840,Active
+1241,Leila,Bianchi,2,Software Engineer,1,2014-03-27,Male,30,Married,Bachelor,1,Travel_Rarely,1539,Active
+1242,Diego,Castellanos,2,Engineering Director,3,2024-01-30,Female,42,Married,Doctor,26,Travel_Frequently,396,Active
+1243,Tariq,Jokinen,1,Sales Executive,3,2012-02-06,Female,35,Married,College,8,Non-Travel,1863,Active
+1244,Samir,Reyes,2,Software Engineer,1,2016-12-17,Male,27,Married,Bachelor,14,Travel_Rarely,520,Active
+1245,Grace,Silva,5,Operations Director,3,2020-03-10,Female,54,Divorced,Master,1,Travel_Frequently,867,Active
+1246,Mira,Osei,2,Software Engineer,1,2015-06-16,Female,44,Married,Below College,2,Travel_Rarely,999,Active
+1248,Leila,Steiner,2,Software Engineer,1,2023-08-30,Female,19,Single,Bachelor,10,Non-Travel,612,Terminated
+1249,Jonas,Silva,2,Software Engineer,1,2022-06-09,Female,29,Divorced,Bachelor,1,Travel_Rarely,1443,Active
+1250,Bruno,Castellanos,2,Engineering Director,4,2015-03-06,Male,54,Married,Bachelor,3,Travel_Rarely,162,Active
+1251,Idris,Moreau,6,Support Representative,2,2019-12-16,Male,31,Married,College,11,Travel_Rarely,165,Active
+1252,Kwame,Reyes,6,Support Representative,2,2015-12-16,Female,31,Single,Bachelor,24,Travel_Rarely,165,Active
+1254,Mei,Krishnan,1,Sales Executive,2,2019-08-20,Female,59,Single,Bachelor,3,Travel_Rarely,1167,Active
+1255,Claire,Reyes,2,Engineering Director,5,2017-12-18,Male,43,Married,Bachelor,3,Travel_Rarely,1770,Active
+1256,Soren,Fitzgerald,4,Finance Manager,5,2024-01-31,Male,49,Married,College,4,Travel_Rarely,140,Active
+1257,Omar,Whitfield,2,Software Engineer,1,2014-07-08,Male,36,Married,Bachelor,3,Travel_Frequently,1250,Active
+1258,Freya,Osei,2,QA Engineer,1,2024-01-25,Male,48,Single,College,2,Travel_Rarely,58,Active
+1259,Yuki,Navarro,2,Software Engineer,1,2020-02-14,Male,27,Divorced,College,4,Travel_Rarely,520,Active
+1260,Andre,Vandenberg,6,Support Representative,2,2019-12-18,Male,29,Divorced,Bachelor,7,Travel_Rarely,165,Active
+1263,Caleb,Eriksen,2,Engineering Director,5,2024-10-01,Male,48,Single,Bachelor,1,Travel_Rarely,254,Active
+1264,Luis,Andersen,2,Engineering Director,4,2018-06-11,Female,29,Divorced,Bachelor,1,Travel_Rarely,385,Active
+1265,Rahul,Whitfield,2,Software Engineer,1,2024-06-24,Female,34,Married,Bachelor,20,Travel_Rarely,386,Active
+1267,Samir,Kowalski,4,Finance Manager,5,2003-05-18,Male,44,Married,Bachelor,5,Travel_Rarely,140,Active
+1268,Marcus,Ibrahim,1,Sales Executive,3,2016-03-14,Male,33,Divorced,Doctor,10,Travel_Rarely,1863,Active
+1269,Jonas,Mbeki,2,Software Engineer,1,2024-03-14,Female,19,Single,Bachelor,25,Travel_Rarely,612,Active
+1270,Marcus,Fitzgerald,2,Software Engineer,1,2024-09-05,Male,23,Married,College,1,Travel_Rarely,468,Active
+1273,Omar,Duarte,1,Sales Representative,1,2022-10-09,Male,25,Single,Below College,24,Travel_Frequently,1732,Terminated
+1275,Zara,Ramos,2,Software Engineer,1,2017-06-18,Male,26,Single,College,4,Travel_Rarely,843,Active
+1277,Felix,Nowak,4,Finance Manager,5,2000-07-16,Female,45,Single,Bachelor,2,Travel_Rarely,140,Terminated
+1278,Luis,Jokinen,6,Support Representative,4,1992-12-24,Male,55,Divorced,Below College,8,Non-Travel,762,Active
+1279,Felix,Nowak,2,QA Engineer,1,2023-03-08,Female,21,Single,College,10,Travel_Frequently,612,Terminated
+1280,Ethan,Okafor,4,Finance Manager,5,2014-05-29,Female,46,Married,College,4,Travel_Rarely,140,Active
+1281,Hannah,Whitfield,1,Sales Executive,2,2022-10-19,Female,34,Single,Bachelor,2,Travel_Rarely,862,Active
+1282,Sofia,Dubois,4,Finance Manager,5,1996-09-07,Male,51,Divorced,Bachelor,9,Travel_Frequently,140,Active
+1283,Aisha,Aoki,5,Operations Director,3,2016-12-01,Male,59,Single,Master,18,Travel_Rarely,1775,Active
+1285,Bruno,Castellanos,2,QA Engineer,2,2014-07-26,Female,34,Divorced,Bachelor,19,Travel_Frequently,1069,Active
+1286,Soren,Ortega,2,QA Engineer,1,2021-10-13,Male,28,Single,Master,1,Travel_Frequently,575,Active
+1288,Amara,Pashkov,4,Finance Manager,5,2000-01-31,Male,44,Divorced,College,4,Travel_Rarely,140,Active
+1289,Isabel,Mehta,3,HR Generalist,2,2015-09-12,Male,34,Married,Bachelor,11,Travel_Frequently,1744,Active
+1291,Hugo,Simonsen,2,Software Engineer,1,2022-07-06,Male,35,Married,Below College,6,Travel_Rarely,1422,Active
+1292,Fatima,Nowak,2,Software Engineer,2,2024-01-05,Female,42,Married,Master,7,Travel_Rarely,1263,Active
+1293,Ethan,Varga,1,Sales Executive,3,2004-03-27,Female,43,Single,Master,4,Travel_Rarely,1716,Active
+1294,Marcus,Whitfield,5,Operations Director,2,2009-09-22,Female,36,Single,Master,2,Travel_Rarely,1026,Active
+1295,Anika,Whitfield,6,Support Representative,3,2015-01-29,Female,44,Married,Bachelor,15,Travel_Rarely,1606,Terminated
+1296,Nikolai,Krishnan,2,QA Engineer,1,2023-10-23,Male,28,Married,Bachelor,2,Travel_Frequently,575,Active
+1297,Mei,Varga,2,QA Engineer,1,2018-06-24,Female,51,Single,College,6,Travel_Frequently,58,Active
+1298,Nina,Tanaka,5,Operations Director,2,2017-12-07,Female,30,Single,College,9,Non-Travel,1360,Active
+1299,Sofia,Dubois,2,QA Engineer,1,2016-12-27,Female,29,Divorced,Bachelor,7,Travel_Rarely,1443,Terminated
+1301,Hannah,Ramos,2,Software Engineer,1,2022-01-13,Male,28,Single,Bachelor,1,Travel_Rarely,575,Active
+1303,Rahul,Kaur,2,Software Engineer,1,2023-07-25,Female,25,Single,Bachelor,1,Travel_Rarely,1666,Active
+1304,Daniel,Ramos,1,Sales Executive,2,2015-08-01,Male,32,Married,Bachelor,8,Travel_Rarely,1968,Active
+1306,Kwame,Marchetti,4,Finance Manager,5,2025-07-13,Female,45,Single,Bachelor,25,Travel_Frequently,140,Active
+1307,Samir,Lindqvist,4,Finance Manager,4,2006-02-09,Female,39,Divorced,Master,13,Travel_Rarely,1578,Active
+1308,Nina,Okafor,2,Software Engineer,1,2023-05-19,Male,58,Divorced,Master,23,Travel_Rarely,1255,Active
+1309,Chloe,Rossi,2,QA Engineer,2,2014-07-25,Male,32,Married,College,7,Travel_Rarely,1789,Terminated
+1310,Viktor,Ibrahim,2,Software Engineer,1,2020-04-12,Male,39,Single,Bachelor,23,Travel_Rarely,1128,Terminated
+1311,Ethan,Marchetti,2,QA Engineer,2,2016-08-10,Female,30,Married,Bachelor,6,Travel_Rarely,1608,Active
+1312,Omar,Nowak,6,Support Representative,3,2018-07-26,Female,36,Married,Master,10,Travel_Rarely,431,Active
+1314,Oscar,Kaur,3,HR Generalist,1,2018-03-16,Female,46,Single,College,1,Travel_Rarely,1098,Active
+1315,Samir,Sharma,2,QA Engineer,2,2016-01-30,Female,28,Married,Bachelor,1,Non-Travel,1608,Active
+1317,Aarav,Duarte,2,Engineering Director,4,2022-12-10,Female,50,Married,Bachelor,28,Travel_Rarely,80,Active
+1318,Bruno,Tanaka,1,Sales Executive,3,2019-07-29,Male,40,Single,Master,25,Travel_Rarely,1716,Terminated
+1319,Sofia,Castellanos,1,Sales Executive,3,2015-11-04,Male,52,Single,Bachelor,5,Travel_Rarely,897,Terminated
+1321,Mei,Castellanos,4,Finance Manager,3,2016-12-10,Female,30,Married,Master,17,Travel_Rarely,1973,Active
+1322,Diego,Reyes,5,Operations Director,2,2017-03-20,Male,39,Single,College,18,Travel_Rarely,601,Active
+1324,Fatima,Kaur,1,Sales Executive,3,2015-06-21,Female,31,Divorced,Master,2,Non-Travel,1039,Active
+1329,Tariq,Nakamura,1,Sales Executive,2,2006-04-19,Male,41,Single,College,10,Non-Travel,2056,Active
+1331,Chloe,Bianchi,1,Sales Representative,1,2020-05-22,Female,31,Single,Bachelor,1,Travel_Frequently,1457,Terminated
+1333,Leila,Silva,2,QA Engineer,1,2022-05-21,Male,44,Married,Bachelor,3,Travel_Rarely,999,Terminated
+1334,Nina,Andersen,4,Finance Manager,4,2005-07-15,Male,42,Married,Below College,2,Non-Travel,1336,Active
+1336,Viktor,Bianchi,4,Finance Manager,5,2006-11-21,Female,55,Married,College,2,Travel_Rarely,549,Active
+1338,Samir,Duarte,4,Finance Manager,5,2018-07-11,Male,56,Single,Master,8,Travel_Rarely,549,Active
+1340,Tariq,Delacroix,2,Software Engineer,1,2021-09-07,Male,40,Divorced,College,16,Non-Travel,352,Active
+1344,Chloe,Mehta,6,Support Representative,3,2016-08-19,Male,34,Divorced,Bachelor,9,Travel_Rarely,431,Active
+1346,Kwame,Rossi,2,Software Engineer,2,2016-09-17,Male,40,Single,Bachelor,2,Travel_Rarely,1263,Active
+1349,Nikolai,Castellanos,1,Sales Executive,2,2016-09-08,Female,41,Divorced,Bachelor,1,Travel_Frequently,2056,Active
+1350,Soren,Pashkov,2,Software Engineer,2,2016-08-17,Male,35,Single,Master,4,Travel_Frequently,1069,Active
+1352,Mira,Kowalski,4,Finance Manager,4,1992-12-13,Male,51,Divorced,Bachelor,5,Travel_Rarely,787,Active
+1355,Jonas,Haddad,1,Sales Executive,2,2018-06-10,Female,38,Divorced,College,2,Travel_Rarely,573,Active
+1356,Amara,Marchetti,1,Sales Executive,2,2015-08-05,Female,34,Single,College,15,Travel_Rarely,862,Active
+1358,Camila,Castellanos,2,QA Engineer,1,2022-12-28,Male,25,Married,Below College,19,Travel_Rarely,1666,Active
+1360,Tariq,Hassan,5,Operations Director,3,2014-12-27,Female,58,Married,Master,7,Travel_Rarely,1775,Terminated
+1361,Yuki,Grimaldi,2,QA Engineer,1,2021-12-02,Male,40,Married,Master,1,Travel_Rarely,1128,Active
+1362,Aisha,Tanaka,1,Sales Executive,2,2010-06-30,Female,36,Married,Bachelor,7,Travel_Frequently,81,Active
+1363,Samir,Pashkov,5,Operations Director,3,2015-10-21,Male,48,Single,Bachelor,4,Travel_Rarely,867,Active
+1364,Caleb,Dubois,1,Sales Representative,1,2024-11-06,Female,27,Married,Bachelor,11,Travel_Rarely,1732,Active
+1367,Isabel,Duarte,5,Operations Director,4,2020-10-02,Female,51,Single,College,11,Travel_Rarely,1373,Active
+1368,Nina,Novak,2,QA Engineer,1,2025-10-12,Female,18,Single,Bachelor,1,Non-Travel,612,Active
+1369,Mei,Fitzgerald,2,QA Engineer,2,2016-02-27,Female,35,Married,Bachelor,1,Travel_Rarely,1069,Active
+1371,Idris,Pashkov,1,Sales Executive,2,2019-03-31,Male,27,Single,Below College,2,Travel_Frequently,2055,Active
+1372,Tobias,Varga,1,Sales Executive,4,2006-03-21,Male,55,Single,Master,13,Travel_Rarely,131,Terminated
+1373,Marcus,Hassan,5,Operations Director,4,2006-02-26,Male,56,Married,Bachelor,23,Travel_Rarely,1032,Active
+1374,Bruno,Bianchi,2,Software Engineer,1,2020-06-23,Female,34,Divorced,Below College,26,Non-Travel,386,Active
+1375,Lena,Moreau,6,Support Representative,2,2013-06-24,Female,40,Divorced,Below College,2,Travel_Rarely,119,Active
+1377,Freya,Vandenberg,2,QA Engineer,2,2017-10-09,Male,34,Married,Bachelor,29,Travel_Rarely,1069,Active
+1379,Oscar,Mehta,1,Sales Representative,1,2023-11-20,Female,31,Single,Bachelor,2,Travel_Frequently,1457,Terminated
+1380,Anika,Ramos,1,Sales Executive,2,2020-08-19,Female,35,Married,Master,18,Travel_Frequently,1070,Terminated
+1382,Viktor,Larsen,2,Software Engineer,1,2021-05-31,Male,38,Divorced,Bachelor,7,Travel_Frequently,1128,Active
+1383,Elena,Petrov,6,Support Representative,2,2011-07-06,Female,34,Single,Master,2,Travel_Rarely,1697,Active
+1387,Viktor,Mbeki,1,Sales Executive,2,2020-06-03,Male,28,Married,Bachelor,26,Travel_Rarely,174,Active
+1389,Camila,Bianchi,5,Operations Director,2,2015-06-22,Male,31,Married,Master,22,Travel_Rarely,1283,Terminated
+1390,Soren,Bianchi,1,Sales Executive,2,2020-03-31,Male,39,Married,Master,21,Travel_Rarely,2056,Active
+1391,Marcus,Andersen,1,Sales Executive,3,2021-12-31,Male,51,Married,Bachelor,2,Travel_Frequently,897,Active
+1392,Daniel,Nakamura,2,Software Engineer,2,2019-03-02,Female,41,Divorced,Bachelor,22,Travel_Frequently,1263,Active
+1394,Samir,Bakker,2,Software Engineer,1,2019-08-04,Male,37,Married,Below College,4,Travel_Rarely,1424,Active
+1395,Tariq,Bergman,1,Sales Executive,2,2020-10-25,Male,33,Married,Below College,5,Travel_Frequently,1050,Active
+1396,Chloe,Simonsen,1,Sales Executive,2,2022-10-05,Male,32,Married,Below College,2,Travel_Rarely,1968,Active
+1397,Claire,Delacroix,6,Support Representative,3,2019-11-18,Male,39,Married,College,25,Non-Travel,431,Active
+1399,Aarav,Larsen,1,Sales Executive,2,2022-03-29,Male,25,Married,Below College,18,Travel_Rarely,840,Active
+1401,Rosa,Marchetti,5,Operations Director,4,2020-12-13,Female,52,Married,College,28,Travel_Frequently,1373,Active
+1402,Nadia,Silva,2,Software Engineer,2,2005-04-12,Female,43,Single,Bachelor,6,Travel_Rarely,1941,Active
+1403,Priya,Fitzgerald,1,Sales Executive,2,2019-07-10,Female,27,Married,Bachelor,10,Travel_Rarely,2055,Active
+1405,Andre,Dubois,2,Software Engineer,1,2016-05-31,Female,27,Single,Master,17,Travel_Rarely,520,Terminated
+1407,Claire,Duarte,2,Software Engineer,1,2021-07-05,Male,26,Single,Below College,2,Travel_Rarely,843,Active
+1408,Felix,Nakamura,4,Finance Manager,4,2005-08-22,Female,42,Married,Bachelor,10,Travel_Rarely,1336,Active
+1409,Nadia,Haddad,2,QA Engineer,1,2020-04-20,Female,52,Married,Master,8,Travel_Rarely,58,Active
+1411,Amara,Kaur,2,QA Engineer,1,2022-03-06,Female,37,Single,Bachelor,11,Travel_Rarely,1424,Active
+1412,Fatima,Okafor,5,Operations Director,3,2023-02-14,Male,35,Single,College,18,Travel_Frequently,1367,Active
+1415,Sofia,Rossi,2,QA Engineer,1,2022-12-18,Male,25,Married,Bachelor,1,Travel_Rarely,1666,Active
+1417,Daniel,Moreau,2,QA Engineer,1,2018-11-29,Male,26,Single,Bachelor,7,Travel_Rarely,843,Active
+1419,Hugo,Bergman,3,HR Generalist,3,2015-09-03,Male,29,Single,Bachelor,17,Travel_Rarely,1744,Active
+1420,Aisha,Fitzgerald,2,QA Engineer,2,2020-04-29,Male,49,Single,College,28,Travel_Frequently,638,Terminated
+1421,Yuki,Varga,6,Support Representative,3,2016-11-03,Female,29,Single,Below College,14,Travel_Frequently,431,Terminated
+1422,Isabel,Vandenberg,2,Engineering Director,4,2005-06-25,Female,54,Single,Bachelor,1,Travel_Rarely,162,Active
+1423,Anika,Andersen,2,Engineering Director,5,2016-07-07,Female,58,Married,Bachelor,1,Travel_Rarely,825,Active
+1424,Rahul,Novak,2,Engineering Director,4,2018-05-29,Male,55,Divorced,Master,1,Travel_Rarely,522,Active
+1425,Isabel,Duarte,1,Sales Executive,2,2020-09-03,Female,36,Single,Master,3,Travel_Rarely,81,Active
+1427,Soren,Krishnan,1,Sales Representative,1,2023-12-03,Female,31,Single,Master,1,Travel_Frequently,1457,Terminated
+1428,Ingrid,Vandenberg,1,Sales Executive,2,2022-05-07,Female,30,Divorced,Master,7,Travel_Rarely,1391,Active
+1430,Idris,Novak,2,Engineering Director,4,2022-08-16,Female,31,Single,Doctor,8,Travel_Rarely,385,Active
+1431,Ethan,Mbeki,2,Software Engineer,1,2021-04-27,Male,34,Divorced,Master,1,Travel_Frequently,386,Active
+1433,Anika,Andersen,2,Software Engineer,1,2024-10-07,Female,31,Single,Bachelor,8,Travel_Rarely,997,Terminated
+1434,Mira,Pashkov,2,QA Engineer,1,2020-08-09,Male,27,Married,Below College,11,Travel_Rarely,520,Active
+1435,Nadia,Ferreira,2,QA Engineer,2,2015-02-12,Male,36,Single,Master,4,Travel_Rarely,447,Active
+1436,Anika,Jokinen,1,Sales Executive,2,2022-11-25,Female,36,Married,Master,16,Travel_Rarely,81,Active
+1438,Caleb,Bianchi,2,Software Engineer,1,2019-01-27,Male,47,Married,Bachelor,1,Travel_Rarely,58,Active
+1439,Chloe,Jokinen,1,Sales Representative,1,2021-09-07,Male,25,Married,College,9,Travel_Rarely,1732,Terminated
+1440,Nina,Cardoso,2,QA Engineer,1,2019-01-22,Male,37,Single,College,5,Non-Travel,1424,Active
+1441,Mei,Aoki,2,Software Engineer,1,2022-09-27,Female,56,Married,College,1,Travel_Rarely,1255,Active
+1443,Aisha,Rossi,2,Engineering Director,4,2005-08-12,Female,47,Married,Master,2,Travel_Rarely,80,Active
+1445,Fatima,Haddad,1,Sales Executive,2,2020-02-24,Female,24,Married,Below College,4,Travel_Rarely,118,Active
+1446,Peter,Simonsen,1,Sales Executive,2,2021-07-28,Male,32,Married,Doctor,7,Travel_Rarely,1968,Active
+1447,Aisha,Lombardi,2,QA Engineer,1,2020-01-12,Female,34,Married,Bachelor,1,Travel_Rarely,386,Active
+1448,Mira,Moreau,2,Software Engineer,1,2021-05-05,Male,41,Married,Doctor,5,Travel_Rarely,352,Active
+1449,Nadia,Nowak,2,QA Engineer,2,2017-05-30,Male,40,Divorced,Master,9,Non-Travel,1263,Active
+1453,Aarav,Silva,1,Sales Executive,3,2012-06-19,Male,31,Divorced,College,8,Travel_Rarely,1039,Active
+1457,Leila,Rossi,1,Sales Executive,3,2017-06-20,Male,46,Divorced,Bachelor,9,Travel_Rarely,1138,Terminated
+1458,Rosa,Vandenberg,2,QA Engineer,1,2023-10-19,Female,39,Single,Bachelor,2,Non-Travel,1128,Terminated
+1459,Luis,Petrov,5,Operations Director,3,2014-04-16,Female,31,Single,Doctor,1,Travel_Frequently,1367,Terminated
+1460,Hannah,Rossi,6,Support Representative,3,2018-11-03,Male,45,Divorced,Bachelor,20,Travel_Rarely,1606,Active
+1461,Zara,Moreau,3,HR Generalist,1,2022-03-06,Female,31,Single,College,8,Travel_Rarely,2040,Active
+1464,Sanne,Sharma,2,QA Engineer,1,2023-01-13,Male,31,Married,Bachelor,2,Travel_Frequently,997,Terminated
+1465,Luis,Navarro,5,Operations Director,3,2022-09-10,Male,45,Married,Bachelor,29,Travel_Rarely,867,Active
+1466,Aarav,Jokinen,1,Sales Executive,2,2023-03-04,Male,48,Divorced,Bachelor,7,Travel_Rarely,986,Active
+1467,Divya,Nakamura,3,HR Generalist,1,2022-09-06,Female,34,Married,Master,9,Travel_Rarely,2040,Terminated
+1468,Kwame,Hassan,2,Engineering Director,3,2016-08-29,Male,40,Divorced,Below College,8,Non-Travel,396,Active
+1469,Felix,Bakker,1,Sales Executive,2,2020-12-17,Male,28,Single,Bachelor,5,Travel_Rarely,174,Active
+1471,Isabel,Quintero,2,QA Engineer,1,2020-06-14,Male,44,Single,Bachelor,5,Non-Travel,999,Active
+1472,Divya,Lindqvist,2,Engineering Director,4,2016-02-16,Male,53,Single,Bachelor,2,Travel_Rarely,162,Active
+1473,Ingrid,Mbeki,6,Support Representative,2,2022-12-22,Male,49,Married,Master,5,Travel_Rarely,1661,Active
+1474,Chloe,Sharma,2,Software Engineer,1,2022-02-07,Male,40,Divorced,Bachelor,2,Travel_Rarely,1128,Active
+1475,Oscar,Mehta,2,Software Engineer,1,2020-03-06,Male,44,Single,Bachelor,20,Travel_Rarely,999,Active
+1477,Amara,Lombardi,1,Sales Executive,2,2021-12-19,Male,33,Married,Bachelor,7,Travel_Frequently,1050,Active
+1478,Aisha,Osei,1,Sales Executive,2,2012-09-21,Male,34,Single,Bachelor,3,Travel_Rarely,862,Active
+1479,Yuki,Krishnan,1,Sales Executive,2,2023-03-26,Male,30,Married,Below College,16,Travel_Rarely,1391,Active
+1480,Jonas,Jokinen,2,QA Engineer,1,2013-05-19,Female,42,Single,College,9,Travel_Frequently,1035,Active
+1481,Isabel,Kaur,1,Sales Executive,2,2024-04-09,Female,44,Married,Doctor,1,Travel_Frequently,1975,Active
+1482,Nadia,Eriksen,2,Software Engineer,1,2024-11-15,Male,30,Divorced,Bachelor,7,Non-Travel,1539,Active
+1483,Diego,Fitzgerald,2,Software Engineer,2,2013-02-11,Male,57,Married,College,1,Travel_Rarely,638,Active
+1484,Felix,Ibrahim,6,Support Representative,3,2017-01-02,Male,49,Divorced,Master,7,Travel_Rarely,1606,Active
+1485,Ethan,Quintero,2,Engineering Director,4,2011-01-06,Male,34,Divorced,Bachelor,15,Travel_Frequently,141,Active
+1486,Felix,Delacroix,1,Sales Representative,1,2022-02-23,Male,28,Married,Bachelor,1,Travel_Frequently,1732,Terminated
+1487,Yuki,Okafor,1,Sales Executive,2,2020-08-12,Female,29,Single,Bachelor,13,Travel_Frequently,1391,Terminated
+1489,Aisha,Hassan,1,Sales Executive,2,2009-07-31,Female,34,Single,Master,24,Travel_Rarely,862,Terminated
+1492,Elena,Reyes,1,Sales Representative,1,2024-06-30,Male,35,Married,Below College,7,Travel_Rarely,244,Active
+1494,Nikolai,Grimaldi,2,QA Engineer,1,2024-09-20,Male,24,Single,Bachelor,9,Travel_Frequently,468,Terminated
+1495,Samir,Hassan,1,Sales Representative,1,2024-09-03,Female,24,Married,College,13,Non-Travel,1869,Active
+1496,Chloe,Fitzgerald,5,Operations Director,3,2023-10-12,Male,44,Single,Below College,2,Travel_Frequently,1401,Active
+1497,Fatima,Ferreira,1,Sales Executive,2,2015-05-04,Male,29,Divorced,Bachelor,19,Travel_Rarely,174,Active
+1499,Rahul,Bakker,3,HR Generalist,1,2020-09-16,Male,30,Divorced,Bachelor,1,Travel_Rarely,2040,Active
+1501,Samir,Delacroix,6,Support Representative,2,2022-10-24,Male,55,Married,Master,4,Travel_Rarely,431,Active
+1502,Amara,Steiner,2,QA Engineer,1,2020-10-15,Female,33,Married,Master,4,Travel_Rarely,901,Active
+1503,Samir,Bakker,1,Sales Executive,2,2020-04-08,Female,47,Married,Bachelor,14,Travel_Rarely,1975,Active
+1504,Leila,Tanaka,2,QA Engineer,1,2023-10-08,Male,28,Single,College,2,Travel_Frequently,1719,Terminated
+1506,Mei,Dubois,2,Software Engineer,1,2024-06-24,Male,28,Divorced,Bachelor,1,Travel_Rarely,1719,Active
+1507,Andre,Sharma,1,Sales Executive,2,2021-04-19,Male,28,Single,Bachelor,7,Travel_Frequently,174,Active
+1509,Isabel,Castellanos,2,QA Engineer,2,2022-09-04,Female,49,Married,College,3,Travel_Rarely,1941,Active
+1513,Sanne,Cardoso,2,QA Engineer,1,2022-07-15,Female,29,Married,Below College,2,Travel_Frequently,1443,Active
+1514,Viktor,Rossi,5,Operations Director,2,2017-12-07,Male,28,Married,Below College,29,Travel_Rarely,1360,Active
+1515,Leila,Cardoso,6,Support Representative,2,2025-08-24,Male,33,Single,Doctor,8,Travel_Rarely,1697,Active
+1516,Oscar,Okafor,4,Finance Manager,3,2020-06-10,Male,32,Single,Bachelor,10,Travel_Rarely,1973,Active
+1520,Aisha,Okafor,4,Finance Manager,4,2011-11-08,Female,54,Divorced,Master,11,Travel_Frequently,374,Active
+1522,Marcus,Sharma,2,Software Engineer,1,2016-03-05,Male,29,Single,Master,1,Travel_Rarely,1443,Terminated
+1523,Daniel,Osei,2,Engineering Director,4,2005-11-15,Male,44,Married,Bachelor,28,Travel_Rarely,80,Active
+1525,Luis,Bianchi,5,Operations Director,3,2023-10-31,Female,39,Single,Bachelor,6,Travel_Rarely,1367,Active
+1527,Soren,Silva,4,Finance Manager,4,2012-04-25,Female,46,Married,Bachelor,3,Travel_Rarely,787,Active
+1529,Kwame,Sharma,6,Support Representative,3,2014-10-06,Female,35,Single,Bachelor,16,Travel_Rarely,431,Active
+1533,Rahul,Varga,2,QA Engineer,2,2021-03-18,Male,23,Single,Below College,20,Travel_Rarely,1608,Active
+1534,Daniel,Vandenberg,2,QA Engineer,1,2019-12-17,Male,40,Single,Master,9,Travel_Rarely,1128,Terminated
+1535,Omar,Nakamura,1,Sales Executive,3,2015-05-26,Male,34,Married,Bachelor,1,Travel_Rarely,1863,Active
+1537,Mei,Whitfield,2,Software Engineer,1,2018-05-15,Female,31,Single,Bachelor,3,Travel_Frequently,997,Terminated
+1539,Camila,Dubois,2,Engineering Director,4,1993-10-26,Male,50,Single,Doctor,22,Travel_Frequently,80,Active
+1541,Tobias,Aoki,1,Sales Representative,1,2014-09-15,Male,34,Married,College,7,Travel_Rarely,580,Active
+1542,Elena,Andersen,2,QA Engineer,1,2024-12-04,Male,42,Married,Bachelor,2,Travel_Rarely,1035,Active
+1543,Sanne,Moreau,2,Software Engineer,2,2015-07-14,Male,37,Married,Bachelor,13,Travel_Rarely,447,Active
+1544,Nikolai,Castellanos,6,Support Representative,2,2018-10-01,Female,29,Married,Below College,8,Travel_Rarely,165,Active
+1545,Nikolai,Andersen,5,Operations Director,2,2020-04-03,Male,33,Single,Bachelor,25,Travel_Rarely,1283,Active
+1546,Lena,Mbeki,2,Software Engineer,1,2020-05-10,Male,45,Married,Bachelor,28,Travel_Rarely,999,Active
+1547,Kwame,Fitzgerald,6,Support Representative,3,2005-03-11,Male,42,Married,Bachelor,2,Travel_Frequently,431,Active
+1548,Felix,Bergman,1,Sales Executive,2,2017-03-26,Male,40,Married,College,9,Travel_Rarely,2056,Active
+1549,Aisha,Larsen,2,QA Engineer,2,2010-07-06,Male,33,Married,Master,28,Travel_Rarely,1217,Active
+1550,Aisha,Petrov,4,Finance Manager,4,2004-06-16,Male,40,Single,College,6,Travel_Rarely,1336,Active
+1551,Idris,Osei,2,QA Engineer,1,2024-11-02,Male,24,Divorced,College,21,Travel_Rarely,468,Active
+1552,Nikolai,Nowak,6,Support Representative,2,2023-12-25,Male,40,Divorced,College,8,Non-Travel,119,Active
+1553,Tariq,Ramos,6,Support Representative,3,2015-11-19,Male,45,Divorced,Master,1,Travel_Rarely,1606,Active
+1554,Omar,Steiner,1,Sales Representative,1,2020-09-19,Female,35,Married,Master,28,Travel_Rarely,244,Active
+1555,Samir,Pashkov,2,Software Engineer,2,2018-01-19,Female,32,Married,College,5,Travel_Rarely,1789,Active
+1556,Oscar,Delacroix,1,Sales Representative,1,2022-05-16,Male,36,Single,Master,2,Travel_Rarely,244,Active
+1557,Yuki,Quintero,1,Sales Executive,2,2017-12-22,Female,48,Divorced,Master,16,Travel_Rarely,986,Active
+1558,Soren,Dubois,2,Software Engineer,1,2024-02-03,Male,29,Married,Bachelor,9,Travel_Rarely,1443,Active
+1560,Jonas,Kaur,1,Sales Executive,2,2023-12-28,Male,33,Married,Master,8,Travel_Rarely,1050,Active
+1562,Jonas,Aoki,1,Sales Executive,2,2015-08-29,Male,30,Married,Bachelor,1,Travel_Rarely,1391,Terminated
+1563,Rosa,Cardoso,3,HR Generalist,2,2019-05-29,Male,38,Married,Master,10,Travel_Frequently,1744,Active
+1564,Grace,Kowalski,2,QA Engineer,1,2022-10-22,Male,35,Single,Bachelor,1,Travel_Rarely,1422,Active
+1568,Nadia,Grimaldi,1,Sales Executive,3,2021-05-11,Male,30,Married,Master,29,Travel_Rarely,404,Active
+1569,Claire,Ferreira,2,QA Engineer,1,2022-06-17,Female,35,Divorced,Bachelor,2,Travel_Rarely,1422,Terminated
+1572,Hugo,Eriksen,5,Operations Director,3,1991-07-09,Female,53,Married,Doctor,2,Travel_Rarely,867,Terminated
+1573,Samir,Ortega,5,Operations Director,2,2019-04-01,Male,38,Married,Bachelor,2,Travel_Rarely,601,Terminated
+1574,Aarav,Steiner,2,Software Engineer,2,2019-01-23,Male,32,Married,Master,1,Non-Travel,1789,Active
+1576,Fatima,Castellanos,2,Software Engineer,1,2017-05-18,Female,48,Married,Master,15,Travel_Rarely,58,Active
+1577,Hugo,Nakamura,2,Software Engineer,1,2024-02-17,Male,34,Single,Master,7,Travel_Rarely,730,Active
+1578,Tariq,Pashkov,4,Finance Manager,5,1989-05-25,Male,55,Married,Doctor,26,Travel_Rarely,549,Active
+1580,Idris,Dubois,2,Software Engineer,2,2023-08-03,Male,34,Married,Master,1,Travel_Rarely,1069,Active
+1581,Nina,Mbeki,2,Software Engineer,1,2024-02-16,Female,26,Married,Bachelor,3,Travel_Rarely,843,Active
+1582,Viktor,Mehta,1,Sales Executive,2,2016-01-11,Male,38,Married,Bachelor,14,Travel_Rarely,81,Active
+1583,Felix,Fitzgerald,1,Sales Executive,2,2022-02-10,Female,38,Single,Bachelor,16,Travel_Rarely,81,Active
+1585,Anika,Rossi,1,Sales Executive,2,2024-04-15,Female,36,Single,Master,1,Travel_Rarely,81,Active
+1586,Elena,Varga,2,QA Engineer,1,2015-02-18,Male,29,Single,Below College,3,Travel_Rarely,1443,Active
+1587,Grace,Eriksen,6,Support Representative,2,2020-02-24,Female,35,Single,Master,10,Travel_Rarely,1127,Active
+1588,Oscar,Andersen,1,Sales Executive,3,2018-01-03,Male,39,Married,Bachelor,6,Travel_Rarely,1716,Active
+1590,Mira,Nakamura,6,Support Representative,2,2019-03-22,Male,29,Divorced,Below College,2,Travel_Frequently,165,Active
+1591,Marcus,Cardoso,4,Finance Manager,5,2024-03-05,Male,50,Married,Bachelor,9,Travel_Rarely,140,Active
+1592,Fatima,Whitfield,2,Software Engineer,1,2023-06-10,Male,23,Married,Bachelor,10,Travel_Rarely,468,Active
+1594,Nadia,Hassan,2,QA Engineer,2,2022-02-02,Male,36,Married,Master,6,Travel_Frequently,447,Active
+1595,Claire,Aoki,4,Finance Manager,5,2024-02-15,Male,42,Single,College,9,Travel_Rarely,1191,Active
+1596,Mei,Nakamura,2,QA Engineer,2,2015-06-24,Male,35,Married,Bachelor,28,Travel_Rarely,1069,Active
+1597,Hannah,Grimaldi,6,Support Representative,2,2017-04-18,Male,34,Married,Master,10,Travel_Frequently,1697,Active
+1598,Zara,Tanaka,1,Sales Executive,2,2020-09-30,Female,40,Married,College,14,Travel_Rarely,2056,Active
+1599,Anika,Kaur,2,QA Engineer,1,2019-03-11,Male,43,Divorced,Bachelor,27,Travel_Rarely,1035,Active
+1601,Caleb,Ramos,2,QA Engineer,1,2024-02-24,Male,35,Married,College,7,Travel_Rarely,1422,Active
+1602,Soren,Navarro,4,Finance Manager,4,1999-09-16,Male,46,Single,Master,1,Travel_Rarely,787,Active
+1604,Soren,Tanaka,2,QA Engineer,1,2023-09-29,Male,28,Married,Bachelor,24,Travel_Rarely,1719,Terminated
+1605,Tobias,Whitfield,2,Software Engineer,1,2021-05-25,Female,22,Married,College,26,Non-Travel,1485,Active
+1606,Aarav,Eriksen,6,Support Representative,4,1995-06-06,Male,50,Married,Doctor,20,Travel_Frequently,1278,Active
+1607,Idris,Navarro,2,Software Engineer,1,2022-11-14,Female,32,Married,Master,5,Travel_Rarely,815,Active
+1608,Oscar,Silva,2,Engineering Director,5,2003-06-14,Female,44,Divorced,Bachelor,7,Travel_Rarely,1770,Active
+1609,Fatima,Quintero,2,Software Engineer,1,2019-05-27,Male,30,Married,Bachelor,7,Travel_Rarely,1539,Active
+1611,Diego,Sharma,2,QA Engineer,2,2015-02-02,Female,45,Single,Doctor,5,Travel_Rarely,1941,Active
+1612,Chloe,Nowak,1,Sales Executive,2,2015-04-25,Male,45,Married,Bachelor,26,Non-Travel,1975,Active
+1613,Elena,Rossi,1,Sales Executive,2,2020-01-03,Male,31,Single,Master,2,Travel_Frequently,1319,Active
+1614,Rahul,Petrov,5,Operations Director,2,2022-05-27,Female,36,Married,Master,12,Travel_Rarely,1026,Active
+1615,Lena,Bergman,5,Operations Director,2,2016-10-20,Male,34,Divorced,Master,10,Travel_Frequently,1283,Active
+1617,Ethan,Moreau,2,QA Engineer,1,2016-08-12,Female,49,Married,Master,25,Travel_Rarely,58,Active
+1618,Grace,Dubois,5,Operations Director,2,2018-09-23,Male,39,Married,Doctor,10,Travel_Rarely,601,Active
+1619,Leila,Jokinen,2,QA Engineer,1,2018-11-02,Male,27,Divorced,Bachelor,19,Travel_Rarely,520,Active
+1621,Freya,Haddad,2,Software Engineer,2,2009-02-20,Male,35,Married,Doctor,18,Travel_Rarely,1069,Active
+1622,Jonas,Bergman,5,Operations Director,2,2020-07-19,Female,28,Divorced,Bachelor,27,Travel_Rarely,1360,Active
+1623,Sofia,Whitfield,2,Software Engineer,1,2023-07-28,Male,21,Single,Below College,5,Travel_Rarely,612,Active
+1624,Claire,Ibrahim,1,Sales Representative,1,2025-04-02,Female,18,Single,College,3,Travel_Frequently,1716,Terminated
+1625,Nadia,Cardoso,4,Finance Manager,5,2020-01-20,Female,47,Married,Master,26,Travel_Rarely,140,Active
+1627,Zara,Pashkov,2,QA Engineer,2,2015-02-24,Male,39,Divorced,College,3,Travel_Rarely,1263,Active
+1628,Grace,Nowak,5,Operations Director,3,2007-01-06,Female,40,Married,Bachelor,15,Travel_Rarely,1401,Active
+1630,Sofia,Petrov,6,Support Representative,2,2011-05-21,Female,35,Married,Master,8,Non-Travel,1127,Active
+1631,Luis,Mbeki,5,Operations Director,2,2021-06-12,Male,37,Married,Bachelor,19,Travel_Rarely,1026,Active
+1633,Freya,Halvorsen,5,Operations Director,2,2016-03-06,Female,39,Single,Bachelor,4,Travel_Frequently,601,Active
+1635,Hugo,Pashkov,5,Operations Director,2,2015-10-29,Female,45,Divorced,College,2,Travel_Rarely,2034,Active
+1638,Divya,Cardoso,5,Operations Director,3,2020-07-19,Female,38,Married,College,2,Travel_Rarely,1367,Active
+1639,Divya,Bakker,1,Sales Executive,3,2011-11-08,Male,35,Married,Bachelor,10,Travel_Rarely,1863,Terminated
+1640,Oscar,Nowak,2,Software Engineer,1,2017-06-25,Female,37,Married,Bachelor,10,Travel_Rarely,1424,Active
+1641,Mira,Pashkov,5,Operations Director,3,2021-11-16,Female,40,Single,Bachelor,16,Travel_Rarely,1401,Active
+1642,Elena,Aoki,3,HR Generalist,2,2015-07-10,Male,44,Married,Doctor,1,Travel_Frequently,1744,Active
+1644,Bruno,Nakamura,4,Finance Manager,4,2023-01-27,Male,48,Married,Doctor,4,Travel_Frequently,787,Active
+1645,Caleb,Mehta,1,Sales Executive,2,2022-01-13,Male,35,Divorced,College,15,Travel_Rarely,1070,Terminated
+1646,Marcus,Haddad,2,Software Engineer,1,2019-10-23,Female,24,Single,Below College,2,Travel_Frequently,468,Active
+1647,Rahul,Ramos,2,Software Engineer,1,2022-02-06,Female,27,Married,Bachelor,8,Travel_Rarely,520,Active
+1648,Ingrid,Dubois,2,Software Engineer,1,2021-06-06,Male,27,Single,Bachelor,2,Travel_Frequently,520,Active
+1649,Caleb,Vandenberg,2,QA Engineer,1,2020-05-13,Male,40,Single,Bachelor,7,Travel_Rarely,1128,Terminated
+1650,Divya,Marchetti,1,Sales Executive,2,2020-02-19,Male,29,Single,Bachelor,10,Travel_Rarely,174,Active
+1651,Lena,Duarte,6,Support Representative,3,2022-05-28,Female,36,Married,Master,5,Travel_Rarely,431,Active
+1653,Chloe,Osei,5,Operations Director,2,2018-12-01,Male,25,Divorced,Below College,2,Travel_Frequently,1360,Active
+1654,Chloe,Lindqvist,5,Operations Director,2,2020-07-08,Male,39,Married,Bachelor,12,Travel_Rarely,601,Active
+1655,Hannah,Duarte,2,Engineering Director,4,2021-03-06,Female,49,Married,Master,22,Travel_Rarely,80,Active
+1656,Nadia,Silva,2,Engineering Director,3,2011-02-01,Female,50,Divorced,Doctor,17,Travel_Rarely,385,Active
+1657,Soren,Simonsen,1,Sales Representative,1,2023-12-16,Female,20,Single,Bachelor,2,Travel_Rarely,302,Active
+1658,Isabel,Sharma,2,Software Engineer,2,2014-11-18,Female,34,Divorced,Bachelor,3,Travel_Rarely,1069,Active
+1659,Aarav,Pashkov,2,QA Engineer,1,2021-03-02,Male,36,Single,Bachelor,7,Travel_Rarely,1250,Active
+1661,Daniel,Krishnan,6,Support Representative,4,2010-06-12,Female,49,Married,Below College,6,Travel_Rarely,1278,Active
+1662,Soren,Cardoso,5,Operations Director,2,2022-05-17,Female,36,Married,Master,1,Non-Travel,1026,Active
+1664,Idris,Rossi,6,Support Representative,2,2020-03-24,Male,36,Divorced,College,3,Travel_Rarely,119,Active
+1665,Hugo,Grimaldi,4,Finance Manager,4,2015-09-07,Female,54,Married,Doctor,22,Travel_Rarely,374,Active
+1666,Soren,Marchetti,2,Engineering Director,4,2011-11-08,Male,43,Married,College,15,Travel_Rarely,141,Active
+1667,Leila,Varga,1,Sales Executive,2,2014-02-03,Male,35,Single,Master,12,Travel_Frequently,1070,Terminated
+1668,Peter,Grimaldi,2,Software Engineer,2,2012-07-28,Male,38,Married,Bachelor,1,Travel_Frequently,447,Active
+1669,Rahul,Ortega,1,Sales Executive,2,2015-10-03,Male,29,Divorced,Bachelor,5,Travel_Rarely,174,Active
+1670,Nikolai,Cardoso,1,Sales Executive,2,2019-10-25,Male,33,Divorced,Master,2,Travel_Rarely,1050,Active
+1671,Claire,Nowak,2,Software Engineer,2,2016-03-27,Male,32,Divorced,Bachelor,2,Travel_Rarely,1789,Active
+1673,Chloe,Pashkov,1,Sales Executive,2,2015-02-19,Female,31,Married,Master,5,Travel_Rarely,1319,Active
+1674,Grace,Krishnan,2,QA Engineer,1,2023-03-17,Female,49,Divorced,Bachelor,16,Travel_Rarely,58,Active
+1675,Elena,Whitfield,2,QA Engineer,1,2021-11-04,Female,38,Single,Bachelor,2,Travel_Frequently,1128,Active
+1676,Grace,Novak,4,Finance Manager,4,2022-12-23,Female,47,Divorced,Master,2,Travel_Rarely,787,Active
+1677,Felix,Kowalski,4,Finance Manager,4,2017-09-30,Male,49,Single,Bachelor,1,Travel_Rarely,787,Active
+1678,Marcus,Tanaka,1,Sales Executive,3,2023-03-13,Male,41,Single,College,23,Travel_Rarely,1716,Active
+1680,Oscar,Kowalski,1,Sales Representative,1,2023-04-27,Male,20,Single,Below College,9,Travel_Rarely,302,Active
+1681,Idris,Halvorsen,1,Sales Executive,2,2019-12-21,Female,33,Divorced,Bachelor,16,Non-Travel,1050,Active
+1682,Mira,Kowalski,6,Support Representative,2,2022-05-18,Male,36,Married,Master,26,Travel_Rarely,119,Active
+1683,Mira,Pashkov,3,HR Generalist,1,2023-08-14,Female,44,Divorced,Bachelor,1,Travel_Rarely,1098,Active
+1684,Leila,Navarro,2,QA Engineer,1,2020-01-24,Male,23,Single,Below College,8,Travel_Rarely,468,Terminated
+1687,Sanne,Bergman,2,QA Engineer,1,2025-03-18,Female,38,Married,College,4,Travel_Rarely,1128,Active
+1689,Andre,Lombardi,6,Support Representative,3,2021-09-02,Male,53,Married,Master,24,Travel_Rarely,1606,Active
+1691,Nikolai,Rossi,1,Sales Representative,1,2014-10-25,Female,48,Married,College,7,Travel_Frequently,118,Terminated
+1692,Luis,Hassan,2,QA Engineer,1,2022-09-16,Male,32,Single,Master,2,Travel_Rarely,815,Terminated
+1693,Nadia,Quintero,2,QA Engineer,1,2018-12-09,Male,26,Single,Bachelor,7,Non-Travel,843,Active
+1694,Andre,Bakker,2,Software Engineer,1,2021-09-10,Male,55,Divorced,Bachelor,22,Travel_Rarely,1255,Active
+1696,Fatima,Varga,2,QA Engineer,2,2010-11-28,Male,34,Married,College,5,Travel_Rarely,1069,Active
+1697,Aarav,Haddad,6,Support Representative,3,2024-10-02,Male,60,Divorced,Master,1,Travel_Rarely,258,Active
+1698,Tobias,Bergman,2,QA Engineer,1,2011-03-05,Male,33,Married,Bachelor,21,Travel_Rarely,901,Active
+1700,Divya,Halvorsen,1,Sales Executive,2,2019-09-13,Male,37,Divorced,Master,1,Travel_Frequently,81,Active
+1701,Viktor,Vandenberg,2,Software Engineer,1,2015-11-04,Female,34,Married,Bachelor,19,Travel_Rarely,730,Active
+1702,Andre,Rossi,1,Sales Representative,1,2021-08-08,Male,23,Divorced,Bachelor,7,Travel_Rarely,1869,Terminated
+1703,Bruno,Larsen,6,Support Representative,3,2017-01-06,Female,44,Married,Bachelor,2,Travel_Rarely,1606,Active
+1704,Hannah,Ferreira,2,Software Engineer,1,2020-11-14,Male,35,Single,Master,2,Travel_Frequently,1422,Active
+1706,Rahul,Cardoso,1,Sales Executive,2,2015-03-19,Male,43,Married,Bachelor,2,Travel_Rarely,1975,Active
+1707,Ethan,Marchetti,2,Software Engineer,1,2020-02-14,Male,24,Married,Bachelor,9,Travel_Rarely,468,Active
+1708,Tariq,Ramos,1,Sales Executive,3,2015-03-29,Male,41,Single,Bachelor,6,Travel_Rarely,1716,Active
+1709,Hannah,Marchetti,2,QA Engineer,1,2020-02-04,Female,29,Married,Master,9,Travel_Rarely,1443,Active
+1710,Sanne,Mbeki,1,Sales Representative,2,2012-04-12,Female,36,Single,Master,2,Travel_Rarely,81,Active
+1712,Andre,Eriksen,6,Support Representative,3,2002-10-01,Male,45,Married,Below College,1,Non-Travel,1606,Active
+1714,Amara,Dubois,3,HR Generalist,1,2023-12-22,Male,24,Married,Below College,22,Travel_Rarely,590,Terminated
+1716,Elena,Pashkov,1,Sales Executive,4,2002-01-16,Male,47,Married,Bachelor,9,Travel_Frequently,532,Terminated
+1718,Amara,Osei,2,QA Engineer,1,2022-02-15,Male,26,Married,Master,17,Travel_Rarely,1666,Active
+1719,Amara,Sharma,2,Engineering Director,4,2004-09-08,Female,45,Single,College,28,Travel_Rarely,80,Active
+1720,Isabel,Andersen,2,Software Engineer,1,2020-12-10,Male,32,Married,Bachelor,10,Travel_Frequently,815,Active
+1721,Caleb,Varga,2,QA Engineer,1,2020-06-13,Male,31,Married,Master,2,Travel_Rarely,997,Active
+1722,Yuki,Dubois,3,HR Generalist,2,2022-06-27,Male,41,Married,Bachelor,4,Non-Travel,1744,Active
+1724,Nadia,Novak,5,Operations Director,2,2024-01-13,Female,40,Married,College,8,Travel_Rarely,601,Active
+1725,Nikolai,Kowalski,2,QA Engineer,1,2019-04-19,Male,24,Divorced,Below College,29,Travel_Rarely,468,Active
+1727,Bruno,Ibrahim,6,Support Representative,2,2015-11-12,Male,46,Single,Master,13,Travel_Rarely,1661,Active
+1728,Lena,Varga,5,Operations Director,2,2018-09-04,Male,35,Married,Master,27,Travel_Rarely,1026,Active
+1729,Lena,Okafor,2,Software Engineer,1,2015-06-25,Male,30,Married,Below College,16,Travel_Rarely,1539,Active
+1731,Idris,Bergman,1,Sales Executive,2,2024-08-26,Male,47,Married,Master,2,Non-Travel,1975,Active
+1732,Claire,Mehta,1,Sales Executive,3,2015-10-28,Male,46,Divorced,Bachelor,2,Travel_Rarely,746,Active
+1733,Ingrid,Ortega,1,Sales Executive,2,2023-02-05,Male,36,Divorced,Doctor,13,Travel_Rarely,106,Terminated
+1734,Divya,Simonsen,1,Sales Executive,2,2023-10-13,Male,32,Single,College,1,Travel_Rarely,1968,Terminated
+1735,Mira,Ferreira,2,QA Engineer,1,2022-10-24,Female,23,Single,Below College,4,Travel_Rarely,468,Active
+1736,Mei,Silva,5,Operations Director,2,2020-06-16,Female,31,Single,Below College,24,Travel_Frequently,1283,Active
+1737,Bruno,Cardoso,2,QA Engineer,2,2016-08-01,Male,39,Married,Bachelor,1,Non-Travel,1867,Active
+1739,Anika,Ramos,1,Sales Executive,3,2021-12-23,Male,32,Married,Bachelor,19,Travel_Rarely,1039,Active
+1740,Anika,Jokinen,4,Finance Manager,5,2004-01-28,Male,40,Single,Master,7,Travel_Rarely,1338,Active
+1744,Grace,Sharma,3,HR Generalist,3,2020-11-03,Female,45,Married,Bachelor,4,Travel_Rarely,698,Active
+1745,Sofia,Lombardi,2,Software Engineer,1,2016-05-30,Female,30,Single,Master,2,Travel_Frequently,1539,Active
+1746,Bruno,Ramos,3,HR Generalist,1,2023-08-20,Male,24,Married,Bachelor,10,Travel_Frequently,590,Active
+1747,Sanne,Marchetti,3,HR Generalist,1,2019-11-05,Female,30,Divorced,Bachelor,8,Travel_Frequently,590,Terminated
+1749,Soren,Mehta,1,Sales Executive,2,2020-01-03,Male,31,Married,Bachelor,5,Travel_Rarely,1319,Active
+1751,Mei,Okafor,2,Software Engineer,1,2019-12-08,Female,27,Single,Bachelor,8,Travel_Rarely,520,Active
+1752,Idris,Nowak,1,Sales Representative,1,2023-01-20,Female,29,Single,Bachelor,9,Travel_Rarely,1732,Terminated
+1753,Sofia,Vandenberg,6,Support Representative,2,2022-02-14,Male,29,Single,Bachelor,1,Travel_Frequently,165,Active
+1754,Diego,Grimaldi,1,Sales Executive,3,2018-06-16,Male,30,Divorced,College,15,Travel_Rarely,404,Active
+1755,Hannah,Rossi,2,Software Engineer,1,2020-11-16,Male,34,Married,Master,2,Travel_Rarely,730,Active
+1756,Diego,Mbeki,1,Sales Executive,2,2014-08-29,Female,33,Single,Bachelor,2,Non-Travel,1050,Active
+1757,Zara,Castellanos,1,Sales Executive,2,2020-09-11,Female,49,Single,Master,11,Travel_Rarely,986,Active
+1758,Kwame,Tanaka,1,Sales Executive,3,2024-08-10,Female,33,Single,Bachelor,16,Travel_Rarely,1863,Terminated
+1760,Ethan,Reyes,2,QA Engineer,1,2019-01-29,Female,38,Married,College,2,Travel_Frequently,1837,Active
+1761,Peter,Hassan,1,Sales Executive,3,2022-10-07,Male,31,Married,Master,16,Travel_Rarely,1039,Terminated
+1762,Oscar,Aoki,2,Software Engineer,1,2024-11-21,Female,29,Divorced,Bachelor,4,Travel_Rarely,1443,Active
+1763,Chloe,Kowalski,6,Support Representative,2,2018-01-27,Male,30,Married,Bachelor,16,Travel_Rarely,165,Active
+1764,Bruno,Steiner,2,Software Engineer,1,2018-02-23,Male,32,Single,Master,5,Non-Travel,815,Active
+1766,Idris,Jokinen,6,Support Representative,2,2024-11-15,Male,38,Married,Bachelor,18,Travel_Rarely,119,Active
+1767,Chloe,Grimaldi,2,Software Engineer,1,2022-12-18,Male,43,Married,Bachelor,17,Travel_Frequently,1035,Terminated
+1768,Idris,Delacroix,2,QA Engineer,1,2020-03-14,Male,42,Divorced,Bachelor,12,Travel_Rarely,1035,Active
+1770,Lena,Ferreira,2,Engineering Director,5,2024-08-22,Male,55,Married,Bachelor,2,Travel_Rarely,825,Active
+1771,Tariq,Silva,2,Software Engineer,2,2016-04-14,Male,33,Divorced,Bachelor,4,Non-Travel,1217,Active
+1772,Rahul,Larsen,2,QA Engineer,1,2020-11-02,Male,41,Divorced,Master,9,Travel_Rarely,352,Active
+1774,Oscar,Fitzgerald,1,Sales Executive,2,2010-09-23,Male,34,Divorced,Bachelor,10,Non-Travel,862,Active
+1775,Yuki,Larsen,5,Operations Director,4,2022-07-16,Female,53,Married,Master,1,Non-Travel,1032,Active
+1778,Diego,Simonsen,3,HR Generalist,1,2016-05-24,Male,43,Single,Bachelor,2,Travel_Rarely,1098,Active
+1779,Leila,Jokinen,1,Sales Executive,2,2023-03-02,Female,34,Single,College,3,Travel_Rarely,862,Active
+1780,Ethan,Novak,1,Sales Representative,1,2022-10-13,Male,21,Single,Below College,7,Travel_Rarely,302,Terminated
+1782,Mei,Tanaka,2,QA Engineer,1,2020-05-27,Female,38,Married,College,6,Travel_Rarely,1837,Active
+1783,Bruno,Cardoso,2,QA Engineer,1,2022-03-16,Female,22,Married,Below College,8,Travel_Rarely,1485,Terminated
+1784,Omar,Marchetti,1,Sales Executive,2,2013-06-12,Female,31,Married,Master,29,Travel_Rarely,1319,Active
+1786,Hannah,Delacroix,4,Finance Manager,3,2023-01-03,Female,51,Married,Bachelor,3,Travel_Rarely,1578,Active
+1787,Leila,Ramos,1,Sales Executive,2,2020-06-20,Male,37,Married,College,9,Travel_Rarely,81,Active
+1789,Kwame,Eriksen,2,Engineering Director,5,2023-07-12,Male,46,Divorced,Master,2,Travel_Rarely,1770,Active
+1790,Zara,Bianchi,6,Support Representative,3,2013-11-17,Male,36,Married,Bachelor,10,Travel_Rarely,431,Active
+1792,Ingrid,Kaur,2,Software Engineer,1,2018-04-24,Male,44,Divorced,College,1,Travel_Frequently,999,Terminated
+1794,Nikolai,Duarte,3,HR Generalist,2,2015-06-17,Male,37,Divorced,College,8,Travel_Rarely,1744,Active
+1797,Kwame,Halvorsen,1,Sales Executive,2,2013-12-04,Male,35,Single,Bachelor,27,Travel_Rarely,1070,Terminated
+1798,Aarav,Jokinen,2,Software Engineer,1,2015-06-26,Male,33,Married,Master,8,Travel_Rarely,901,Active
+1799,Jonas,Okafor,2,Software Engineer,1,2020-09-29,Male,28,Married,Bachelor,1,Travel_Rarely,1719,Active
+1800,Divya,Delacroix,2,Engineering Director,3,2021-02-20,Male,39,Single,Below College,10,Travel_Rarely,396,Active
+1801,Jonas,Castellanos,1,Sales Executive,2,2023-03-21,Male,46,Single,College,26,Non-Travel,1975,Active
+1802,Luis,Moreau,2,QA Engineer,1,2021-01-29,Female,40,Married,College,2,Travel_Rarely,1128,Active
+1803,Felix,Sharma,6,Support Representative,2,2025-11-02,Male,42,Married,Bachelor,13,Travel_Rarely,372,Active
+1804,Sanne,Castellanos,5,Operations Director,2,2018-11-02,Male,35,Divorced,College,2,Non-Travel,1026,Active
+1805,Marcus,Petrov,3,HR Generalist,1,2014-05-01,Male,38,Divorced,Bachelor,2,Non-Travel,1098,Active
+1807,Mira,Dubois,2,QA Engineer,2,2017-09-25,Male,34,Married,Master,9,Travel_Frequently,1069,Terminated
+1809,Claire,Ramos,5,Operations Director,2,2014-05-06,Male,37,Single,Master,10,Travel_Rarely,1026,Terminated
+1812,Lena,Simonsen,1,Sales Executive,2,2023-08-20,Male,39,Divorced,Bachelor,20,Travel_Frequently,2056,Active
+1813,Claire,Rossi,2,Software Engineer,1,2022-07-10,Male,43,Single,Bachelor,9,Non-Travel,1035,Active
+1814,Isabel,Hassan,6,Support Representative,2,2022-03-09,Male,41,Single,Bachelor,5,Travel_Rarely,119,Active
+1815,Ingrid,Ortega,1,Sales Executive,3,2003-01-25,Female,41,Divorced,Below College,4,Travel_Rarely,1716,Active
+1816,Zara,Lindqvist,5,Operations Director,3,2018-04-06,Female,30,Single,Bachelor,10,Travel_Rarely,1005,Active
+1818,Kwame,Grimaldi,3,HR Generalist,1,2020-05-22,Female,26,Married,College,20,Travel_Rarely,590,Terminated
+1821,Nadia,Moreau,6,Support Representative,2,2014-10-06,Female,46,Married,College,21,Travel_Rarely,1661,Terminated
+1822,Nadia,Pashkov,6,Support Representative,2,2020-05-20,Female,40,Divorced,Bachelor,1,Travel_Rarely,119,Active
+1823,Aisha,Andersen,1,Sales Executive,2,2015-09-12,Male,34,Married,College,8,Travel_Rarely,862,Active
+1824,Zara,Duarte,4,Finance Manager,4,2009-04-03,Male,58,Divorced,Bachelor,2,Non-Travel,1338,Active
+1826,Sofia,Fitzgerald,2,QA Engineer,1,2020-08-02,Male,35,Married,Master,23,Travel_Rarely,1422,Active
+1827,Yuki,Bergman,5,Operations Director,3,2003-06-04,Female,47,Divorced,Bachelor,4,Travel_Rarely,867,Active
+1829,Aarav,Nakamura,6,Support Representative,2,2018-07-02,Female,40,Divorced,Bachelor,12,Travel_Rarely,119,Active
+1830,Leila,Tanaka,2,Software Engineer,2,2018-11-22,Female,54,Married,Master,7,Travel_Rarely,638,Active
+1833,Priya,Pashkov,1,Sales Executive,3,2022-10-01,Female,31,Married,Master,7,Travel_Frequently,1039,Active
+1834,Divya,Petrov,2,Software Engineer,1,2022-02-18,Female,28,Married,Bachelor,1,Travel_Rarely,1719,Active
+1835,Ingrid,Ramos,1,Sales Representative,2,2021-09-25,Female,38,Married,Master,2,Travel_Rarely,81,Active
+1836,Daniel,Ortega,1,Sales Executive,2,2020-12-12,Male,26,Single,Bachelor,10,Travel_Rarely,2055,Active
+1837,Diego,Whitfield,2,Engineering Director,4,2023-08-09,Male,58,Married,Master,15,Travel_Frequently,522,Active
+1839,Hannah,Quintero,2,Software Engineer,1,2025-12-07,Female,18,Single,Bachelor,14,Non-Travel,385,Active
+1842,Marcus,Marchetti,3,HR Generalist,1,2024-05-05,Male,31,Married,Doctor,18,Travel_Rarely,2040,Terminated
+1844,Nikolai,Hassan,3,HR Generalist,1,2022-06-06,Male,29,Divorced,Bachelor,13,Travel_Rarely,590,Terminated
+1845,Hannah,Varga,1,Sales Executive,2,2017-04-28,Female,45,Married,Master,2,Non-Travel,1975,Active
+1847,Rosa,Varga,2,Software Engineer,2,2024-02-11,Female,36,Married,Master,2,Travel_Rarely,447,Active
+1849,Samir,Silva,1,Sales Executive,2,2018-10-27,Male,43,Married,Master,2,Travel_Frequently,1975,Active
+1850,Rahul,Nowak,2,QA Engineer,1,2020-07-21,Female,27,Single,College,5,Travel_Frequently,520,Active
+1852,Hannah,Fitzgerald,2,QA Engineer,1,2014-09-05,Male,29,Married,Below College,20,Travel_Frequently,1443,Active
+1853,Grace,Haddad,1,Sales Executive,2,2025-01-11,Male,32,Single,Master,10,Travel_Frequently,1968,Active
+1854,Jonas,Nakamura,2,Software Engineer,1,2019-04-16,Male,42,Married,Master,10,Non-Travel,1035,Active
+1856,Kwame,Novak,2,QA Engineer,1,2023-08-12,Female,47,Single,Master,9,Travel_Rarely,58,Active
+1857,Camila,Sharma,5,Operations Director,3,2016-06-10,Male,46,Divorced,College,2,Travel_Rarely,867,Active
+1858,Aisha,Bianchi,3,HR Generalist,1,2022-01-19,Male,28,Divorced,College,1,Non-Travel,590,Active
+1859,Luis,Halvorsen,6,Support Representative,2,2018-01-31,Male,29,Divorced,Below College,29,Travel_Rarely,165,Active
+1860,Camila,Steiner,2,QA Engineer,1,2025-06-12,Male,42,Single,Bachelor,8,Travel_Rarely,1035,Active
+1862,Nina,Mbeki,1,Sales Executive,2,2021-11-21,Male,32,Single,Master,2,Travel_Rarely,1968,Terminated
+1863,Oscar,Kowalski,1,Sales Executive,4,2006-06-22,Female,46,Divorced,Bachelor,3,Travel_Rarely,532,Active
+1864,Ingrid,Nowak,1,Sales Representative,2,2016-11-22,Female,27,Married,Below College,23,Travel_Rarely,2055,Active
+1865,Priya,Tanaka,3,HR Generalist,1,2024-06-19,Male,29,Married,Below College,6,Travel_Rarely,590,Active
+1866,Diego,Quintero,4,Finance Manager,5,2009-03-18,Female,43,Married,Bachelor,6,Travel_Rarely,1191,Active
+1867,Caleb,Reyes,2,Engineering Director,5,2003-03-30,Male,48,Married,Bachelor,10,Travel_Rarely,254,Active
+1868,Idris,Ramos,2,Software Engineer,1,2022-07-21,Male,29,Single,College,24,Travel_Frequently,1443,Terminated
+1869,Aisha,Silva,1,Sales Executive,3,2016-02-18,Female,46,Married,Bachelor,10,Travel_Rarely,746,Terminated
+1870,Samir,Eriksen,2,Software Engineer,1,2018-06-06,Female,27,Married,Bachelor,15,Travel_Frequently,661,Active
+1871,Grace,Sharma,2,Software Engineer,2,2023-10-19,Male,39,Divorced,Master,19,Travel_Rarely,1867,Active
+1873,Hannah,Ferreira,2,Software Engineer,1,2020-06-15,Male,55,Married,Master,2,Travel_Rarely,58,Active
+1875,Diego,Tanaka,1,Sales Representative,1,2024-07-06,Female,28,Married,Bachelor,3,Travel_Rarely,1732,Active
+1876,Diego,Bianchi,1,Sales Representative,1,2024-02-18,Male,30,Single,Bachelor,9,Travel_Rarely,1732,Terminated
+1878,Felix,Cardoso,2,Software Engineer,1,2023-10-11,Male,22,Single,Below College,7,Travel_Rarely,1485,Terminated
+1880,Anika,Silva,1,Sales Executive,2,2015-08-03,Female,36,Married,Master,10,Travel_Rarely,106,Active
+1881,Divya,Andersen,2,QA Engineer,2,2015-09-13,Male,31,Divorced,Bachelor,20,Travel_Rarely,1608,Active
+1882,Freya,Petrov,1,Sales Executive,3,2020-06-14,Male,34,Married,Bachelor,4,Travel_Rarely,1863,Active
+1883,Isabel,Larsen,2,QA Engineer,1,2022-10-15,Male,29,Single,Bachelor,7,Travel_Rarely,575,Active
+1885,Jonas,Rossi,2,Software Engineer,2,2020-07-09,Male,37,Married,Master,7,Travel_Rarely,447,Active
+1886,Zara,Sharma,5,Operations Director,2,2022-07-25,Female,35,Married,College,16,Travel_Rarely,1026,Active
+1888,Jonas,Hassan,5,Operations Director,2,2016-07-27,Female,45,Married,College,25,Travel_Rarely,2034,Active
+1890,Rosa,Steiner,3,HR Generalist,2,2015-07-28,Male,36,Single,Below College,2,Travel_Frequently,1744,Active
+1892,Nina,Ramos,4,Finance Manager,4,2006-08-06,Male,40,Divorced,Master,1,Travel_Rarely,1578,Active
+1893,Felix,Osei,2,Software Engineer,1,2024-09-23,Female,26,Married,College,1,Travel_Rarely,1666,Active
+1898,Zara,Dubois,1,Sales Executive,2,2017-05-18,Female,27,Single,College,2,Travel_Rarely,2055,Active
+1900,Hannah,Dubois,4,Finance Manager,4,2003-12-14,Female,48,Divorced,Bachelor,22,Travel_Frequently,787,Active
+1903,Jonas,Osei,6,Support Representative,2,2023-03-12,Male,44,Married,Master,1,Travel_Rarely,1661,Active
+1905,Felix,Halvorsen,2,Software Engineer,1,2020-11-10,Male,34,Married,Master,16,Non-Travel,730,Terminated
+1907,Samir,Novak,2,QA Engineer,1,2020-02-18,Male,56,Single,College,24,Travel_Rarely,1255,Terminated
+1908,Aisha,Rossi,1,Sales Executive,2,2021-01-09,Male,36,Married,College,17,Travel_Rarely,106,Active
+1909,Kwame,Castellanos,1,Sales Executive,2,2020-02-15,Female,41,Married,Bachelor,8,Travel_Rarely,2056,Active
+1911,Felix,Ramos,2,Engineering Director,3,2012-02-01,Male,42,Married,Bachelor,6,Travel_Rarely,396,Active
+1912,Kwame,Delacroix,1,Sales Executive,2,2020-07-11,Female,31,Divorced,College,10,Travel_Rarely,1319,Active
+1915,Claire,Marchetti,1,Sales Executive,2,2021-08-14,Female,34,Married,Below College,3,Travel_Rarely,862,Active
+1916,Samir,Duarte,2,QA Engineer,1,2023-03-02,Female,31,Divorced,Bachelor,4,Travel_Rarely,997,Active
+1918,Oscar,Ramos,2,QA Engineer,1,2018-02-27,Male,26,Married,Bachelor,6,Travel_Frequently,1666,Active
+1922,Luis,Steiner,6,Support Representative,2,2021-07-19,Male,45,Single,Master,1,Travel_Frequently,1661,Active
+1924,Rosa,Aoki,1,Sales Executive,2,2015-08-24,Male,33,Single,Master,10,Travel_Rarely,1050,Active
+1927,Rahul,Moreau,1,Sales Executive,2,2018-07-05,Male,28,Married,College,1,Travel_Frequently,174,Active
+1928,Samir,Aoki,1,Sales Representative,1,2024-12-15,Male,29,Single,Bachelor,24,Travel_Frequently,1732,Terminated
+1929,Yuki,Cardoso,1,Sales Executive,2,2022-06-30,Female,39,Married,Master,21,Non-Travel,2056,Active
+1931,Peter,Bakker,2,Software Engineer,1,2020-12-07,Male,27,Married,Master,2,Travel_Rarely,661,Active
+1932,Sanne,Aoki,2,Software Engineer,2,2010-02-07,Male,34,Married,Master,22,Travel_Frequently,1069,Active
+1933,Tobias,Mbeki,1,Sales Executive,2,2022-07-10,Female,28,Single,College,13,Travel_Rarely,174,Terminated
+1934,Aisha,Lindqvist,2,Software Engineer,2,2017-11-22,Male,47,Married,Master,14,Non-Travel,1941,Active
+1935,Nikolai,Aoki,1,Sales Executive,2,2025-03-24,Female,56,Married,Doctor,11,Travel_Rarely,986,Active
+1936,Elena,Kowalski,5,Operations Director,2,2015-07-15,Male,39,Married,College,9,Travel_Rarely,601,Active
+1937,Viktor,Sharma,2,Software Engineer,2,2005-04-10,Female,38,Divorced,Bachelor,8,Travel_Frequently,447,Active
+1938,Daniel,Fitzgerald,4,Finance Manager,4,2024-12-07,Female,58,Married,Bachelor,21,Travel_Rarely,1338,Active
+1939,Ethan,Moreau,2,Software Engineer,1,2020-10-30,Female,32,Single,College,5,Travel_Frequently,815,Terminated
+1940,Rosa,Vandenberg,2,Software Engineer,1,2020-11-13,Male,38,Divorced,College,9,Travel_Rarely,1837,Active
+1941,Andre,Delacroix,2,Engineering Director,5,2020-02-02,Male,49,Married,Below College,2,Travel_Frequently,254,Active
+1943,Marcus,Osei,1,Sales Executive,2,2025-03-06,Male,42,Divorced,Master,12,Travel_Rarely,1975,Active
+1944,Luis,Steiner,3,HR Generalist,1,2024-07-11,Female,27,Married,Bachelor,22,Travel_Frequently,590,Terminated
+1945,Freya,Mehta,1,Sales Executive,2,2020-09-26,Male,35,Married,Master,18,Travel_Rarely,1070,Active
+1947,Mei,Pashkov,2,Software Engineer,1,2020-10-15,Male,28,Single,Bachelor,16,Non-Travel,1719,Active
+1948,Elena,Lombardi,2,Software Engineer,1,2021-02-26,Male,31,Divorced,College,3,Non-Travel,1317,Active
+1949,Priya,Whitfield,2,QA Engineer,1,2020-08-28,Male,36,Married,Master,9,Non-Travel,1250,Active
+1950,Peter,Jokinen,1,Sales Executive,3,2011-11-09,Male,34,Single,Bachelor,1,Travel_Rarely,1863,Active
+1951,Felix,Moreau,1,Sales Executive,3,2017-07-05,Male,34,Divorced,Master,13,Travel_Rarely,1863,Active
+1952,Lena,Reyes,2,QA Engineer,1,2018-06-21,Male,26,Single,Bachelor,1,Travel_Rarely,1666,Active
+1954,Fatima,Marchetti,6,Support Representative,2,2020-07-23,Male,29,Married,Bachelor,1,Travel_Rarely,165,Active
+1955,Kwame,Silva,6,Support Representative,2,2020-07-18,Female,32,Divorced,Master,15,Non-Travel,1697,Active
+1956,Hugo,Castellanos,2,Software Engineer,2,2015-09-21,Male,31,Married,Bachelor,1,Travel_Frequently,1608,Active
+1960,Mei,Mehta,2,QA Engineer,1,2020-06-29,Male,28,Divorced,Bachelor,17,Travel_Rarely,1523,Terminated
+1961,Idris,Ferreira,1,Sales Representative,1,2024-06-23,Male,38,Single,Bachelor,1,Travel_Rarely,118,Active
+1962,Samir,Cardoso,1,Sales Executive,2,2015-08-30,Female,35,Married,Master,7,Travel_Rarely,1070,Active
+1965,Daniel,Vandenberg,1,Sales Executive,2,2018-04-11,Male,27,Single,Bachelor,9,Travel_Rarely,2055,Active
+1966,Claire,Halvorsen,5,Operations Director,2,2024-02-12,Male,32,Single,Master,5,Travel_Rarely,1283,Active
+1967,Mei,Ramos,1,Sales Executive,2,2014-01-05,Male,31,Married,Master,26,Travel_Frequently,1319,Terminated
+1968,Andre,Ortega,1,Sales Executive,3,2022-09-18,Male,53,Single,Master,24,Travel_Rarely,897,Terminated
+1969,Camila,Navarro,2,Software Engineer,2,2021-10-09,Female,54,Married,College,9,Travel_Rarely,638,Active
+1970,Rosa,Varga,6,Support Representative,2,2016-03-16,Male,33,Divorced,College,7,Travel_Frequently,1697,Active
+1971,Priya,Simonsen,6,Support Representative,3,2015-11-08,Male,43,Married,Bachelor,11,Travel_Rarely,431,Active
+1972,Claire,Grimaldi,3,HR Generalist,1,2019-04-01,Male,38,Married,Master,1,Travel_Frequently,1098,Active
+1973,Yuki,Kaur,4,Finance Manager,5,2015-04-12,Male,55,Married,Master,26,Travel_Rarely,549,Active
+1974,Claire,Haddad,2,QA Engineer,1,2024-03-06,Female,31,Divorced,Below College,2,Travel_Rarely,1317,Active
+1975,Grace,Kaur,1,Sales Executive,4,2005-04-10,Male,39,Single,Master,15,Travel_Rarely,532,Active
+1976,Soren,Pashkov,2,Software Engineer,2,2005-07-23,Male,42,Single,College,23,Non-Travel,1263,Active
+1979,Freya,Whitfield,2,Engineering Director,3,2014-03-19,Female,31,Married,Bachelor,10,Non-Travel,638,Active
+1980,Lena,Fitzgerald,5,Operations Director,2,2020-04-15,Female,54,Single,Bachelor,10,Travel_Rarely,1005,Active
+1981,Freya,Ramos,6,Support Representative,2,2021-04-05,Male,24,Single,College,1,Travel_Rarely,165,Active
+1982,Aarav,Bakker,2,QA Engineer,1,2020-06-16,Male,23,Single,College,12,Travel_Rarely,468,Active
+1985,Sofia,Navarro,2,QA Engineer,2,2015-05-25,Female,40,Married,Bachelor,11,Travel_Frequently,1263,Active
+1986,Divya,Bergman,1,Sales Executive,2,2014-11-12,Female,40,Married,College,2,Travel_Rarely,2056,Active
+1987,Nadia,Sharma,3,HR Generalist,1,2023-06-19,Female,25,Married,Bachelor,2,Travel_Rarely,590,Active
+1989,Samir,Mehta,2,QA Engineer,1,2013-05-06,Male,30,Married,College,1,Travel_Rarely,1539,Active
+1992,Fatima,Hassan,2,QA Engineer,1,2023-02-20,Male,25,Divorced,Below College,2,Travel_Rarely,1666,Active
+1993,Hugo,Mbeki,6,Support Representative,3,2008-06-04,Male,47,Single,Bachelor,25,Travel_Rarely,1606,Active
+1994,Caleb,Fitzgerald,2,QA Engineer,1,2024-08-09,Male,33,Divorced,College,1,Non-Travel,901,Active
+1995,Hannah,Ibrahim,1,Sales Executive,2,2010-02-09,Male,38,Married,Master,1,Travel_Rarely,81,Active
+1996,Anika,Hassan,1,Sales Representative,1,2023-05-14,Male,31,Married,College,2,Travel_Rarely,1457,Active
+1997,Hugo,Silva,5,Operations Director,2,2017-04-30,Male,38,Married,Master,6,Travel_Frequently,601,Active
+1998,Peter,Fitzgerald,2,Software Engineer,2,2021-04-17,Male,42,Divorced,Master,18,Travel_Rarely,1263,Active
+1999,Nikolai,Hassan,2,Software Engineer,1,2020-03-31,Male,41,Married,Bachelor,1,Travel_Rarely,352,Active
+2000,Idris,Nakamura,2,Engineering Director,3,2012-02-28,Female,47,Married,Below College,1,Non-Travel,1061,Active
+2003,Viktor,Ferreira,2,QA Engineer,1,2023-02-06,Male,35,Married,Master,11,Travel_Rarely,1422,Active
+2007,Soren,Ferreira,2,Software Engineer,1,2022-11-08,Male,22,Single,College,1,Travel_Rarely,1485,Active
+2008,Amara,Ibrahim,2,Software Engineer,2,2015-11-03,Male,35,Single,Master,9,Travel_Rarely,1069,Active
+2009,Lena,Mbeki,6,Support Representative,2,2016-08-23,Female,33,Married,College,15,Travel_Rarely,1697,Active
+2010,Marcus,Nakamura,2,QA Engineer,1,2019-12-08,Female,32,Single,Master,29,Travel_Rarely,815,Active
+2012,Ethan,Novak,2,QA Engineer,1,2024-11-18,Male,40,Married,Master,1,Travel_Rarely,1128,Active
+2013,Aisha,Delacroix,1,Sales Representative,1,2023-01-16,Male,32,Married,Master,1,Travel_Rarely,580,Active
+2014,Andre,Hassan,2,Software Engineer,2,2018-07-19,Male,39,Single,Below College,24,Travel_Rarely,1867,Active
+2015,Sofia,Duarte,2,Engineering Director,3,2007-12-02,Female,38,Married,Bachelor,10,Travel_Rarely,396,Active
+2016,Aisha,Haddad,1,Sales Executive,3,2011-09-30,Female,32,Married,Master,1,Travel_Rarely,1039,Active
+2017,Jonas,Tanaka,2,Engineering Director,3,2009-05-12,Female,37,Married,Bachelor,10,Travel_Rarely,396,Active
+2018,Ethan,Petrov,1,Sales Executive,2,2020-12-01,Female,25,Divorced,College,8,Travel_Rarely,118,Active
+2019,Zara,Ramos,1,Sales Representative,1,2016-07-16,Male,52,Divorced,Master,29,Non-Travel,118,Active
+2020,Peter,Eriksen,2,Software Engineer,1,2021-12-18,Male,44,Single,Bachelor,1,Travel_Rarely,999,Active
+2021,Nina,Andersen,1,Sales Representative,1,2023-03-07,Male,21,Single,Below College,5,Travel_Rarely,302,Active
+2022,Isabel,Ibrahim,4,Finance Manager,5,2019-10-25,Male,39,Single,Bachelor,9,Non-Travel,1338,Active
+2023,Samir,Lombardi,1,Sales Representative,1,2023-05-09,Male,23,Married,Bachelor,9,Travel_Frequently,1869,Terminated
+2024,Mira,Eriksen,1,Sales Executive,3,2016-08-30,Female,36,Married,Bachelor,3,Travel_Rarely,1863,Active
+2025,Jonas,Mbeki,5,Operations Director,2,2021-05-28,Female,36,Divorced,College,4,Travel_Frequently,1026,Active
+2026,Ethan,Marchetti,6,Support Representative,2,2012-09-04,Male,56,Divorced,Master,1,Non-Travel,431,Active
+2027,Andre,Okafor,2,Software Engineer,1,2022-02-22,Male,29,Married,Master,1,Travel_Rarely,575,Terminated
+2031,Zara,Moreau,4,Finance Manager,5,2003-06-22,Male,42,Married,Bachelor,2,Travel_Rarely,1191,Active
+2032,Nina,Jokinen,2,QA Engineer,1,2014-11-09,Male,56,Married,College,7,Travel_Rarely,1255,Terminated
+2034,Nadia,Larsen,5,Operations Director,4,2005-06-28,Female,41,Married,Master,28,Travel_Rarely,1373,Active
+2035,Amara,Ramos,1,Sales Executive,2,2017-05-12,Female,34,Married,Bachelor,28,Travel_Rarely,862,Active
+2036,Zara,Whitfield,1,Sales Executive,2,2010-05-03,Male,36,Divorced,Master,15,Non-Travel,106,Active
+2037,Felix,Mehta,1,Sales Executive,2,2020-02-13,Male,41,Divorced,Bachelor,3,Travel_Rarely,2056,Active
+2038,Elena,Delacroix,2,Software Engineer,1,2021-01-09,Male,32,Single,Bachelor,2,Travel_Rarely,815,Active
+2040,Hugo,Mbeki,3,HR Generalist,3,2016-08-27,Female,35,Single,Master,26,Travel_Rarely,698,Active
+2041,Peter,Castellanos,1,Sales Executive,2,2015-03-22,Female,38,Married,College,10,Travel_Rarely,81,Active
+2044,Nadia,Haddad,1,Sales Executive,2,2018-06-29,Male,50,Divorced,Master,1,Travel_Frequently,986,Terminated
+2045,Mei,Lindqvist,1,Sales Executive,2,2019-12-07,Female,36,Married,Master,11,Travel_Rarely,106,Active
+2046,Omar,Kowalski,1,Sales Executive,2,2020-01-19,Female,45,Single,Bachelor,20,Travel_Rarely,1975,Active
+2048,Hannah,Kowalski,2,Software Engineer,1,2023-12-08,Male,40,Single,Master,2,Travel_Rarely,1128,Active
+2049,Leila,Novak,6,Support Representative,2,2015-07-30,Male,35,Married,Master,18,Travel_Frequently,1127,Active
+2051,Mei,Ramos,2,Software Engineer,1,2020-02-05,Female,40,Married,Master,2,Travel_Rarely,1128,Active
+2052,Amara,Lindqvist,2,Software Engineer,1,2021-08-03,Female,35,Married,Master,1,Travel_Rarely,1422,Active
+2053,Amara,Ortega,2,QA Engineer,2,2021-06-10,Male,29,Married,College,13,Travel_Rarely,1608,Active
+2054,Freya,Larsen,2,Software Engineer,1,2020-07-07,Female,29,Single,Master,28,Travel_Rarely,575,Active
+2055,Oscar,Bakker,1,Sales Executive,3,2021-09-08,Male,50,Divorced,Bachelor,28,Travel_Rarely,1138,Terminated
+2056,Grace,Krishnan,1,Sales Executive,4,2005-11-03,Female,39,Married,Below College,24,Travel_Rarely,1372,Active
+2057,Kwame,Cardoso,5,Operations Director,2,2016-02-29,Male,31,Single,Bachelor,5,Non-Travel,1360,Active
+2060,Andre,Halvorsen,1,Sales Representative,1,2021-01-14,Female,26,Single,Bachelor,5,Travel_Rarely,1732,Active
+2061,Diego,Quintero,2,QA Engineer,2,2020-04-09,Male,36,Married,College,23,Travel_Frequently,447,Active
+2062,Marcus,Dubois,6,Support Representative,3,2018-05-13,Male,39,Married,Below College,6,Travel_Rarely,431,Active
+2064,Mira,Jokinen,5,Operations Director,2,2019-08-06,Male,27,Married,Bachelor,4,Travel_Rarely,1360,Active
+2065,Chloe,Haddad,1,Sales Executive,2,2016-10-04,Male,49,Married,Bachelor,2,Travel_Frequently,986,Active
+2068,Tariq,Bianchi,2,QA Engineer,2,2021-03-12,Male,34,Married,Bachelor,8,Travel_Rarely,1069,Active
