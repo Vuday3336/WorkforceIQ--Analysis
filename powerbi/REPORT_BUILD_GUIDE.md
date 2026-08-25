@@ -34,7 +34,30 @@ semantic model — the part that carries the actual analytical work — is compl
    - `ServerName` → `db.<your-project-ref>.supabase.co`
    - `DatabaseName` → `postgres`
 3. Refresh. Credentials: **Database** auth, user `postgres`, your Postgres
-   password. Encryption: **enable**.
+   password.
+4. **Untick "Encrypt connection"** in that same credentials dialog.
+
+### If the refresh fails with "The remote certificate is invalid"
+
+Supabase's connection pooler presents a certificate that is not chained to a
+root in the Windows trust store, so Npgsql (the provider behind Power BI's
+PostgreSQL connector) rejects it and every table fails to load.
+
+Two ways to resolve it:
+
+**A. Untick "Encrypt connection"** — *Home → Transform data → Data source
+settings → select the server → Edit Permissions → Credentials: Edit → untick
+Encrypt connection → Save.* Supabase requires TLS regardless, so the session is
+still encrypted in transit; what this turns off is **certificate validation**,
+which leaves the connection theoretically open to man-in-the-middle. Acceptable
+for this database — a public demo dataset with synthesised names and read-only
+anon access — and not something to copy onto a real HRIS.
+
+**B. Trust the certificate properly** — *Supabase dashboard → Project Settings →
+Database → SSL Configuration → Download certificate*, then install the `.crt`
+into **Trusted Root Certification Authorities** in the Windows certificate store
+(`certmgr.msc`), and leave "Encrypt connection" ticked. This is the correct
+option for anything real.
 
 Connection is a **live PostgreSQL connector connection to the analytical views**
 — not a CSV import. That distinction is worth stating on a résumé, because most
