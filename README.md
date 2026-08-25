@@ -351,11 +351,14 @@ pip install -r requirements.txt
 
 **Rebuild everything from the raw CSV** (deterministic — same bytes every time):
 
+Order matters: `train_attrition_model.py` must run **before** `build_seed_sql.py`,
+because the seed script embeds the scored watchlist it produces.
+
 ```bash
 python generators/build_dataset.py         # normalise + synthesise the time dimension
-python generators/build_seed_sql.py        # emit sql/seed_data.sql
-python generators/run_views_local.py       # run all 8 views on DuckDB, no server needed
 python generators/train_attrition_model.py # train, evaluate, score, write charts
+python generators/build_seed_sql.py        # emit sql/seed_data.sql (includes scores)
+python generators/run_views_local.py       # run all 8 views on DuckDB, no server needed
 python generators/build_notebook.py        # regenerate the executed notebook
 python generators/build_powerbi.py         # regenerate the TMDL semantic model
 python generators/build_dashboard.py       # rebuild the web dashboard
@@ -368,9 +371,34 @@ regenerated without a database server running.
 **Load into PostgreSQL:**
 
 ```bash
-cp .env.example .env     # add your DATABASE_URL
+cp .env.example .env     # add your DATABASE_URL (session pooler, port 5432)
 python generators/load_to_postgres.py
+python generators/verify_parity.py
 ```
+
+### Cross-engine parity
+
+Developing against DuckDB and shipping to Postgres only works if the two
+actually agree, so [`generators/verify_parity.py`](generators/verify_parity.py)
+runs 13 checks — including row-level comparisons across all 1,470 employees —
+against both engines and exits non-zero on any difference.
+
+It earned its place immediately by catching two bugs that raised no error on
+either engine and would have shipped silently:
+
+- **`NTILE(4)` ordered by `monthly_income` alone was non-deterministic.** NTILE
+  forces equal-sized buckets, so employees sharing a salary that straddles a
+  quartile boundary *must* be split — and which tied row landed in which bucket
+  was arbitrary. Postgres and DuckDB disagreed by one employee on the Q3/Q4
+  boundary. Fixed with an `employee_id` tiebreaker.
+- **`::NUMERIC` with no precision meant two different things.** Postgres reads
+  it as arbitrary precision; DuckDB defaults it to `DECIMAL(18,3)`. So
+  `ROUND(x::NUMERIC, 4)` silently truncated pay percentiles to three decimals on
+  DuckDB only, and the engines differed by up to 0.0005. Fixed with an explicit
+  `NUMERIC(12,8)`.
+
+Both were quiet wrong-answer bugs, which is the kind a test has to catch because
+review will not.
 
 Or with `psql` alone:
 
@@ -397,6 +425,7 @@ WorkforceIQ/
 │   ├── train_attrition_model.py   train, compare, score, chart
 │   ├── run_views_local.py         run the shipped .sql on DuckDB
 │   ├── load_to_postgres.py        build the live database
+│   ├── verify_parity.py           assert Postgres and DuckDB agree
 │   ├── build_notebook.py          generate + execute the notebook
 │   ├── build_powerbi.py           generate the TMDL semantic model
 │   └── build_dashboard.py         inline data → web dashboard

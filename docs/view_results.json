@@ -616,7 +616,7 @@
       "department_name": "Sales",
       "job_role": "Sales Representative",
       "manager_name": "Marcus Silva",
-      "risk_score": 0.903,
+      "risk_score": 0.904,
       "risk_tier": "High",
       "risk_flag_count": 1,
       "tenure_years": 0.18,
@@ -655,7 +655,7 @@
       "department_name": "Operations",
       "job_role": "Operations Director",
       "manager_name": "Amara Grimaldi",
-      "risk_score": 0.89,
+      "risk_score": 0.891,
       "risk_tier": "High",
       "risk_flag_count": 2,
       "tenure_years": 15.93,
@@ -681,7 +681,7 @@
       "department_name": "Sales",
       "job_role": "Sales Executive",
       "manager_name": "Tobias Varga",
-      "risk_score": 0.882,
+      "risk_score": 0.883,
       "risk_tier": "High",
       "risk_flag_count": 3,
       "tenure_years": 21.62,
@@ -760,13 +760,13 @@
       "model_name": "logistic_regression",
       "risk_tier": "High",
       "employees": 124,
-      "avg_score": 0.7713
+      "avg_score": 0.7715
     },
     {
       "model_name": "logistic_regression",
       "risk_tier": "Medium",
       "employees": 246,
-      "avg_score": 0.544
+      "avg_score": 0.5442
     },
     {
       "model_name": "logistic_regression",
@@ -778,19 +778,19 @@
       "model_name": "random_forest",
       "risk_tier": "High",
       "employees": 124,
-      "avg_score": 0.3753
+      "avg_score": 0.3754
     },
     {
       "model_name": "random_forest",
       "risk_tier": "Medium",
       "employees": 246,
-      "avg_score": 0.2197
+      "avg_score": 0.2184
     },
     {
       "model_name": "random_forest",
       "risk_tier": "Low",
       "employees": 863,
-      "avg_score": 0.0945
+      "avg_score": 0.0946
     }
   ]
 }

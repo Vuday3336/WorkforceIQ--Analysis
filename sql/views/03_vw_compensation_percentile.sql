@@ -71,13 +71,32 @@ WITH emp_comp AS (
 ranked AS (
     SELECT ec.*,
 
-           -- where this person sits inside their own job role
+           -- Where this person sits inside their own job role.
+           -- PERCENT_RANK is ordered by income ALONE on purpose: employees on
+           -- identical salaries should get an identical percentile, which is
+           -- what "what fraction of my peers earn less than me" means.
+           -- The cast needs an EXPLICIT precision. Postgres treats bare
+           -- NUMERIC as arbitrary precision, but DuckDB defaults it to
+           -- DECIMAL(18,3) -- so `::NUMERIC` silently truncated this to three
+           -- decimals there and the two engines disagreed by up to 0.0005 on
+           -- the same query. The cast is needed at all because Postgres has no
+           -- two-argument ROUND for double precision.
            ROUND(PERCENT_RANK() OVER (
                      PARTITION BY ec.job_role ORDER BY ec.monthly_income
-                 )::NUMERIC, 4) AS income_pct_rank_in_role,
+                 )::NUMERIC(12,8), 4) AS income_pct_rank_in_role,
 
+           -- NTILE is different and needs the employee_id tiebreaker.
+           -- NTILE forces equal-sized buckets, so when several employees share
+           -- a salary that straddles a quartile boundary it MUST split them --
+           -- and with only monthly_income in the ORDER BY, which of the tied
+           -- rows lands in which bucket is arbitrary. That is not merely
+           -- untidy: it made this view non-deterministic, and Postgres and
+           -- DuckDB genuinely disagreed by one employee on the Q3/Q4 boundary.
+           -- Adding a unique tiebreaker makes the split stable across engines
+           -- and across runs.
            NTILE(4) OVER (
-               PARTITION BY ec.job_role ORDER BY ec.monthly_income
+               PARTITION BY ec.job_role
+               ORDER BY ec.monthly_income, ec.employee_id
            ) AS income_quartile_in_role,
 
            -- how far off the role's midpoint they are, in percent
