@@ -119,13 +119,19 @@ def main() -> None:
 
     if not verify_only:
         if not views_only:
-            print("\n[1/3] schema")
+            print("\n[1/4] schema")
             run_file(cur, SQL / "schema.sql")
-            print("\n[2/3] seed data (this one takes a moment)")
+            print("\n[2/4] seed data (this one takes a moment)")
             run_file(cur, SQL / "seed_data.sql")
-        print("\n[3/3] analytical views")
+        print("\n[3/4] analytical views")
         for path in sorted((SQL / "views").glob("*.sql")):
             run_file(cur, path)
+        # Always last, and never skipped. schema.sql starts with
+        # DROP TABLE ... CASCADE, which takes every RLS policy with it -- so
+        # security has to be reapplied on every build or a rebuild silently
+        # leaves the tables open.
+        print("\n[4/4] row-level security and grants")
+        run_file(cur, SQL / "rls_policies.sql")
 
     print("\n--- verification ---")
     for title, query in VERIFY:

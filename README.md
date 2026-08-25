@@ -376,6 +376,22 @@ python generators/load_to_postgres.py
 python generators/verify_parity.py
 ```
 
+The loader runs four steps in order — schema, seed, views, then
+[`sql/rls_policies.sql`](sql/rls_policies.sql). That last step is never skipped,
+because `schema.sql` opens with `DROP TABLE ... CASCADE`, and dropping a table
+takes its RLS policies with it. Security applied as a one-off migration is
+destroyed by the next rebuild and the tables come back open with nobody
+noticing — which is exactly what happened once during this build and is why the
+policies now live in the build script.
+
+**Posture:** anonymous *read* is intentional — it is what lets the hosted
+dashboard query the database with no server-side secret, over a public demo
+dataset with synthesised names. Anonymous *write* is closed twice over: RLS with
+SELECT-only policies, plus `INSERT/UPDATE/DELETE/TRUNCATE` revoked from `anon`
+and `authenticated` outright. All 16 views are `security_invoker`, so a view
+cannot bypass the policies on the table underneath it — without that, per-manager
+RLS on the watchlist would be decorative.
+
 ### Cross-engine parity
 
 Developing against DuckDB and shipping to Postgres only works if the two
@@ -417,6 +433,7 @@ WorkforceIQ/
 ├── sql/
 │   ├── schema.sql                 DDL: 7 tables, FKs, checks, indexes
 │   ├── seed_data.sql              generated INSERT script (~1.1 MB)
+│   ├── rls_policies.sql           RLS, read-only grants, security_invoker
 │   └── views/                     8 analytical views, one file each
 ├── generators/
 │   ├── build_dataset.py           CSV → normalised tables + time dimension
