@@ -36,6 +36,15 @@ TABLES = DEF / "tables"
 
 T = "\t"
 
+# "Measures" is a RESERVED table name in the Tabular object model -- Power BI
+# Desktop refuses to open a model containing it with:
+#     Unable to open document: Unsupported Table name "Measures" ...
+# The leading underscore is the conventional workaround, and has the useful
+# side effect of sorting the table to the top of the field list. TMDL needs the
+# name single-quoted everywhere because of that leading underscore.
+MEASURES_TABLE = "_Measures"
+MEASURES_TABLE_Q = "'_Measures'"
+
 # DuckDB type -> TMDL dataType
 TYPE_MAP = {
     "BIGINT": "int64", "INTEGER": "int64", "SMALLINT": "int64", "HUGEINT": "int64",
@@ -309,14 +318,14 @@ def emit_measures_table() -> str:
     out = [
         "/// Measure-only table. Holds every DAX measure so they sit at the top",
         "/// of the field list instead of being buried inside a data table.",
-        "table Measures",
-        T + "lineageTag: " + guid("table:Measures"),
+        "table " + MEASURES_TABLE_Q,
+        T + "lineageTag: " + guid("table:" + MEASURES_TABLE),
         "",
         # a hidden placeholder column: a table needs at least one column
         T + "column _placeholder",
         T * 2 + "isHidden",
         T * 2 + "dataType: int64",
-        T * 2 + "lineageTag: " + guid("Measures._placeholder"),
+        T * 2 + "lineageTag: " + guid(MEASURES_TABLE + "._placeholder"),
         T * 2 + "summarizeBy: none",
         T * 2 + "sourceColumn: _placeholder",
         "",
@@ -337,7 +346,7 @@ def emit_measures_table() -> str:
         out.append(T * 2 + "displayFolder: " + folder)
         out.append(T * 2 + "lineageTag: " + guid("measure:" + name))
         out.append("")
-    out.append(T + "partition Measures = m")
+    out.append(T + "partition " + MEASURES_TABLE_Q + " = m")
     out.append(T * 2 + "mode: import")
     out.append(T * 2 + "source =")
     out.append(T * 4 + "let")
@@ -366,8 +375,8 @@ def main() -> None:
         order.append(name)
         print("  " + name + ".tmdl  (" + str(len(cols)) + " columns from " + source + ")")
 
-    (TABLES / "Measures.tmdl").write_text(emit_measures_table(), encoding="utf-8")
-    order.insert(0, "Measures")
+    (TABLES / (MEASURES_TABLE + ".tmdl")).write_text(emit_measures_table(), encoding="utf-8")
+    order.insert(0, MEASURES_TABLE)
     print("  Measures.tmdl  (" + str(len(MEASURES)) + " DAX measures)")
 
     # ---------------------------------------------------------------- model
@@ -384,7 +393,8 @@ def main() -> None:
         "",
     ]
     for name in order:
-        model.append("ref table " + name)
+        quoted = MEASURES_TABLE_Q if name == MEASURES_TABLE else name
+        model.append("ref table " + quoted)
     model.append("")
     model.append("ref cultureInfo en-US")
     model.append("")

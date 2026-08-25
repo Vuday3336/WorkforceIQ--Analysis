@@ -1,12 +1,12 @@
 /// Measure-only table. Holds every DAX measure so they sit at the top
 /// of the field list instead of being buried inside a data table.
-table Measures
-	lineageTag: da03d3a9-4d2f-e9ad-3454-a972c9c11934
+table '_Measures'
+	lineageTag: b8665904-bf8e-7f4a-872c-0f4f736e697e
 
 	column _placeholder
 		isHidden
 		dataType: int64
-		lineageTag: 1e50f3e2-16b7-4e6b-dc0f-6c6f3c874591
+		lineageTag: e2d655d5-0c4b-482f-b21f-a7b80cdb0f58
 		summarizeBy: none
 		sourceColumn: _placeholder
 
@@ -211,7 +211,7 @@ table Measures
 		displayFolder: Segments
 		lineageTag: 50bbd679-7f4b-b36b-d8eb-b497338e5be7
 
-	partition Measures = m
+	partition '_Measures' = m
 		mode: import
 		source =
 				let
