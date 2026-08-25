@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "WorkforceIQ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a5e5b4a8-d791-318c-6a0c-9e92a4499b1a"
+  }
+}

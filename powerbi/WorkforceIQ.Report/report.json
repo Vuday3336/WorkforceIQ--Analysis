@@ -1,0 +1,67 @@
+{
+  "config": "{\"version\": \"5.55\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY24SU10\"}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Executive Overview",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "461ae50a9757e90db38e4a8cc24549a1",
+      "ordinal": 0,
+      "visualContainers": [],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "Tenure & Cohort Analysis",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "d3ae7e53a993674d1b6eef483fad3ce3",
+      "ordinal": 1,
+      "visualContainers": [],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "Compensation & Satisfaction",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "e14770ec7cc18a179bb356dad0ecf653",
+      "ordinal": 2,
+      "visualContainers": [],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "Attrition Risk Watchlist",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "275b2b51e9be4926dfbef77a91a5f937",
+      "ordinal": 3,
+      "visualContainers": [],
+      "width": 1280.0
+    }
+  ],
+  "filters": "[]"
+}

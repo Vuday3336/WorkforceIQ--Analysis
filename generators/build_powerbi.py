@@ -19,6 +19,7 @@ NOTE ON .pbix
 """
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -29,6 +30,7 @@ from feature_store import connect  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 PBI = ROOT / "powerbi"
 MODEL = PBI / "WorkforceIQ.SemanticModel"
+REPORT = PBI / "WorkforceIQ.Report"
 DEF = MODEL / "definition"
 TABLES = DEF / "tables"
 
@@ -445,9 +447,14 @@ def main() -> None:
         '  }\n'
         '}\n', encoding="utf-8")
 
+    # NOTE ON THE $schema URL: Power BI Desktop validates this against
+    #   ^https://developer.microsoft.com/json-schemas/fabric/pbip/pbipProperties/1.[0-9]+.[0-9]+/schema.json$
+    # It is pbip/pbipProperties, NOT item/pbip/definitionProperties -- the
+    # latter is the shape used by the per-item definition files inside each
+    # artifact folder, and using it here fails to open with "Issues were found".
     (PBI / "WorkforceIQ.pbip").write_text(
         '{\n'
-        '  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/pbip/definitionProperties/1.0.0/schema.json",\n'
+        '  "$schema": "https://developer.microsoft.com/json-schemas/fabric/pbip/pbipProperties/1.0.0/schema.json",\n'
         '  "version": "1.0",\n'
         '  "artifacts": [\n'
         '    {\n'
@@ -460,6 +467,83 @@ def main() -> None:
         '    "enableAutoRecovery": true\n'
         '  }\n'
         '}\n', encoding="utf-8")
+
+    # ---------------------------------------------------------------- report
+    # The .pbip above points at a report artifact, so that folder has to exist
+    # or Desktop refuses to open the project. Four empty, correctly-named pages
+    # are emitted; the visuals themselves are specified in REPORT_BUILD_GUIDE.md
+    # and dropped on in Desktop, because visual JSON is version-pinned and
+    # cannot be validated outside Desktop.
+    REPORT.mkdir(parents=True, exist_ok=True)
+
+    (REPORT / ".platform").write_text(
+        '{\n'
+        '  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",\n'
+        '  "metadata": {\n'
+        '    "type": "Report",\n'
+        '    "displayName": "WorkforceIQ"\n'
+        '  },\n'
+        '  "config": {\n'
+        '    "version": "2.0",\n'
+        '    "logicalId": "' + guid("logical:report") + '"\n'
+        '  }\n'
+        '}\n', encoding="utf-8")
+
+    # binds the report to the semantic model sitting beside it
+    (REPORT / "definition.pbir").write_text(
+        '{\n'
+        '  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/1.0.0/schema.json",\n'
+        '  "version": "1.0",\n'
+        '  "datasetReference": {\n'
+        '    "byPath": {\n'
+        '      "path": "../WorkforceIQ.SemanticModel"\n'
+        '    }\n'
+        '  }\n'
+        '}\n', encoding="utf-8")
+
+    pages = [
+        ("Executive Overview", "Headline KPIs, crude vs tenure-adjusted by department, trend"),
+        ("Tenure & Cohort Analysis", "Cohort rates, share of outflow, cohort x department matrix"),
+        ("Compensation & Satisfaction", "Pay quartiles and the overtime x satisfaction matrix"),
+        ("Attrition Risk Watchlist", "Scored active employees with driver flags"),
+    ]
+    sections = []
+    for i, (name, _) in enumerate(pages):
+        sections.append({
+            "config": "{}",
+            "displayName": name,
+            "displayOption": 1,
+            "filters": "[]",
+            "height": 720.0,
+            "name": guid("page:" + name).replace("-", ""),
+            "ordinal": i,
+            "visualContainers": [],
+            "width": 1280.0,
+        })
+
+    report = {
+        "config": json.dumps({
+            "version": "5.55",
+            "themeCollection": {"baseTheme": {"name": "CY24SU10"}},
+            "activeSectionIndex": 0,
+            "defaultDrillFilterOtherVisuals": True,
+        }),
+        "layoutOptimization": 0,
+        "resourcePackages": [{
+            "resourcePackage": {
+                "disabled": False,
+                "items": [{"name": "CY24SU10", "path": "BaseThemes/CY24SU10.json", "type": 202}],
+                "name": "SharedResources",
+                "type": 2,
+            }
+        }],
+        "sections": sections,
+        "filters": "[]",
+    }
+    (REPORT / "report.json").write_text(
+        json.dumps(report, indent=2), encoding="utf-8")
+
+    print("wrote report scaffold with " + str(len(pages)) + " named pages")
 
     con.close()
     print("\nwrote PBIP semantic model to " + str(MODEL.relative_to(ROOT)))
