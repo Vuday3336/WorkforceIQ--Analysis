@@ -15,11 +15,17 @@ good.
 
 Connection string comes from DATABASE_URL in .env or the environment:
 
-    postgresql://postgres:PASSWORD@db.PROJECT_REF.supabase.co:5432/postgres
+    postgresql://postgres.REF:PASSWORD@aws-0-REGION.pooler.supabase.com:5432/postgres
 
-Supabase note: use the DIRECT connection (port 5432), not the pooled one
-(port 6543). The pooler runs in transaction mode and will reject the
-multi-statement DDL this script sends.
+Supabase offers three endpoints and only one of them works here:
+
+    session pooler      pooler.supabase.com:5432   <- use this one
+    transaction pooler  pooler.supabase.com:6543   rejects multi-statement DDL
+    direct              db.<ref>.supabase.co:5432  IPv6-only since 2024, so it
+                                                   fails on most home networks
+
+The session pooler is the endpoint that is both IPv4-reachable and in session
+mode, which is what the multi-statement DDL below requires.
 """
 from __future__ import annotations
 
@@ -52,6 +58,16 @@ def dsn() -> str:
         sys.exit(
             "DATABASE_URL is not set.\n"
             "Copy .env.example to .env and fill in your Postgres connection string."
+        )
+    # Fail loudly on the two mistakes that otherwise surface as a confusing
+    # error halfway through the DDL.
+    if "YOUR_PASSWORD" in url or "YOUR-PASSWORD" in url:
+        sys.exit("DATABASE_URL still contains the password placeholder. Edit .env.")
+    if ":6543/" in url:
+        sys.exit(
+            "That is the TRANSACTION pooler (port 6543), which cannot run the\n"
+            "multi-statement DDL this script sends. Use the SESSION pooler:\n"
+            "change the port from 6543 to 5432 in DATABASE_URL."
         )
     return url
 
