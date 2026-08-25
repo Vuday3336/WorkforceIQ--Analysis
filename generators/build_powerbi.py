@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from build_report_pages import build_sections  # noqa: E402
 from feature_store import connect  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,9 +57,9 @@ TYPE_MAP = {
 # (tmdl table name, source view/table, description)
 MODEL_TABLES = [
     ("DimDate", "dim_date",
-     "Contiguous 2015-2026 calendar. MARK THIS AS THE DATE TABLE in Power BI "
-     "(Table tools > Mark as date table > date_key) or every time-intelligence "
-     "measure below silently returns wrong numbers."),
+     "Contiguous 2015-2026 calendar. Already marked as the date table "
+     "(dataCategory: Time + isKey on date_key), which is what SAMEPERIODLASTYEAR "
+     "and DATESINPERIOD require. Do not clear that marking."),
     ("DimDepartment", "departments",
      "Six Everline Corp departments rolled up to division."),
     ("DimEmployee", "vw_dim_employee",
@@ -289,16 +290,30 @@ def m_partition(table: str, source: str) -> str:
     )
 
 
+# Marking the date table is otherwise a manual step in Desktop
+# (Table tools > Mark as date table), and skipping it makes every
+# time-intelligence measure return wrong numbers SILENTLY -- no error, just
+# incorrect values. Serialising it here means it cannot be forgotten:
+# `dataCategory: Time` on the table plus `isKey` on the date column is exactly
+# what Desktop writes when you mark it by hand.
+DATE_TABLE = "DimDate"
+DATE_KEY = "date_key"
+
+
 def emit_table(name: str, source: str, description: str, cols) -> str:
     out = []
     for line in description.split("\n"):
         out.append("/// " + line)
     out.append("table " + name)
+    if name == DATE_TABLE:
+        out.append(T + "dataCategory: Time")
     out.append(T + "lineageTag: " + guid("table:" + name))
     out.append("")
     for col_name, col_type in cols:
         dt = TYPE_MAP.get(col_type.upper().split("(")[0], "string")
         out.append(T + "column " + col_name)
+        if name == DATE_TABLE and col_name == DATE_KEY:
+            out.append(T * 2 + "isKey")
         out.append(T * 2 + "dataType: " + dt)
         if dt == "dateTime":
             out.append(T * 2 + "formatString: yyyy-mm-dd")
@@ -511,26 +526,7 @@ def main() -> None:
         '  }\n'
         '}\n', encoding="utf-8")
 
-    pages = [
-        ("Executive Overview", "Headline KPIs, crude vs tenure-adjusted by department, trend"),
-        ("Tenure & Cohort Analysis", "Cohort rates, share of outflow, cohort x department matrix"),
-        ("Compensation & Satisfaction", "Pay quartiles and the overtime x satisfaction matrix"),
-        ("Attrition Risk Watchlist", "Scored active employees with driver flags"),
-    ]
-    sections = []
-    for i, (name, _) in enumerate(pages):
-        sections.append({
-            "config": "{}",
-            "displayName": name,
-            "displayOption": 1,
-            "filters": "[]",
-            "height": 720.0,
-            "name": guid("page:" + name).replace("-", ""),
-            "ordinal": i,
-            "visualContainers": [],
-            "width": 1280.0,
-        })
-
+    sections = build_sections()
     report = {
         "config": json.dumps({
             "version": "5.55",
@@ -542,7 +538,8 @@ def main() -> None:
         "resourcePackages": [{
             "resourcePackage": {
                 "disabled": False,
-                "items": [{"name": "CY24SU10", "path": "BaseThemes/CY24SU10.json", "type": 202}],
+                "items": [{"name": "CY24SU10", "path": "BaseThemes/CY24SU10.json",
+                           "type": 202}],
                 "name": "SharedResources",
                 "type": 2,
             }
@@ -550,10 +547,11 @@ def main() -> None:
         "sections": sections,
         "filters": "[]",
     }
-    (REPORT / "report.json").write_text(
-        json.dumps(report, indent=2), encoding="utf-8")
+    (REPORT / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
-    print("wrote report scaffold with " + str(len(pages)) + " named pages")
+    total = sum(len(sec["visualContainers"]) for sec in sections)
+    print("wrote report.json: " + str(len(sections)) + " pages, "
+          + str(total) + " visuals")
 
     con.close()
     print("\nwrote PBIP semantic model to " + str(MODEL.relative_to(ROOT)))

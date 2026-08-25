@@ -1,8 +1,10 @@
-/// Contiguous 2015-2026 calendar. MARK THIS AS THE DATE TABLE in Power BI (Table tools > Mark as date table > date_key) or every time-intelligence measure below silently returns wrong numbers.
+/// Contiguous 2015-2026 calendar. Already marked as the date table (dataCategory: Time + isKey on date_key), which is what SAMEPERIODLASTYEAR and DATESINPERIOD require. Do not clear that marking.
 table DimDate
+	dataCategory: Time
 	lineageTag: c501efbc-ef9a-ec8d-89d0-e5d891ced24d
 
 	column date_key
+		isKey
 		dataType: dateTime
 		formatString: yyyy-mm-dd
 		lineageTag: a479af02-1871-0e2f-fb19-c7eae15284ac

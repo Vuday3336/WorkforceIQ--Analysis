@@ -63,13 +63,16 @@ Connection is a **live PostgreSQL connector connection to the analytical views**
 — not a CSV import. That distinction is worth stating on a résumé, because most
 portfolio dashboards import a flat file and lose the entire SQL layer.
 
-## Step 2 — mark the date table (do not skip)
+## Step 2 — the date table is already marked
 
-**Table tools → Mark as date table → `DimDate[date_key]`.**
+`DimDate` ships with `dataCategory: Time` and `isKey` on `date_key`, which is
+exactly what Desktop writes when you use *Table tools → Mark as date table*. It
+is serialised in the TMDL so it cannot be forgotten — without it every
+time-intelligence measure (`SAMEPERIODLASTYEAR`, `DATESINPERIOD`, `DATESYTD`)
+returns wrong numbers **silently**, with no error at all.
 
-Every time-intelligence measure (`SAMEPERIODLASTYEAR`, `DATESINPERIOD`,
-`DATESYTD`) returns wrong numbers *silently* without this. No error, just
-incorrect values — which is the worst failure mode there is.
+Verify rather than repeat it: select `DimDate` in Table view and confirm
+*Mark as date table* already shows `date_key`. Do not clear it.
 
 ## Step 3 — verify the model
 

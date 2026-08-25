@@ -24,9 +24,91 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.0,
-      "name": "461ae50a9757e90db38e4a8cc24549a1",
+      "name": "v461ae50a9757e90db38",
       "ordinal": 0,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "x": 16.0,
+          "y": 12.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 96.0,
+          "config": "{\"name\": \"v8b9cb4cba7c7398c183\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 12, \"z\": 0, \"width\": 240, \"height\": 96}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Active Headcount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Active Headcount\"}, \"Name\": \"_Measures.Active Headcount\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active headcount'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 264.0,
+          "y": 12.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 96.0,
+          "config": "{\"name\": \"v7d883619e312a84aea1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 264, \"y\": 12, \"z\": 0, \"width\": 240, \"height\": 96}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Attrition Rate\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Attrition Rate\"}, \"Name\": \"_Measures.Attrition Rate\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Attrition rate'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 512.0,
+          "y": 12.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 96.0,
+          "config": "{\"name\": \"vad65580bed5c2c404ec\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 512, \"y\": 12, \"z\": 0, \"width\": 240, \"height\": 96}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Terminated Count\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Terminated Count\"}, \"Name\": \"_Measures.Terminated Count\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Departures'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 760.0,
+          "y": 12.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 96.0,
+          "config": "{\"name\": \"v696430656f73cd3f5c4\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 760, \"y\": 12, \"z\": 0, \"width\": 240, \"height\": 96}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.Avg Tenure (Years)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Avg Tenure (Years)\"}, \"Name\": \"_Measures.Avg Tenure (Years)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Avg tenure (yrs)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1008.0,
+          "y": 12.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 96.0,
+          "config": "{\"name\": \"vf7fcebc220e8598ed26\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1008, \"y\": 12, \"z\": 0, \"width\": 240, \"height\": 96}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.High Risk Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"High Risk Employees\"}, \"Name\": \"_Measures.High Risk Employees\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'High-risk now'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 120.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 300.0,
+          "config": "{\"name\": \"v4e1a9102fbdef2e8e61\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 120, \"z\": 0, \"width\": 616, \"height\": 300}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"DepartmentControlled.department_name\"}], \"Y\": [{\"queryRef\": \"Avg(DepartmentControlled.crude_attrition_rate)\"}, {\"queryRef\": \"Avg(DepartmentControlled.tenure_adjusted_rate)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"DepartmentControlled\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"department_name\"}, \"Name\": \"DepartmentControlled.department_name\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"crude_attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(DepartmentControlled.crude_attrition_rate)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"tenure_adjusted_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(DepartmentControlled.tenure_adjusted_rate)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Crude vs tenure-adjusted attrition by department'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 648.0,
+          "y": 120.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 300.0,
+          "config": "{\"name\": \"v82009ec8fcf65a9a47a\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 648, \"y\": 120, \"z\": 0, \"width\": 616, \"height\": 300}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"AttritionByDepartment.year_quarter\"}], \"Y\": [{\"queryRef\": \"Avg(AttritionByDepartment.rolling_4q_attrition_rate)\"}, {\"queryRef\": \"Avg(AttritionByDepartment.attrition_rate_qtr)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"q\", \"Entity\": \"AttritionByDepartment\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"q\"}}, \"Property\": \"year_quarter\"}, \"Name\": \"AttritionByDepartment.year_quarter\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"q\"}}, \"Property\": \"rolling_4q_attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(AttritionByDepartment.rolling_4q_attrition_rate)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"q\"}}, \"Property\": \"attrition_rate_qtr\"}}, \"Function\": 1}, \"Name\": \"Avg(AttritionByDepartment.attrition_rate_qtr)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Attrition trend - rolling 4q vs single quarter'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 432.0,
+          "z": 0.0,
+          "width": 856.0,
+          "height": 272.0,
+          "config": "{\"name\": \"v59a4b2bdec3343091e4\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 432, \"z\": 0, \"width\": 856, \"height\": 272}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"DepartmentControlled.department_name\"}, {\"queryRef\": \"Sum(DepartmentControlled.headcount)\"}, {\"queryRef\": \"Sum(DepartmentControlled.observed_leavers)\"}, {\"queryRef\": \"Sum(DepartmentControlled.expected_leavers)\"}, {\"queryRef\": \"Avg(DepartmentControlled.crude_attrition_rate)\"}, {\"queryRef\": \"Avg(DepartmentControlled.standardised_attrition_ratio)\"}, {\"queryRef\": \"DepartmentControlled.verdict\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"DepartmentControlled\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"department_name\"}, \"Name\": \"DepartmentControlled.department_name\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"headcount\"}}, \"Function\": 0}, \"Name\": \"Sum(DepartmentControlled.headcount)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"observed_leavers\"}}, \"Function\": 0}, \"Name\": \"Sum(DepartmentControlled.observed_leavers)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"expected_leavers\"}}, \"Function\": 0}, \"Name\": \"Sum(DepartmentControlled.expected_leavers)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"crude_attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(DepartmentControlled.crude_attrition_rate)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"standardised_attrition_ratio\"}}, \"Function\": 1}, \"Name\": \"Avg(DepartmentControlled.standardised_attrition_ratio)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"verdict\"}, \"Name\": \"DepartmentControlled.verdict\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Department scorecard - observed vs expected leavers'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 888.0,
+          "y": 432.0,
+          "z": 0.0,
+          "width": 376.0,
+          "height": 272.0,
+          "config": "{\"name\": \"v30a43e800214b8f2227\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 888, \"y\": 432, \"z\": 0, \"width\": 376, \"height\": 272}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"The finding that changes a decision\", \"textStyle\": {\"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"Engineering's crude rate is 17.6% and it accounts for 111 of 237 departures - 47% of all outflow. On the old quarterly report it looked like the problem to solve.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"Its standardised ratio is 1.01: it loses almost exactly what its tenure mix predicts. That is a hiring-volume consequence, not a retention failure.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"Sales (1.36 across 409 people) is where a retention task force belongs.\", \"textStyle\": {\"fontWeight\": \"bold\"}}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
       "width": 1280.0
     },
     {
@@ -35,9 +117,46 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.0,
-      "name": "d3ae7e53a993674d1b6eef483fad3ce3",
+      "name": "vd3ae7e53a993674d1b6",
       "ordinal": 1,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "x": 16.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 330.0,
+          "config": "{\"name\": \"vfdc6b77d40b3dad2734\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 16, \"z\": 0, \"width\": 616, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"lineClusteredColumnComboChart\", \"projections\": {\"Category\": [{\"queryRef\": \"TenureCohort.tenure_cohort\"}], \"Y\": [{\"queryRef\": \"Sum(TenureCohort.employees)\"}], \"Y2\": [{\"queryRef\": \"Avg(TenureCohort.attrition_rate)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TenureCohort\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"tenure_cohort\"}, \"Name\": \"TenureCohort.tenure_cohort\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"employees\"}}, \"Function\": 0}, \"Name\": \"Sum(TenureCohort.employees)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(TenureCohort.attrition_rate)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Headcount and attrition rate by tenure cohort'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 648.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 330.0,
+          "config": "{\"name\": \"vabf3fa24e0ac517b97b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 648, \"y\": 16, \"z\": 0, \"width\": 616, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"TenureCohort.tenure_cohort\"}], \"Y\": [{\"queryRef\": \"Avg(TenureCohort.share_of_all_leavers)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"TenureCohort\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"tenure_cohort\"}, \"Name\": \"TenureCohort.tenure_cohort\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"share_of_all_leavers\"}}, \"Function\": 1}, \"Name\": \"Avg(TenureCohort.share_of_all_leavers)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Share of all leavers by cohort'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 362.0,
+          "z": 0.0,
+          "width": 792.0,
+          "height": 342.0,
+          "config": "{\"name\": \"vdca9f99198c46385e8c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 362, \"z\": 0, \"width\": 792, \"height\": 342}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"DimEmployee.department_name\"}], \"Columns\": [{\"queryRef\": \"DimEmployee.tenure_cohort\"}], \"Values\": [{\"queryRef\": \"_Measures.Attrition Rate\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"DimEmployee\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"department_name\"}, \"Name\": \"DimEmployee.department_name\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"tenure_cohort\"}, \"Name\": \"DimEmployee.tenure_cohort\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Attrition Rate\"}, \"Name\": \"_Measures.Attrition Rate\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Attrition rate by department and tenure cohort'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 824.0,
+          "y": 362.0,
+          "z": 0.0,
+          "width": 440.0,
+          "height": 342.0,
+          "config": "{\"name\": \"v3ca2f663e05828cba44\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 824, \"y\": 362, \"z\": 0, \"width\": 440, \"height\": 342}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Rate and volume point at different cohorts\", \"textStyle\": {\"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"The 0-1 yr cohort has the highest rate at 36.4%, but it is only 6.8% of everyone who actually leaves - 44 people.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"The 1-3 yr cohort runs at 28.9% across 298 people and accounts for 36.3% of all departures.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"Ranking on rate alone would send the retention budget to onboarding. The money belongs in the 1-3 year experience.\", \"textStyle\": {\"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"The first three years carry 43% of all departures from 23% of headcount.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
       "width": 1280.0
     },
     {
@@ -46,9 +165,46 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.0,
-      "name": "e14770ec7cc18a179bb356dad0ecf653",
+      "name": "ve14770ec7cc18a179bb",
       "ordinal": 2,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "x": 16.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 330.0,
+          "config": "{\"name\": \"v13c887044a7376df571\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 16, \"z\": 0, \"width\": 616, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"CompQuartile.income_quartile_label\"}], \"Y\": [{\"queryRef\": \"Avg(CompQuartile.attrition_rate)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"q\", \"Entity\": \"CompQuartile\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"q\"}}, \"Property\": \"income_quartile_label\"}, \"Name\": \"CompQuartile.income_quartile_label\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"q\"}}, \"Property\": \"attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(CompQuartile.attrition_rate)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Attrition by pay quartile within job role'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 648.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 330.0,
+          "config": "{\"name\": \"vf9f9d30db93a2997691\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 648, \"y\": 16, \"z\": 0, \"width\": 616, \"height\": 330}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"OvertimeSatisfaction.overtime_flag\"}], \"Columns\": [{\"queryRef\": \"OvertimeSatisfaction.satisfaction_bucket\"}], \"Values\": [{\"queryRef\": \"Avg(OvertimeSatisfaction.attrition_rate)\"}, {\"queryRef\": \"Avg(OvertimeSatisfaction.lift_vs_base)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"o\", \"Entity\": \"OvertimeSatisfaction\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"overtime_flag\"}, \"Name\": \"OvertimeSatisfaction.overtime_flag\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"satisfaction_bucket\"}, \"Name\": \"OvertimeSatisfaction.satisfaction_bucket\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(OvertimeSatisfaction.attrition_rate)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"o\"}}, \"Property\": \"lift_vs_base\"}}, \"Function\": 1}, \"Name\": \"Avg(OvertimeSatisfaction.lift_vs_base)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'THE HEADLINE - overtime x satisfaction, rate and lift vs base'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 362.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 342.0,
+          "config": "{\"name\": \"vd8959c2c89fa8c69d10\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 362, \"z\": 0, \"width\": 616, \"height\": 342}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"SpanBand.span_band\"}], \"Y\": [{\"queryRef\": \"Avg(SpanBand.attrition_rate)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"SpanBand\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"span_band\"}, \"Name\": \"SpanBand.span_band\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"attrition_rate\"}}, \"Function\": 1}, \"Name\": \"Avg(SpanBand.attrition_rate)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Manager span of control - a negative result'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 648.0,
+          "y": 362.0,
+          "z": 0.0,
+          "width": 616.0,
+          "height": 342.0,
+          "config": "{\"name\": \"vfa9b9f95832c2a6d7ce\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 648, \"y\": 362, \"z\": 0, \"width\": 616, \"height\": 342}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Overtime is the lever. Satisfaction only modulates it.\", \"textStyle\": {\"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"Overtime AND low satisfaction: 36.6% attrition - 2.27x the company base rate, and 5.3x the 6.9% of employees with neither factor.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"The asymmetry is the real insight: overtime alone (21.1%, even among the highly satisfied) is worse than low satisfaction alone (13.5%). High satisfaction does not protect someone being worked too hard.\"}]}, {\"textRuns\": [{\"value\": \"\"}]}, {\"textRuns\": [{\"value\": \"On span of control (left): no relationship. Flat at 14.0% / 16.6% / 16.3% across 6-10, 11-15 and 16+ reports. The spike in the smallest band is small-sample noise across 79 people. Do not restructure the org on it.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
       "width": 1280.0
     },
     {
@@ -57,9 +213,64 @@
       "displayOption": 1,
       "filters": "[]",
       "height": 720.0,
-      "name": "275b2b51e9be4926dfbef77a91a5f937",
+      "name": "v275b2b51e9be4926dfb",
       "ordinal": 3,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "x": 16.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 180.0,
+          "config": "{\"name\": \"vb8d1fbd2430e5e63d39\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 16, \"z\": 0, \"width\": 240, \"height\": 180}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"DimEmployee.department_name\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"DimEmployee\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department_name\"}, \"Name\": \"DimEmployee.department_name\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Department'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 204.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 180.0,
+          "config": "{\"name\": \"v707d088c8145a2b35bd\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 204, \"z\": 0, \"width\": 240, \"height\": 180}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"RiskScores.risk_tier\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"RiskScores\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"risk_tier\"}, \"Name\": \"RiskScores.risk_tier\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Risk tier'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 392.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 200.0,
+          "config": "{\"name\": \"v476091a235c39bc214e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 392, \"z\": 0, \"width\": 240, \"height\": 200}}], \"singleVisual\": {\"visualType\": \"donutChart\", \"projections\": {\"Category\": [{\"queryRef\": \"RiskScores.risk_tier\"}], \"Y\": [{\"queryRef\": \"Count(RiskScores.employee_id)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"r\", \"Entity\": \"RiskScores\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"risk_tier\"}, \"Name\": \"RiskScores.risk_tier\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"employee_id\"}}, \"Function\": 4}, \"Name\": \"Count(RiskScores.employee_id)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Employees by tier'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 16.0,
+          "y": 600.0,
+          "z": 0.0,
+          "width": 240.0,
+          "height": 104.0,
+          "config": "{\"name\": \"v68c1c729bb9e98102cb\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 600, \"z\": 0, \"width\": 240, \"height\": 104}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Measures.High Risk Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"High Risk Employees\"}, \"Name\": \"_Measures.High Risk Employees\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'High-risk employees'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 272.0,
+          "y": 16.0,
+          "z": 0.0,
+          "width": 992.0,
+          "height": 576.0,
+          "config": "{\"name\": \"vf454599c5ae45747001\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 272, \"y\": 16, \"z\": 0, \"width\": 992, \"height\": 576}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"DimEmployee.employee_name\"}, {\"queryRef\": \"DimEmployee.department_name\"}, {\"queryRef\": \"DimEmployee.job_role\"}, {\"queryRef\": \"DimEmployee.manager_name\"}, {\"queryRef\": \"Max(RiskScores.risk_score)\"}, {\"queryRef\": \"RiskScores.risk_tier\"}, {\"queryRef\": \"_Measures.Flight Risk Score (Rule-Based)\"}, {\"queryRef\": \"Max(DimEmployee.tenure_years)\"}, {\"queryRef\": \"DimEmployee.income_quartile_label\"}, {\"queryRef\": \"DimEmployee.overtime_flag\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"DimEmployee\", \"Type\": 0}, {\"Name\": \"r\", \"Entity\": \"RiskScores\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"_Measures\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"employee_name\"}, \"Name\": \"DimEmployee.employee_name\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department_name\"}, \"Name\": \"DimEmployee.department_name\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"job_role\"}, \"Name\": \"DimEmployee.job_role\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"manager_name\"}, \"Name\": \"DimEmployee.manager_name\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"risk_score\"}}, \"Function\": 3}, \"Name\": \"Max(RiskScores.risk_score)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"risk_tier\"}, \"Name\": \"RiskScores.risk_tier\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Flight Risk Score (Rule-Based)\"}, \"Name\": \"_Measures.Flight Risk Score (Rule-Based)\"}, {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"tenure_years\"}}, \"Function\": 3}, \"Name\": \"Max(DimEmployee.tenure_years)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"income_quartile_label\"}, \"Name\": \"DimEmployee.income_quartile_label\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"overtime_flag\"}, \"Name\": \"DimEmployee.overtime_flag\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"r\"}}, \"Property\": \"risk_score\"}}, \"Function\": 3}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active employees by modelled flight risk (highest first)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1F5673'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 272.0,
+          "y": 600.0,
+          "z": 0.0,
+          "width": 992.0,
+          "height": 104.0,
+          "config": "{\"name\": \"va97ada286131b6e37df\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 272, \"y\": 600, \"z\": 0, \"width\": 992, \"height\": 104}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Model output, not a verdict.\", \"textStyle\": {\"fontWeight\": \"bold\"}}, {\"value\": \" Scores are associations, not causes, and carry roughly +/-0.06 PR-AUC of uncertainty. Use as a prompt for a conversation - never as an input to a performance or employment decision. Employee names are synthetic. Filter RiskScores to model_name = 'logistic_regression' and the latest scored_date.\"}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
       "width": 1280.0
     }
   ],
