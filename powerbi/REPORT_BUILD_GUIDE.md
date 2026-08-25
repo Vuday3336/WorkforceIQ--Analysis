@@ -7,6 +7,7 @@
 | `WorkforceIQ.pbip` | Power BI project file. **Open this with Power BI Desktop.** |
 | `WorkforceIQ.SemanticModel/` | The full semantic model in TMDL — 14 tables, 6 relationships, 22 DAX measures. Plain text, diffable, reviewable. |
 | `measures.dax` | Every measure in one readable file, with the reasoning for each. |
+| `WorkforceIQ.Report/` | The report: 4 pages, 23 visuals, serialised in `report.json`. |
 | *(no `.pbix`)* | See below. |
 
 **Why there is no `.pbix` in this repo.** A `.pbix` is a proprietary binary that
@@ -20,21 +21,24 @@ merged, which is why Microsoft built PBIP in the first place. Desktop opens the
 `.pbip` natively and `File → Save As → .pbix` produces a binary in one step if
 one is needed for sharing.
 
-The report *pages* are specified below rather than serialised, for the same
-reason: the PBIR visual layer is version-pinned JSON that cannot be validated
-without Desktop, and an unopenable file is worse than a precise spec. The
-semantic model — the part that carries the actual analytical work — is complete.
+The report pages **are** serialised — 23 visuals across four pages in
+`WorkforceIQ.Report/report.json`. The per-page specification further down is
+kept as documentation of what each visual is for and why, and as the reference
+for rebuilding or extending them.
 
 ---
 
 ## Step 1 — connect
 
 1. Open `WorkforceIQ.pbip` in Power BI Desktop.
-2. **Transform data → Manage parameters**, set:
-   - `ServerName` → `db.<your-project-ref>.supabase.co`
+2. The connection parameters are pre-filled; check them under
+   **Transform data → Manage parameters** only if the refresh fails:
+   - `ServerName` → `aws-0-<region>.pooler.supabase.com:5432` (the **session**
+     pooler — the transaction pooler on 6543 and the IPv6-only direct host both
+     fail here)
    - `DatabaseName` → `postgres`
-3. Refresh. Credentials: **Database** auth, user `postgres`, your Postgres
-   password.
+3. Refresh. Credentials: **Database** auth, user
+   `postgres.<your-project-ref>`, your Postgres password.
 4. **Untick "Encrypt connection"** in that same credentials dialog.
 
 ### If the refresh fails with "The remote certificate is invalid"
