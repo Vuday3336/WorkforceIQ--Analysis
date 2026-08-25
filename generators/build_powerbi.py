@@ -400,9 +400,11 @@ def main() -> None:
 
     # ---------------------------------------------------------------- expressions
     expressions = (
-        '/// Postgres host. Supabase: db.<project-ref>.supabase.co\n'
+        '/// Postgres host, written as host:port.\n'
+        '/// Use the Supabase SESSION pooler on port 5432. The transaction\n'
+        '/// pooler on 6543 and the IPv6-only direct host both fail here.\n'
         '/// Change this in Power BI via Transform data > Manage parameters.\n'
-        'expression ServerName = "db.YOUR_PROJECT_REF.supabase.co" '
+        'expression ServerName = "aws-0-ap-south-1.pooler.supabase.com:5432" '
         'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
         + T + "lineageTag: " + guid("expr:ServerName") + "\n"
         + T + "annotation PBI_ResultType = Text\n\n"

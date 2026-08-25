@@ -1,6 +1,8 @@
-/// Postgres host. Supabase: db.<project-ref>.supabase.co
+/// Postgres host, written as host:port.
+/// Use the Supabase SESSION pooler on port 5432. The transaction
+/// pooler on 6543 and the IPv6-only direct host both fail here.
 /// Change this in Power BI via Transform data > Manage parameters.
-expression ServerName = "db.YOUR_PROJECT_REF.supabase.co" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression ServerName = "aws-0-ap-south-1.pooler.supabase.com:5432" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: a6139704-93ec-ab8b-359b-31f54cb13335
 	annotation PBI_ResultType = Text
 
