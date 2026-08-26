@@ -143,7 +143,30 @@ def compare(a: pd.DataFrame, b: pd.DataFrame) -> list[str]:
 
 def main() -> None:
     print("connecting ...")
-    pg = psycopg2.connect(dsn())
+    try:
+        pg = psycopg2.connect(dsn())
+    except psycopg2.OperationalError as exc:
+        # A paused Supabase project answers with ENOTFOUND on the tenant rather
+        # than refusing the connection. Free-tier projects pause on their own
+        # once the org exceeds two active ones, so this is an expected state,
+        # not a broken repo -- say so plainly and skip rather than traceback.
+        msg = str(exc)
+        print("\nPostgreSQL is not reachable:\n  " + msg.strip().splitlines()[0])
+        if "ENOTFOUND" in msg or "not found" in msg:
+            print(
+                "\nThat error means the Supabase project is PAUSED (free tier allows\n"
+                "two active projects per org). Restore it from the Supabase dashboard,\n"
+                "then re-run:\n"
+                "    python generators/load_to_postgres.py\n"
+                "    python generators/verify_parity.py"
+            )
+        print(
+            "\nNothing else depends on this. The views are validated against DuckDB by\n"
+            "    python generators/run_views_local.py\n"
+            "and the Power BI report imports data/powerbi/*.csv, so it is unaffected."
+        )
+        sys.exit(2)
+
     duck = connect()
     print("postgres + duckdb ready\n")
 

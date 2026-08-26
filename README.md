@@ -228,6 +228,10 @@ better line on a CV. It was the wrong call for a portfolio artefact:
   either certificate validation disabled or the Supabase CA installed into
   Trusted Root Certification Authorities — neither of which belongs in a
   "clone and open" experience.
+- **The free tier pauses the database out from under you.** Supabase allows two
+  active projects per organisation; create a third and one of the others is
+  paused automatically. That happened to this database mid-build. A report whose
+  data source can vanish on someone else's schedule is not a portfolio piece.
 
 The `ServerName` / `DatabaseName` parameters are still in the model and the
 live-connection M is documented in

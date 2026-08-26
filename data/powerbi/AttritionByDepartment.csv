@@ -1,20 +1,4 @@
 department_id,department_name,division,year,quarter,year_quarter,headcount_start,headcount_end,avg_headcount,terminations,attrition_rate_qtr,rolling_4q_terminations,rolling_4q_attrition_rate,rolling_window_quarters
-4,Finance,Corporate Services,2024,1,2024 Q1,93,96,94.5,0,0.0,0.0,0.0,1
-4,Finance,Corporate Services,2024,2,2024 Q2,96,96,96.0,1,0.0104,1.0,0.0105,2
-4,Finance,Corporate Services,2024,3,2024 Q3,96,95,95.5,2,0.0209,3.0,0.0315,3
-4,Finance,Corporate Services,2024,4,2024 Q4,95,96,95.5,1,0.0105,4.0,0.0419,4
-4,Finance,Corporate Services,2025,1,2025 Q1,96,97,96.5,0,0.0,4.0,0.0417,4
-4,Finance,Corporate Services,2025,2,2025 Q2,97,97,97.0,0,0.0,3.0,0.0312,4
-4,Finance,Corporate Services,2025,3,2025 Q3,97,97,97.0,1,0.0103,2.0,0.0207,4
-4,Finance,Corporate Services,2025,4,2025 Q4,97,97,97.0,0,0.0,1.0,0.0103,4
-2,Engineering,Technology,2024,1,2024 Q1,538,552,545.0,11,0.0202,11.0,0.0202,1
-2,Engineering,Technology,2024,2,2024 Q2,552,551,551.5,16,0.029,27.0,0.0492,2
-2,Engineering,Technology,2024,3,2024 Q3,551,557,554.0,12,0.0217,39.0,0.0709,3
-2,Engineering,Technology,2024,4,2024 Q4,557,566,561.5,13,0.0232,52.0,0.094,4
-2,Engineering,Technology,2025,1,2025 Q1,566,557,561.5,10,0.0178,51.0,0.0915,4
-2,Engineering,Technology,2025,2,2025 Q2,557,544,550.5,15,0.0272,50.0,0.0898,4
-2,Engineering,Technology,2025,3,2025 Q3,544,537,540.5,13,0.0241,51.0,0.0921,4
-2,Engineering,Technology,2025,4,2025 Q4,537,520,528.5,21,0.0397,59.0,0.1082,4
 1,Sales,Go-To-Market,2024,1,2024 Q1,368,370,369.0,7,0.019,7.0,0.019,1
 1,Sales,Go-To-Market,2024,2,2024 Q2,370,369,369.5,11,0.0298,18.0,0.0487,2
 1,Sales,Go-To-Market,2024,3,2024 Q3,369,358,363.5,16,0.044,34.0,0.0926,3
@@ -23,6 +7,14 @@ department_id,department_name,division,year,quarter,year_quarter,headcount_start
 1,Sales,Go-To-Market,2025,2,2025 Q2,354,342,348.0,14,0.0402,47.0,0.1323,4
 1,Sales,Go-To-Market,2025,3,2025 Q3,342,331,336.5,12,0.0357,43.0,0.1233,4
 1,Sales,Go-To-Market,2025,4,2025 Q4,331,319,325.0,13,0.04,46.0,0.1349,4
+5,Operations,Technology,2024,1,2024 Q1,135,138,136.5,0,0.0,0.0,0.0,1
+5,Operations,Technology,2024,2,2024 Q2,138,139,138.5,0,0.0,0.0,0.0,2
+5,Operations,Technology,2024,3,2024 Q3,139,138,138.5,3,0.0217,3.0,0.0218,3
+5,Operations,Technology,2024,4,2024 Q4,138,137,137.5,3,0.0218,6.0,0.0436,4
+5,Operations,Technology,2025,1,2025 Q1,137,137,137.0,0,0.0,6.0,0.0435,4
+5,Operations,Technology,2025,2,2025 Q2,137,136,136.5,1,0.0073,7.0,0.051,4
+5,Operations,Technology,2025,3,2025 Q3,136,134,135.0,3,0.0222,7.0,0.0513,4
+5,Operations,Technology,2025,4,2025 Q4,134,135,134.5,0,0.0,4.0,0.0295,4
 3,HR,Corporate Services,2024,1,2024 Q1,49,49,49.0,0,0.0,0.0,0.0,1
 3,HR,Corporate Services,2024,2,2024 Q2,49,49,49.0,2,0.0408,2.0,0.0408,2
 3,HR,Corporate Services,2024,3,2024 Q3,49,50,49.5,0,0.0,2.0,0.0407,3
@@ -39,11 +31,19 @@ department_id,department_name,division,year,quarter,year_quarter,headcount_start
 6,Customer Support,Go-To-Market,2025,2,2025 Q2,121,121,121.0,0,0.0,5.0,0.0412,4
 6,Customer Support,Go-To-Market,2025,3,2025 Q3,121,121,121.0,1,0.0083,4.0,0.0329,4
 6,Customer Support,Go-To-Market,2025,4,2025 Q4,121,122,121.5,0,0.0,4.0,0.0329,4
-5,Operations,Technology,2024,1,2024 Q1,135,138,136.5,0,0.0,0.0,0.0,1
-5,Operations,Technology,2024,2,2024 Q2,138,139,138.5,0,0.0,0.0,0.0,2
-5,Operations,Technology,2024,3,2024 Q3,139,138,138.5,3,0.0217,3.0,0.0218,3
-5,Operations,Technology,2024,4,2024 Q4,138,137,137.5,3,0.0218,6.0,0.0436,4
-5,Operations,Technology,2025,1,2025 Q1,137,137,137.0,0,0.0,6.0,0.0435,4
-5,Operations,Technology,2025,2,2025 Q2,137,136,136.5,1,0.0073,7.0,0.051,4
-5,Operations,Technology,2025,3,2025 Q3,136,134,135.0,3,0.0222,7.0,0.0513,4
-5,Operations,Technology,2025,4,2025 Q4,134,135,134.5,0,0.0,4.0,0.0295,4
+2,Engineering,Technology,2024,1,2024 Q1,538,552,545.0,11,0.0202,11.0,0.0202,1
+2,Engineering,Technology,2024,2,2024 Q2,552,551,551.5,16,0.029,27.0,0.0492,2
+2,Engineering,Technology,2024,3,2024 Q3,551,557,554.0,12,0.0217,39.0,0.0709,3
+2,Engineering,Technology,2024,4,2024 Q4,557,566,561.5,13,0.0232,52.0,0.094,4
+2,Engineering,Technology,2025,1,2025 Q1,566,557,561.5,10,0.0178,51.0,0.0915,4
+2,Engineering,Technology,2025,2,2025 Q2,557,544,550.5,15,0.0272,50.0,0.0898,4
+2,Engineering,Technology,2025,3,2025 Q3,544,537,540.5,13,0.0241,51.0,0.0921,4
+2,Engineering,Technology,2025,4,2025 Q4,537,520,528.5,21,0.0397,59.0,0.1082,4
+4,Finance,Corporate Services,2024,1,2024 Q1,93,96,94.5,0,0.0,0.0,0.0,1
+4,Finance,Corporate Services,2024,2,2024 Q2,96,96,96.0,1,0.0104,1.0,0.0105,2
+4,Finance,Corporate Services,2024,3,2024 Q3,96,95,95.5,2,0.0209,3.0,0.0315,3
+4,Finance,Corporate Services,2024,4,2024 Q4,95,96,95.5,1,0.0105,4.0,0.0419,4
+4,Finance,Corporate Services,2025,1,2025 Q1,96,97,96.5,0,0.0,4.0,0.0417,4
+4,Finance,Corporate Services,2025,2,2025 Q2,97,97,97.0,0,0.0,3.0,0.0312,4
+4,Finance,Corporate Services,2025,3,2025 Q3,97,97,97.0,1,0.0103,2.0,0.0207,4
+4,Finance,Corporate Services,2025,4,2025 Q4,97,97,97.0,0,0.0,1.0,0.0103,4
