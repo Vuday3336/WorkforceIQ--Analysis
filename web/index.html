@@ -191,8 +191,25 @@ h1, h2, h3, .display {
   font-size: 13px; font-weight: 500;
 }
 .track { background: var(--surface-alt); border-radius: 3px; height: 22px; position: relative; overflow: hidden; }
-.bar { height: 100%; border-radius: 3px; transition: width .5s cubic-bezier(.22,.8,.3,1); }
-@media (prefers-reduced-motion: reduce) { .bar { transition: none; } }
+/* Two things here are load-bearing, both learned the hard way:
+
+   1. display:block -- the bar is an <i>, which is inline by default, and
+      inline elements ignore width and height outright.
+
+   2. The grow-in effect is a CSS animation on transform, NOT a JS-driven
+      width transition. The first version set width to 0% and then filled it
+      in from a requestAnimationFrame callback; rAF is throttled to never in a
+      backgrounded or zero-size viewport, so every bar stayed at 0% forever
+      and the whole page rendered as empty tracks. Correctness must not depend
+      on an animation frame firing. The width is now set outright and the
+      animation is purely declarative. */
+.bar {
+  display: block; height: 100%; border-radius: 3px;
+  transform-origin: left center;
+  animation: bar-in .55s cubic-bezier(.22, .8, .3, 1) both;
+}
+@keyframes bar-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .bar { animation: none; } }
 .bar.a { background: var(--accent); }
 .bar.c { background: var(--critical); }
 .bar.w { background: var(--warning); }
@@ -612,11 +629,12 @@ footer a { color: var(--accent); }
       r.append(el("div", "rl", it.label));
       const t = el("div", "track");
       const b = el("i", "bar " + (it.tone || "a"));
-      b.style.width = "0%";
+      // set outright -- never from a rAF callback, which does not fire in a
+      // backgrounded or zero-size viewport and left every bar at 0%
+      b.style.width = Math.max(0, Math.min(100, (it.v / m) * 100)) + "%";
       t.append(b);
       r.append(t, el("div", "rv", fmt ? fmt(it.v) : pct(it.v)));
       host.append(r);
-      requestAnimationFrame(() => { b.style.width = (it.v / m) * 100 + "%"; });
     });
   }
 

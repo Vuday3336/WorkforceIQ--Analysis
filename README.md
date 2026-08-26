@@ -103,12 +103,12 @@ erDiagram
     }
     attrition_events {
         int event_id PK
-        int employee_id FK UK
+        int employee_id FK "unique - one exit per employee"
         date termination_date
         smallint voluntary_flag
     }
     attrition_risk_scores {
-        int employee_id PK_FK
+        int employee_id PK "also FK to employees"
         date scored_date PK
         varchar model_name PK
         numeric risk_score
