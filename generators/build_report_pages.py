@@ -28,8 +28,13 @@ import json
 
 CANVAS_W, CANVAS_H = 1280.0, 720.0
 
-# aggregation function codes used in prototypeQuery
-SUM, AVG, MIN, MAX, COUNT = 0, 1, 2, 3, 4
+# Power BI QueryAggregateFunction codes. Count is 2, NOT 4 -- Min and Max sit
+# after it. The first version had these as 0,1,2,3,4 = Sum,Avg,Min,Max,Count,
+# which silently shifted three of them: the watchlist showed "Min of
+# risk_score" where Max was intended, and the risk-tier donut plotted the
+# MAXIMUM employee_id per tier instead of a count of employees. Both rendered
+# without error, which is what made it easy to miss.
+SUM, AVG, COUNT, MIN, MAX = 0, 1, 2, 3, 4
 
 
 def vid(seed: str) -> str:
@@ -53,7 +58,7 @@ def measure(alias: str, table: str, name: str) -> dict:
 
 
 def agg(alias: str, table: str, column: str, func: int = SUM) -> dict:
-    label = {SUM: "Sum", AVG: "Avg", MIN: "Min", MAX: "Max", COUNT: "Count"}[func]
+    label = {SUM: "Sum", AVG: "Avg", COUNT: "Count", MIN: "Min", MAX: "Max"}[func]
     return {
         "Aggregation": {
             "Expression": {"Column": {"Expression": {"SourceRef": {"Source": alias}},
@@ -74,6 +79,13 @@ def ref(item: dict) -> dict:
 
 
 # ---------------------------------------------------------------- containers
+# Turns off the grand-total row. On the department scorecard the total was
+# averaging six departmental rates (0.14 against the true 0.1612) and averaging
+# six standardised ratios into a meaningless 0.85; on the watchlist it reduced
+# a per-employee probability to a single aggregate. Both invite misreading.
+NO_TOTALS = {"total": [{"properties": {"totals": {"expr": {"Literal": {"Value": "false"}}}}}]}
+
+
 def visual(name_seed, vtype, x, y, w, h, from_, select, projections,
            title=None, objects=None, sort=None, z=0):
     single = {
@@ -197,7 +209,8 @@ def page_executive() -> list:
         [s_dept, s_head, s_obs, s_exp, s_crude, s_sar, s_verdict],
         {"Values": [ref(s_dept), ref(s_head), ref(s_obs), ref(s_exp),
                     ref(s_crude), ref(s_sar), ref(s_verdict)]},
-        title="Department scorecard - observed vs expected leavers"))
+        title="Department scorecard - observed vs expected leavers",
+        objects=NO_TOTALS))
 
     v.append(textbox("exec.note", 888, 432, 376, 272, [
         [("The finding that changes a decision", True)],
@@ -360,6 +373,7 @@ def page_watchlist() -> list:
                     ref(w_score), ref(w_tier), ref(w_rule), ref(w_ten),
                     ref(w_pay), ref(w_ot)]},
         title="Active employees by modelled flight risk (highest first)",
+        objects=NO_TOTALS,
         sort=[{"Direction": 2, "Expression": {"Aggregation": {
             "Expression": {"Column": {"Expression": {"SourceRef": {"Source": r}},
                                       "Property": "risk_score"}},
