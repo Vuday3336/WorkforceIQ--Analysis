@@ -117,7 +117,7 @@ table DimEmployee
 		annotation SummarizationSetBy = Automatic
 
 	column tenure_years
-		dataType: string
+		dataType: double
 		lineageTag: 9b15089b-b247-f832-aea9-cdcdb08cec4b
 		summarizeBy: none
 		sourceColumn: tenure_years
@@ -126,6 +126,7 @@ table DimEmployee
 
 	column tenure_cohort
 		dataType: string
+		sortByColumn: tenure_cohort_sort
 		lineageTag: 99d8dfa3-aa52-8dad-fbf5-ad2ce205a383
 		summarizeBy: none
 		sourceColumn: tenure_cohort
@@ -205,7 +206,7 @@ table DimEmployee
 		annotation SummarizationSetBy = Automatic
 
 	column income_pct_rank_in_role
-		dataType: string
+		dataType: double
 		lineageTag: 457f922a-f293-6a65-2172-c4605ccf2c5e
 		summarizeBy: none
 		sourceColumn: income_pct_rank_in_role
@@ -222,6 +223,7 @@ table DimEmployee
 
 	column income_quartile_label
 		dataType: string
+		sortByColumn: income_quartile_in_role
 		lineageTag: c092c114-d7c7-3096-3809-18070b4ccb00
 		summarizeBy: none
 		sourceColumn: income_quartile_label
@@ -317,7 +319,7 @@ table DimEmployee
 				        File.Contents(DataFolder & "\DimEmployee.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
-				    Typed = Table.TransformColumnTypes(Headers, {{"employee_id", Int64.Type}, {"first_name", type text}, {"last_name", type text}, {"employee_name", type text}, {"department_id", Int64.Type}, {"department_name", type text}, {"division", type text}, {"job_role", type text}, {"job_level", Int64.Type}, {"business_travel", type text}, {"hire_date", type date}, {"termination_date", type date}, {"current_status", type text}, {"attrition_flag", Int64.Type}, {"tenure_years", type text}, {"tenure_cohort", type text}, {"tenure_cohort_sort", Int64.Type}, {"gender", type text}, {"age", Int64.Type}, {"marital_status", type text}, {"education_level", type text}, {"distance_from_home", Int64.Type}, {"manager_id", type number}, {"manager_name", type text}, {"monthly_income", Int64.Type}, {"income_pct_rank_in_role", type text}, {"income_quartile_in_role", Int64.Type}, {"income_quartile_label", type text}, {"pct_vs_role_average", type number}, {"stock_option_level", Int64.Type}, {"salary_hike_pct", type number}, {"latest_review_date", type date}, {"performance_rating", Int64.Type}, {"job_satisfaction", Int64.Type}, {"environment_satisfaction", Int64.Type}, {"work_life_balance", Int64.Type}, {"overtime_flag", type text}, {"voluntary_flag", Int64.Type}})
+				    Typed = Table.TransformColumnTypes(Headers, {{"employee_id", Int64.Type}, {"first_name", type text}, {"last_name", type text}, {"employee_name", type text}, {"department_id", Int64.Type}, {"department_name", type text}, {"division", type text}, {"job_role", type text}, {"job_level", Int64.Type}, {"business_travel", type text}, {"hire_date", type date}, {"termination_date", type date}, {"current_status", type text}, {"attrition_flag", Int64.Type}, {"tenure_years", type number}, {"tenure_cohort", type text}, {"tenure_cohort_sort", Int64.Type}, {"gender", type text}, {"age", Int64.Type}, {"marital_status", type text}, {"education_level", type text}, {"distance_from_home", Int64.Type}, {"manager_id", type number}, {"manager_name", type text}, {"monthly_income", Int64.Type}, {"income_pct_rank_in_role", type number}, {"income_quartile_in_role", Int64.Type}, {"income_quartile_label", type text}, {"pct_vs_role_average", type number}, {"stock_option_level", Int64.Type}, {"salary_hike_pct", type number}, {"latest_review_date", type date}, {"performance_rating", Int64.Type}, {"job_satisfaction", Int64.Type}, {"environment_satisfaction", Int64.Type}, {"work_life_balance", Int64.Type}, {"overtime_flag", type text}, {"voluntary_flag", Int64.Type}})
 				in
 				    Typed
 

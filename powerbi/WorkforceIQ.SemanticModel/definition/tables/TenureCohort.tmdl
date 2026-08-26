@@ -4,6 +4,7 @@ table TenureCohort
 
 	column tenure_cohort
 		dataType: string
+		sortByColumn: cohort_sort
 		lineageTag: 02c2589e-3a50-88ef-aeb4-935242983e84
 		summarizeBy: none
 		sourceColumn: tenure_cohort

@@ -12,6 +12,7 @@ table CompQuartile
 
 	column income_quartile_label
 		dataType: string
+		sortByColumn: income_quartile_in_role
 		lineageTag: 878c3be6-3aa2-b1a6-bebe-373d307b59c2
 		summarizeBy: none
 		sourceColumn: income_quartile_label

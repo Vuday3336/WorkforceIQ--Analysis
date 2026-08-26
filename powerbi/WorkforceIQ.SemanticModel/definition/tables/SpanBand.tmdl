@@ -4,6 +4,7 @@ table SpanBand
 
 	column span_band
 		dataType: string
+		sortByColumn: span_band_sort
 		lineageTag: ed8aa274-84d7-171c-66b9-331ebe98f042
 		summarizeBy: none
 		sourceColumn: span_band

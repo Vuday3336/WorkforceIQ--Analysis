@@ -12,6 +12,7 @@ table OvertimeSatisfaction
 
 	column satisfaction_bucket
 		dataType: string
+		sortByColumn: satisfaction_sort
 		lineageTag: 3c2c9bf9-c54d-e40a-e7b1-6c0dab78797d
 		summarizeBy: none
 		sourceColumn: satisfaction_bucket

@@ -46,12 +46,39 @@ T = "\t"
 MEASURES_TABLE = "_Measures"
 MEASURES_TABLE_Q = "'_Measures'"
 
-# DuckDB type -> TMDL dataType
+# DuckDB type -> TMDL dataType.
+#
+# DECIMAL/NUMERIC must be here. Anything missing used to fall through to
+# "string", and SQL ROUND()/NUMERIC casts produce DECIMAL constantly -- so
+# DimEmployee[tenure_years] and [income_pct_rank_in_role] were imported as
+# TEXT. Nothing errored at load; the failures appeared later and looked
+# unrelated: AVERAGE() over text broke the Avg Tenure card, and MAX() over
+# text plus a text-vs-number comparison in the rule-based risk measure broke
+# the whole watchlist table with a misleading "capacity or license issue".
+#
+# The unknown-type fallback below now raises instead of guessing, so a new
+# column type fails the build rather than shipping a silently wrong model.
 TYPE_MAP = {
     "BIGINT": "int64", "INTEGER": "int64", "SMALLINT": "int64", "HUGEINT": "int64",
+    "TINYINT": "int64", "UBIGINT": "int64", "UINTEGER": "int64",
     "DOUBLE": "double", "FLOAT": "double", "REAL": "double",
-    "VARCHAR": "string", "DATE": "dateTime", "TIMESTAMP": "dateTime",
-    "BOOLEAN": "boolean",
+    "DECIMAL": "double", "NUMERIC": "double",
+    "VARCHAR": "string", "TEXT": "string", "CHAR": "string",
+    "DATE": "dateTime", "TIMESTAMP": "dateTime", "TIMESTAMP_NS": "dateTime",
+    "BOOLEAN": "boolean", "BOOL": "boolean",
+}
+
+# Columns whose display order must come from a numeric companion rather than
+# alphabetical text. Without these, "0-1 yr" sorts next to "10 yr+" and the
+# cohort charts read in a nonsense order.
+#   (table, column) -> sort-by column
+SORT_BY = {
+    ("TenureCohort", "tenure_cohort"): "cohort_sort",
+    ("DimEmployee", "tenure_cohort"): "tenure_cohort_sort",
+    ("SpanBand", "span_band"): "span_band_sort",
+    ("OvertimeSatisfaction", "satisfaction_bucket"): "satisfaction_sort",
+    ("CompQuartile", "income_quartile_label"): "income_quartile_in_role",
+    ("DimEmployee", "income_quartile_label"): "income_quartile_in_role",
 }
 
 # (tmdl table name, source view/table, description)
@@ -340,13 +367,23 @@ def emit_table(name: str, source: str, description: str, cols) -> str:
         out.append(T + "dataCategory: Time")
     out.append(T + "lineageTag: " + guid("table:" + name))
     out.append("")
+    col_names = {c for c, _ in cols}
     for col_name, col_type in cols:
-        dt = TYPE_MAP.get(col_type.upper().split("(")[0], "string")
+        base = col_type.upper().split("(")[0]
+        if base not in TYPE_MAP:
+            # fail the build rather than silently importing it as text
+            raise ValueError(
+                "unmapped column type %r on %s.%s -- add it to TYPE_MAP"
+                % (col_type, name, col_name))
+        dt = TYPE_MAP[base]
         typed_cols.append((col_name, dt))
         out.append(T + "column " + col_name)
         if name == DATE_TABLE and col_name == DATE_KEY:
             out.append(T * 2 + "isKey")
         out.append(T * 2 + "dataType: " + dt)
+        sort_col = SORT_BY.get((name, col_name))
+        if sort_col and sort_col in col_names:
+            out.append(T * 2 + "sortByColumn: " + sort_col)
         if dt == "dateTime":
             out.append(T * 2 + "formatString: yyyy-mm-dd")
         out.append(T * 2 + "lineageTag: " + guid(name + "." + col_name))
