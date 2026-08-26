@@ -11,9 +11,9 @@
 | *(no `.pbix`)* | See below. |
 
 **Why there is no `.pbix` in this repo.** A `.pbix` is a proprietary binary that
-only Power BI Desktop can write, and Desktop is Windows-only. It was not
-available in the environment this repo was generated in, so shipping one would
-have meant shipping something untested.
+only Power BI Desktop can write. The project was generated as PBIP/TMDL text and
+verified by opening it in Desktop -- screenshots of all four rendered pages are
+in `docs/dashboard_screenshots/`.
 
 That is not really a loss. **PBIP/TMDL is the format you want in source
 control** — a `.pbix` is an opaque blob that cannot be diffed, code-reviewed or

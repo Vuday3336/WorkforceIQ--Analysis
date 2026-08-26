@@ -4,9 +4,17 @@
 analytical SQL layer, a Power BI semantic model with time-intelligence DAX, and a
 scikit-learn model whose output feeds back into the database.
 
-> **[▶ Live interactive dashboard](docs/index.html)** — six findings, a
-> tenure-controlled department ranking, and a filterable flight-risk watchlist.
-> *(Enable GitHub Pages on `/docs` to serve it, or open `web/index.html` locally.)*
+### **[▶ Open the live dashboard](https://vuday3336.github.io/WorkforceIQ--Analysis/)**
+
+Six findings, a tenure-controlled department ranking, and a filterable
+flight-risk watchlist. Every figure on it is computed by the SQL view named in
+its section — nothing is hand-entered.
+
+**Jump to:** [SQL findings](docs/sql_findings.md) ·
+[the Power BI report](#4-power-bi) ·
+[model results](#5-the-model) ·
+[schema](#2-schema) ·
+[notebook](notebooks/attrition_risk_model.ipynb)
 
 ```
 IBM HR CSV  →  normalised Postgres schema  →  8 analytical views  ┬→  Power BI (PBIP/TMDL + DAX)
@@ -284,9 +292,35 @@ YoY Attrition Change =
 report can show a human-designed heuristic beside the trained model. They correlate
 only **r = 0.47** — and that gap is the argument for the model.
 
-> Dashboard screenshots go in [`docs/dashboard_screenshots/`](docs/dashboard_screenshots/)
-> once the report is opened and rendered in Desktop. In the meantime the
-> **[live web dashboard](docs/index.html)** shows the same findings from the same views.
+### The report
+
+**Page 1 — Executive Overview.** Headline KPIs, the crude vs tenure-adjusted
+comparison, the quarterly trend against its rolling 4-quarter window, and the
+department scorecard showing observed against expected leavers.
+
+![Executive Overview](docs/dashboard_screenshots/01_executive.png)
+
+**Page 2 — Tenure & Cohort Analysis.** Headcount and attrition rate per cohort,
+each cohort's share of total outflow, and the department × cohort matrix. Note
+that the highest *rate* and the largest *share of leavers* are different cohorts.
+
+![Tenure and Cohort Analysis](docs/dashboard_screenshots/02_tenure.png)
+
+**Page 3 — Compensation & Satisfaction.** Attrition by in-role pay quartile, the
+overtime × satisfaction cross-segment with lift against the base rate, and the
+span-of-control chart reporting a negative result.
+
+![Compensation and Satisfaction](docs/dashboard_screenshots/03_compensation.png)
+
+**Page 4 — Attrition Risk Watchlist.** Every active employee ranked by modelled
+flight risk, with the rule-based heuristic beside the model score, plus
+department and tier slicers. This is the page that makes it an operational tool
+rather than a retrospective report.
+
+![Attrition Risk Watchlist](docs/dashboard_screenshots/04_watchlist.png)
+
+The same findings, from the same SQL views, are also on the
+**[live web dashboard](https://vuday3336.github.io/WorkforceIQ--Analysis/)**.
 
 ---
 
