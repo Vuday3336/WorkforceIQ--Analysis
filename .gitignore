@@ -15,5 +15,7 @@ Thumbs.db
 
 # power bi local artefacts
 *.pbix.bak
-powerbi/**/.pbi/localSettings.json
-powerbi/**/.pbi/cache.abf
+# the whole .pbi folder is Desktop's per-machine state: the data cache, editor
+# settings and local settings. None of it belongs in the repo, and cache.abf in
+# particular pins the model's compatibility level and cached data source.
+powerbi/**/.pbi/
