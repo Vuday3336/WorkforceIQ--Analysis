@@ -119,7 +119,7 @@ table DepartmentControlled
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\DepartmentControlled.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\DepartmentControlled.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"department_id", Int64.Type}, {"department_name", type text}, {"division", type text}, {"headcount", Int64.Type}, {"observed_leavers", Int64.Type}, {"expected_leavers", type number}, {"avg_tenure_years", type number}, {"crude_attrition_rate", type number}, {"standardised_attrition_ratio", type number}, {"tenure_adjusted_rate", type number}, {"mix_effect", type number}, {"company_crude_rate", type number}, {"verdict", type text}, {"has_reliable_sample", Int64.Type}})

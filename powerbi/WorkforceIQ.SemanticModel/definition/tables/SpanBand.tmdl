@@ -64,7 +64,7 @@ table SpanBand
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\SpanBand.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\SpanBand.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"span_band", type text}, {"span_band_sort", Int64.Type}, {"managers", Int64.Type}, {"employees_covered", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"avg_span", type number}})

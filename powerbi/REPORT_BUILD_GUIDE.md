@@ -33,9 +33,19 @@ for rebuilding or extending them.
 1. Open `WorkforceIQ.pbip` in Power BI Desktop.
 2. **That is it.** No credentials, no server, no certificate. The model imports
    from the CSVs in `data/powerbi/`, so the report populates on open.
-3. If you cloned to a different path, point the parameter at it:
-   **Transform data → Manage parameters → `DataFolder`** →
-   `<your-repo>\data\powerbi`, then **Home → Refresh**.
+3. If you cloned to a different path, the CSV paths are baked into each
+   query, so regenerate them:
+
+   ```bash
+   python generators/export_for_powerbi.py
+   python generators/build_powerbi.py
+   ```
+
+   The paths are inlined rather than built from a shared `DataFolder`
+   parameter on purpose. Having all thirteen queries reference one parameter
+   was the model's only cross-query dependency, and Power Query rejected the
+   entire load with *"A cyclic reference was encountered during evaluation."*
+   Self-contained queries make a dependency cycle structurally impossible.
 
 ### Why a file import and not a live database connection
 

@@ -48,7 +48,7 @@ table FactAttrition
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\FactAttrition.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\FactAttrition.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"event_id", Int64.Type}, {"employee_id", Int64.Type}, {"termination_date", type date}, {"attrition_flag", Int64.Type}, {"voluntary_flag", Int64.Type}})

@@ -48,7 +48,7 @@ table RiskScores
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\RiskScores.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\RiskScores.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"employee_id", Int64.Type}, {"scored_date", type date}, {"risk_score", type number}, {"risk_tier", type text}, {"model_name", type text}})

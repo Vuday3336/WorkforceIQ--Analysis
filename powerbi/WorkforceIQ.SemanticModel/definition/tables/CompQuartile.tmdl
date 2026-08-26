@@ -56,7 +56,7 @@ table CompQuartile
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\CompQuartile.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\CompQuartile.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"income_quartile_in_role", Int64.Type}, {"income_quartile_label", type text}, {"employees", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"avg_monthly_income", type number}})

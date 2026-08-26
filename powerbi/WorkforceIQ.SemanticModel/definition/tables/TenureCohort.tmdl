@@ -72,7 +72,7 @@ table TenureCohort
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\TenureCohort.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\TenureCohort.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"tenure_cohort", type text}, {"cohort_sort", Int64.Type}, {"employees", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"avg_tenure_years", type number}, {"share_of_all_leavers", type number}, {"lift_vs_company", type number}})

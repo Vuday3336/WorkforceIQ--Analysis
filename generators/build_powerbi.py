@@ -332,13 +332,27 @@ def m_partition(table: str, source: str, cols) -> str:
     transforms = ", ".join(
         "{" + '"' + c + '"' + ", " + M_TYPE.get(t, "type text") + "}"
         for c, t in cols)
+
+    # The full path is INLINED rather than built from a shared DataFolder
+    # parameter. Every table referencing one parameter was the only cross-query
+    # dependency in the model, and it made Power Query fail all 13 loads with
+    # "A cyclic reference was encountered during evaluation". Inlining makes
+    # each query completely self-contained, so a dependency cycle is
+    # structurally impossible.
+    #
+    # Note single backslashes: M has no backslash escape, so "\\" would be a
+    # literal double separator rather than an escaped one.
+    #
+    # Cost of inlining: moving the repo means re-running this generator. That
+    # is one command, and is documented in REPORT_BUILD_GUIDE.md.
+    csv_path = str(ROOT / "data" / "powerbi" / (table + ".csv"))
     return (
         T + "partition " + table + " = m\n"
         + T * 2 + "mode: import\n"
         + T * 2 + "source =\n"
         + T * 4 + "let\n"
         + T * 4 + '    Source = Csv.Document(\n'
-        + T * 4 + '        File.Contents(DataFolder & "\\' + table + '.csv"),\n'
+        + T * 4 + '        File.Contents("' + csv_path + '"),\n'
         + T * 4 + '        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),\n'
         + T * 4 + '    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n'
         + T * 4 + "    Typed = Table.TransformColumnTypes(Headers, {" + transforms + "})\n"
@@ -495,33 +509,21 @@ def main() -> None:
     (DEF / "relationships.tmdl").write_text("\n".join(rel), encoding="utf-8")
 
     # ---------------------------------------------------------------- expressions
-    data_folder = str(ROOT / "data" / "powerbi").replace("\\", "\\\\")
-    expressions = (
-        '/// Folder holding the exported CSVs the model imports.\n'
-        '/// Point this at <repo>\\data\\powerbi after cloning:\n'
-        '///   Power BI > Transform data > Manage parameters > DataFolder\n'
-        '/// Regenerate the files with: python generators/export_for_powerbi.py\n'
-        'expression DataFolder = "' + data_folder + '" '
-        'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
-        + T + "lineageTag: " + guid("expr:DataFolder") + "\n"
-        + T + "annotation PBI_ResultType = Text\n\n"
-        '/// Kept for the live-database variant described in\n'
-        '/// REPORT_BUILD_GUIDE.md. Unused by the default file import: the\n'
-        '/// Supabase pooler certificate is not chained to a root Windows\n'
-        '/// trusts, so a PostgreSQL connection needs either "Encrypt\n'
-        '/// connection" unticked or the Supabase CA installed.\n'
-        '/// Use the SESSION pooler on 5432, never the transaction pooler on 6543.\n'
-        'expression ServerName = "aws-0-ap-south-1.pooler.supabase.com:5432" '
-        'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
-        + T + "lineageTag: " + guid("expr:ServerName") + "\n"
-        + T + "annotation PBI_ResultType = Text\n\n"
-        '/// Database name. On Supabase this is always "postgres".\n'
-        'expression DatabaseName = "postgres" '
-        'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
-        + T + "lineageTag: " + guid("expr:DatabaseName") + "\n"
-        + T + "annotation PBI_ResultType = Text\n"
-    )
-    (DEF / "expressions.tmdl").write_text(expressions, encoding="utf-8")
+    # No expressions.tmdl at all.
+    #
+    # It previously declared DataFolder / ServerName / DatabaseName as
+    # parameter queries (meta [IsParameterQuery=true]). Every table's M
+    # referenced DataFolder, which was the model's only cross-query
+    # dependency, and Power Query rejected the whole load with "A cyclic
+    # reference was encountered during evaluation". Table paths are now
+    # inlined, so no parameters are needed and none are emitted -- there is
+    # nothing left for the dependency resolver to trip over.
+    #
+    # The live-PostgreSQL variant is documented in REPORT_BUILD_GUIDE.md.
+    stale = DEF / "expressions.tmdl"
+    if stale.exists():
+        stale.unlink()
+
 
     (DEF / "database.tmdl").write_text(
         # 1606, not 1567. Power BI Desktop upgrades the model to its own

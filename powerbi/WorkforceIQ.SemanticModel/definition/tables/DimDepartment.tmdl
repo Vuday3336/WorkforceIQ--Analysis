@@ -31,7 +31,7 @@ table DimDepartment
 		source =
 				let
 				    Source = Csv.Document(
-				        File.Contents(DataFolder & "\DimDepartment.csv"),
+				        File.Contents("D:\Projects\WorkForceIq\data\powerbi\DimDepartment.csv"),
 				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Typed = Table.TransformColumnTypes(Headers, {{"department_id", Int64.Type}, {"department_name", type text}, {"division", type text}})
