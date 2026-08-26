@@ -487,7 +487,15 @@ def main() -> None:
     (DEF / "expressions.tmdl").write_text(expressions, encoding="utf-8")
 
     (DEF / "database.tmdl").write_text(
-        "database\n" + T + "compatibilityLevel: 1567\n", encoding="utf-8")
+        # 1606, not 1567. Power BI Desktop upgrades the model to its own
+        # compatibility level the first time it saves, and Tabular refuses a
+        # DOWNGRADE outright:
+        #     Tabular databases do not support CompatibilityLevel downgrade.
+        #     Current: '1606'. Requested: '1567'.
+        # Regenerating this file with a lower number therefore breaks a project
+        # that Desktop has already opened. Upgrades are allowed, so a newer
+        # Desktop can still raise it; older ones prompt to upgrade.
+        "database\n" + T + "compatibilityLevel: 1606\n", encoding="utf-8")
 
     (DEF / "cultures").mkdir(exist_ok=True)
     (DEF / "cultures" / "en-US.tmdl").write_text(
