@@ -10,7 +10,8 @@ Six findings, a tenure-controlled department ranking, and a filterable
 flight-risk watchlist. Every figure on it is computed by the SQL view named in
 its section — nothing is hand-entered.
 
-**Jump to:** [full build walkthrough](docs/PROJECT_WALKTHROUGH.md) ·
+**Jump to:** [**illustrated build log**](https://vuday3336.github.io/WorkforceIQ--Analysis/how-it-was-built.html) ·
+[written walkthrough](docs/PROJECT_WALKTHROUGH.md) ·
 [SQL findings](docs/sql_findings.md) ·
 [the Power BI report](#4-power-bi) ·
 [model results](#5-the-model) ·
