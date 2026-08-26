@@ -47,9 +47,12 @@ table RiskScores
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="attrition_risk_scores"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\RiskScores.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"employee_id", Int64.Type}, {"scored_date", type date}, {"risk_score", type number}, {"risk_tier", type text}, {"model_name", type text}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

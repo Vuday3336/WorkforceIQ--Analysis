@@ -28,44 +28,54 @@ for rebuilding or extending them.
 
 ---
 
-## Step 1 — connect
+## Step 1 — open it
 
 1. Open `WorkforceIQ.pbip` in Power BI Desktop.
-2. The connection parameters are pre-filled; check them under
-   **Transform data → Manage parameters** only if the refresh fails:
-   - `ServerName` → `aws-0-<region>.pooler.supabase.com:5432` (the **session**
-     pooler — the transaction pooler on 6543 and the IPv6-only direct host both
-     fail here)
-   - `DatabaseName` → `postgres`
-3. Refresh. Credentials: **Database** auth, user
-   `postgres.<your-project-ref>`, your Postgres password.
-4. **Untick "Encrypt connection"** in that same credentials dialog.
+2. **That is it.** No credentials, no server, no certificate. The model imports
+   from the CSVs in `data/powerbi/`, so the report populates on open.
+3. If you cloned to a different path, point the parameter at it:
+   **Transform data → Manage parameters → `DataFolder`** →
+   `<your-repo>\data\powerbi`, then **Home → Refresh**.
 
-### If the refresh fails with "The remote certificate is invalid"
+### Why a file import and not a live database connection
 
-Supabase's connection pooler presents a certificate that is not chained to a
-root in the Windows trust store, so Npgsql (the provider behind Power BI's
-PostgreSQL connector) rejects it and every table fails to load.
+Importing straight from PostgreSQL is the better line on a CV, and the first
+version of this model did exactly that. It was the wrong call for a portfolio
+artefact, for two reasons:
 
-Two ways to resolve it:
+- **Nobody else can open it.** A reviewer without the database password gets a
+  report full of `(Blank)`. A report that cannot be opened is worth nothing.
+- **It does not even work reliably for the author.** Supabase's connection
+  pooler presents a certificate that is not chained to any root in the Windows
+  trust store, so Npgsql rejects it and every table fails with *"The remote
+  certificate is invalid according to the validation procedure."* Getting past
+  that needs either "Encrypt connection" unticked — which disables certificate
+  validation — or the Supabase CA installed into Trusted Root Certification
+  Authorities.
 
-**A. Untick "Encrypt connection"** — *Home → Transform data → Data source
-settings → select the server → Edit Permissions → Credentials: Edit → untick
-Encrypt connection → Save.* Supabase requires TLS regardless, so the session is
-still encrypted in transit; what this turns off is **certificate validation**,
-which leaves the connection theoretically open to man-in-the-middle. Acceptable
-for this database — a public demo dataset with synthesised names and read-only
-anon access — and not something to copy onto a real HRIS.
+**No analytical fidelity is lost.** These CSVs are not hand-made extracts: each
+is the output of running the actual shipped `.sql` view via
+`generators/export_for_powerbi.py`. The SQL layer still computes every number
+in the report, and `generators/verify_parity.py` proves those views return
+identical results on PostgreSQL and DuckDB.
 
-**B. Trust the certificate properly** — *Supabase dashboard → Project Settings →
-Database → SSL Configuration → Download certificate*, then install the `.crt`
-into **Trusted Root Certification Authorities** in the Windows certificate store
-(`certmgr.msc`), and leave "Encrypt connection" ticked. This is the correct
-option for anything real.
+### Switching to the live PostgreSQL connection
 
-Connection is a **live PostgreSQL connector connection to the analytical views**
-— not a CSV import. That distinction is worth stating on a résumé, because most
-portfolio dashboards import a flat file and lose the entire SQL layer.
+The `ServerName` and `DatabaseName` parameters are still in the model. To use
+them, replace a table's partition source in Power Query with:
+
+```m
+let
+    Source = PostgreSQL.Database(ServerName, DatabaseName),
+    Data = Source{[Schema="public", Item="vw_dim_employee"]}[Data]
+in
+    Data
+```
+
+Credentials: **Database** auth, user `postgres.<project-ref>`, your password,
+and handle the certificate one of the two ways above. Use the **session**
+pooler on port 5432 — the transaction pooler on 6543 cannot run this, and the
+direct `db.<ref>.supabase.co` host has been IPv6-only since 2024.
 
 ## Step 2 — the date table is already marked
 

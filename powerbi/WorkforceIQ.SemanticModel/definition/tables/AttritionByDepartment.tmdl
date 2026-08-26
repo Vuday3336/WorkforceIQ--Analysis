@@ -118,9 +118,12 @@ table AttritionByDepartment
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="vw_attrition_by_department"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\AttritionByDepartment.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"department_id", Int64.Type}, {"department_name", type text}, {"division", type text}, {"year", Int64.Type}, {"quarter", Int64.Type}, {"year_quarter", type text}, {"headcount_start", Int64.Type}, {"headcount_end", Int64.Type}, {"avg_headcount", type number}, {"terminations", Int64.Type}, {"attrition_rate_qtr", type number}, {"rolling_4q_terminations", Int64.Type}, {"rolling_4q_attrition_rate", type number}, {"rolling_window_quarters", Int64.Type}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

@@ -1,0 +1,7 @@
+overtime_flag,satisfaction_bucket,satisfaction_sort,employees,leavers,attrition_rate,company_base_rate,lift_vs_base,has_reliable_sample
+Yes,Low (1-2),1,153,56.0,0.366,0.1612,2.27,1
+Yes,Medium (3),2,121,41.0,0.3388,0.1612,2.1,1
+Yes,High (4),3,142,30.0,0.2113,0.1612,1.31,1
+No,Low (1-2),1,416,56.0,0.1346,0.1612,0.83,1
+No,Medium (3),2,321,32.0,0.0997,0.1612,0.62,1
+No,High (4),3,317,22.0,0.0694,0.1612,0.43,1

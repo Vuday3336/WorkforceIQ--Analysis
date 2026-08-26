@@ -1,0 +1,204 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1296.2794052459287,
+            "y": 279.78597237436742
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "b8665904-bf8e-7f4a-872c-0f4f736e697e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1580.2794052459287,
+            "y": 279.78597237436742
+          },
+          "nodeIndex": "AttritionByDepartment",
+          "nodeLineageTag": "0465daf1-5407-4e2c-52ce-496661999218",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1864.2794052459287,
+            "y": 317.78597237436742
+          },
+          "nodeIndex": "CompQuartile",
+          "nodeLineageTag": "e672bc6a-011e-87a0-9926-acecec171a9b",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2148.2794052459285,
+            "y": 279.78597237436742
+          },
+          "nodeIndex": "DepartmentControlled",
+          "nodeLineageTag": "756c74d8-ea20-4227-d6e2-488f11301b01",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 197.68482477603902
+          },
+          "nodeIndex": "DimDate",
+          "nodeLineageTag": "c501efbc-ef9a-ec8d-89d0-e5d891ced24d",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 578.00109587690065,
+            "y": -50
+          },
+          "nodeIndex": "DimDepartment",
+          "nodeLineageTag": "50bd9c18-c4de-d573-2de6-8a534471695f",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 686.13703707494471,
+            "y": 156.34879068935027
+          },
+          "nodeIndex": "DimEmployee",
+          "nodeLineageTag": "a01bca26-22a0-5376-1ce1-2abb8474150a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.23913862870546,
+            "y": 257.32352092653389
+          },
+          "nodeIndex": "FactAttrition",
+          "nodeLineageTag": "d9bc9879-6a85-6ff3-df61-f454dfc229fa",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1062.2794052459287,
+            "y": 498.91491577763986
+          },
+          "nodeIndex": "FactCompensation",
+          "nodeLineageTag": "05d03239-da4c-da25-cafd-2637529e03dd",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 602.78514954550383,
+            "y": 513.57194474873484
+          },
+          "nodeIndex": "FactReview",
+          "nodeLineageTag": "8c8a4222-bfc6-2f52-69a9-1c6ba5eacd30",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2432.2794052459285,
+            "y": 281.78597237436742
+          },
+          "nodeIndex": "OvertimeSatisfaction",
+          "nodeLineageTag": "53932163-f979-3d19-9d1c-d433f4d1ee01",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 975.23489977830627,
+            "y": 244.41958930516535
+          },
+          "nodeIndex": "RiskScores",
+          "nodeLineageTag": "baa97fbd-3034-dd5d-ab97-eabd41261d62",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2716.2794052459285,
+            "y": 305.78597237436742
+          },
+          "nodeIndex": "SpanBand",
+          "nodeLineageTag": "531b4fe0-5271-9f0f-bb3d-418090812653",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3000.2794052459285,
+            "y": 293.78597237436742
+          },
+          "nodeIndex": "TenureCohort",
+          "nodeLineageTag": "d370309d-d72d-77b3-a7f5-d9a4d58937ed",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

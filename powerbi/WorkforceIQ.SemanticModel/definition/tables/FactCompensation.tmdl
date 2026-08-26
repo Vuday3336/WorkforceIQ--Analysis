@@ -55,9 +55,12 @@ table FactCompensation
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="compensation_history"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\FactCompensation.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"comp_id", Int64.Type}, {"employee_id", Int64.Type}, {"effective_date", type date}, {"monthly_income", Int64.Type}, {"salary_hike_pct", type number}, {"stock_option_level", Int64.Type}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

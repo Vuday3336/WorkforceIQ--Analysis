@@ -277,16 +277,46 @@ def guid(seed: str) -> str:
     return h[:8] + "-" + h[8:12] + "-" + h[12:16] + "-" + h[16:20] + "-" + h[20:32]
 
 
-def m_partition(table: str, source: str) -> str:
+# M type for each TMDL dataType
+M_TYPE = {
+    "int64": "Int64.Type",
+    "double": "type number",
+    "string": "type text",
+    "dateTime": "type date",
+    "boolean": "type logical",
+}
+
+
+def m_partition(table: str, source: str, cols) -> str:
+    """
+    File import from data/powerbi/<table>.csv.
+
+    Deliberately NOT a PostgreSQL connection by default. Importing from
+    Postgres is the better line on a CV, but it makes the report unopenable
+    without the database password, and on Supabase it additionally fails TLS
+    because the pooler certificate is not chained to a root Windows trusts.
+    A portfolio report a reviewer cannot open is worth nothing.
+
+    No analytical fidelity is lost: each CSV is the output of running the
+    actual shipped .sql view (generators/export_for_powerbi.py), so the SQL
+    layer still computes every number. To switch back to a live connection,
+    see powerbi/REPORT_BUILD_GUIDE.md -- the Postgres M is one edit away.
+    """
+    transforms = ", ".join(
+        "{" + '"' + c + '"' + ", " + M_TYPE.get(t, "type text") + "}"
+        for c, t in cols)
     return (
         T + "partition " + table + " = m\n"
         + T * 2 + "mode: import\n"
         + T * 2 + "source =\n"
         + T * 4 + "let\n"
-        + T * 4 + '    Source = PostgreSQL.Database(ServerName, DatabaseName),\n'
-        + T * 4 + '    Data = Source{[Schema="public",Item="' + source + '"]}[Data]\n'
+        + T * 4 + '    Source = Csv.Document(\n'
+        + T * 4 + '        File.Contents(DataFolder & "\\' + table + '.csv"),\n'
+        + T * 4 + '        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),\n'
+        + T * 4 + '    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),\n'
+        + T * 4 + "    Typed = Table.TransformColumnTypes(Headers, {" + transforms + "})\n"
         + T * 4 + "in\n"
-        + T * 4 + "    Data\n"
+        + T * 4 + "    Typed\n"
     )
 
 
@@ -302,6 +332,7 @@ DATE_KEY = "date_key"
 
 def emit_table(name: str, source: str, description: str, cols) -> str:
     out = []
+    typed_cols = []
     for line in description.split("\n"):
         out.append("/// " + line)
     out.append("table " + name)
@@ -311,6 +342,7 @@ def emit_table(name: str, source: str, description: str, cols) -> str:
     out.append("")
     for col_name, col_type in cols:
         dt = TYPE_MAP.get(col_type.upper().split("(")[0], "string")
+        typed_cols.append((col_name, dt))
         out.append(T + "column " + col_name)
         if name == DATE_TABLE and col_name == DATE_KEY:
             out.append(T * 2 + "isKey")
@@ -323,7 +355,7 @@ def emit_table(name: str, source: str, description: str, cols) -> str:
         out.append("")
         out.append(T * 2 + "annotation SummarizationSetBy = Automatic")
         out.append("")
-    out.append(m_partition(name, source))
+    out.append(m_partition(name, source, typed_cols))
     out.append(T + "annotation PBI_ResultType = Table")
     out.append("")
     return "\n".join(out)
@@ -426,11 +458,22 @@ def main() -> None:
     (DEF / "relationships.tmdl").write_text("\n".join(rel), encoding="utf-8")
 
     # ---------------------------------------------------------------- expressions
+    data_folder = str(ROOT / "data" / "powerbi").replace("\\", "\\\\")
     expressions = (
-        '/// Postgres host, written as host:port.\n'
-        '/// Use the Supabase SESSION pooler on port 5432. The transaction\n'
-        '/// pooler on 6543 and the IPv6-only direct host both fail here.\n'
-        '/// Change this in Power BI via Transform data > Manage parameters.\n'
+        '/// Folder holding the exported CSVs the model imports.\n'
+        '/// Point this at <repo>\\data\\powerbi after cloning:\n'
+        '///   Power BI > Transform data > Manage parameters > DataFolder\n'
+        '/// Regenerate the files with: python generators/export_for_powerbi.py\n'
+        'expression DataFolder = "' + data_folder + '" '
+        'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
+        + T + "lineageTag: " + guid("expr:DataFolder") + "\n"
+        + T + "annotation PBI_ResultType = Text\n\n"
+        '/// Kept for the live-database variant described in\n'
+        '/// REPORT_BUILD_GUIDE.md. Unused by the default file import: the\n'
+        '/// Supabase pooler certificate is not chained to a root Windows\n'
+        '/// trusts, so a PostgreSQL connection needs either "Encrypt\n'
+        '/// connection" unticked or the Supabase CA installed.\n'
+        '/// Use the SESSION pooler on 5432, never the transaction pooler on 6543.\n'
         'expression ServerName = "aws-0-ap-south-1.pooler.supabase.com:5432" '
         'meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]\n'
         + T + "lineageTag: " + guid("expr:ServerName") + "\n"

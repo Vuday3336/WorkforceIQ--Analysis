@@ -1,0 +1,5 @@
+income_quartile_in_role,income_quartile_label,employees,leavers,attrition_rate,avg_monthly_income
+1,Q1 (lowest paid in role),370,72.0,0.1946,4481.0
+2,Q2,369,62.0,0.168,5568.0
+3,Q3,367,50.0,0.1362,6868.0
+4,Q4 (highest paid in role),364,53.0,0.1456,9139.0

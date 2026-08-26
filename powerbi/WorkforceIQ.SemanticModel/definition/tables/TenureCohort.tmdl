@@ -70,9 +70,12 @@ table TenureCohort
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="vw_tenure_cohort_attrition"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\TenureCohort.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"tenure_cohort", type text}, {"cohort_sort", Int64.Type}, {"employees", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"avg_tenure_years", type number}, {"share_of_all_leavers", type number}, {"lift_vs_company", type number}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

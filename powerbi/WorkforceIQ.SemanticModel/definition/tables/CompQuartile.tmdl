@@ -54,9 +54,12 @@ table CompQuartile
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="vw_attrition_by_comp_quartile"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\CompQuartile.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"income_quartile_in_role", Int64.Type}, {"income_quartile_label", type text}, {"employees", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"avg_monthly_income", type number}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

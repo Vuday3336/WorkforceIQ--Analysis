@@ -79,9 +79,12 @@ table FactReview
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="performance_reviews"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\FactReview.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"review_id", Int64.Type}, {"employee_id", Int64.Type}, {"review_date", type date}, {"performance_rating", Int64.Type}, {"job_satisfaction", Int64.Type}, {"environment_satisfaction", Int64.Type}, {"work_life_balance", Int64.Type}, {"overtime_flag", type text}, {"manager_id", type number}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

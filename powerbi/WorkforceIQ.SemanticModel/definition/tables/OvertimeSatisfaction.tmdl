@@ -78,9 +78,12 @@ table OvertimeSatisfaction
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database(ServerName, DatabaseName),
-				    Data = Source{[Schema="public",Item="vw_overtime_satisfaction_attrition"]}[Data]
+				    Source = Csv.Document(
+				        File.Contents(DataFolder & "\OvertimeSatisfaction.csv"),
+				        [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"overtime_flag", type text}, {"satisfaction_bucket", type text}, {"satisfaction_sort", Int64.Type}, {"employees", Int64.Type}, {"leavers", Int64.Type}, {"attrition_rate", type number}, {"company_base_rate", type number}, {"lift_vs_base", type number}, {"has_reliable_sample", Int64.Type}})
 				in
-				    Data
+				    Typed
 
 	annotation PBI_ResultType = Table

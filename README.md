@@ -206,24 +206,41 @@ SAR are comparable on tenure, not on everything.
 ([`powerbi/measures.dax`](powerbi/measures.dax)). Page-by-page spec in
 [`powerbi/REPORT_BUILD_GUIDE.md`](powerbi/REPORT_BUILD_GUIDE.md).
 
-Connects to PostgreSQL **through the native connector against the analytical
-views** — not a CSV import. That distinction matters: most portfolio dashboards
-import a flat file and throw away the entire SQL layer.
+**Opens with no setup**: the model imports from `data/powerbi/*.csv`, so the
+report populates the moment you open it — no database password, no server, no
+certificate.
+
+Those CSVs are not hand-made extracts. Each one is the output of running the
+actual shipped `.sql` view (`generators/export_for_powerbi.py`), so the SQL
+layer still computes every number on every page.
+
+### Why not a live PostgreSQL connection?
+
+The first version of this model did connect straight to Postgres, which is the
+better line on a CV. It was the wrong call for a portfolio artefact:
+
+- **A reviewer without the database password sees a report full of `(Blank)`.**
+  A report nobody can open is worth nothing.
+- **It did not work reliably even for me.** Supabase's connection pooler
+  presents a certificate that chains to no root in the Windows trust store, so
+  Npgsql rejects it and every table fails with *"The remote certificate is
+  invalid according to the validation procedure."* Getting past that needs
+  either certificate validation disabled or the Supabase CA installed into
+  Trusted Root Certification Authorities — neither of which belongs in a
+  "clone and open" experience.
+
+The `ServerName` / `DatabaseName` parameters are still in the model and the
+live-connection M is documented in
+[`powerbi/REPORT_BUILD_GUIDE.md`](powerbi/REPORT_BUILD_GUIDE.md); the database
+itself is live and populated, and `generators/verify_parity.py` proves the
+views return identical results there and on DuckDB.
 
 ### On the missing `.pbix`
 
-**There is deliberately no `.pbix` binary in this repo.** A `.pbix` can only be
-written by Power BI Desktop, which is Windows-only and was not available in the
-environment this repo was built in — shipping one would have meant shipping
-something untested.
-
-That is not much of a loss. **PBIP/TMDL is the format you want in source control**
-— a `.pbix` is an opaque blob that cannot be diffed, reviewed or merged, which is
-why Microsoft built PBIP. Desktop opens the `.pbip` natively and `File → Save As`
-produces a binary in one step. The semantic model — tables, relationships, every
-measure — is complete and version-controlled; only the visual layout is specified
-as a build guide rather than serialised, because PBIR visual JSON is version-pinned
-and could not be validated here.
+A `.pbix` is a binary only Power BI Desktop can write. **PBIP/TMDL is the
+format you want in source control anyway** — a `.pbix` cannot be diffed,
+reviewed or merged, which is why Microsoft built PBIP. Desktop opens the
+`.pbip` natively; `File → Save As` produces a binary in one step.
 
 ### Selected measures
 

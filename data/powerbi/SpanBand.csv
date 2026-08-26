@@ -1,0 +1,5 @@
+span_band,span_band_sort,managers,employees_covered,leavers,attrition_rate,avg_span
+1-5 reports,1,19,79.0,16.0,0.2025,4.2
+6-10 reports,2,39,286.0,40.0,0.1399,7.3
+11-15 reports,3,26,343.0,57.0,0.1662,13.2
+16+ reports,4,37,756.0,123.0,0.1627,20.4
